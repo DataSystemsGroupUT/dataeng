@@ -1,0 +1,3667 @@
+     1  ﻿***The Project Gutenberg's Etext of Shakespeare's First Folio***
+     2  ********************The Tragedie of Macbeth*********************
+     3  
+     4  This is our 3rd edition of most of these plays.  See the index.
+     5  
+     6  
+     7  Copyright laws are changing all over the world, be sure to check
+     8  the copyright laws for your country before posting these files!!
+     9  
+    10  Please take a look at the important information in this header.
+    11  We encourage you to keep this file on your own disk, keeping an
+    12  electronic path open for the next readers.  Do not remove this.
+    13  
+    14  
+    15  **Welcome To The World of Free Plain Vanilla Electronic Texts**
+    16  
+    17  **Etexts Readable By Both Humans and By Computers, Since 1971**
+    18  
+    19  *These Etexts Prepared By Hundreds of Volunteers and Donations*
+    20  
+    21  Information on contacting Project Gutenberg to get Etexts, and
+    22  further information is included below.  We need your donations.
+    23  
+    24  
+    25  The Tragedie of Macbeth
+    26  
+    27  by William Shakespeare
+    28  
+    29  July, 2000  [Etext #2264]
+    30  
+    31  
+    32  ***The Project Gutenberg's Etext of Shakespeare's First Folio***
+    33  ********************The Tragedie of Macbeth*********************
+    34  
+    35  *****This file should be named 0ws3410.txt or 0ws3410.zip******
+    36  
+    37  Corrected EDITIONS of our etexts get a new NUMBER, 0ws3411.txt
+    38  VERSIONS based on separate sources get new LETTER, 0ws3410a.txt
+    39  
+    40  
+    41  Project Gutenberg Etexts are usually created from multiple editions,
+    42  all of which are in the Public Domain in the United States, unless a
+    43  copyright notice is included.  Therefore, we usually do NOT keep any
+    44  of these books in compliance with any particular paper edition.
+    45  
+    46  
+    47  We are now trying to release all our books one month in advance
+    48  of the official release dates, leaving time for better editing.
+    49  
+    50  Please note:  neither this list nor its contents are final till
+    51  midnight of the last day of the month of any such announcement.
+    52  The official release date of all Project Gutenberg Etexts is at
+    53  Midnight, Central Time, of the last day of the stated month.  A
+    54  preliminary version may often be posted for suggestion, comment
+    55  and editing by those who wish to do so.  To be sure you have an
+    56  up to date first edition [xxxxx10x.xxx] please check file sizes
+    57  in the first week of the next month.  Since our ftp program has
+    58  a bug in it that scrambles the date [tried to fix and failed] a
+    59  look at the file size will have to do, but we will try to see a
+    60  new copy has at least one byte more or less.
+    61  
+    62  
+    63  Information about Project Gutenberg (one page)
+    64  
+    65  We produce about two million dollars for each hour we work.  The
+    66  time it takes us, a rather conservative estimate, is fifty hours
+    67  to get any etext selected, entered, proofread, edited, copyright
+    68  searched and analyzed, the copyright letters written, etc.  This
+    69  projected audience is one hundred million readers.  If our value
+    70  per text is nominally estimated at one dollar then we produce $2
+    71  million dollars per hour this year as we release thirty-six text
+    72  files per month, or 432 more Etexts in 1999 for a total of 2000+
+    73  If these reach just 10% of the computerized population, then the
+    74  total should reach over 200 billion Etexts given away this year.
+    75  
+    76  The Goal of Project Gutenberg is to Give Away One Trillion Etext
+    77  Files by December 31, 2001.  [10,000 x 100,000,000 = 1 Trillion]
+    78  This is ten thousand titles each to one hundred million readers,
+    79  which is only ~5% of the present number of computer users.
+    80  
+    81  At our revised rates of production, we will reach only one-third
+    82  of that goal by the end of 2001, or about 3,333 Etexts unless we
+    83  manage to get some real funding; currently our funding is mostly
+    84  from Michael Hart's salary at Carnegie-Mellon University, and an
+    85  assortment of sporadic gifts; this salary is only good for a few
+    86  more years, so we are looking for something to replace it, as we
+    87  don't want Project Gutenberg to be so dependent on one person.
+    88  
+    89  We need your donations more than ever!
+    90  
+    91  
+    92  All donations should be made to "Project Gutenberg/CMU": and are
+    93  tax deductible to the extent allowable by law.  (CMU = Carnegie-
+    94  Mellon University).
+    95  
+    96  For these and other matters, please mail to:
+    97  
+    98  Project Gutenberg
+    99  P. O. Box  2782
+   100  Champaign, IL 61825
+   101  
+   102  When all other email fails. . .try our Executive Director:
+   103  Michael S. Hart <hart@pobox.com>
+   104  hart@pobox.com forwards to hart@prairienet.org and archive.org
+   105  if your mail bounces from archive.org, I will still see it, if
+   106  it bounces from prairienet.org, better resend later on. . . .
+   107  
+   108  We would prefer to send you this information by email.
+   109  
+   110  ******
+   111  
+   112  To access Project Gutenberg etexts, use any Web browser
+   113  to view http://promo.net/pg.  This site lists Etexts by
+   114  author and by title, and includes information about how
+   115  to get involved with Project Gutenberg.  You could also
+   116  download our past Newsletters, or subscribe here.  This
+   117  is one of our major sites, please email hart@pobox.com,
+   118  for a more complete list of our various sites.
+   119  
+   120  To go directly to the etext collections, use FTP or any
+   121  Web browser to visit a Project Gutenberg mirror (mirror
+   122  sites are available on 7 continents; mirrors are listed
+   123  at http://promo.net/pg).
+   124  
+   125  Mac users, do NOT point and click, typing works better.
+   126  
+   127  Example FTP session:
+   128  
+   129  ftp sunsite.unc.edu
+   130  login: anonymous
+   131  password: your@login
+   132  cd pub/docs/books/gutenberg
+   133  cd etext90 through etext99
+   134  dir [to see files]
+   135  get or mget [to get files. . .set bin for zip files]
+   136  GET GUTINDEX.??  [to get a year's listing of books, e.g., GUTINDEX.99]
+   137  GET GUTINDEX.ALL [to get a listing of ALL books]
+   138  
+   139  ***
+   140  
+   141  **Information prepared by the Project Gutenberg legal advisor**
+   142  
+   143  (Three Pages)
+   144  
+   145  
+   146  ***START**THE SMALL PRINT!**FOR PUBLIC DOMAIN ETEXTS**START***
+   147  Why is this "Small Print!" statement here?  You know: lawyers.
+   148  They tell us you might sue us if there is something wrong with
+   149  your copy of this etext, even if you got it for free from
+   150  someone other than us, and even if what's wrong is not our
+   151  fault.  So, among other things, this "Small Print!" statement
+   152  disclaims most of our liability to you.  It also tells you how
+   153  you can distribute copies of this etext if you want to.
+   154  
+   155  *BEFORE!* YOU USE OR READ THIS ETEXT
+   156  By using or reading any part of this PROJECT GUTENBERG-tm
+   157  etext, you indicate that you understand, agree to and accept
+   158  this "Small Print!" statement.  If you do not, you can receive
+   159  a refund of the money (if any) you paid for this etext by
+   160  sending a request within 30 days of receiving it to the person
+   161  you got it from.  If you received this etext on a physical
+   162  medium (such as a disk), you must return it with your request.
+   163  
+   164  ABOUT PROJECT GUTENBERG-TM ETEXTS
+   165  This PROJECT GUTENBERG-tm etext, like most PROJECT GUTENBERG-
+   166  tm etexts, is a "public domain" work distributed by Professor
+   167  Michael S. Hart through the Project Gutenberg Association at
+   168  Carnegie-Mellon University (the "Project").  Among other
+   169  things, this means that no one owns a United States copyright
+   170  on or for this work, so the Project (and you!) can copy and
+   171  distribute it in the United States without permission and
+   172  without paying copyright royalties.  Special rules, set forth
+   173  below, apply if you wish to copy and distribute this etext
+   174  under the Project's "PROJECT GUTENBERG" trademark.
+   175  
+   176  To create these etexts, the Project expends considerable
+   177  efforts to identify, transcribe and proofread public domain
+   178  works.  Despite these efforts, the Project's etexts and any
+   179  medium they may be on may contain "Defects".  Among other
+   180  things, Defects may take the form of incomplete, inaccurate or
+   181  corrupt data, transcription errors, a copyright or other
+   182  intellectual property infringement, a defective or damaged
+   183  disk or other etext medium, a computer virus, or computer
+   184  codes that damage or cannot be read by your equipment.
+   185  
+   186  LIMITED WARRANTY; DISCLAIMER OF DAMAGES
+   187  But for the "Right of Replacement or Refund" described below,
+   188  [1] the Project (and any other party you may receive this
+   189  etext from as a PROJECT GUTENBERG-tm etext) disclaims all
+   190  liability to you for damages, costs and expenses, including
+   191  legal fees, and [2] YOU HAVE NO REMEDIES FOR NEGLIGENCE OR
+   192  UNDER STRICT LIABILITY, OR FOR BREACH OF WARRANTY OR CONTRACT,
+   193  INCLUDING BUT NOT LIMITED TO INDIRECT, CONSEQUENTIAL, PUNITIVE
+   194  OR INCIDENTAL DAMAGES, EVEN IF YOU GIVE NOTICE OF THE
+   195  POSSIBILITY OF SUCH DAMAGES.
+   196  
+   197  If you discover a Defect in this etext within 90 days of
+   198  receiving it, you can receive a refund of the money (if any)
+   199  you paid for it by sending an explanatory note within that
+   200  time to the person you received it from.  If you received it
+   201  on a physical medium, you must return it with your note, and
+   202  such person may choose to alternatively give you a replacement
+   203  copy.  If you received it electronically, such person may
+   204  choose to alternatively give you a second opportunity to
+   205  receive it electronically.
+   206  
+   207  THIS ETEXT IS OTHERWISE PROVIDED TO YOU "AS-IS".  NO OTHER
+   208  WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, ARE MADE TO YOU AS
+   209  TO THE ETEXT OR ANY MEDIUM IT MAY BE ON, INCLUDING BUT NOT
+   210  LIMITED TO WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A
+   211  PARTICULAR PURPOSE.
+   212  
+   213  Some states do not allow disclaimers of implied warranties or
+   214  the exclusion or limitation of consequential damages, so the
+   215  above disclaimers and exclusions may not apply to you, and you
+   216  may have other legal rights.
+   217  
+   218  INDEMNITY
+   219  You will indemnify and hold the Project, its directors,
+   220  officers, members and agents harmless from all liability, cost
+   221  and expense, including legal fees, that arise directly or
+   222  indirectly from any of the following that you do or cause:
+   223  [1] distribution of this etext, [2] alteration, modification,
+   224  or addition to the etext, or [3] any Defect.
+   225  
+   226  DISTRIBUTION UNDER "PROJECT GUTENBERG-tm"
+   227  You may distribute copies of this etext electronically, or by
+   228  disk, book or any other medium if you either delete this
+   229  "Small Print!" and all other references to Project Gutenberg,
+   230  or:
+   231  
+   232  [1]  Only give exact copies of it.  Among other things, this
+   233       requires that you do not remove, alter or modify the
+   234       etext or this "small print!" statement.  You may however,
+   235       if you wish, distribute this etext in machine readable
+   236       binary, compressed, mark-up, or proprietary form,
+   237       including any form resulting from conversion by word pro-
+   238       cessing or hypertext software, but only so long as
+   239       *EITHER*:
+   240  
+   241       [*]  The etext, when displayed, is clearly readable, and
+   242            does *not* contain characters other than those
+   243            intended by the author of the work, although tilde
+   244            (~), asterisk (*) and underline (_) characters may
+   245            be used to convey punctuation intended by the
+   246            author, and additional characters may be used to
+   247            indicate hypertext links; OR
+   248  
+   249       [*]  The etext may be readily converted by the reader at
+   250            no expense into plain ASCII, EBCDIC or equivalent
+   251            form by the program that displays the etext (as is
+   252            the case, for instance, with most word processors);
+   253            OR
+   254  
+   255       [*]  You provide, or agree to also provide on request at
+   256            no additional cost, fee or expense, a copy of the
+   257            etext in its original plain ASCII form (or in EBCDIC
+   258            or other equivalent proprietary form).
+   259  
+   260  [2]  Honor the etext refund and replacement provisions of this
+   261       "Small Print!" statement.
+   262  
+   263  [3]  Pay a trademark license fee to the Project of 20% of the
+   264       net profits you derive calculated using the method you
+   265       already use to calculate your applicable taxes.  If you
+   266       don't derive profits, no royalty is due.  Royalties are
+   267       payable to "Project Gutenberg Association/Carnegie-Mellon
+   268       University" within the 60 days following each
+   269       date you prepare (or were legally required to prepare)
+   270       your annual (or equivalent periodic) tax return.
+   271  
+   272  WHAT IF YOU *WANT* TO SEND MONEY EVEN IF YOU DON'T HAVE TO?
+   273  The Project gratefully accepts contributions in money, time,
+   274  scanning machines, OCR software, public domain etexts, royalty
+   275  free copyright licenses, and every other sort of contribution
+   276  you can think of.  Money should be paid to "Project Gutenberg
+   277  Association / Carnegie-Mellon University".
+   278  
+   279  *END*THE SMALL PRINT! FOR PUBLIC DOMAIN ETEXTS*Ver.04.29.93*END*
+   280  
+   281  
+   282  
+   283  
+   284  
+   285  Project Gutenberg's Etext of Shakespeare's The Tragedie of Macbeth
+   286  
+   287  
+   288  
+   289  
+   290  
+   291  Executive Director's Notes:
+   292  
+   293  In addition to the notes below, and so you will *NOT* think all
+   294  the spelling errors introduced by the printers of the time have
+   295  been corrected, here are the first few lines of Hamlet, as they
+   296  are presented herein:
+   297  
+   298    Barnardo. Who's there?
+   299    Fran. Nay answer me: Stand & vnfold
+   300  your selfe
+   301  
+   302     Bar. Long liue the King
+   303  
+   304  ***
+   305  
+   306  As I understand it, the printers often ran out of certain words
+   307  or letters they had often packed into a "cliche". . .this is the
+   308  original meaning of the term cliche. . .and thus, being unwilling
+   309  to unpack the cliches, and thus you will see some substitutions
+   310  that look very odd. . .such as the exchanges of u for v, v for u,
+   311  above. . .and you may wonder why they did it this way, presuming
+   312  Shakespeare did not actually write the play in this manner. . . .
+   313  
+   314  The answer is that they MAY have packed "liue" into a cliche at a
+   315  time when they were out of "v"'s. . .possibly having used "vv" in
+   316  place of some "w"'s, etc.  This was a common practice of the day,
+   317  as print was still quite expensive, and they didn't want to spend
+   318  more on a wider selection of characters than they had to.
+   319  
+   320  You will find a lot of these kinds of "errors" in this text, as I
+   321  have mentioned in other times and places, many "scholars" have an
+   322  extreme attachment to these errors, and many have accorded them a
+   323  very high place in the "canon" of Shakespeare.  My father read an
+   324  assortment of these made available to him by Cambridge University
+   325  in England for several months in a glass room constructed for the
+   326  purpose.  To the best of my knowledge he read ALL those available
+   327  . . .in great detail. . .and determined from the various changes,
+   328  that Shakespeare most likely did not write in nearly as many of a
+   329  variety of errors we credit him for, even though he was in/famous
+   330  for signing his name with several different spellings.
+   331  
+   332  So, please take this into account when reading the comments below
+   333  made by our volunteer who prepared this file:  you may see errors
+   334  that are "not" errors. . . .
+   335  
+   336  So. . .with this caveat. . .we have NOT changed the canon errors,
+   337  here is the Project Gutenberg Etext of Shakespeare's The Tragedie 
+   338  of Macbeth.
+   339  
+   340  Michael S. Hart
+   341  Project Gutenberg
+   342  Executive Director
+   343  
+   344  
+   345  ***
+   346  
+   347  
+   348  Scanner's Notes: What this is and isn't.  This was taken from
+   349  a copy of Shakespeare's first folio and it is as close as I can
+   350  come in ASCII to the printed text.
+   351  
+   352  The elongated S's have been changed to small s's and the
+   353  conjoined ae have been changed to ae.  I have left the spelling,
+   354  punctuation, capitalization as close as possible to the
+   355  printed text.  I have corrected some spelling mistakes (I have put
+   356  together a spelling dictionary devised from the spellings of the
+   357  Geneva Bible and Shakespeare's First Folio and have unified
+   358  spellings according to this template), typo's and expanded
+   359  abbreviations as I have come across them.  Everything within
+   360  brackets [] is what I have added.  So if you don't like that
+   361  you can delete everything within the brackets if you want a
+   362  purer Shakespeare.
+   363  
+   364  Another thing that you should be aware of is that there are textual
+   365  differences between various copies of the first folio.  So there may
+   366  be differences (other than what I have mentioned above) between
+   367  this and other first folio editions.  This is due to the printer's
+   368  habit of setting the type and running off a number of copies and
+   369  then proofing the printed copy and correcting the type and then
+   370  continuing the printing run.  The proof run wasn't thrown away but
+   371  incorporated into the printed copies.  This is just the way it is.
+   372  The text I have used was a composite of more than 30 different
+   373  First Folio editions' best pages.
+   374  
+   375  If you find any scanning errors, out and out typos, punctuation
+   376  errors, or if you disagree with my spelling choices please feel
+   377  free to email me those errors.  I wish to make this the best
+   378  etext possible.  My email address for right now are haradda@aol.com
+   379  and davidr@inconnect.com.  I hope that you enjoy this.
+   380  
+   381  David Reed
+   382  
+   383  The Tragedie of Macbeth
+   384  
+   385  Actus Primus. Scoena Prima.
+   386  
+   387  Thunder and Lightning. Enter three Witches.
+   388  
+   389    1. When shall we three meet againe?
+   390  In Thunder, Lightning, or in Raine?
+   391    2. When the Hurley-burley's done,
+   392  When the Battaile's lost, and wonne
+   393  
+   394     3. That will be ere the set of Sunne
+   395  
+   396     1. Where the place?
+   397    2. Vpon the Heath
+   398  
+   399     3. There to meet with Macbeth
+   400  
+   401     1. I come, Gray-Malkin
+   402  
+   403     All. Padock calls anon: faire is foule, and foule is faire,
+   404  Houer through the fogge and filthie ayre.
+   405  
+   406  Exeunt.
+   407  
+   408  
+   409  Scena Secunda.
+   410  
+   411  Alarum within. Enter King Malcome, Donalbaine, Lenox, with
+   412  attendants,
+   413  meeting a bleeding Captaine.
+   414  
+   415    King. What bloody man is that? he can report,
+   416  As seemeth by his plight, of the Reuolt
+   417  The newest state
+   418  
+   419     Mal. This is the Serieant,
+   420  Who like a good and hardie Souldier fought
+   421  'Gainst my Captiuitie: Haile braue friend;
+   422  Say to the King, the knowledge of the Broyle,
+   423  As thou didst leaue it
+   424  
+   425     Cap. Doubtfull it stood,
+   426  As two spent Swimmers, that doe cling together,
+   427  And choake their Art: The mercilesse Macdonwald
+   428  (Worthie to be a Rebell, for to that
+   429  The multiplying Villanies of Nature
+   430  Doe swarme vpon him) from the Westerne Isles
+   431  Of Kernes and Gallowgrosses is supply'd,
+   432  And Fortune on his damned Quarry smiling,
+   433  Shew'd like a Rebells Whore: but all's too weake:
+   434  For braue Macbeth (well hee deserues that Name)
+   435  Disdayning Fortune, with his brandisht Steele,
+   436  Which smoak'd with bloody execution
+   437  (Like Valours Minion) caru'd out his passage,
+   438  Till hee fac'd the Slaue:
+   439  Which neu'r shooke hands, nor bad farwell to him,
+   440  Till he vnseam'd him from the Naue toth' Chops,
+   441  And fix'd his Head vpon our Battlements
+   442  
+   443     King. O valiant Cousin, worthy Gentleman
+   444  
+   445     Cap. As whence the Sunne 'gins his reflection,
+   446  Shipwracking Stormes, and direfull Thunders:
+   447  So from that Spring, whence comfort seem'd to come,
+   448  Discomfort swells: Marke King of Scotland, marke,
+   449  No sooner Iustice had, with Valour arm'd,
+   450  Compell'd these skipping Kernes to trust their heeles,
+   451  But the Norweyan Lord, surueying vantage,
+   452  With furbusht Armes, and new supplyes of men,
+   453  Began a fresh assault
+   454  
+   455     King. Dismay'd not this our Captaines, Macbeth and
+   456  Banquoh?
+   457    Cap. Yes, as Sparrowes, Eagles;
+   458  Or the Hare, the Lyon:
+   459  If I say sooth, I must report they were
+   460  As Cannons ouer-charg'd with double Cracks,
+   461  So they doubly redoubled stroakes vpon the Foe:
+   462  Except they meant to bathe in reeking Wounds,
+   463  Or memorize another Golgotha,
+   464  I cannot tell: but I am faint,
+   465  My Gashes cry for helpe
+   466  
+   467     King. So well thy words become thee, as thy wounds,
+   468  They smack of Honor both: Goe get him Surgeons.
+   469  Enter Rosse and Angus.
+   470  
+   471  Who comes here?
+   472    Mal. The worthy Thane of Rosse
+   473  
+   474     Lenox. What a haste lookes through his eyes?
+   475  So should he looke, that seemes to speake things strange
+   476  
+   477     Rosse. God saue the King
+   478  
+   479     King. Whence cam'st thou, worthy Thane?
+   480    Rosse. From Fiffe, great King,
+   481  Where the Norweyan Banners flowt the Skie,
+   482  And fanne our people cold.
+   483  Norway himselfe, with terrible numbers,
+   484  Assisted by that most disloyall Traytor,
+   485  The Thane of Cawdor, began a dismall Conflict,
+   486  Till that Bellona's Bridegroome, lapt in proofe,
+   487  Confronted him with selfe-comparisons,
+   488  Point against Point, rebellious Arme 'gainst Arme,
+   489  Curbing his lauish spirit: and to conclude,
+   490  The Victorie fell on vs
+   491  
+   492     King. Great happinesse
+   493  
+   494     Rosse. That now Sweno, the Norwayes King,
+   495  Craues composition:
+   496  Nor would we deigne him buriall of his men,
+   497  Till he disbursed, at Saint Colmes ynch,
+   498  Ten thousand Dollars, to our generall vse
+   499  
+   500     King. No more that Thane of Cawdor shall deceiue
+   501  Our Bosome interest: Goe pronounce his present death,
+   502  And with his former Title greet Macbeth
+   503  
+   504     Rosse. Ile see it done
+   505  
+   506     King. What he hath lost, Noble Macbeth hath wonne.
+   507  
+   508  Exeunt.
+   509  
+   510  
+   511  Scena Tertia.
+   512  
+   513  Thunder. Enter the three Witches.
+   514  
+   515    1. Where hast thou beene, Sister?
+   516    2. Killing Swine
+   517  
+   518     3. Sister, where thou?
+   519    1. A Saylors Wife had Chestnuts in her Lappe,
+   520  And mouncht, & mouncht, and mouncht:
+   521  Giue me, quoth I.
+   522  Aroynt thee, Witch, the rumpe-fed Ronyon cryes.
+   523  Her Husband's to Aleppo gone, Master o'th' Tiger:
+   524  But in a Syue Ile thither sayle,
+   525  And like a Rat without a tayle,
+   526  Ile doe, Ile doe, and Ile doe
+   527  
+   528     2. Ile giue thee a Winde
+   529  
+   530     1. Th'art kinde
+   531  
+   532     3. And I another
+   533  
+   534     1. I my selfe haue all the other,
+   535  And the very Ports they blow,
+   536  All the Quarters that they know,
+   537  I'th' Ship-mans Card.
+   538  Ile dreyne him drie as Hay:
+   539  Sleepe shall neyther Night nor Day
+   540  Hang vpon his Pent-house Lid:
+   541  He shall liue a man forbid:
+   542  Wearie Seu'nights, nine times nine,
+   543  Shall he dwindle, peake, and pine:
+   544  Though his Barke cannot be lost,
+   545  Yet it shall be Tempest-tost.
+   546  Looke what I haue
+   547  
+   548     2. Shew me, shew me
+   549  
+   550     1. Here I haue a Pilots Thumbe,
+   551  Wrackt, as homeward he did come.
+   552  
+   553  Drum within.
+   554  
+   555    3. A Drumme, a Drumme:
+   556  Macbeth doth come
+   557  
+   558     All. The weyward Sisters, hand in hand,
+   559  Posters of the Sea and Land,
+   560  Thus doe goe, about, about,
+   561  Thrice to thine, and thrice to mine,
+   562  And thrice againe, to make vp nine.
+   563  Peace, the Charme's wound vp.
+   564  Enter Macbeth and Banquo.
+   565  
+   566    Macb. So foule and faire a day I haue not seene
+   567  
+   568     Banquo. How farre is't call'd to Soris? What are these,
+   569  So wither'd, and so wilde in their attyre,
+   570  That looke not like th' Inhabitants o'th' Earth,
+   571  And yet are on't? Liue you, or are you aught
+   572  That man may question? you seeme to vnderstand me,
+   573  By each at once her choppie finger laying
+   574  Vpon her skinnie Lips: you should be Women,
+   575  And yet your Beards forbid me to interprete
+   576  That you are so
+   577  
+   578     Mac. Speake if you can: what are you?
+   579    1. All haile Macbeth, haile to thee Thane of Glamis
+   580  
+   581     2. All haile Macbeth, haile to thee Thane of Cawdor
+   582  
+   583     3. All haile Macbeth, that shalt be King hereafter
+   584  
+   585     Banq. Good Sir, why doe you start, and seeme to feare
+   586  Things that doe sound so faire? i'th' name of truth
+   587  Are ye fantasticall, or that indeed
+   588  Which outwardly ye shew? My Noble Partner
+   589  You greet with present Grace, and great prediction
+   590  Of Noble hauing, and of Royall hope,
+   591  That he seemes wrapt withall: to me you speake not.
+   592  If you can looke into the Seedes of Time,
+   593  And say, which Graine will grow, and which will not,
+   594  Speake then to me, who neyther begge, nor feare
+   595  Your fauors, nor your hate
+   596  
+   597     1. Hayle
+   598  
+   599     2. Hayle
+   600  
+   601     3. Hayle
+   602  
+   603     1. Lesser than Macbeth, and greater
+   604  
+   605     2. Not so happy, yet much happyer
+   606  
+   607     3. Thou shalt get Kings, though thou be none:
+   608  So all haile Macbeth, and Banquo
+   609  
+   610     1. Banquo, and Macbeth, all haile
+   611  
+   612     Macb. Stay you imperfect Speakers, tell me more:
+   613  By Sinells death, I know I am Thane of Glamis,
+   614  But how, of Cawdor? the Thane of Cawdor liues
+   615  A prosperous Gentleman: And to be King,
+   616  Stands not within the prospect of beleefe,
+   617  No more then to be Cawdor. Say from whence
+   618  You owe this strange Intelligence, or why
+   619  Vpon this blasted Heath you stop our way
+   620  With such Prophetique greeting?
+   621  Speake, I charge you.
+   622  
+   623  Witches vanish.
+   624  
+   625    Banq. The Earth hath bubbles, as the Water ha's,
+   626  And these are of them: whither are they vanish'd?
+   627    Macb. Into the Ayre: and what seem'd corporall,
+   628  Melted, as breath into the Winde.
+   629  Would they had stay'd
+   630  
+   631     Banq. Were such things here, as we doe speake about?
+   632  Or haue we eaten on the insane Root,
+   633  That takes the Reason Prisoner?
+   634    Macb. Your Children shall be Kings
+   635  
+   636     Banq. You shall be King
+   637  
+   638     Macb. And Thane of Cawdor too: went it not so?
+   639    Banq. Toth' selfe-same tune and words: who's here?
+   640  Enter Rosse and Angus.
+   641  
+   642    Rosse. The King hath happily receiu'd, Macbeth,
+   643  The newes of thy successe: and when he reades
+   644  Thy personall Venture in the Rebels sight,
+   645  His Wonders and his Prayses doe contend,
+   646  Which should be thine, or his: silenc'd with that,
+   647  In viewing o're the rest o'th' selfe-same day,
+   648  He findes thee in the stout Norweyan Rankes,
+   649  Nothing afeard of what thy selfe didst make
+   650  Strange Images of death, as thick as Tale
+   651  Can post with post, and euery one did beare
+   652  Thy prayses in his Kingdomes great defence,
+   653  And powr'd them downe before him
+   654  
+   655     Ang. Wee are sent,
+   656  To giue thee from our Royall Master thanks,
+   657  Onely to harrold thee into his sight,
+   658  Not pay thee
+   659  
+   660     Rosse. And for an earnest of a greater Honor,
+   661  He bad me, from him, call thee Thane of Cawdor:
+   662  In which addition, haile most worthy Thane,
+   663  For it is thine
+   664  
+   665     Banq. What, can the Deuill speake true?
+   666    Macb. The Thane of Cawdor liues:
+   667  Why doe you dresse me in borrowed Robes?
+   668    Ang. Who was the Thane, liues yet,
+   669  But vnder heauie Iudgement beares that Life,
+   670  Which he deserues to loose.
+   671  Whether he was combin'd with those of Norway,
+   672  Or did lyne the Rebell with hidden helpe,
+   673  And vantage; or that with both he labour'd
+   674  In his Countreyes wracke, I know not:
+   675  But Treasons Capitall, confess'd, and prou'd,
+   676  Haue ouerthrowne him
+   677  
+   678     Macb. Glamys, and Thane of Cawdor:
+   679  The greatest is behinde. Thankes for your paines.
+   680  Doe you not hope your Children shall be Kings,
+   681  When those that gaue the Thane of Cawdor to me,
+   682  Promis'd no lesse to them
+   683  
+   684     Banq. That trusted home,
+   685  Might yet enkindle you vnto the Crowne,
+   686  Besides the Thane of Cawdor. But 'tis strange:
+   687  And oftentimes, to winne vs to our harme,
+   688  The Instruments of Darknesse tell vs Truths,
+   689  Winne vs with honest Trifles, to betray's
+   690  In deepest consequence.
+   691  Cousins, a word, I pray you
+   692  
+   693     Macb. Two Truths are told,
+   694  As happy Prologues to the swelling Act
+   695  Of the Imperiall Theame. I thanke you Gentlemen:
+   696  This supernaturall solliciting
+   697  Cannot be ill; cannot be good.
+   698  If ill? why hath it giuen me earnest of successe,
+   699  Commencing in a Truth? I am Thane of Cawdor.
+   700  If good? why doe I yeeld to that suggestion,
+   701  Whose horrid Image doth vnfixe my Heire,
+   702  And make my seated Heart knock at my Ribbes,
+   703  Against the vse of Nature? Present Feares
+   704  Are lesse then horrible Imaginings:
+   705  My Thought, whose Murther yet is but fantasticall,
+   706  Shakes so my single state of Man,
+   707  That Function is smother'd in surmise,
+   708  And nothing is, but what is not
+   709  
+   710     Banq. Looke how our Partner's rapt
+   711  
+   712     Macb. If Chance will haue me King,
+   713  Why Chance may Crowne me,
+   714  Without my stirre
+   715  
+   716     Banq. New Honors come vpon him
+   717  Like our strange Garments, cleaue not to their mould,
+   718  But with the aid of vse
+   719  
+   720     Macb. Come what come may,
+   721  Time, and the Houre, runs through the roughest Day
+   722  
+   723     Banq. Worthy Macbeth, wee stay vpon your leysure
+   724  
+   725     Macb. Giue me your fauour:
+   726  My dull Braine was wrought with things forgotten.
+   727  Kinde Gentlemen, your paines are registred,
+   728  Where euery day I turne the Leafe,
+   729  To reade them.
+   730  Let vs toward the King: thinke vpon
+   731  What hath chanc'd: and at more time,
+   732  The Interim hauing weigh'd it, let vs speake
+   733  Our free Hearts each to other
+   734  
+   735     Banq. Very gladly
+   736  
+   737     Macb. Till then enough:
+   738  Come friends.
+   739  
+   740  Exeunt.
+   741  
+   742  
+   743  Scena Quarta.
+   744  
+   745  Flourish. Enter King, Lenox, Malcolme, Donalbaine, and
+   746  Attendants.
+   747  
+   748    King. Is execution done on Cawdor?
+   749  Or not those in Commission yet return'd?
+   750    Mal. My Liege, they are not yet come back.
+   751  But I haue spoke with one that saw him die:
+   752  Who did report, that very frankly hee
+   753  Confess'd his Treasons, implor'd your Highnesse Pardon,
+   754  And set forth a deepe Repentance:
+   755  Nothing in his Life became him,
+   756  Like the leauing it. Hee dy'de,
+   757  As one that had beene studied in his death,
+   758  To throw away the dearest thing he ow'd,
+   759  As 'twere a carelesse Trifle
+   760  
+   761     King. There's no Art,
+   762  To finde the Mindes construction in the Face.
+   763  He was a Gentleman, on whom I built
+   764  An absolute Trust.
+   765  Enter Macbeth, Banquo, Rosse, and Angus.
+   766  
+   767  O worthyest Cousin,
+   768  The sinne of my Ingratitude euen now
+   769  Was heauie on me. Thou art so farre before,
+   770  That swiftest Wing of Recompence is slow,
+   771  To ouertake thee. Would thou hadst lesse deseru'd,
+   772  That the proportion both of thanks, and payment,
+   773  Might haue beene mine: onely I haue left to say,
+   774  More is thy due, then more then all can pay
+   775  
+   776     Macb. The seruice, and the loyaltie I owe,
+   777  In doing it, payes it selfe.
+   778  Your Highnesse part, is to receiue our Duties:
+   779  And our Duties are to your Throne, and State,
+   780  Children, and Seruants; which doe but what they should,
+   781  By doing euery thing safe toward your Loue
+   782  And Honor
+   783  
+   784     King. Welcome hither:
+   785  I haue begun to plant thee, and will labour
+   786  To make thee full of growing. Noble Banquo,
+   787  That hast no lesse deseru'd, nor must be knowne
+   788  No lesse to haue done so: Let me enfold thee,
+   789  And hold thee to my Heart
+   790  
+   791     Banq. There if I grow,
+   792  The Haruest is your owne
+   793  
+   794     King. My plenteous Ioyes,
+   795  Wanton in fulnesse, seeke to hide themselues
+   796  In drops of sorrow. Sonnes, Kinsmen, Thanes,
+   797  And you whose places are the nearest, know,
+   798  We will establish our Estate vpon
+   799  Our eldest, Malcolme, whom we name hereafter,
+   800  The Prince of Cumberland: which Honor must
+   801  Not vnaccompanied, inuest him onely,
+   802  But signes of Noblenesse, like Starres, shall shine
+   803  On all deseruers. From hence to Envernes,
+   804  And binde vs further to you
+   805  
+   806     Macb. The Rest is Labor, which is not vs'd for you:
+   807  Ile be my selfe the Herbenger, and make ioyfull
+   808  The hearing of my Wife, with your approach:
+   809  So humbly take my leaue
+   810  
+   811     King. My worthy Cawdor
+   812  
+   813     Macb. The Prince of Cumberland: that is a step,
+   814  On which I must fall downe, or else o're-leape,
+   815  For in my way it lyes. Starres hide your fires,
+   816  Let not Light see my black and deepe desires:
+   817  The Eye winke at the Hand: yet let that bee,
+   818  Which the Eye feares, when it is done to see.
+   819  Enter.
+   820  
+   821    King. True worthy Banquo: he is full so valiant,
+   822  And in his commendations, I am fed:
+   823  It is a Banquet to me. Let's after him,
+   824  Whose care is gone before, to bid vs welcome:
+   825  It is a peerelesse Kinsman.
+   826  
+   827  Flourish. Exeunt.
+   828  
+   829  
+   830  Scena Quinta.
+   831  
+   832  Enter Macbeths Wife alone with a Letter.
+   833  
+   834    Lady. They met me in the day of successe: and I haue
+   835  learn'd by the perfect'st report, they haue more in them, then
+   836  mortall knowledge. When I burnt in desire to question them
+   837  further, they made themselues Ayre, into which they vanish'd.
+   838  Whiles I stood rapt in the wonder of it, came Missiues from
+   839  the King, who all-hail'd me Thane of Cawdor, by which Title
+   840  before, these weyward Sisters saluted me, and referr'd me to
+   841  the comming on of time, with haile King that shalt be. This
+   842  haue I thought good to deliuer thee (my dearest Partner of
+   843  Greatnesse) that thou might'st not loose the dues of reioycing
+   844  by being ignorant of what Greatnesse is promis'd thee. Lay
+   845  it to thy heart and farewell.
+   846  Glamys thou art, and Cawdor, and shalt be
+   847  What thou art promis'd: yet doe I feare thy Nature,
+   848  It is too full o'th' Milke of humane kindnesse,
+   849  To catch the neerest way. Thou would'st be great,
+   850  Art not without Ambition, but without
+   851  The illnesse should attend it. What thou would'st highly,
+   852  That would'st thou holily: would'st not play false,
+   853  And yet would'st wrongly winne.
+   854  Thould'st haue, great Glamys, that which cryes,
+   855  Thus thou must doe, if thou haue it;
+   856  And that which rather thou do'st feare to doe,
+   857  Then wishest should be vndone. High thee hither,
+   858  That I may powre my Spirits in thine Eare,
+   859  And chastise with the valour of my Tongue
+   860  All that impeides thee from the Golden Round,
+   861  Which Fate and Metaphysicall ayde doth seeme
+   862  To haue thee crown'd withall.
+   863  Enter Messenger.
+   864  
+   865  What is your tidings?
+   866    Mess. The King comes here to Night
+   867  
+   868     Lady. Thou'rt mad to say it.
+   869  Is not thy Master with him? who, wer't so,
+   870  Would haue inform'd for preparation
+   871  
+   872     Mess. So please you, it is true: our Thane is comming:
+   873  One of my fellowes had the speed of him;
+   874  Who almost dead for breath, had scarcely more
+   875  Then would make vp his Message
+   876  
+   877     Lady. Giue him tending,
+   878  He brings great newes,
+   879  
+   880  Exit Messenger.
+   881  
+   882  The Rauen himselfe is hoarse,
+   883  That croakes the fatall entrance of Duncan
+   884  Vnder my Battlements. Come you Spirits,
+   885  That tend on mortall thoughts, vnsex me here,
+   886  And fill me from the Crowne to the Toe, top-full
+   887  Of direst Crueltie: make thick my blood,
+   888  Stop vp th' accesse, and passage to Remorse,
+   889  That no compunctious visitings of Nature
+   890  Shake my fell purpose, nor keepe peace betweene
+   891  Th' effect, and hit. Come to my Womans Brests,
+   892  And take my Milke for Gall, you murth'ring Ministers,
+   893  Where-euer, in your sightlesse substances,
+   894  You wait on Natures Mischiefe. Come thick Night,
+   895  And pall thee in the dunnest smoake of Hell,
+   896  
+   897  That my keene Knife see not the Wound it makes,
+   898  Nor Heauen peepe through the Blanket of the darke,
+   899  To cry, hold, hold.
+   900  Enter Macbeth.
+   901  
+   902  Great Glamys, worthy Cawdor,
+   903  Greater then both, by the all-haile hereafter,
+   904  Thy Letters haue transported me beyond
+   905  This ignorant present, and I feele now
+   906  The future in the instant
+   907  
+   908     Macb. My dearest Loue,
+   909  Duncan comes here to Night
+   910  
+   911     Lady. And when goes hence?
+   912    Macb. To morrow, as he purposes
+   913  
+   914     Lady. O neuer,
+   915  Shall Sunne that Morrow see.
+   916  Your Face, my Thane, is as a Booke, where men
+   917  May reade strange matters, to beguile the time.
+   918  Looke like the time, beare welcome in your Eye,
+   919  Your Hand, your Tongue: looke like th' innocent flower,
+   920  But be the Serpent vnder't. He that's comming,
+   921  Must be prouided for: and you shall put
+   922  This Nights great Businesse into my dispatch,
+   923  Which shall to all our Nights, and Dayes to come,
+   924  Giue solely soueraigne sway, and Masterdome
+   925  
+   926     Macb. We will speake further,
+   927    Lady. Onely looke vp cleare:
+   928  To alter fauor, euer is to feare:
+   929  Leaue all the rest to me.
+   930  
+   931  Exeunt.
+   932  
+   933  
+   934  Scena Sexta.
+   935  
+   936  Hoboyes, and Torches. Enter King, Malcolme, Donalbaine,
+   937  Banquo, Lenox,
+   938  Macduff, Rosse, Angus, and Attendants.
+   939  
+   940    King. This Castle hath a pleasant seat,
+   941  The ayre nimbly and sweetly recommends it selfe
+   942  Vnto our gentle sences
+   943  
+   944     Banq. This Guest of Summer,
+   945  The Temple-haunting Barlet does approue,
+   946  By his loued Mansonry, that the Heauens breath
+   947  Smells wooingly here: no Iutty frieze,
+   948  Buttrice, nor Coigne of Vantage, but this Bird
+   949  Hath made his pendant Bed, and procreant Cradle,
+   950  Where they must breed, and haunt: I haue obseru'd
+   951  The ayre is delicate.
+   952  Enter Lady.
+   953  
+   954    King. See, see our honor'd Hostesse:
+   955  The Loue that followes vs, sometime is our trouble,
+   956  Which still we thanke as Loue. Herein I teach you,
+   957  How you shall bid God-eyld vs for your paines,
+   958  And thanke vs for your trouble
+   959  
+   960     Lady. All our seruice,
+   961  In euery point twice done, and then done double,
+   962  Were poore, and single Businesse, to contend
+   963  Against those Honors deepe, and broad,
+   964  Wherewith your Maiestie loades our House:
+   965  For those of old, and the late Dignities,
+   966  Heap'd vp to them, we rest your Ermites
+   967  
+   968     King. Where's the Thane of Cawdor?
+   969  We courst him at the heeles, and had a purpose
+   970  To be his Purueyor: But he rides well,
+   971  And his great Loue (sharpe as his Spurre) hath holp him
+   972  To his home before vs: Faire and Noble Hostesse
+   973  We are your guest to night
+   974  
+   975     La. Your Seruants euer,
+   976  Haue theirs, themselues, and what is theirs in compt,
+   977  To make their Audit at your Highnesse pleasure,
+   978  Still to returne your owne
+   979  
+   980     King. Giue me your hand:
+   981  Conduct me to mine Host we loue him highly,
+   982  And shall continue, our Graces towards him.
+   983  By your leaue Hostesse.
+   984  
+   985  Exeunt.
+   986  
+   987  Scena Septima.
+   988  
+   989  Hoboyes. Torches. Enter a Sewer, and diuers Seruants with Dishes
+   990  and
+   991  Seruice ouer the Stage. Then enter Macbeth
+   992  
+   993     Macb. If it were done, when 'tis done, then 'twer well,
+   994  It were done quickly: If th' Assassination
+   995  Could trammell vp the Consequence, and catch
+   996  With his surcease, Successe: that but this blow
+   997  Might be the be all, and the end all. Heere,
+   998  But heere, vpon this Banke and Schoole of time,
+   999  Wee'ld iumpe the life to come. But in these Cases,
+  1000  We still haue iudgement heere, that we but teach
+  1001  Bloody Instructions, which being taught, returne
+  1002  To plague th' Inuenter, this euen-handed Iustice
+  1003  Commends th' Ingredience of our poyson'd Challice
+  1004  To our owne lips. Hee's heere in double trust;
+  1005  First, as I am his Kinsman, and his Subiect,
+  1006  Strong both against the Deed: Then, as his Host,
+  1007  Who should against his Murtherer shut the doore,
+  1008  Not beare the knife my selfe. Besides, this Duncane
+  1009  Hath borne his Faculties so meeke; hath bin
+  1010  So cleere in his great Office, that his Vertues
+  1011  Will pleade like Angels, Trumpet-tongu'd against
+  1012  The deepe damnation of his taking off:
+  1013  And Pitty, like a naked New-borne-Babe,
+  1014  Striding the blast, or Heauens Cherubin, hors'd
+  1015  Vpon the sightlesse Curriors of the Ayre,
+  1016  Shall blow the horrid deed in euery eye,
+  1017  That teares shall drowne the winde. I haue no Spurre
+  1018  To pricke the sides of my intent, but onely
+  1019  Vaulting Ambition, which ore-leapes it selfe,
+  1020  And falles on th' other.
+  1021  Enter Lady.
+  1022  
+  1023  How now? What Newes?
+  1024    La. He has almost supt: why haue you left the chamber?
+  1025    Mac. Hath he ask'd for me?
+  1026    La. Know you not, he ha's?
+  1027    Mac. We will proceed no further in this Businesse:
+  1028  He hath Honour'd me of late, and I haue bought
+  1029  Golden Opinions from all sorts of people,
+  1030  Which would be worne now in their newest glosse,
+  1031  Not cast aside so soone
+  1032  
+  1033     La. Was the hope drunke,
+  1034  Wherein you drest your selfe? Hath it slept since?
+  1035  And wakes it now to looke so greene, and pale,
+  1036  At what it did so freely? From this time,
+  1037  Such I account thy loue. Art thou affear'd
+  1038  To be the same in thine owne Act, and Valour,
+  1039  As thou art in desire? Would'st thou haue that
+  1040  Which thou esteem'st the Ornament of Life,
+  1041  And liue a Coward in thine owne Esteeme?
+  1042  Letting I dare not, wait vpon I would,
+  1043  Like the poore Cat i'th' Addage
+  1044  
+  1045     Macb. Prythee peace:
+  1046  I dare do all that may become a man,
+  1047  Who dares do more, is none
+  1048  
+  1049     La. What Beast was't then
+  1050  That made you breake this enterprize to me?
+  1051  When you durst do it, then you were a man:
+  1052  And to be more then what you were, you would
+  1053  Be so much more the man. Nor time, nor place
+  1054  Did then adhere, and yet you would make both:
+  1055  They haue made themselues, and that their fitnesse now
+  1056  Do's vnmake you. I haue giuen Sucke, and know
+  1057  How tender 'tis to loue the Babe that milkes me,
+  1058  I would, while it was smyling in my Face,
+  1059  Haue pluckt my Nipple from his Bonelesse Gummes,
+  1060  And dasht the Braines out, had I so sworne
+  1061  As you haue done to this
+  1062  
+  1063     Macb. If we should faile?
+  1064    Lady. We faile?
+  1065  But screw your courage to the sticking place,
+  1066  And wee'le not fayle: when Duncan is asleepe,
+  1067  (Whereto the rather shall his dayes hard Iourney
+  1068  Soundly inuite him) his two Chamberlaines
+  1069  Will I with Wine, and Wassell, so conuince,
+  1070  That Memorie, the Warder of the Braine,
+  1071  Shall be a Fume, and the Receit of Reason
+  1072  A Lymbeck onely: when in Swinish sleepe,
+  1073  Their drenched Natures lyes as in a Death,
+  1074  What cannot you and I performe vpon
+  1075  Th' vnguarded Duncan? What not put vpon
+  1076  His spungie Officers? who shall beare the guilt
+  1077  Of our great quell
+  1078  
+  1079     Macb. Bring forth Men-Children onely:
+  1080  For thy vndaunted Mettle should compose
+  1081  Nothing but Males. Will it not be receiu'd,
+  1082  When we haue mark'd with blood those sleepie two
+  1083  Of his owne Chamber, and vs'd their very Daggers,
+  1084  That they haue don't?
+  1085    Lady. Who dares receiue it other,
+  1086  As we shall make our Griefes and Clamor rore,
+  1087  Vpon his Death?
+  1088    Macb. I am settled, and bend vp
+  1089  Each corporall Agent to this terrible Feat.
+  1090  Away, and mock the time with fairest show,
+  1091  False Face must hide what the false Heart doth know.
+  1092  
+  1093  Exeunt.
+  1094  
+  1095  
+  1096  Actus Secundus. Scena Prima.
+  1097  
+  1098  Enter Banquo, and Fleance, with a Torch before him.
+  1099  
+  1100    Banq. How goes the Night, Boy?
+  1101    Fleance. The Moone is downe: I haue not heard the
+  1102  Clock
+  1103  
+  1104     Banq. And she goes downe at Twelue
+  1105  
+  1106     Fleance. I take't, 'tis later, Sir
+  1107  
+  1108     Banq. Hold, take my Sword:
+  1109  There's Husbandry in Heauen,
+  1110  Their Candles are all out: take thee that too.
+  1111  A heauie Summons lyes like Lead vpon me,
+  1112  And yet I would not sleepe:
+  1113  Mercifull Powers, restraine in me the cursed thoughts
+  1114  That Nature giues way to in repose.
+  1115  Enter Macbeth, and a Seruant with a Torch.
+  1116  
+  1117  Giue me my Sword: who's there?
+  1118    Macb. A Friend
+  1119  
+  1120     Banq. What Sir, not yet at rest? the King's a bed.
+  1121  He hath beene in vnusuall Pleasure,
+  1122  And sent forth great Largesse to your Offices.
+  1123  This Diamond he greetes your Wife withall,
+  1124  By the name of most kind Hostesse,
+  1125  And shut vp in measurelesse content
+  1126  
+  1127     Mac. Being vnprepar'd,
+  1128  Our will became the seruant to defect,
+  1129  Which else should free haue wrought
+  1130  
+  1131     Banq. All's well.
+  1132  I dreamt last Night of the three weyward Sisters:
+  1133  To you they haue shew'd some truth
+  1134  
+  1135     Macb. I thinke not of them:
+  1136  Yet when we can entreat an houre to serue,
+  1137  We would spend it in some words vpon that Businesse,
+  1138  If you would graunt the time
+  1139  
+  1140     Banq. At your kind'st leysure
+  1141  
+  1142     Macb. If you shall cleaue to my consent,
+  1143  When 'tis, it shall make Honor for you
+  1144  
+  1145     Banq. So I lose none,
+  1146  In seeking to augment it, but still keepe
+  1147  My Bosome franchis'd, and Allegeance cleare,
+  1148  I shall be counsail'd
+  1149  
+  1150     Macb. Good repose the while
+  1151  
+  1152     Banq. Thankes Sir: the like to you.
+  1153  
+  1154  Exit Banquo.
+  1155  
+  1156    Macb. Goe bid thy Mistresse, when my drinke is ready,
+  1157  She strike vpon the Bell. Get thee to bed.
+  1158  Enter.
+  1159  
+  1160  Is this a Dagger, which I see before me,
+  1161  The Handle toward my Hand? Come, let me clutch thee:
+  1162  I haue thee not, and yet I see thee still.
+  1163  Art thou not fatall Vision, sensible
+  1164  To feeling, as to sight? or art thou but
+  1165  A Dagger of the Minde, a false Creation,
+  1166  Proceeding from the heat-oppressed Braine?
+  1167  I see thee yet, in forme as palpable,
+  1168  As this which now I draw.
+  1169  Thou marshall'st me the way that I was going,
+  1170  And such an Instrument I was to vse.
+  1171  Mine Eyes are made the fooles o'th' other Sences,
+  1172  Or else worth all the rest: I see thee still;
+  1173  And on thy Blade, and Dudgeon, Gouts of Blood,
+  1174  Which was not so before. There's no such thing:
+  1175  It is the bloody Businesse, which informes
+  1176  Thus to mine Eyes. Now o're the one halfe World
+  1177  Nature seemes dead, and wicked Dreames abuse
+  1178  The Curtain'd sleepe: Witchcraft celebrates
+  1179  Pale Heccats Offrings: and wither'd Murther,
+  1180  Alarum'd by his Centinell, the Wolfe,
+  1181  Whose howle's his Watch, thus with his stealthy pace,
+  1182  With Tarquins rauishing sides, towards his designe
+  1183  Moues like a Ghost. Thou sowre and firme-set Earth
+  1184  Heare not my steps, which they may walke, for feare
+  1185  Thy very stones prate of my where-about,
+  1186  And take the present horror from the time,
+  1187  Which now sutes with it. Whiles I threat, he liues:
+  1188  Words to the heat of deedes too cold breath giues.
+  1189  
+  1190  A Bell rings.
+  1191  
+  1192  I goe, and it is done: the Bell inuites me.
+  1193  Heare it not, Duncan, for it is a Knell,
+  1194  That summons thee to Heauen, or to Hell.
+  1195  Enter.
+  1196  
+  1197  
+  1198  Scena Secunda.
+  1199  
+  1200  Enter Lady.
+  1201  
+  1202    La. That which hath made the[m] drunk, hath made me bold:
+  1203  What hath quench'd them, hath giuen me fire.
+  1204  Hearke, peace: it was the Owle that shriek'd,
+  1205  The fatall Bell-man, which giues the stern'st good-night.
+  1206  He is about it, the Doores are open:
+  1207  And the surfeted Groomes doe mock their charge
+  1208  With Snores. I haue drugg'd their Possets,
+  1209  That Death and Nature doe contend about them,
+  1210  Whether they liue, or dye.
+  1211  Enter Macbeth.
+  1212  
+  1213    Macb. Who's there? what hoa?
+  1214    Lady. Alack, I am afraid they haue awak'd,
+  1215  And 'tis not done: th' attempt, and not the deed,
+  1216  Confounds vs: hearke: I lay'd their Daggers ready,
+  1217  He could not misse 'em. Had he not resembled
+  1218  My Father as he slept, I had don't.
+  1219  My Husband?
+  1220    Macb. I haue done the deed:
+  1221  Didst thou not heare a noyse?
+  1222    Lady. I heard the Owle schreame, and the Crickets cry.
+  1223  Did not you speake?
+  1224    Macb. When?
+  1225    Lady. Now
+  1226  
+  1227     Macb. As I descended?
+  1228    Lady. I
+  1229  
+  1230     Macb. Hearke, who lyes i'th' second Chamber?
+  1231    Lady. Donalbaine
+  1232  
+  1233     Mac. This is a sorry sight
+  1234  
+  1235     Lady. A foolish thought, to say a sorry sight
+  1236  
+  1237     Macb. There's one did laugh in's sleepe,
+  1238  And one cry'd Murther, that they did wake each other:
+  1239  I stood, and heard them: But they did say their Prayers,
+  1240  And addrest them againe to sleepe
+  1241  
+  1242     Lady. There are two lodg'd together
+  1243  
+  1244     Macb. One cry'd God blesse vs, and Amen the other,
+  1245  As they had seene me with these Hangmans hands:
+  1246  Listning their feare, I could not say Amen,
+  1247  When they did say God blesse vs
+  1248  
+  1249     Lady. Consider it not so deepely
+  1250  
+  1251     Mac. But wherefore could not I pronounce Amen?
+  1252  I had most need of Blessing, and Amen stuck in my throat
+  1253  
+  1254     Lady. These deeds must not be thought
+  1255  After these wayes: so, it will make vs mad
+  1256  
+  1257     Macb. Me thought I heard a voyce cry, Sleep no more:
+  1258  Macbeth does murther Sleepe, the innocent Sleepe,
+  1259  Sleepe that knits vp the rauel'd Sleeue of Care,
+  1260  The death of each dayes Life, sore Labors Bath,
+  1261  Balme of hurt Mindes, great Natures second Course,
+  1262  Chiefe nourisher in Life's Feast
+  1263  
+  1264     Lady. What doe you meane?
+  1265    Macb. Still it cry'd, Sleepe no more to all the House:
+  1266  Glamis hath murther'd Sleepe, and therefore Cawdor
+  1267  Shall sleepe no more: Macbeth shall sleepe no more
+  1268  
+  1269     Lady. Who was it, that thus cry'd? why worthy Thane,
+  1270  You doe vnbend your Noble strength, to thinke
+  1271  So braine-sickly of things: Goe get some Water,
+  1272  And wash this filthie Witnesse from your Hand.
+  1273  Why did you bring these Daggers from the place?
+  1274  They must lye there: goe carry them, and smeare
+  1275  The sleepie Groomes with blood
+  1276  
+  1277     Macb. Ile goe no more:
+  1278  I am afraid, to thinke what I haue done:
+  1279  Looke on't againe, I dare not
+  1280  
+  1281     Lady. Infirme of purpose:
+  1282  Giue me the Daggers: the sleeping, and the dead,
+  1283  Are but as Pictures: 'tis the Eye of Childhood,
+  1284  That feares a painted Deuill. If he doe bleed,
+  1285  Ile guild the Faces of the Groomes withall,
+  1286  For it must seeme their Guilt.
+  1287  Enter.
+  1288  
+  1289  Knocke within.
+  1290  
+  1291    Macb. Whence is that knocking?
+  1292  How is't with me, when euery noyse appalls me?
+  1293  What Hands are here? hah: they pluck out mine Eyes.
+  1294  Will all great Neptunes Ocean wash this blood
+  1295  Cleane from my Hand? no: this my Hand will rather
+  1296  The multitudinous Seas incarnardine,
+  1297  Making the Greene one, Red.
+  1298  Enter Lady.
+  1299  
+  1300    Lady. My Hands are of your colour: but I shame
+  1301  To weare a Heart so white.
+  1302  
+  1303  Knocke.
+  1304  
+  1305  I heare a knocking at the South entry:
+  1306  Retyre we to our Chamber:
+  1307  A little Water cleares vs of this deed.
+  1308  How easie is it then? your Constancie
+  1309  Hath left you vnattended.
+  1310  
+  1311  Knocke.
+  1312  
+  1313  Hearke, more knocking.
+  1314  Get on your Night-Gowne, least occasion call vs,
+  1315  And shew vs to be Watchers: be not lost
+  1316  So poorely in your thoughts
+  1317  
+  1318     Macb. To know my deed,
+  1319  
+  1320  Knocke.
+  1321  
+  1322  'Twere best not know my selfe.
+  1323  Wake Duncan with thy knocking:
+  1324  I would thou could'st.
+  1325  
+  1326  Exeunt.
+  1327  
+  1328  
+  1329  Scena Tertia.
+  1330  
+  1331  Enter a Porter. Knocking within.
+  1332  
+  1333    Porter. Here's a knocking indeede: if a man were
+  1334  Porter of Hell Gate, hee should haue old turning the
+  1335  Key.
+  1336  
+  1337  Knock.
+  1338  
+  1339  Knock, Knock, Knock. Who's there
+  1340  i'th' name of Belzebub? Here's a Farmer, that hang'd
+  1341  himselfe on th' expectation of Plentie: Come in time, haue
+  1342  Napkins enow about you, here you'le sweat for't.
+  1343  
+  1344  Knock.
+  1345  
+  1346  Knock, knock. Who's there in th' other Deuils Name?
+  1347  Faith here's an Equiuocator, that could sweare in both
+  1348  the Scales against eyther Scale, who committed Treason
+  1349  enough for Gods sake, yet could not equiuocate to Heauen:
+  1350  oh come in, Equiuocator.
+  1351  
+  1352  Knock.
+  1353  
+  1354  Knock, Knock, Knock. Who's there? 'Faith here's an English
+  1355  Taylor come hither, for stealing out of a French Hose:
+  1356  Come in Taylor, here you may rost your Goose.
+  1357  Knock.
+  1358  
+  1359  Knock, Knock. Neuer at quiet: What are you? but this
+  1360  place is too cold for Hell. Ile Deuill-Porter it no further:
+  1361  I had thought to haue let in some of all Professions, that
+  1362  goe the Primrose way to th' euerlasting Bonfire.
+  1363  
+  1364  Knock.
+  1365  
+  1366  Anon, anon, I pray you remember the Porter.
+  1367  Enter Macduff, and Lenox.
+  1368  
+  1369    Macd. Was it so late, friend, ere you went to Bed,
+  1370  That you doe lye so late?
+  1371    Port. Faith Sir, we were carowsing till the second Cock:
+  1372  And Drinke, Sir, is a great prouoker of three things
+  1373  
+  1374     Macd. What three things does Drinke especially
+  1375  prouoke?
+  1376    Port. Marry, Sir, Nose-painting, Sleepe, and Vrine.
+  1377  Lecherie, Sir, it prouokes, and vnprouokes: it prouokes
+  1378  the desire, but it takes away the performance. Therefore
+  1379  much Drinke may be said to be an Equiuocator with Lecherie:
+  1380  it makes him, and it marres him; it sets him on,
+  1381  and it takes him off; it perswades him, and dis-heartens
+  1382  him; makes him stand too, and not stand too: in conclusion,
+  1383  equiuocates him in a sleepe, and giuing him the Lye,
+  1384  leaues him
+  1385  
+  1386     Macd. I beleeue, Drinke gaue thee the Lye last Night
+  1387  
+  1388     Port. That it did, Sir, i'the very Throat on me: but I
+  1389  requited him for his Lye, and (I thinke) being too strong
+  1390  for him, though he tooke vp my Legges sometime, yet I
+  1391  made a Shift to cast him.
+  1392  Enter Macbeth.
+  1393  
+  1394    Macd. Is thy Master stirring?
+  1395  Our knocking ha's awak'd him: here he comes
+  1396  
+  1397     Lenox. Good morrow, Noble Sir
+  1398  
+  1399     Macb. Good morrow both
+  1400  
+  1401     Macd. Is the King stirring, worthy Thane?
+  1402    Macb. Not yet
+  1403  
+  1404     Macd. He did command me to call timely on him,
+  1405  I haue almost slipt the houre
+  1406  
+  1407     Macb. Ile bring you to him
+  1408  
+  1409     Macd. I know this is a ioyfull trouble to you:
+  1410  But yet 'tis one
+  1411  
+  1412     Macb. The labour we delight in, Physicks paine:
+  1413  This is the Doore
+  1414  
+  1415     Macd. Ile make so bold to call, for 'tis my limitted
+  1416  seruice.
+  1417  
+  1418  Exit Macduffe.
+  1419  
+  1420    Lenox. Goes the King hence to day?
+  1421    Macb. He does: he did appoint so
+  1422  
+  1423     Lenox. The Night ha's been vnruly:
+  1424  Where we lay, our Chimneys were blowne downe,
+  1425  And (as they say) lamentings heard i'th' Ayre;
+  1426  Strange Schreemes of Death,
+  1427  And Prophecying, with Accents terrible,
+  1428  Of dyre Combustion, and confus'd Euents,
+  1429  New hatch'd toth' wofull time.
+  1430  The obscure Bird clamor'd the liue-long Night.
+  1431  Some say, the Earth was Feuorous,
+  1432  And did shake
+  1433  
+  1434     Macb. 'Twas a rough Night
+  1435  
+  1436     Lenox. My young remembrance cannot paralell
+  1437  A fellow to it.
+  1438  Enter Macduff.
+  1439  
+  1440    Macd. O horror, horror, horror,
+  1441  Tongue nor Heart cannot conceiue, nor name thee
+  1442  
+  1443     Macb. and Lenox. What's the matter?
+  1444    Macd. Confusion now hath made his Master-peece:
+  1445  Most sacrilegious Murther hath broke ope
+  1446  The Lords anoynted Temple, and stole thence
+  1447  The Life o'th' Building
+  1448  
+  1449     Macb. What is't you say, the Life?
+  1450    Lenox. Meane you his Maiestie?
+  1451    Macd. Approch the Chamber, and destroy your sight
+  1452  With a new Gorgon. Doe not bid me speake:
+  1453  See, and then speake your selues: awake, awake,
+  1454  
+  1455  Exeunt. Macbeth and Lenox.
+  1456  
+  1457  Ring the Alarum Bell: Murther, and Treason,
+  1458  Banquo, and Donalbaine: Malcolme awake,
+  1459  Shake off this Downey sleepe, Deaths counterfeit,
+  1460  And looke on Death it selfe: vp, vp, and see
+  1461  The great Doomes Image: Malcolme, Banquo,
+  1462  As from your Graues rise vp, and walke like Sprights,
+  1463  To countenance this horror. Ring the Bell.
+  1464  
+  1465  Bell rings. Enter Lady.
+  1466  
+  1467    Lady. What's the Businesse?
+  1468  That such a hideous Trumpet calls to parley
+  1469  The sleepers of the House? speake, speake
+  1470  
+  1471     Macd. O gentle Lady,
+  1472  'Tis not for you to heare what I can speake:
+  1473  The repetition in a Womans eare,
+  1474  Would murther as it fell.
+  1475  Enter Banquo.
+  1476  
+  1477  O Banquo, Banquo, Our Royall Master's murther'd
+  1478  
+  1479     Lady. Woe, alas:
+  1480  What, in our House?
+  1481    Ban. Too cruell, any where.
+  1482  Deare Duff, I prythee contradict thy selfe,
+  1483  And say, it is not so.
+  1484  Enter Macbeth, Lenox, and Rosse.
+  1485  
+  1486    Macb. Had I but dy'd an houre before this chance,
+  1487  I had liu'd a blessed time: for from this instant,
+  1488  There's nothing serious in Mortalitie:
+  1489  All is but Toyes: Renowne and Grace is dead,
+  1490  The Wine of Life is drawne, and the meere Lees
+  1491  Is left this Vault, to brag of.
+  1492  Enter Malcolme and Donalbaine.
+  1493  
+  1494    Donal. What is amisse?
+  1495    Macb. You are, and doe not know't:
+  1496  The Spring, the Head, the Fountaine of your Blood
+  1497  Is stopt, the very Source of it is stopt
+  1498  
+  1499     Macd. Your Royall Father's murther'd
+  1500  
+  1501     Mal. Oh, by whom?
+  1502    Lenox. Those of his Chamber, as it seem'd, had don't:
+  1503  Their Hands and Faces were all badg'd with blood,
+  1504  So were their Daggers, which vnwip'd, we found
+  1505  Vpon their Pillowes: they star'd, and were distracted,
+  1506  No mans Life was to be trusted with them
+  1507  
+  1508     Macb. O, yet I doe repent me of my furie,
+  1509  That I did kill them
+  1510  
+  1511     Macd. Wherefore did you so?
+  1512    Macb. Who can be wise, amaz'd, temp'rate, & furious,
+  1513  Loyall, and Neutrall, in a moment? No man:
+  1514  Th' expedition of my violent Loue
+  1515  Out-run the pawser, Reason. Here lay Duncan,
+  1516  His Siluer skinne, lac'd with His Golden Blood,
+  1517  And his gash'd Stabs, look'd like a Breach in Nature,
+  1518  For Ruines wastfull entrance: there the Murtherers,
+  1519  Steep'd in the Colours of their Trade; their Daggers
+  1520  Vnmannerly breech'd with gore: who could refraine,
+  1521  That had a heart to loue; and in that heart,
+  1522  Courage, to make's loue knowne?
+  1523    Lady. Helpe me hence, hoa
+  1524  
+  1525     Macd. Looke to the Lady
+  1526  
+  1527     Mal. Why doe we hold our tongues,
+  1528  That most may clayme this argument for ours?
+  1529    Donal. What should be spoken here,
+  1530  Where our Fate hid in an augure hole,
+  1531  May rush, and seize vs? Let's away,
+  1532  Our Teares are not yet brew'd
+  1533  
+  1534     Mal. Nor our strong Sorrow
+  1535  Vpon the foot of Motion
+  1536  
+  1537     Banq. Looke to the Lady:
+  1538  And when we haue our naked Frailties hid,
+  1539  That suffer in exposure; let vs meet,
+  1540  And question this most bloody piece of worke,
+  1541  To know it further. Feares and scruples shake vs:
+  1542  In the great Hand of God I stand, and thence,
+  1543  Against the vndivulg'd pretence, I fight
+  1544  Of Treasonous Mallice
+  1545  
+  1546     Macd. And so doe I
+  1547  
+  1548     All. So all
+  1549  
+  1550     Macb. Let's briefely put on manly readinesse,
+  1551  And meet i'th' Hall together
+  1552  
+  1553     All. Well contented.
+  1554  
+  1555  Exeunt.
+  1556  
+  1557    Malc. What will you doe?
+  1558  Let's not consort with them:
+  1559  To shew an vnfelt Sorrow, is an Office
+  1560  Which the false man do's easie.
+  1561  Ile to England
+  1562  
+  1563     Don. To Ireland, I:
+  1564  Our seperated fortune shall keepe vs both the safer:
+  1565  Where we are, there's Daggers in mens smiles;
+  1566  The neere in blood, the neerer bloody
+  1567  
+  1568     Malc. This murtherous Shaft that's shot,
+  1569  Hath not yet lighted: and our safest way,
+  1570  Is to auoid the ayme. Therefore to Horse,
+  1571  And let vs not be daintie of leaue-taking,
+  1572  But shift away: there's warrant in that Theft,
+  1573  Which steales it selfe, when there's no mercie left.
+  1574  
+  1575  Exeunt.
+  1576  
+  1577  
+  1578  
+  1579  Scena Quarta.
+  1580  
+  1581  Enter Rosse, with an Old man.
+  1582  
+  1583    Old man. Threescore and ten I can remember well,
+  1584  Within the Volume of which Time, I haue seene
+  1585  Houres dreadfull, and things strange: but this sore Night
+  1586  Hath trifled former knowings
+  1587  
+  1588     Rosse. Ha, good Father,
+  1589  Thou seest the Heauens, as troubled with mans Act,
+  1590  Threatens his bloody Stage: byth' Clock 'tis Day,
+  1591  And yet darke Night strangles the trauailing Lampe:
+  1592  Is't Nights predominance, or the Dayes shame,
+  1593  That Darknesse does the face of Earth intombe,
+  1594  When liuing Light should kisse it?
+  1595    Old man. 'Tis vnnaturall,
+  1596  Euen like the deed that's done: On Tuesday last,
+  1597  A Faulcon towring in her pride of place,
+  1598  Was by a Mowsing Owle hawkt at, and kill'd
+  1599  
+  1600     Rosse. And Duncans Horses,
+  1601  (A thing most strange, and certaine)
+  1602  Beauteous, and swift, the Minions of their Race,
+  1603  Turn'd wilde in nature, broke their stalls, flong out,
+  1604  Contending 'gainst Obedience, as they would
+  1605  Make Warre with Mankinde
+  1606  
+  1607     Old man. 'Tis said, they eate each other
+  1608  
+  1609     Rosse. They did so:
+  1610  To th' amazement of mine eyes that look'd vpon't.
+  1611  Enter Macduffe.
+  1612  
+  1613  Heere comes the good Macduffe.
+  1614  How goes the world Sir, now?
+  1615    Macd. Why see you not?
+  1616    Ross. Is't known who did this more then bloody deed?
+  1617    Macd. Those that Macbeth hath slaine
+  1618  
+  1619     Ross. Alas the day,
+  1620  What good could they pretend?
+  1621    Macd. They were subborned,
+  1622  Malcolme, and Donalbaine the Kings two Sonnes
+  1623  Are stolne away and fled, which puts vpon them
+  1624  Suspition of the deed
+  1625  
+  1626     Rosse. 'Gainst Nature still,
+  1627  Thriftlesse Ambition, that will rauen vp
+  1628  Thine owne liues meanes: Then 'tis most like,
+  1629  The Soueraignty will fall vpon Macbeth
+  1630  
+  1631     Macd. He is already nam'd, and gone to Scone
+  1632  To be inuested
+  1633  
+  1634     Rosse. Where is Duncans body?
+  1635    Macd. Carried to Colmekill,
+  1636  The Sacred Store-house of his Predecessors,
+  1637  And Guardian of their Bones
+  1638  
+  1639     Rosse. Will you to Scone?
+  1640    Macd. No Cosin, Ile to Fife
+  1641  
+  1642     Rosse. Well, I will thither
+  1643  
+  1644     Macd. Well may you see things wel done there: Adieu
+  1645  Least our old Robes sit easier then our new
+  1646  
+  1647     Rosse. Farewell, Father
+  1648  
+  1649     Old M. Gods benyson go with you, and with those
+  1650  That would make good of bad, and Friends of Foes.
+  1651  
+  1652  Exeunt. omnes
+  1653  
+  1654  Actus Tertius. Scena Prima.
+  1655  
+  1656  Enter Banquo.
+  1657  
+  1658    Banq. Thou hast it now, King, Cawdor, Glamis, all,
+  1659  As the weyard Women promis'd, and I feare
+  1660  Thou playd'st most fowly for't: yet it was saide
+  1661  It should not stand in thy Posterity,
+  1662  But that my selfe should be the Roote, and Father
+  1663  Of many Kings. If there come truth from them,
+  1664  As vpon thee Macbeth, their Speeches shine,
+  1665  Why by the verities on thee made good,
+  1666  May they not be my Oracles as well,
+  1667  And set me vp in hope. But hush, no more.
+  1668  
+  1669  Senit sounded. Enter Macbeth as King, Lady Lenox, Rosse, Lords,
+  1670  and
+  1671  Attendants.
+  1672  
+  1673    Macb. Heere's our chiefe Guest
+  1674  
+  1675     La. If he had beene forgotten,
+  1676  It had bene as a gap in our great Feast,
+  1677  And all-thing vnbecomming
+  1678  
+  1679     Macb. To night we hold a solemne Supper sir,
+  1680  And Ile request your presence
+  1681  
+  1682     Banq. Let your Highnesse
+  1683  Command vpon me, to the which my duties
+  1684  Are with a most indissoluble tye
+  1685  For euer knit
+  1686  
+  1687     Macb. Ride you this afternoone?
+  1688    Ban. I, my good Lord
+  1689  
+  1690     Macb. We should haue else desir'd your good aduice
+  1691  (Which still hath been both graue, and prosperous)
+  1692  In this dayes Councell: but wee'le take to morrow.
+  1693  Is't farre you ride?
+  1694    Ban. As farre, my Lord, as will fill vp the time
+  1695  'Twixt this, and Supper. Goe not my Horse the better,
+  1696  I must become a borrower of the Night,
+  1697  For a darke houre, or twaine
+  1698  
+  1699     Macb. Faile not our Feast
+  1700  
+  1701     Ban. My Lord, I will not
+  1702  
+  1703     Macb. We heare our bloody Cozens are bestow'd
+  1704  In England, and in Ireland, not confessing
+  1705  Their cruell Parricide, filling their hearers
+  1706  With strange inuention. But of that to morrow,
+  1707  When therewithall, we shall haue cause of State,
+  1708  Crauing vs ioyntly. Hye you to Horse:
+  1709  Adieu, till you returne at Night.
+  1710  Goes Fleance with you?
+  1711    Ban. I, my good Lord: our time does call vpon's
+  1712  
+  1713     Macb. I wish your Horses swift, and sure of foot:
+  1714  And so I doe commend you to their backs.
+  1715  Farwell.
+  1716  
+  1717  Exit Banquo.
+  1718  
+  1719  Let euery man be master of his time,
+  1720  Till seuen at Night, to make societie
+  1721  The sweeter welcome:
+  1722  We will keepe our selfe till Supper time alone:
+  1723  While then, God be with you.
+  1724  
+  1725  Exeunt. Lords.
+  1726  
+  1727  Sirrha, a word with you: Attend those men
+  1728  Our pleasure?
+  1729    Seruant. They are, my Lord, without the Pallace
+  1730  Gate
+  1731  
+  1732     Macb. Bring them before vs.
+  1733  
+  1734  Exit Seruant.
+  1735  
+  1736  To be thus, is nothing, but to be safely thus
+  1737  Our feares in Banquo sticke deepe,
+  1738  And in his Royaltie of Nature reignes that
+  1739  Which would be fear'd. 'Tis much he dares,
+  1740  And to that dauntlesse temper of his Minde,
+  1741  He hath a Wisdome, that doth guide his Valour,
+  1742  To act in safetie. There is none but he,
+  1743  Whose being I doe feare: and vnder him,
+  1744  My Genius is rebuk'd, as it is said
+  1745  Mark Anthonies was by Caesar. He chid the Sisters,
+  1746  When first they put the Name of King vpon me,
+  1747  And bad them speake to him. Then Prophet-like,
+  1748  They hayl'd him Father to a Line of Kings.
+  1749  Vpon my Head they plac'd a fruitlesse Crowne,
+  1750  And put a barren Scepter in my Gripe,
+  1751  Thence to be wrencht with an vnlineall Hand,
+  1752  No Sonne of mine succeeding: if't be so,
+  1753  For Banquo's Issue haue I fil'd my Minde,
+  1754  For them, the gracious Duncan haue I murther'd,
+  1755  Put Rancours in the Vessell of my Peace
+  1756  Onely for them, and mine eternall Iewell
+  1757  Giuen to the common Enemie of Man,
+  1758  To make them Kings, the Seedes of Banquo Kings.
+  1759  Rather then so, come Fate into the Lyst,
+  1760  And champion me to th' vtterance.
+  1761  Who's there?
+  1762  Enter Seruant, and two Murtherers.
+  1763  
+  1764  Now goe to the Doore, and stay there till we call.
+  1765  
+  1766  Exit Seruant.
+  1767  
+  1768  Was it not yesterday we spoke together?
+  1769    Murth. It was, so please your Highnesse
+  1770  
+  1771     Macb. Well then,
+  1772  Now haue you consider'd of my speeches:
+  1773  Know, that it was he, in the times past,
+  1774  Which held you so vnder fortune,
+  1775  Which you thought had been our innocent selfe.
+  1776  This I made good to you, in our last conference,
+  1777  Past in probation with you:
+  1778  How you were borne in hand, how crost:
+  1779  The Instruments: who wrought with them:
+  1780  And all things else, that might
+  1781  To halfe a Soule, and to a Notion craz'd,
+  1782  Say, Thus did Banquo
+  1783  
+  1784     1.Murth. You made it knowne to vs
+  1785  
+  1786     Macb. I did so:
+  1787  And went further, which is now
+  1788  Our point of second meeting.
+  1789  Doe you finde your patience so predominant,
+  1790  In your nature, that you can let this goe?
+  1791  Are you so Gospell'd, to pray for this good man,
+  1792  And for his Issue, whose heauie hand
+  1793  Hath bow'd you to the Graue, and begger'd
+  1794  Yours for euer?
+  1795    1.Murth. We are men, my Liege
+  1796  
+  1797     Macb. I, in the Catalogue ye goe for men,
+  1798  As Hounds, and Greyhounds, Mungrels, Spaniels, Curres,
+  1799  Showghes, Water-Rugs, and Demy-Wolues are clipt
+  1800  All by the Name of Dogges: the valued file
+  1801  Distinguishes the swift, the slow, the subtle,
+  1802  The House-keeper, the Hunter, euery one
+  1803  According to the gift, which bounteous Nature
+  1804  Hath in him clos'd: whereby he does receiue
+  1805  Particular addition, from the Bill,
+  1806  That writes them all alike: and so of men.
+  1807  Now, if you haue a station in the file,
+  1808  Not i'th' worst ranke of Manhood, say't,
+  1809  And I will put that Businesse in your Bosomes,
+  1810  Whose execution takes your Enemie off,
+  1811  Grapples you to the heart; and loue of vs,
+  1812  Who weare our Health but sickly in his Life,
+  1813  Which in his Death were perfect
+  1814  
+  1815     2.Murth. I am one, my Liege,
+  1816  Whom the vile Blowes and Buffets of the World
+  1817  Hath so incens'd, that I am recklesse what I doe,
+  1818  To spight the World
+  1819  
+  1820     1.Murth. And I another,
+  1821  So wearie with Disasters, tugg'd with Fortune,
+  1822  That I would set my Life on any Chance,
+  1823  To mend it, or be rid on't
+  1824  
+  1825     Macb. Both of you know Banquo was your Enemie
+  1826  
+  1827     Murth. True, my Lord
+  1828  
+  1829     Macb. So is he mine: and in such bloody distance,
+  1830  That euery minute of his being, thrusts
+  1831  Against my neer'st of Life: and though I could
+  1832  With bare-fac'd power sweepe him from my sight,
+  1833  And bid my will auouch it; yet I must not,
+  1834  For certaine friends that are both his, and mine,
+  1835  Whose loues I may not drop, but wayle his fall,
+  1836  Who I my selfe struck downe: and thence it is,
+  1837  That I to your assistance doe make loue,
+  1838  Masking the Businesse from the common Eye,
+  1839  For sundry weightie Reasons
+  1840  
+  1841     2.Murth. We shall, my Lord,
+  1842  Performe what you command vs
+  1843  
+  1844     1.Murth. Though our Liues-
+  1845    Macb. Your Spirits shine through you.
+  1846  Within this houre, at most,
+  1847  I will aduise you where to plant your selues,
+  1848  Acquaint you with the perfect Spy o'th' time,
+  1849  The moment on't, for't must be done to Night,
+  1850  And something from the Pallace: alwayes thought,
+  1851  That I require a clearenesse; and with him,
+  1852  To leaue no Rubs nor Botches in the Worke:
+  1853    Fleans , his Sonne, that keepes him companie,
+  1854  Whose absence is no lesse materiall to me,
+  1855  Then is his Fathers, must embrace the fate
+  1856  Of that darke houre: resolue your selues apart,
+  1857  Ile come to you anon
+  1858  
+  1859     Murth. We are resolu'd, my Lord
+  1860  
+  1861     Macb. Ile call vpon you straight: abide within,
+  1862  It is concluded: Banquo, thy Soules flight,
+  1863  If it finde Heauen, must finde it out to Night.
+  1864  
+  1865  Exeunt.
+  1866  
+  1867  
+  1868  Scena Secunda.
+  1869  
+  1870  Enter Macbeths Lady, and a Seruant.
+  1871  
+  1872    Lady. Is Banquo gone from Court?
+  1873    Seruant. I, Madame, but returnes againe to Night
+  1874  
+  1875     Lady. Say to the King, I would attend his leysure,
+  1876  For a few words
+  1877  
+  1878     Seruant. Madame, I will.
+  1879  Enter.
+  1880  
+  1881    Lady. Nought's had, all's spent.
+  1882  Where our desire is got without content:
+  1883  'Tis safer, to be that which we destroy,
+  1884  Then by destruction dwell in doubtfull ioy.
+  1885  Enter Macbeth.
+  1886  
+  1887  How now, my Lord, why doe you keepe alone?
+  1888  Of sorryest Fancies your Companions making,
+  1889  Vsing those Thoughts, which should indeed haue dy'd
+  1890  With them they thinke on: things without all remedie
+  1891  Should be without regard: what's done, is done
+  1892  
+  1893     Macb. We haue scorch'd the Snake, not kill'd it:
+  1894  Shee'le close, and be her selfe, whilest our poore Mallice
+  1895  Remaines in danger of her former Tooth.
+  1896  But let the frame of things dis-ioynt,
+  1897  Both the Worlds suffer,
+  1898  Ere we will eate our Meale in feare, and sleepe
+  1899  In the affliction of these terrible Dreames,
+  1900  That shake vs Nightly: Better be with the dead,
+  1901  Whom we, to gayne our peace, haue sent to peace,
+  1902  Then on the torture of the Minde to lye
+  1903  In restlesse extasie.
+  1904  Duncane is in his Graue:
+  1905  After Lifes fitfull Feuer, he sleepes well,
+  1906  Treason ha's done his worst: nor Steele, nor Poyson,
+  1907  Mallice domestique, forraine Leuie, nothing,
+  1908  Can touch him further
+  1909  
+  1910     Lady. Come on:
+  1911  Gentle my Lord, sleeke o're your rugged Lookes,
+  1912  Be bright and Iouiall among your Guests to Night
+  1913  
+  1914     Macb. So shall I Loue, and so I pray be you:
+  1915  Let your remembrance apply to Banquo,
+  1916  Present him Eminence, both with Eye and Tongue:
+  1917  Vnsafe the while, that wee must laue
+  1918  Our Honors in these flattering streames,
+  1919  And make our Faces Vizards to our Hearts,
+  1920  Disguising what they are
+  1921  
+  1922     Lady. You must leaue this
+  1923  
+  1924     Macb. O, full of Scorpions is my Minde, deare Wife:
+  1925  Thou know'st, that Banquo and his Fleans liues
+  1926  
+  1927     Lady. But in them, Natures Coppie's not eterne
+  1928  
+  1929     Macb. There's comfort yet, they are assaileable,
+  1930  Then be thou iocund: ere the Bat hath flowne
+  1931  His Cloyster'd flight, ere to black Heccats summons
+  1932  The shard-borne Beetle, with his drowsie hums,
+  1933  Hath rung Nights yawning Peale,
+  1934  There shall be done a deed of dreadfull note
+  1935  
+  1936     Lady. What's to be done?
+  1937    Macb. Be innocent of the knowledge, dearest Chuck,
+  1938  Till thou applaud the deed: Come, seeling Night,
+  1939  Skarfe vp the tender Eye of pittifull Day,
+  1940  And with thy bloodie and inuisible Hand
+  1941  Cancell and teare to pieces that great Bond,
+  1942  Which keepes me pale. Light thickens,
+  1943  And the Crow makes Wing toth' Rookie Wood:
+  1944  Good things of Day begin to droope, and drowse,
+  1945  Whiles Nights black Agents to their Prey's doe rowse.
+  1946  Thou maruell'st at my words: but hold thee still,
+  1947  Things bad begun, make strong themselues by ill:
+  1948  So prythee goe with me.
+  1949  
+  1950  Exeunt.
+  1951  
+  1952  
+  1953  Scena Tertia.
+  1954  
+  1955  Enter three Murtherers.
+  1956  
+  1957    1. But who did bid thee ioyne with vs?
+  1958    3. Macbeth
+  1959  
+  1960     2. He needes not our mistrust, since he deliuers
+  1961  Our Offices, and what we haue to doe,
+  1962  To the direction iust
+  1963  
+  1964     1. Then stand with vs:
+  1965  The West yet glimmers with some streakes of Day.
+  1966  Now spurres the lated Traueller apace,
+  1967  To gayne the timely Inne, and neere approches
+  1968  The subiect of our Watch
+  1969  
+  1970     3. Hearke, I heare Horses
+  1971  
+  1972     Banquo within. Giue vs a Light there, hoa
+  1973  
+  1974     2. Then 'tis hee:
+  1975  The rest, that are within the note of expectation,
+  1976  Alreadie are i'th' Court
+  1977  
+  1978     1. His Horses goe about
+  1979  
+  1980     3. Almost a mile: but he does vsually,
+  1981  So all men doe, from hence toth' Pallace Gate
+  1982  Make it their Walke.
+  1983  Enter Banquo and Fleans, with a Torch.
+  1984  
+  1985    2. A Light, a Light
+  1986  
+  1987     3. 'Tis hee
+  1988  
+  1989     1. Stand too't
+  1990  
+  1991     Ban. It will be Rayne to Night
+  1992  
+  1993     1. Let it come downe
+  1994  
+  1995     Ban. O, Trecherie!
+  1996  Flye good Fleans, flye, flye, flye,
+  1997  Thou may'st reuenge. O Slaue!
+  1998    3. Who did strike out the Light?
+  1999    1. Was't not the way?
+  2000    3. There's but one downe: the Sonne is fled
+  2001  
+  2002     2. We haue lost
+  2003  Best halfe of our Affaire
+  2004  
+  2005     1. Well, let's away, and say how much is done.
+  2006  
+  2007  Exeunt.
+  2008  
+  2009  
+  2010  Scaena Quarta.
+  2011  
+  2012  Banquet prepar'd. Enter Macbeth, Lady, Rosse, Lenox, Lords, and
+  2013  Attendants.
+  2014  
+  2015    Macb. You know your owne degrees, sit downe:
+  2016  At first and last, the hearty welcome
+  2017  
+  2018     Lords. Thankes to your Maiesty
+  2019  
+  2020     Macb. Our selfe will mingle with Society,
+  2021  And play the humble Host:
+  2022  Our Hostesse keepes her State, but in best time
+  2023  We will require her welcome
+  2024  
+  2025     La. Pronounce it for me Sir, to all our Friends,
+  2026  For my heart speakes, they are welcome.
+  2027  Enter first Murtherer.
+  2028  
+  2029    Macb. See they encounter thee with their harts thanks
+  2030  Both sides are euen: heere Ile sit i'th' mid'st,
+  2031  Be large in mirth, anon wee'l drinke a Measure
+  2032  The Table round. There's blood vpon thy face
+  2033  
+  2034     Mur. 'Tis Banquo's then
+  2035  
+  2036     Macb. 'Tis better thee without, then he within.
+  2037  Is he dispatch'd?
+  2038    Mur. My Lord his throat is cut, that I did for him
+  2039  
+  2040     Mac. Thou art the best o'th' Cut-throats,
+  2041  Yet hee's good that did the like for Fleans:
+  2042  If thou did'st it, thou art the Non-pareill
+  2043  
+  2044     Mur. Most Royall Sir
+  2045  Fleans is scap'd
+  2046  
+  2047     Macb. Then comes my Fit againe:
+  2048  I had else beene perfect;
+  2049  Whole as the Marble, founded as the Rocke,
+  2050  As broad, and generall, as the casing Ayre:
+  2051  But now I am cabin'd, crib'd, confin'd, bound in
+  2052  To sawcy doubts, and feares. But Banquo's safe?
+  2053    Mur. I, my good Lord: safe in a ditch he bides,
+  2054  With twenty trenched gashes on his head;
+  2055  The least a Death to Nature
+  2056  
+  2057     Macb. Thankes for that:
+  2058  There the growne Serpent lyes, the worme that's fled
+  2059  Hath Nature that in time will Venom breed,
+  2060  No teeth for th' present. Get thee gone, to morrow
+  2061  Wee'l heare our selues againe.
+  2062  
+  2063  Exit Murderer.
+  2064  
+  2065    Lady. My Royall Lord,
+  2066  You do not giue the Cheere, the Feast is sold
+  2067  That is not often vouch'd, while 'tis a making:
+  2068  'Tis giuen, with welcome: to feede were best at home:
+  2069  From thence, the sawce to meate is Ceremony,
+  2070  Meeting were bare without it.
+  2071  Enter the Ghost of Banquo, and sits in Macbeths place.
+  2072  
+  2073    Macb. Sweet Remembrancer:
+  2074  Now good digestion waite on Appetite,
+  2075  And health on both
+  2076  
+  2077     Lenox. May't please your Highnesse sit
+  2078  
+  2079     Macb. Here had we now our Countries Honor, roof'd,
+  2080  Were the grac'd person of our Banquo present:
+  2081  Who, may I rather challenge for vnkindnesse,
+  2082  Then pitty for Mischance
+  2083  
+  2084     Rosse. His absence (Sir)
+  2085  Layes blame vpon his promise. Pleas't your Highnesse
+  2086  To grace vs with your Royall Company?
+  2087    Macb. The Table's full
+  2088  
+  2089     Lenox. Heere is a place reseru'd Sir
+  2090  
+  2091     Macb. Where?
+  2092    Lenox. Heere my good Lord.
+  2093  What is't that moues your Highnesse?
+  2094    Macb. Which of you haue done this?
+  2095    Lords. What, my good Lord?
+  2096    Macb. Thou canst not say I did it: neuer shake
+  2097  Thy goary lockes at me
+  2098  
+  2099     Rosse. Gentlemen rise, his Highnesse is not well
+  2100  
+  2101     Lady. Sit worthy Friends: my Lord is often thus,
+  2102  And hath beene from his youth. Pray you keepe Seat,
+  2103  The fit is momentary, vpon a thought
+  2104  He will againe be well. If much you note him
+  2105  You shall offend him, and extend his Passion,
+  2106  Feed, and regard him not. Are you a man?
+  2107    Macb. I, and a bold one, that dare looke on that
+  2108  Which might appall the Diuell
+  2109  
+  2110     La. O proper stuffe:
+  2111  This is the very painting of your feare:
+  2112  This is the Ayre-drawne-Dagger which you said
+  2113  Led you to Duncan. O, these flawes and starts
+  2114  (Impostors to true feare) would well become
+  2115  A womans story, at a Winters fire
+  2116  Authoriz'd by her Grandam: shame it selfe,
+  2117  Why do you make such faces? When all's done
+  2118  You looke but on a stoole
+  2119  
+  2120     Macb. Prythee see there:
+  2121  Behold, looke, loe, how say you:
+  2122  Why what care I, if thou canst nod, speake too.
+  2123  If Charnell houses, and our Graues must send
+  2124  Those that we bury, backe; our Monuments
+  2125  Shall be the Mawes of Kytes
+  2126  
+  2127     La. What? quite vnmann'd in folly
+  2128  
+  2129     Macb. If I stand heere, I saw him
+  2130  
+  2131     La. Fie for shame
+  2132  
+  2133     Macb. Blood hath bene shed ere now, i'th' olden time
+  2134  Ere humane Statute purg'd the gentle Weale:
+  2135  I, and since too, Murthers haue bene perform'd
+  2136  Too terrible for the eare. The times has bene,
+  2137  That when the Braines were out, the man would dye,
+  2138  And there an end: But now they rise againe
+  2139  With twenty mortall murthers on their crownes,
+  2140  And push vs from our stooles. This is more strange
+  2141  Then such a murther is
+  2142  
+  2143     La. My worthy Lord
+  2144  Your Noble Friends do lacke you
+  2145  
+  2146     Macb. I do forget:
+  2147  Do not muse at me my most worthy Friends,
+  2148  I haue a strange infirmity, which is nothing
+  2149  To those that know me. Come, loue and health to all,
+  2150  Then Ile sit downe: Giue me some Wine, fill full:
+  2151  Enter Ghost.
+  2152  
+  2153  I drinke to th' generall ioy o'th' whole Table,
+  2154  And to our deere Friend Banquo, whom we misse:
+  2155  Would he were heere: to all, and him we thirst,
+  2156  And all to all
+  2157  
+  2158     Lords. Our duties, and the pledge
+  2159  
+  2160     Mac. Auant, & quit my sight, let the earth hide thee:
+  2161  Thy bones are marrowlesse, thy blood is cold:
+  2162  Thou hast no speculation in those eyes
+  2163  Which thou dost glare with
+  2164  
+  2165     La. Thinke of this good Peeres
+  2166  But as a thing of Custome: 'Tis no other,
+  2167  Onely it spoyles the pleasure of the time
+  2168  
+  2169     Macb. What man dare, I dare:
+  2170  Approach thou like the rugged Russian Beare,
+  2171  The arm'd Rhinoceros, or th' Hircan Tiger,
+  2172  Take any shape but that, and my firme Nerues
+  2173  Shall neuer tremble. Or be aliue againe,
+  2174  And dare me to the Desart with thy Sword:
+  2175  If trembling I inhabit then, protest mee
+  2176  The Baby of a Girle. Hence horrible shadow,
+  2177  Vnreall mock'ry hence. Why so, being gone
+  2178  I am a man againe: pray you sit still
+  2179  
+  2180     La. You haue displac'd the mirth,
+  2181  Broke the good meeting, with most admir'd disorder
+  2182  
+  2183     Macb. Can such things be,
+  2184  And ouercome vs like a Summers Clowd,
+  2185  Without our speciall wonder? You make me strange
+  2186  Euen to the disposition that I owe,
+  2187  When now I thinke you can behold such sights,
+  2188  And keepe the naturall Rubie of your Cheekes,
+  2189  When mine is blanch'd with feare
+  2190  
+  2191     Rosse. What sights, my Lord?
+  2192    La. I pray you speake not: he growes worse & worse
+  2193  Question enrages him: at once, goodnight.
+  2194  Stand not vpon the order of your going,
+  2195  But go at once
+  2196  
+  2197     Len. Good night, and better health
+  2198  Attend his Maiesty
+  2199  
+  2200     La. A kinde goodnight to all.
+  2201  
+  2202  Exit Lords.
+  2203  
+  2204    Macb. It will haue blood they say:
+  2205  Blood will haue Blood:
+  2206  Stones haue beene knowne to moue, & Trees to speake:
+  2207  Augures, and vnderstood Relations, haue
+  2208  By Maggot Pyes, & Choughes, & Rookes brought forth
+  2209  The secret'st man of Blood. What is the night?
+  2210    La. Almost at oddes with morning, which is which
+  2211  
+  2212     Macb. How say'st thou that Macduff denies his person
+  2213  At our great bidding
+  2214  
+  2215     La. Did you send to him Sir?
+  2216    Macb. I heare it by the way: But I will send:
+  2217  There's not a one of them but in his house
+  2218  I keepe a Seruant Feed. I will to morrow
+  2219  (And betimes I will) to the weyard Sisters.
+  2220  More shall they speake: for now I am bent to know
+  2221  By the worst meanes, the worst, for mine owne good,
+  2222  All causes shall giue way. I am in blood
+  2223  Stept in so farre, that should I wade no more,
+  2224  Returning were as tedious as go ore:
+  2225  Strange things I haue in head, that will to hand,
+  2226  Which must be acted, ere they may be scand
+  2227  
+  2228     La. You lacke the season of all Natures, sleepe
+  2229  
+  2230     Macb. Come, wee'l to sleepe: My strange & self-abuse
+  2231  Is the initiate feare, that wants hard vse:
+  2232  We are yet but yong indeed.
+  2233  
+  2234  Exeunt.
+  2235  
+  2236  
+  2237  Scena Quinta.
+  2238  
+  2239  Thunder. Enter the three Witches, meeting Hecat.
+  2240  
+  2241    1. Why how now Hecat, you looke angerly?
+  2242    Hec. Haue I not reason (Beldams) as you are?
+  2243  Sawcy, and ouer-bold, how did you dare
+  2244  To Trade, and Trafficke with Macbeth,
+  2245  In Riddles, and Affaires of death;
+  2246  And I the Mistris of your Charmes,
+  2247  The close contriuer of all harmes,
+  2248  Was neuer call'd to beare my part,
+  2249  Or shew the glory of our Art?
+  2250  And which is worse, all you haue done
+  2251  Hath bene but for a wayward Sonne,
+  2252  Spightfull, and wrathfull, who (as others do)
+  2253  Loues for his owne ends, not for you.
+  2254  But make amends now: Get you gon,
+  2255  And at the pit of Acheron
+  2256  Meete me i'th' Morning: thither he
+  2257  Will come, to know his Destinie.
+  2258  Your Vessels, and your Spels prouide,
+  2259  Your Charmes, and euery thing beside;
+  2260  I am for th' Ayre: This night Ile spend
+  2261  Vnto a dismall, and a Fatall end.
+  2262  Great businesse must be wrought ere Noone.
+  2263  Vpon the Corner of the Moone
+  2264  There hangs a vap'rous drop, profound,
+  2265  Ile catch it ere it come to ground;
+  2266  And that distill'd by Magicke slights,
+  2267  Shall raise such Artificiall Sprights,
+  2268  As by the strength of their illusion,
+  2269  Shall draw him on to his Confusion.
+  2270  He shall spurne Fate, scorne Death, and beare
+  2271  His hopes 'boue Wisedome, Grace, and Feare:
+  2272  And you all know, Security
+  2273  Is Mortals cheefest Enemie.
+  2274  
+  2275  Musicke, and a Song.
+  2276  
+  2277  Hearke, I am call'd: my little Spirit see
+  2278  Sits in Foggy cloud, and stayes for me.
+  2279  
+  2280  Sing within. Come away, come away, &c.
+  2281  
+  2282    1 Come, let's make hast, shee'l soone be
+  2283  Backe againe.
+  2284  
+  2285  Exeunt.
+  2286  
+  2287  
+  2288  Scaena Sexta.
+  2289  
+  2290  Enter Lenox, and another Lord.
+  2291  
+  2292    Lenox. My former Speeches,
+  2293  Haue but hit your Thoughts
+  2294  Which can interpret farther: Onely I say
+  2295  Things haue bin strangely borne. The gracious Duncan
+  2296  Was pittied of Macbeth: marry he was dead:
+  2297  And the right valiant Banquo walk'd too late,
+  2298  Whom you may say (if't please you) Fleans kill'd,
+  2299  For Fleans fled: Men must not walke too late.
+  2300  Who cannot want the thought, how monstrous
+  2301  It was for Malcolme, and for Donalbane
+  2302  To kill their gracious Father? Damned Fact,
+  2303  How it did greeue Macbeth? Did he not straight
+  2304  In pious rage, the two delinquents teare,
+  2305  That were the Slaues of drinke, and thralles of sleepe?
+  2306  Was not that Nobly done? I, and wisely too:
+  2307  For 'twould haue anger'd any heart aliue
+  2308  To heare the men deny't. So that I say,
+  2309  He ha's borne all things well, and I do thinke,
+  2310  That had he Duncans Sonnes vnder his Key,
+  2311  (As, and't please Heauen he shall not) they should finde
+  2312  What 'twere to kill a Father: So should Fleans.
+  2313  But peace; for from broad words, and cause he fayl'd
+  2314  His presence at the Tyrants Feast, I heare
+  2315  Macduffe liues in disgrace. Sir, can you tell
+  2316  Where he bestowes himselfe?
+  2317    Lord. The Sonnes of Duncane
+  2318  (From whom this Tyrant holds the due of Birth)
+  2319  Liues in the English Court, and is receyu'd
+  2320  Of the most Pious Edward, with such grace,
+  2321  That the maleuolence of Fortune, nothing
+  2322  Takes from his high respect. Thither Macduffe
+  2323  Is gone, to pray the Holy King, vpon his ayd
+  2324  To wake Northumberland, and warlike Seyward,
+  2325  That by the helpe of these (with him aboue)
+  2326  To ratifie the Worke) we may againe
+  2327  Giue to our Tables meate, sleepe to our Nights:
+  2328  Free from our Feasts, and Banquets bloody kniues;
+  2329  Do faithfull Homage, and receiue free Honors,
+  2330  All which we pine for now. And this report
+  2331  Hath so exasperate their King, that hee
+  2332  Prepares for some attempt of Warre
+  2333  
+  2334     Len. Sent he to Macduffe?
+  2335    Lord. He did: and with an absolute Sir, not I
+  2336  The clowdy Messenger turnes me his backe,
+  2337  And hums; as who should say, you'l rue the time
+  2338  That clogges me with this Answer
+  2339  
+  2340     Lenox. And that well might
+  2341  Aduise him to a Caution, t' hold what distance
+  2342  His wisedome can prouide. Some holy Angell
+  2343  Flye to the Court of England, and vnfold
+  2344  His Message ere he come, that a swift blessing
+  2345  May soone returne to this our suffering Country,
+  2346  Vnder a hand accurs'd
+  2347  
+  2348     Lord. Ile send my Prayers with him.
+  2349  
+  2350  Exeunt.
+  2351  
+  2352  Actus Quartus. Scena Prima.
+  2353  
+  2354  Thunder. Enter the three Witches.
+  2355  
+  2356    1 Thrice the brinded Cat hath mew'd
+  2357  
+  2358     2 Thrice, and once the Hedge-Pigge whin'd
+  2359  
+  2360     3 Harpier cries, 'tis time, 'tis time
+  2361  
+  2362     1 Round about the Caldron go:
+  2363  In the poysond Entrailes throw
+  2364  Toad, that vnder cold stone,
+  2365  Dayes and Nights, ha's thirty one:
+  2366  Sweltred Venom sleeping got,
+  2367  Boyle thou first i'th' charmed pot
+  2368  
+  2369     All. Double, double, toile and trouble;
+  2370  Fire burne, and Cauldron bubble
+  2371  
+  2372     2 Fillet of a Fenny Snake,
+  2373  In the Cauldron boyle and bake:
+  2374  Eye of Newt, and Toe of Frogge,
+  2375  Wooll of Bat, and Tongue of Dogge:
+  2376  Adders Forke, and Blinde-wormes Sting,
+  2377  Lizards legge, and Howlets wing:
+  2378  For a Charme of powrefull trouble,
+  2379  Like a Hell-broth, boyle and bubble
+  2380  
+  2381     All. Double, double, toyle and trouble,
+  2382  Fire burne, and Cauldron bubble
+  2383  
+  2384     3 Scale of Dragon, Tooth of Wolfe,
+  2385  Witches Mummey, Maw, and Gulfe
+  2386  Of the rauin'd salt Sea sharke:
+  2387  Roote of Hemlocke, digg'd i'th' darke:
+  2388  Liuer of Blaspheming Iew,
+  2389  Gall of Goate, and Slippes of Yew,
+  2390  Sliuer'd in the Moones Ecclipse:
+  2391  Nose of Turke, and Tartars lips:
+  2392  Finger of Birth-strangled Babe,
+  2393  Ditch-deliuer'd by a Drab,
+  2394  Make the Grewell thicke, and slab.
+  2395  Adde thereto a Tigers Chawdron,
+  2396  For th' Ingredience of our Cawdron
+  2397  
+  2398     All. Double, double, toyle and trouble,
+  2399  Fire burne, and Cauldron bubble
+  2400  
+  2401     2 Coole it with a Baboones blood,
+  2402  Then the Charme is firme and good.
+  2403  Enter Hecat, and the other three Witches.
+  2404  
+  2405    Hec. O well done: I commend your paines,
+  2406  And euery one shall share i'th' gaines:
+  2407  And now about the Cauldron sing
+  2408  Like Elues and Fairies in a Ring,
+  2409  Inchanting all that you put in.
+  2410  
+  2411  Musicke and a Song. Blacke Spirits, &c.
+  2412  
+  2413    2 By the pricking of my Thumbes,
+  2414  Something wicked this way comes:
+  2415  Open Lockes, who euer knockes.
+  2416  Enter Macbeth.
+  2417  
+  2418    Macb. How now you secret, black, & midnight Hags?
+  2419  What is't you do?
+  2420    All. A deed without a name
+  2421  
+  2422     Macb. I coniure you, by that which you Professe,
+  2423  (How ere you come to know it) answer me:
+  2424  Though you vntye the Windes, and let them fight
+  2425  Against the Churches: Though the yesty Waues
+  2426  Confound and swallow Nauigation vp:
+  2427  Though bladed Corne be lodg'd, & Trees blown downe,
+  2428  Though Castles topple on their Warders heads:
+  2429  Though Pallaces, and Pyramids do slope
+  2430  Their heads to their Foundations: Though the treasure
+  2431  Of Natures Germaine, tumble altogether,
+  2432  Euen till destruction sicken: Answer me
+  2433  To what I aske you
+  2434  
+  2435     1 Speake
+  2436  
+  2437     2 Demand
+  2438  
+  2439     3 Wee'l answer
+  2440  
+  2441     1 Say, if th'hadst rather heare it from our mouthes,
+  2442  Or from our Masters
+  2443  
+  2444     Macb. Call 'em: let me see 'em
+  2445  
+  2446     1 Powre in Sowes blood, that hath eaten
+  2447  Her nine Farrow: Greaze that's sweaten
+  2448  From the Murderers Gibbet, throw
+  2449  Into the Flame
+  2450  
+  2451     All. Come high or low:
+  2452  Thy Selfe and Office deaftly show.
+  2453  Thunder. 1. Apparation, an Armed Head.
+  2454  
+  2455    Macb. Tell me, thou vnknowne power
+  2456  
+  2457     1 He knowes thy thought:
+  2458  Heare his speech, but say thou nought
+  2459  
+  2460     1 Appar. Macbeth, Macbeth, Macbeth:
+  2461  Beware Macduffe,
+  2462  Beware the Thane of Fife: dismisse me. Enough.
+  2463  
+  2464  He Descends.
+  2465  
+  2466    Macb. What ere thou art, for thy good caution, thanks
+  2467  Thou hast harp'd my feare aright. But one word more
+  2468  
+  2469     1 He will not be commanded: heere's another
+  2470  More potent then the first.
+  2471  
+  2472  Thunder. 2 Apparition, a Bloody Childe.
+  2473  
+  2474    2 Appar. Macbeth, Macbeth, Macbeth
+  2475  
+  2476     Macb. Had I three eares, Il'd heare thee
+  2477  
+  2478     Appar. Be bloody, bold, & resolute:
+  2479  Laugh to scorne
+  2480  The powre of man: For none of woman borne
+  2481  Shall harme Macbeth.
+  2482  
+  2483  Descends.
+  2484  
+  2485    Mac. Then liue Macduffe: what need I feare of thee?
+  2486  But yet Ile make assurance: double sure,
+  2487  And take a Bond of Fate: thou shalt not liue,
+  2488  That I may tell pale-hearted Feare, it lies;
+  2489  And sleepe in spight of Thunder.
+  2490  
+  2491  Thunder 3 Apparation, a Childe Crowned, with a Tree in his hand.
+  2492  
+  2493  What is this, that rises like the issue of a King,
+  2494  And weares vpon his Baby-brow, the round
+  2495  And top of Soueraignty?
+  2496    All. Listen, but speake not too't
+  2497  
+  2498     3 Appar. Be Lyon metled, proud, and take no care:
+  2499  Who chafes, who frets, or where Conspirers are:
+  2500  Macbeth shall neuer vanquish'd be, vntill
+  2501  Great Byrnam Wood, to high Dunsmane Hill
+  2502  Shall come against him.
+  2503  
+  2504  Descend.
+  2505  
+  2506    Macb. That will neuer bee:
+  2507  Who can impresse the Forrest, bid the Tree
+  2508  Vnfixe his earth-bound Root? Sweet boadments, good:
+  2509  Rebellious dead, rise neuer till the Wood
+  2510  Of Byrnan rise, and our high plac'd Macbeth
+  2511  Shall liue the Lease of Nature, pay his breath
+  2512  To time, and mortall Custome. Yet my Hart
+  2513  Throbs to know one thing: Tell me, if your Art
+  2514  Can tell so much: Shall Banquo's issue euer
+  2515  Reigne in this Kingdome?
+  2516    All. Seeke to know no more
+  2517  
+  2518     Macb. I will be satisfied. Deny me this,
+  2519  And an eternall Curse fall on you: Let me know.
+  2520  Why sinkes that Caldron? & what noise is this?
+  2521  
+  2522  Hoboyes
+  2523  
+  2524    1 Shew
+  2525  
+  2526     2 Shew
+  2527  
+  2528     3 Shew
+  2529  
+  2530     All. Shew his Eyes, and greeue his Hart,
+  2531  Come like shadowes, so depart.
+  2532  
+  2533  A shew of eight Kings, and Banquo last, with a glasse in his hand.
+  2534  
+  2535    Macb. Thou art too like the Spirit of Banquo: Down:
+  2536  Thy Crowne do's seare mine Eye-bals. And thy haire
+  2537  Thou other Gold-bound-brow, is like the first:
+  2538  A third, is like the former. Filthy Hagges,
+  2539  Why do you shew me this? - A fourth? Start eyes!
+  2540  What will the Line stretch out to'th' cracke of Doome?
+  2541  Another yet? A seauenth? Ile see no more:
+  2542  And yet the eighth appeares, who beares a glasse,
+  2543  Which shewes me many more: and some I see,
+  2544  That two-fold Balles, and trebble Scepters carry.
+  2545  Horrible sight: Now I see 'tis true,
+  2546  For the Blood-bolter'd Banquo smiles vpon me,
+  2547  And points at them for his. What? is this so?
+  2548    1 I Sir, all this is so. But why
+  2549  Stands Macbeth thus amazedly?
+  2550  Come Sisters, cheere we vp his sprights,
+  2551  And shew the best of our delights.
+  2552  Ile Charme the Ayre to giue a sound,
+  2553  While you performe your Antique round:
+  2554  That this great King may kindly say,
+  2555  Our duties, did his welcome pay.
+  2556  
+  2557  Musicke. The Witches Dance, and vanish.
+  2558  
+  2559    Macb. Where are they? Gone?
+  2560  Let this pernitious houre,
+  2561  Stand aye accursed in the Kalender.
+  2562  Come in, without there.
+  2563  Enter Lenox.
+  2564  
+  2565    Lenox. What's your Graces will
+  2566  
+  2567     Macb. Saw you the Weyard Sisters?
+  2568    Lenox. No my Lord
+  2569  
+  2570     Macb. Came they not by you?
+  2571    Lenox. No indeed my Lord
+  2572  
+  2573     Macb. Infected be the Ayre whereon they ride,
+  2574  And damn'd all those that trust them. I did heare
+  2575  The gallopping of Horse. Who was't came by?
+  2576    Len. 'Tis two or three my Lord, that bring you word:
+  2577  Macduff is fled to England
+  2578  
+  2579     Macb. Fled to England?
+  2580    Len. I, my good Lord
+  2581  
+  2582     Macb. Time, thou anticipat'st my dread exploits:
+  2583  The flighty purpose neuer is o're-tooke
+  2584  Vnlesse the deed go with it. From this moment,
+  2585  The very firstlings of my heart shall be
+  2586  The firstlings of my hand. And euen now
+  2587  To Crown my thoughts with Acts: be it thoght & done:
+  2588  The Castle of Macduff, I will surprize.
+  2589  Seize vpon Fife; giue to th' edge o'th' Sword
+  2590  His Wife, his Babes, and all vnfortunate Soules
+  2591  That trace him in his Line. No boasting like a Foole,
+  2592  This deed Ile do, before this purpose coole,
+  2593  But no more sights. Where are these Gentlemen?
+  2594  Come bring me where they are.
+  2595  
+  2596  Exeunt.
+  2597  
+  2598  Scena Secunda.
+  2599  
+  2600  Enter Macduffes Wife, her Son, and Rosse.
+  2601  
+  2602    Wife. What had he done, to make him fly the Land?
+  2603    Rosse. You must haue patience Madam
+  2604  
+  2605     Wife. He had none:
+  2606  His flight was madnesse: when our Actions do not,
+  2607  Our feares do make vs Traitors
+  2608  
+  2609     Rosse. You know not
+  2610  Whether it was his wisedome, or his feare
+  2611  
+  2612     Wife. Wisedom? to leaue his wife, to leaue his Babes,
+  2613  His Mansion, and his Titles, in a place
+  2614  From whence himselfe do's flye? He loues vs not,
+  2615  He wants the naturall touch. For the poore Wren
+  2616  (The most diminitiue of Birds) will fight,
+  2617  Her yong ones in her Nest, against the Owle:
+  2618  All is the Feare, and nothing is the Loue;
+  2619  As little is the Wisedome, where the flight
+  2620  So runnes against all reason
+  2621  
+  2622     Rosse. My deerest Cooz,
+  2623  I pray you schoole your selfe. But for your Husband,
+  2624  He is Noble, Wise, Iudicious, and best knowes
+  2625  The fits o'th' Season. I dare not speake much further,
+  2626  But cruell are the times, when we are Traitors
+  2627  And do not know our selues: when we hold Rumor
+  2628  From what we feare, yet know not what we feare,
+  2629  But floate vpon a wilde and violent Sea
+  2630  Each way, and moue. I take my leaue of you:
+  2631  Shall not be long but Ile be heere againe:
+  2632  Things at the worst will cease, or else climbe vpward,
+  2633  To what they were before. My pretty Cosine,
+  2634  Blessing vpon you
+  2635  
+  2636     Wife. Father'd he is,
+  2637  And yet hee's Father-lesse
+  2638  
+  2639     Rosse. I am so much a Foole, should I stay longer
+  2640  It would be my disgrace, and your discomfort.
+  2641  I take my leaue at once.
+  2642  
+  2643  Exit Rosse.
+  2644  
+  2645    Wife. Sirra, your Fathers dead,
+  2646  And what will you do now? How will you liue?
+  2647    Son. As Birds do Mother
+  2648  
+  2649     Wife. What with Wormes, and Flyes?
+  2650    Son. With what I get I meane, and so do they
+  2651  
+  2652     Wife. Poore Bird,
+  2653  Thou'dst neuer Feare the Net, nor Lime,
+  2654  The Pitfall, nor the Gin
+  2655  
+  2656     Son. Why should I Mother?
+  2657  Poore Birds they are not set for:
+  2658  My Father is not dead for all your saying
+  2659  
+  2660     Wife. Yes, he is dead:
+  2661  How wilt thou do for a Father?
+  2662    Son. Nay how will you do for a Husband?
+  2663    Wife. Why I can buy me twenty at any Market
+  2664  
+  2665     Son. Then you'l by 'em to sell againe
+  2666  
+  2667     Wife. Thou speak'st withall thy wit,
+  2668  And yet I'faith with wit enough for thee
+  2669  
+  2670     Son. Was my Father a Traitor, Mother?
+  2671    Wife. I, that he was
+  2672  
+  2673     Son. What is a Traitor?
+  2674    Wife. Why one that sweares, and lyes
+  2675  
+  2676     Son. And be all Traitors, that do so
+  2677  
+  2678     Wife. Euery one that do's so, is a Traitor,
+  2679  And must be hang'd
+  2680  
+  2681     Son. And must they all be hang'd, that swear and lye?
+  2682    Wife. Euery one
+  2683  
+  2684     Son. Who must hang them?
+  2685    Wife. Why, the honest men
+  2686  
+  2687     Son. Then the Liars and Swearers are Fools: for there
+  2688  are Lyars and Swearers enow, to beate the honest men,
+  2689  and hang vp them
+  2690  
+  2691     Wife. Now God helpe thee, poore Monkie:
+  2692  But how wilt thou do for a Father?
+  2693    Son. If he were dead, youl'd weepe for him: if you
+  2694  would not, it were a good signe, that I should quickely
+  2695  haue a new Father
+  2696  
+  2697     Wife. Poore pratler, how thou talk'st?
+  2698  Enter a Messenger.
+  2699  
+  2700    Mes. Blesse you faire Dame: I am not to you known,
+  2701  Though in your state of Honor I am perfect;
+  2702  I doubt some danger do's approach you neerely.
+  2703  If you will take a homely mans aduice,
+  2704  Be not found heere: Hence with your little ones
+  2705  To fright you thus. Me thinkes I am too sauage:
+  2706  To do worse to you, were fell Cruelty,
+  2707  Which is too nie your person. Heauen preserue you,
+  2708  I dare abide no longer.
+  2709  
+  2710  Exit Messenger
+  2711  
+  2712    Wife. Whether should I flye?
+  2713  I haue done no harme. But I remember now
+  2714  I am in this earthly world: where to do harme
+  2715  Is often laudable, to do good sometime
+  2716  Accounted dangerous folly. Why then (alas)
+  2717  Do I put vp that womanly defence,
+  2718  To say I haue done no harme?
+  2719  What are these faces?
+  2720  Enter Murtherers.
+  2721  
+  2722    Mur. Where is your Husband?
+  2723    Wife. I hope in no place so vnsanctified,
+  2724  Where such as thou may'st finde him
+  2725  
+  2726     Mur. He's a Traitor
+  2727  
+  2728     Son. Thou ly'st thou shagge-ear'd Villaine
+  2729  
+  2730     Mur. What you Egge?
+  2731  Yong fry of Treachery?
+  2732    Son. He ha's kill'd me Mother,
+  2733  Run away I pray you.
+  2734  
+  2735  Exit crying Murther.
+  2736  
+  2737  
+  2738  Scaena Tertia.
+  2739  
+  2740  Enter Malcolme and Macduffe.
+  2741  
+  2742    Mal. Let vs seeke out some desolate shade, & there
+  2743  Weepe our sad bosomes empty
+  2744  
+  2745     Macd. Let vs rather
+  2746  Hold fast the mortall Sword: and like good men,
+  2747  Bestride our downfall Birthdome: each new Morne,
+  2748  New Widdowes howle, new Orphans cry, new sorowes
+  2749  Strike heauen on the face, that it resounds
+  2750  As if it felt with Scotland, and yell'd out
+  2751  Like Syllable of Dolour
+  2752  
+  2753     Mal. What I beleeue, Ile waile;
+  2754  What know, beleeue; and what I can redresse,
+  2755  As I shall finde the time to friend: I wil.
+  2756  What you haue spoke, it may be so perchance.
+  2757  This Tyrant, whose sole name blisters our tongues,
+  2758  Was once thought honest: you haue lou'd him well,
+  2759  He hath not touch'd you yet. I am yong, but something
+  2760  You may discerne of him through me, and wisedome
+  2761  To offer vp a weake, poore innocent Lambe
+  2762  T' appease an angry God
+  2763  
+  2764     Macd. I am not treacherous
+  2765  
+  2766     Malc. But Macbeth is.
+  2767  A good and vertuous Nature may recoyle
+  2768  In an Imperiall charge. But I shall craue your pardon:
+  2769  That which you are, my thoughts cannot transpose;
+  2770  Angels are bright still, though the brightest fell.
+  2771  Though all things foule, would wear the brows of grace
+  2772  Yet Grace must still looke so
+  2773  
+  2774     Macd. I haue lost my Hopes
+  2775  
+  2776     Malc. Perchance euen there
+  2777  Where I did finde my doubts.
+  2778  Why in that rawnesse left you Wife, and Childe?
+  2779  Those precious Motiues, those strong knots of Loue,
+  2780  Without leaue-taking. I pray you,
+  2781  Let not my Iealousies, be your Dishonors,
+  2782  But mine owne Safeties: you may be rightly iust,
+  2783  What euer I shall thinke
+  2784  
+  2785     Macd. Bleed, bleed poore Country,
+  2786  Great Tyrrany, lay thou thy basis sure,
+  2787  For goodnesse dare not check thee: wear y thy wrongs,
+  2788  The Title, is affear'd. Far thee well Lord,
+  2789  I would not be the Villaine that thou think'st,
+  2790  For the whole Space that's in the Tyrants Graspe,
+  2791  And the rich East to boot
+  2792  
+  2793     Mal. Be not offended:
+  2794  I speake not as in absolute feare of you:
+  2795  I thinke our Country sinkes beneath the yoake,
+  2796  It weepes, it bleeds, and each new day a gash
+  2797  Is added to her wounds. I thinke withall,
+  2798  There would be hands vplifted in my right:
+  2799  And heere from gracious England haue I offer
+  2800  Of goodly thousands. But for all this,
+  2801  When I shall treade vpon the Tyrants head,
+  2802  Or weare it on my Sword; yet my poore Country
+  2803  Shall haue more vices then it had before,
+  2804  More suffer, and more sundry wayes then euer,
+  2805  By him that shall succeede
+  2806  
+  2807     Macd. What should he be?
+  2808    Mal. It is my selfe I meane: in whom I know
+  2809  All the particulars of Vice so grafted,
+  2810  That when they shall be open'd, blacke Macbeth
+  2811  Will seeme as pure as Snow, and the poore State
+  2812  Esteeme him as a Lambe, being compar'd
+  2813  With my confinelesse harmes
+  2814  
+  2815     Macd. Not in the Legions
+  2816  Of horrid Hell, can come a Diuell more damn'd
+  2817  In euils, to top Macbeth
+  2818  
+  2819     Mal. I grant him Bloody,
+  2820  Luxurious, Auaricious, False, Deceitfull,
+  2821  Sodaine, Malicious, smacking of euery sinne
+  2822  That ha's a name. But there's no bottome, none
+  2823  In my Voluptuousnesse: Your Wiues, your Daughters,
+  2824  Your Matrons, and your Maides, could not fill vp
+  2825  The Cesterne of my Lust, and my Desire
+  2826  All continent Impediments would ore-beare
+  2827  That did oppose my will. Better Macbeth,
+  2828  Then such an one to reigne
+  2829  
+  2830     Macd. Boundlesse intemperance
+  2831  In Nature is a Tyranny: It hath beene
+  2832  Th' vntimely emptying of the happy Throne,
+  2833  And fall of many Kings. But feare not yet
+  2834  To take vpon you what is yours: you may
+  2835  Conuey your pleasures in a spacious plenty,
+  2836  And yet seeme cold. The time you may so hoodwinke:
+  2837  We haue willing Dames enough: there cannot be
+  2838  That Vulture in you, to deuoure so many
+  2839  As will to Greatnesse dedicate themselues,
+  2840  Finding it so inclinde
+  2841  
+  2842     Mal. With this, there growes
+  2843  In my most ill-composd Affection, such
+  2844  A stanchlesse Auarice, that were I King,
+  2845  I should cut off the Nobles for their Lands,
+  2846  Desire his Iewels, and this others House,
+  2847  And my more-hauing, would be as a Sawce
+  2848  To make me hunger more, that I should forge
+  2849  Quarrels vniust against the Good and Loyall,
+  2850  Destroying them for wealth
+  2851  
+  2852     Macd. This Auarice
+  2853  stickes deeper: growes with more pernicious roote
+  2854  Then Summer-seeming Lust: and it hath bin
+  2855  The Sword of our slaine Kings: yet do not feare,
+  2856  Scotland hath Foysons, to fill vp your will
+  2857  Of your meere Owne. All these are portable,
+  2858  With other Graces weigh'd
+  2859  
+  2860     Mal. But I haue none. The King-becoming Graces,
+  2861  As Iustice, Verity, Temp'rance, Stablenesse,
+  2862  Bounty, Perseuerance, Mercy, Lowlinesse,
+  2863  Deuotion, Patience, Courage, Fortitude,
+  2864  I haue no rellish of them, but abound
+  2865  In the diuision of each seuerall Crime,
+  2866  Acting it many wayes. Nay, had I powre, I should
+  2867  Poure the sweet Milke of Concord, into Hell,
+  2868  Vprore the vniuersall peace, confound
+  2869  All vnity on earth
+  2870  
+  2871     Macd. O Scotland, Scotland
+  2872  
+  2873     Mal. If such a one be fit to gouerne, speake:
+  2874  I am as I haue spoken
+  2875  
+  2876     Mac. Fit to gouern? No not to liue. O Natio[n] miserable!
+  2877  With an vntitled Tyrant, bloody Sceptred,
+  2878  When shalt thou see thy wholsome dayes againe?
+  2879  Since that the truest Issue of thy Throne
+  2880  By his owne Interdiction stands accust,
+  2881  And do's blaspheme his breed? Thy Royall Father
+  2882  Was a most Sainted-King: the Queene that bore thee,
+  2883  Oftner vpon her knees, then on her feet,
+  2884  Dy'de euery day she liu'd. Fare thee well,
+  2885  These Euils thou repeat'st vpon thy selfe,
+  2886  Hath banish'd me from Scotland. O my Brest,
+  2887  Thy hope ends heere
+  2888  
+  2889     Mal. Macduff, this Noble passion
+  2890  Childe of integrity, hath from my soule
+  2891  Wip'd the blacke Scruples, reconcil'd my thoughts
+  2892  To thy good Truth, and Honor. Diuellish Macbeth,
+  2893  By many of these traines, hath sought to win me
+  2894  Into his power: and modest Wisedome pluckes me
+  2895  From ouer-credulous hast: but God aboue
+  2896  Deale betweene thee and me; For euen now
+  2897  I put my selfe to thy Direction, and
+  2898  Vnspeake mine owne detraction. Heere abiure
+  2899  The taints, and blames I laide vpon my selfe,
+  2900  For strangers to my Nature. I am yet
+  2901  Vnknowne to Woman, neuer was forsworne,
+  2902  Scarsely haue coueted what was mine owne.
+  2903  At no time broke my Faith, would not betray
+  2904  The Deuill to his Fellow, and delight
+  2905  No lesse in truth then life. My first false speaking
+  2906  Was this vpon my selfe. What I am truly
+  2907  Is thine, and my poore Countries to command:
+  2908  Whither indeed, before they heere approach
+  2909  Old Seyward with ten thousand warlike men
+  2910  Already at a point, was setting foorth:
+  2911  Now wee'l together, and the chance of goodnesse
+  2912  Be like our warranted Quarrell. Why are you silent?
+  2913    Macd. Such welcome, and vnwelcom things at once
+  2914  'Tis hard to reconcile.
+  2915  Enter a Doctor.
+  2916  
+  2917    Mal. Well, more anon. Comes the King forth
+  2918  I pray you?
+  2919    Doct. I Sir: there are a crew of wretched Soules
+  2920  That stay his Cure: their malady conuinces
+  2921  The great assay of Art. But at his touch,
+  2922  Such sanctity hath Heauen giuen his hand,
+  2923  They presently amend.
+  2924  Enter.
+  2925  
+  2926    Mal. I thanke you Doctor
+  2927  
+  2928     Macd. What's the Disease he meanes?
+  2929    Mal. Tis call'd the Euill.
+  2930  A most myraculous worke in this good King,
+  2931  Which often since my heere remaine in England,
+  2932  I haue seene him do: How he solicites heauen
+  2933  Himselfe best knowes: but strangely visited people
+  2934  All swolne and Vlcerous, pittifull to the eye,
+  2935  The meere dispaire of Surgery, he cures,
+  2936  Hanging a golden stampe about their neckes,
+  2937  Put on with holy Prayers, and 'tis spoken
+  2938  To the succeeding Royalty he leaues
+  2939  The healing Benediction. With this strange vertue,
+  2940  He hath a heauenly guift of Prophesie,
+  2941  And sundry Blessings hang about his Throne,
+  2942  That speake him full of Grace.
+  2943  Enter Rosse.
+  2944  
+  2945    Macd. See who comes heere
+  2946  
+  2947     Malc. My Countryman: but yet I know him not
+  2948  
+  2949     Macd. My euer gentle Cozen, welcome hither
+  2950  
+  2951     Malc. I know him now. Good God betimes remoue
+  2952  The meanes that makes vs Strangers
+  2953  
+  2954     Rosse. Sir, Amen
+  2955  
+  2956     Macd. Stands Scotland where it did?
+  2957    Rosse. Alas poore Countrey,
+  2958  Almost affraid to know it selfe. It cannot
+  2959  Be call'd our Mother, but our Graue; where nothing
+  2960  But who knowes nothing, is once seene to smile:
+  2961  Where sighes, and groanes, and shrieks that rent the ayre
+  2962  Are made, not mark'd: Where violent sorrow seemes
+  2963  A Moderne extasie: The Deadmans knell,
+  2964  Is there scarse ask'd for who, and good mens liues
+  2965  Expire before the Flowers in their Caps,
+  2966  Dying, or ere they sicken
+  2967  
+  2968     Macd. Oh Relation; too nice, and yet too true
+  2969  
+  2970     Malc. What's the newest griefe?
+  2971    Rosse. That of an houres age, doth hisse the speaker,
+  2972  Each minute teemes a new one
+  2973  
+  2974     Macd. How do's my Wife?
+  2975    Rosse. Why well
+  2976  
+  2977     Macd. And all my Children?
+  2978    Rosse. Well too
+  2979  
+  2980     Macd. The Tyrant ha's not batter'd at their peace?
+  2981    Rosse. No, they were wel at peace, when I did leaue 'em
+  2982    Macd. Be not a niggard of your speech: How gos't?
+  2983    Rosse. When I came hither to transport the Tydings
+  2984  Which I haue heauily borne, there ran a Rumour
+  2985  Of many worthy Fellowes, that were out,
+  2986  Which was to my beleefe witnest the rather,
+  2987  For that I saw the Tyrants Power a-foot.
+  2988  Now is the time of helpe: your eye in Scotland
+  2989  Would create Soldiours, make our women fight,
+  2990  To doffe their dire distresses
+  2991  
+  2992     Malc. Bee't their comfort
+  2993  We are comming thither: Gracious England hath
+  2994  Lent vs good Seyward, and ten thousand men,
+  2995  An older, and a better Souldier, none
+  2996  That Christendome giues out
+  2997  
+  2998     Rosse. Would I could answer
+  2999  This comfort with the like. But I haue words
+  3000  That would be howl'd out in the desert ayre,
+  3001  Where hearing should not latch them
+  3002  
+  3003     Macd. What concerne they,
+  3004  The generall cause, or is it a Fee-griefe
+  3005  Due to some single brest?
+  3006    Rosse. No minde that's honest
+  3007  But in it shares some woe, though the maine part
+  3008  Pertaines to you alone
+  3009  
+  3010     Macd. If it be mine
+  3011  Keepe it not from me, quickly let me haue it
+  3012  
+  3013     Rosse. Let not your eares dispise my tongue for euer,
+  3014  Which shall possesse them with the heauiest sound
+  3015  that euer yet they heard
+  3016  
+  3017     Macd. Humh: I guesse at it
+  3018  
+  3019     Rosse. Your Castle is surpriz'd: your Wife, and Babes
+  3020  Sauagely slaughter'd: To relate the manner
+  3021  Were on the Quarry of these murther'd Deere
+  3022  To adde the death of you
+  3023  
+  3024     Malc. Mercifull Heauen:
+  3025  What man, ne're pull your hat vpon your browes:
+  3026  Giue sorrow words; the griefe that do's not speake,
+  3027  Whispers the o're-fraught heart, and bids it breake
+  3028  
+  3029     Macd. My Children too?
+  3030    Ro. Wife, Children, Seruants, all that could be found
+  3031  
+  3032     Macd. And I must be from thence? My wife kil'd too?
+  3033    Rosse. I haue said
+  3034  
+  3035     Malc. Be comforted.
+  3036  Let's make vs Med'cines of our great Reuenge,
+  3037  To cure this deadly greefe
+  3038  
+  3039     Macd. He ha's no Children. All my pretty ones?
+  3040  Did you say All? Oh Hell-Kite! All?
+  3041  What, All my pretty Chickens, and their Damme
+  3042  At one fell swoope?
+  3043    Malc. Dispute it like a man
+  3044  
+  3045     Macd. I shall do so:
+  3046  But I must also feele it as a man;
+  3047  I cannot but remember such things were
+  3048  That were most precious to me: Did heauen looke on,
+  3049  And would not take their part? Sinfull Macduff,
+  3050  They were all strooke for thee: Naught that I am,
+  3051  Not for their owne demerits, but for mine
+  3052  Fell slaughter on their soules: Heauen rest them now
+  3053  
+  3054     Mal. Be this the Whetstone of your sword, let griefe
+  3055  Conuert to anger: blunt not the heart, enrage it
+  3056  
+  3057     Macd. O I could play the woman with mine eyes,
+  3058  And Braggart with my tongue. But gentle Heauens,
+  3059  Cut short all intermission: Front to Front,
+  3060  Bring thou this Fiend of Scotland, and my selfe
+  3061  Within my Swords length set him, if he scape
+  3062  Heauen forgiue him too
+  3063  
+  3064     Mal. This time goes manly:
+  3065  Come go we to the King, our Power is ready,
+  3066  Our lacke is nothing but our leaue. Macbeth
+  3067  Is ripe for shaking, and the Powres aboue
+  3068  Put on their Instruments: Receiue what cheere you may,
+  3069  The Night is long, that neuer findes the Day.
+  3070  
+  3071  Exeunt.
+  3072  
+  3073  Actus Quintus. Scena Prima.
+  3074  
+  3075  Enter a Doctor of Physicke, and a Wayting Gentlewoman.
+  3076  
+  3077    Doct. I haue too Nights watch'd with you, but can
+  3078  perceiue no truth in your report. When was it shee last
+  3079  walk'd?
+  3080    Gent. Since his Maiesty went into the Field, I haue
+  3081  seene her rise from her bed, throw her Night-Gown vppon
+  3082  her, vnlocke her Closset, take foorth paper, folde it,
+  3083  write vpon't, read it, afterwards Seale it, and againe returne
+  3084  to bed; yet all this while in a most fast sleepe
+  3085  
+  3086     Doct. A great perturbation in Nature, to receyue at
+  3087  once the benefit of sleep, and do the effects of watching.
+  3088  In this slumbry agitation, besides her walking, and other
+  3089  actuall performances, what (at any time) haue you heard
+  3090  her say?
+  3091    Gent. That Sir, which I will not report after her
+  3092  
+  3093     Doct. You may to me, and 'tis most meet you should
+  3094  
+  3095     Gent. Neither to you, nor any one, hauing no witnesse
+  3096  to confirme my speech.
+  3097  Enter Lady, with a Taper.
+  3098  
+  3099  Lo you, heere she comes: This is her very guise, and vpon
+  3100  my life fast asleepe: obserue her, stand close
+  3101  
+  3102     Doct. How came she by that light?
+  3103    Gent. Why it stood by her: she ha's light by her continually,
+  3104  'tis her command
+  3105  
+  3106     Doct. You see her eyes are open
+  3107  
+  3108     Gent. I, but their sense are shut
+  3109  
+  3110     Doct. What is it she do's now?
+  3111  Looke how she rubbes her hands
+  3112  
+  3113     Gent. It is an accustom'd action with her, to seeme
+  3114  thus washing her hands: I haue knowne her continue in
+  3115  this a quarter of an houre
+  3116  
+  3117     Lad. Yet heere's a spot
+  3118  
+  3119     Doct. Heark, she speaks, I will set downe what comes
+  3120  from her, to satisfie my remembrance the more strongly
+  3121  
+  3122     La. Out damned spot: out I say. One: Two: Why
+  3123  then 'tis time to doo't: Hell is murky. Fye, my Lord, fie,
+  3124  a Souldier, and affear'd? what need we feare? who knowes
+  3125  it, when none can call our powre to accompt: yet who
+  3126  would haue thought the olde man to haue had so much
+  3127  blood in him
+  3128  
+  3129     Doct. Do you marke that?
+  3130    Lad. The Thane of Fife, had a wife: where is she now?
+  3131  What will these hands ne're be cleane? No more o'that
+  3132  my Lord, no more o'that: you marre all with this starting
+  3133  
+  3134     Doct. Go too, go too:
+  3135  You haue knowne what you should not
+  3136  
+  3137     Gent. She ha's spoke what shee should not, I am sure
+  3138  of that: Heauen knowes what she ha's knowne
+  3139  
+  3140     La. Heere's the smell of the blood still: all the perfumes
+  3141  of Arabia will not sweeten this little hand.
+  3142  Oh, oh, oh
+  3143  
+  3144     Doct. What a sigh is there? The hart is sorely charg'd
+  3145  
+  3146     Gent. I would not haue such a heart in my bosome,
+  3147  for the dignity of the whole body
+  3148  
+  3149     Doct. Well, well, well
+  3150  
+  3151     Gent. Pray God it be sir
+  3152  
+  3153     Doct. This disease is beyond my practise: yet I haue
+  3154  knowne those which haue walkt in their sleep, who haue
+  3155  dyed holily in their beds
+  3156  
+  3157     Lad. Wash your hands, put on your Night-Gowne,
+  3158  looke not so pale: I tell you yet againe Banquo's buried;
+  3159  he cannot come out on's graue
+  3160  
+  3161     Doct. Euen so?
+  3162    Lady. To bed, to bed: there's knocking at the gate:
+  3163  Come, come, come, come, giue me your hand: What's
+  3164  done, cannot be vndone. To bed, to bed, to bed.
+  3165  
+  3166  Exit Lady.
+  3167  
+  3168    Doct. Will she go now to bed?
+  3169    Gent. Directly
+  3170  
+  3171     Doct. Foule whisp'rings are abroad: vnnaturall deeds
+  3172  Do breed vnnaturall troubles: infected mindes
+  3173  To their deafe pillowes will discharge their Secrets:
+  3174  More needs she the Diuine, then the Physitian:
+  3175  God, God forgiue vs all. Looke after her,
+  3176  Remoue from her the meanes of all annoyance,
+  3177  And still keepe eyes vpon her: So goodnight,
+  3178  My minde she ha's mated, and amaz'd my sight.
+  3179  I thinke, but dare not speake
+  3180  
+  3181     Gent. Good night good Doctor.
+  3182  
+  3183  Exeunt.
+  3184  
+  3185  
+  3186  Scena Secunda.
+  3187  
+  3188  Drum and Colours. Enter Menteth, Cathnes, Angus, Lenox,
+  3189  Soldiers.
+  3190  
+  3191    Ment. The English powre is neere, led on by Malcolm,
+  3192  His Vnkle Seyward, and the good Macduff.
+  3193  Reuenges burne in them: for their deere causes
+  3194  Would to the bleeding, and the grim Alarme
+  3195  Excite the mortified man
+  3196  
+  3197     Ang. Neere Byrnan wood
+  3198  Shall we well meet them, that way are they comming
+  3199  
+  3200     Cath. Who knowes if Donalbane be with his brother?
+  3201    Len. For certaine Sir, he is not: I haue a File
+  3202  Of all the Gentry; there is Seywards Sonne,
+  3203  And many vnruffe youths, that euen now
+  3204  Protest their first of Manhood
+  3205  
+  3206     Ment. What do's the Tyrant
+  3207  
+  3208     Cath. Great Dunsinane he strongly Fortifies:
+  3209  Some say hee's mad: Others, that lesser hate him,
+  3210  Do call it valiant Fury, but for certaine
+  3211  He cannot buckle his distemper'd cause
+  3212  Within the belt of Rule
+  3213  
+  3214     Ang. Now do's he feele
+  3215  His secret Murthers sticking on his hands,
+  3216  Now minutely Reuolts vpbraid his Faith-breach:
+  3217  Those he commands, moue onely in command,
+  3218  Nothing in loue: Now do's he feele his Title
+  3219  Hang loose about him, like a Giants Robe
+  3220  Vpon a dwarfish Theefe
+  3221  
+  3222     Ment. Who then shall blame
+  3223  His pester'd Senses to recoyle, and start,
+  3224  When all that is within him, do's condemne
+  3225  It selfe, for being there
+  3226  
+  3227     Cath. Well, march we on,
+  3228  To giue Obedience, where 'tis truly ow'd:
+  3229  Meet we the Med'cine of the sickly Weale,
+  3230  And with him poure we in our Countries purge,
+  3231  Each drop of vs
+  3232  
+  3233     Lenox. Or so much as it needes,
+  3234  To dew the Soueraigne Flower, and drowne the Weeds:
+  3235  Make we our March towards Birnan.
+  3236  
+  3237  Exeunt. marching.
+  3238  
+  3239  
+  3240  Scaena Tertia.
+  3241  
+  3242  Enter Macbeth, Doctor, and Attendants.
+  3243  
+  3244    Macb. Bring me no more Reports, let them flye all:
+  3245  Till Byrnane wood remoue to Dunsinane,
+  3246  I cannot taint with Feare. What's the Boy Malcolme?
+  3247  Was he not borne of woman? The Spirits that know
+  3248  All mortall Consequences, haue pronounc'd me thus:
+  3249  Feare not Macbeth, no man that's borne of woman
+  3250  Shall ere haue power vpon thee. Then fly false Thanes,
+  3251  And mingle with the English Epicures,
+  3252  The minde I sway by, and the heart I beare,
+  3253  Shall neuer sagge with doubt, nor shake with feare.
+  3254  Enter Seruant.
+  3255  
+  3256  The diuell damne thee blacke, thou cream-fac'd Loone:
+  3257  Where got'st thou that Goose-looke
+  3258  
+  3259     Ser. There is ten thousand
+  3260  
+  3261     Macb. Geese Villaine?
+  3262    Ser. Souldiers Sir
+  3263  
+  3264     Macb. Go pricke thy face, and ouer-red thy feare
+  3265  Thou Lilly-liuer'd Boy. What Soldiers, Patch?
+  3266  Death of thy Soule, those Linnen cheekes of thine
+  3267  Are Counsailers to feare. What Soldiers Whay-face?
+  3268    Ser. The English Force, so please you
+  3269  
+  3270     Macb. Take thy face hence. Seyton, I am sick at hart,
+  3271  When I behold: Seyton, I say, this push
+  3272  Will cheere me euer, or dis-eate me now.
+  3273  I haue liu'd long enough: my way of life
+  3274  Is falne into the Seare, the yellow Leafe,
+  3275  And that which should accompany Old-Age,
+  3276  As Honor, Loue, Obedience, Troopes of Friends,
+  3277  I must not looke to haue: but in their steed,
+  3278  Curses, not lowd but deepe, Mouth-honor, breath
+  3279  Which the poore heart would faine deny, and dare not.
+  3280  Seyton?
+  3281  Enter Seyton.
+  3282  
+  3283    Sey. What's your gracious pleasure?
+  3284    Macb. What Newes more?
+  3285    Sey. All is confirm'd my Lord, which was reported
+  3286  
+  3287     Macb. Ile fight, till from my bones, my flesh be hackt.
+  3288  Giue me my Armor
+  3289  
+  3290     Seyt. 'Tis not needed yet
+  3291  
+  3292     Macb. Ile put it on:
+  3293  Send out moe Horses, skirre the Country round,
+  3294  Hang those that talke of Feare. Giue me mine Armor:
+  3295  How do's your Patient, Doctor?
+  3296    Doct. Not so sicke my Lord,
+  3297  As she is troubled with thicke-comming Fancies
+  3298  That keepe her from her rest
+  3299  
+  3300     Macb. Cure of that:
+  3301  Can'st thou not Minister to a minde diseas'd,
+  3302  Plucke from the Memory a rooted Sorrow,
+  3303  Raze out the written troubles of the Braine,
+  3304  And with some sweet Obliuious Antidote
+  3305  Cleanse the stufft bosome, of that perillous stuffe
+  3306  Which weighes vpon the heart?
+  3307    Doct. Therein the Patient
+  3308  Must minister to himselfe
+  3309  
+  3310     Macb. Throw Physicke to the Dogs, Ile none of it.
+  3311  Come, put mine Armour on: giue me my Staffe:
+  3312  Seyton, send out: Doctor, the Thanes flye from me:
+  3313  Come sir, dispatch. If thou could'st Doctor, cast
+  3314  The Water of my Land, finde her Disease,
+  3315  And purge it to a sound and pristine Health,
+  3316  I would applaud thee to the very Eccho,
+  3317  That should applaud againe. Pull't off I say,
+  3318  What Rubarb, Cyme, or what Purgatiue drugge
+  3319  Would scowre these English hence: hear'st y of them?
+  3320    Doct. I my good Lord: your Royall Preparation
+  3321  Makes vs heare something
+  3322  
+  3323     Macb. Bring it after me:
+  3324  I will not be affraid of Death and Bane,
+  3325  Till Birnane Forrest come to Dunsinane
+  3326  
+  3327     Doct. Were I from Dunsinane away, and cleere,
+  3328  Profit againe should hardly draw me heere.
+  3329  
+  3330  Exeunt.
+  3331  
+  3332  Scena Quarta.
+  3333  
+  3334  Drum and Colours. Enter Malcolme, Seyward, Macduffe,
+  3335  Seywards Sonne,
+  3336  Menteth, Cathnes, Angus, and Soldiers Marching.
+  3337  
+  3338    Malc. Cosins, I hope the dayes are neere at hand
+  3339  That Chambers will be safe
+  3340  
+  3341     Ment. We doubt it nothing
+  3342  
+  3343     Seyw. What wood is this before vs?
+  3344    Ment. The wood of Birnane
+  3345  
+  3346     Malc. Let euery Souldier hew him downe a Bough,
+  3347  And bear't before him, thereby shall we shadow
+  3348  The numbers of our Hoast, and make discouery
+  3349  Erre in report of vs
+  3350  
+  3351     Sold. It shall be done
+  3352  
+  3353     Syw. We learne no other, but the confident Tyrant
+  3354  Keepes still in Dunsinane, and will indure
+  3355  Our setting downe befor't
+  3356  
+  3357     Malc. 'Tis his maine hope:
+  3358  For where there is aduantage to be giuen,
+  3359  Both more and lesse haue giuen him the Reuolt,
+  3360  And none serue with him, but constrained things,
+  3361  Whose hearts are absent too
+  3362  
+  3363     Macd. Let our iust Censures
+  3364  Attend the true euent, and put we on
+  3365  Industrious Souldiership
+  3366  
+  3367     Sey. The time approaches,
+  3368  That will with due decision make vs know
+  3369  What we shall say we haue, and what we owe:
+  3370  Thoughts speculatiue, their vnsure hopes relate,
+  3371  But certaine issue, stroakes must arbitrate,
+  3372  Towards which, aduance the warre.
+  3373  
+  3374  Exeunt. marching
+  3375  
+  3376  Scena Quinta.
+  3377  
+  3378  Enter Macbeth, Seyton, & Souldiers, with Drum and Colours.
+  3379  
+  3380    Macb. Hang out our Banners on the outward walls,
+  3381  The Cry is still, they come: our Castles strength
+  3382  Will laugh a Siedge to scorne: Heere let them lye,
+  3383  Till Famine and the Ague eate them vp:
+  3384  Were they not forc'd with those that should be ours,
+  3385  We might haue met them darefull, beard to beard,
+  3386  And beate them backward home. What is that noyse?
+  3387  
+  3388  A Cry within of Women.
+  3389  
+  3390    Sey. It is the cry of women, my good Lord
+  3391  
+  3392     Macb. I haue almost forgot the taste of Feares:
+  3393  The time ha's beene, my sences would haue cool'd
+  3394  To heare a Night-shrieke, and my Fell of haire
+  3395  Would at a dismall Treatise rowze, and stirre
+  3396  As life were in't. I haue supt full with horrors,
+  3397  Direnesse familiar to my slaughterous thoughts
+  3398  Cannot once start me. Wherefore was that cry?
+  3399    Sey. The Queene (my Lord) is dead
+  3400  
+  3401     Macb. She should haue dy'de heereafter;
+  3402  There would haue beene a time for such a word:
+  3403  To morrow, and to morrow, and to morrow,
+  3404  Creepes in this petty pace from day to day,
+  3405  To the last Syllable of Recorded time:
+  3406  And all our yesterdayes, haue lighted Fooles
+  3407  The way to dusty death. Out, out, breefe Candle,
+  3408  Life's but a walking Shadow, a poore Player,
+  3409  That struts and frets his houre vpon the Stage,
+  3410  And then is heard no more. It is a Tale
+  3411  Told by an Ideot, full of sound and fury
+  3412  Signifying nothing.
+  3413  Enter a Messenger.
+  3414  
+  3415  Thou com'st to vse thy Tongue: thy Story quickly
+  3416  
+  3417     Mes. Gracious my Lord,
+  3418  I should report that which I say I saw,
+  3419  But know not how to doo't
+  3420  
+  3421     Macb. Well, say sir
+  3422  
+  3423     Mes. As I did stand my watch vpon the Hill
+  3424  I look'd toward Byrnane, and anon me thought
+  3425  The Wood began to moue
+  3426  
+  3427     Macb. Lyar, and Slaue
+  3428  
+  3429     Mes. Let me endure your wrath, if't be not so:
+  3430  Within this three Mile may you see it comming.
+  3431  I say, a mouing Groue
+  3432  
+  3433     Macb. If thou speak'st false,
+  3434  Vpon the next Tree shall thou hang aliue
+  3435  Till Famine cling thee: If thy speech be sooth,
+  3436  I care not if thou dost for me as much.
+  3437  I pull in Resolution, and begin
+  3438  To doubt th' Equiuocation of the Fiend,
+  3439  That lies like truth. Feare not, till Byrnane Wood
+  3440  Do come to Dunsinane, and now a Wood
+  3441  Comes toward Dunsinane. Arme, Arme, and out,
+  3442  If this which he auouches, do's appeare,
+  3443  There is nor flying hence, nor tarrying here.
+  3444  I 'ginne to be a-weary of the Sun,
+  3445  And wish th' estate o'th' world were now vndon.
+  3446  Ring the Alarum Bell, blow Winde, come wracke,
+  3447  At least wee'l dye with Harnesse on our backe.
+  3448  
+  3449  Exeunt.
+  3450  
+  3451  Scena Sexta.
+  3452  
+  3453  Drumme and Colours. Enter Malcolme, Seyward, Macduffe, and
+  3454  their Army,
+  3455  with Boughes.
+  3456  
+  3457    Mal. Now neere enough:
+  3458  Your leauy Skreenes throw downe,
+  3459  And shew like those you are: You (worthy Vnkle)
+  3460  Shall with my Cosin your right Noble Sonne
+  3461  Leade our first Battell. Worthy Macduffe, and wee
+  3462  Shall take vpon's what else remaines to do,
+  3463  According to our order
+  3464  
+  3465     Sey. Fare you well:
+  3466  Do we but finde the Tyrants power to night,
+  3467  Let vs be beaten, if we cannot fight
+  3468  
+  3469     Macd. Make all our Trumpets speak, giue the[m] all breath
+  3470  Those clamorous Harbingers of Blood, & Death.
+  3471  
+  3472  Exeunt.
+  3473  
+  3474  Alarums continued.
+  3475  
+  3476  
+  3477  Scena Septima.
+  3478  
+  3479  Enter Macbeth.
+  3480  
+  3481    Macb. They haue tied me to a stake, I cannot flye,
+  3482  But Beare-like I must fight the course. What's he
+  3483  That was not borne of Woman? Such a one
+  3484  Am I to feare, or none.
+  3485  Enter young Seyward.
+  3486  
+  3487    Y.Sey. What is thy name?
+  3488    Macb. Thou'lt be affraid to heare it
+  3489  
+  3490     Y.Sey. No: though thou call'st thy selfe a hoter name
+  3491  Then any is in hell
+  3492  
+  3493     Macb. My name's Macbeth
+  3494  
+  3495     Y.Sey. The diuell himselfe could not pronounce a Title
+  3496  More hatefull to mine eare
+  3497  
+  3498     Macb. No: nor more fearefull
+  3499  
+  3500     Y.Sey. Thou lyest abhorred Tyrant, with my Sword
+  3501  Ile proue the lye thou speak'st.
+  3502  
+  3503  Fight, and young Seyward slaine.
+  3504  
+  3505    Macb. Thou was't borne of woman;
+  3506  But Swords I smile at, Weapons laugh to scorne,
+  3507  Brandish'd by man that's of a Woman borne.
+  3508  Enter.
+  3509  
+  3510  Alarums. Enter Macduffe.
+  3511  
+  3512    Macd. That way the noise is: Tyrant shew thy face,
+  3513  If thou beest slaine, and with no stroake of mine,
+  3514  My Wife and Childrens Ghosts will haunt me still:
+  3515  I cannot strike at wretched Kernes, whose armes
+  3516  Are hyr'd to beare their Staues; either thou Macbeth,
+  3517  Or else my Sword with an vnbattered edge
+  3518  I sheath againe vndeeded. There thou should'st be,
+  3519  By this great clatter, one of greatest note
+  3520  Seemes bruited. Let me finde him Fortune,
+  3521  And more I begge not.
+  3522  
+  3523  Exit. Alarums.
+  3524  
+  3525  Enter Malcolme and Seyward.
+  3526  
+  3527    Sey. This way my Lord, the Castles gently rendred:
+  3528  The Tyrants people, on both sides do fight,
+  3529  The Noble Thanes do brauely in the Warre,
+  3530  The day almost it selfe professes yours,
+  3531  And little is to do
+  3532  
+  3533     Malc. We haue met with Foes
+  3534  That strike beside vs
+  3535  
+  3536     Sey. Enter Sir, the Castle.
+  3537  
+  3538  Exeunt. Alarum
+  3539  
+  3540  Enter Macbeth.
+  3541  
+  3542    Macb. Why should I play the Roman Foole, and dye
+  3543  On mine owne sword? whiles I see liues, the gashes
+  3544  Do better vpon them.
+  3545  Enter Macduffe.
+  3546  
+  3547    Macd. Turne Hell-hound, turne
+  3548  
+  3549     Macb. Of all men else I haue auoyded thee:
+  3550  But get thee backe, my soule is too much charg'd
+  3551  With blood of thine already
+  3552  
+  3553     Macd. I haue no words,
+  3554  My voice is in my Sword, thou bloodier Villaine
+  3555  Then tearmes can giue thee out.
+  3556  
+  3557  Fight: Alarum
+  3558  
+  3559    Macb. Thou loosest labour
+  3560  As easie may'st thou the intrenchant Ayre
+  3561  With thy keene Sword impresse, as make me bleed:
+  3562  Let fall thy blade on vulnerable Crests,
+  3563  I beare a charmed Life, which must not yeeld
+  3564  To one of woman borne
+  3565  
+  3566     Macd. Dispaire thy Charme,
+  3567  And let the Angell whom thou still hast seru'd
+  3568  Tell thee, Macduffe was from his Mothers womb
+  3569  Vntimely ript
+  3570  
+  3571     Macb. Accursed be that tongue that tels mee so;
+  3572  For it hath Cow'd my better part of man:
+  3573  And be these Iugling Fiends no more beleeu'd,
+  3574  That palter with vs in a double sence,
+  3575  That keepe the word of promise to our eare,
+  3576  And breake it to our hope. Ile not fight with thee
+  3577  
+  3578     Macd. Then yeeld thee Coward,
+  3579  And liue to be the shew, and gaze o'th' time.
+  3580  Wee'l haue thee, as our rarer Monsters are
+  3581  Painted vpon a pole, and vnder-writ,
+  3582  Heere may you see the Tyrant
+  3583  
+  3584     Macb. I will not yeeld
+  3585  To kisse the ground before young Malcolmes feet,
+  3586  And to be baited with the Rabbles curse.
+  3587  Though Byrnane wood be come to Dunsinane,
+  3588  And thou oppos'd, being of no woman borne,
+  3589  Yet I will try the last. Before my body,
+  3590  I throw my warlike Shield: Lay on Macduffe,
+  3591  And damn'd be him, that first cries hold, enough.
+  3592  
+  3593  Exeunt. fighting. Alarums.
+  3594  
+  3595  Enter Fighting, and Macbeth slaine.
+  3596  
+  3597  Retreat, and Flourish. Enter with Drumme and Colours, Malcolm,
+  3598  Seyward,
+  3599  Rosse, Thanes, & Soldiers.
+  3600  
+  3601    Mal. I would the Friends we misse, were safe arriu'd
+  3602  
+  3603     Sey. Some must go off: and yet by these I see,
+  3604  So great a day as this is cheapely bought
+  3605  
+  3606     Mal. Macduffe is missing, and your Noble Sonne
+  3607  
+  3608     Rosse. Your son my Lord, ha's paid a souldiers debt,
+  3609  He onely liu'd but till he was a man,
+  3610  The which no sooner had his Prowesse confirm'd
+  3611  In the vnshrinking station where he fought,
+  3612  But like a man he dy'de
+  3613  
+  3614     Sey. Then he is dead?
+  3615    Rosse. I, and brought off the field: your cause of sorrow
+  3616  Must not be measur'd by his worth, for then
+  3617  It hath no end
+  3618  
+  3619     Sey. Had he his hurts before?
+  3620    Rosse. I, on the Front
+  3621  
+  3622     Sey. Why then, Gods Soldier be he:
+  3623  Had I as many Sonnes, as I haue haires,
+  3624  I would not wish them to a fairer death:
+  3625  And so his Knell is knoll'd
+  3626  
+  3627     Mal. Hee's worth more sorrow,
+  3628  and that Ile spend for him
+  3629  
+  3630     Sey. He's worth no more,
+  3631  They say he parted well, and paid his score,
+  3632  And so God be with him. Here comes newer comfort.
+  3633  Enter Macduffe, with Macbeths head.
+  3634  
+  3635    Macd. Haile King, for so thou art.
+  3636  Behold where stands
+  3637  Th' Vsurpers cursed head: the time is free:
+  3638  I see thee compast with thy Kingdomes Pearle,
+  3639  That speake my salutation in their minds:
+  3640  Whose voyces I desire alowd with mine.
+  3641  Haile King of Scotland
+  3642  
+  3643     All. Haile King of Scotland.
+  3644  
+  3645  Flourish.
+  3646  
+  3647    Mal. We shall not spend a large expence of time,
+  3648  Before we reckon with your seuerall loues,
+  3649  And make vs euen with you. My Thanes and Kinsmen
+  3650  Henceforth be Earles, the first that euer Scotland
+  3651  In such an Honor nam'd: What's more to do,
+  3652  Which would be planted newly with the time,
+  3653  As calling home our exil'd Friends abroad,
+  3654  That fled the Snares of watchfull Tyranny,
+  3655  Producing forth the cruell Ministers
+  3656  Of this dead Butcher, and his Fiend-like Queene;
+  3657  Who (as 'tis thought) by selfe and violent hands,
+  3658  Tooke off her life. This, and what need full else
+  3659  That call's vpon vs, by the Grace of Grace,
+  3660  We will performe in measure, time, and place:
+  3661  So thankes to all at once, and to each one,
+  3662  Whom we inuite, to see vs Crown'd at Scone.
+  3663  
+  3664  Flourish. Exeunt Omnes.
+  3665  
+  3666  
+  3667  FINIS. THE TRAGEDIE OF MACBETH.

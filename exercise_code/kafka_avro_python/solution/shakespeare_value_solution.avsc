@@ -1,0 +1,8 @@
+{"namespace": "solution.model",
+ "type": "record",
+ "name": "ShakespeareValue",
+ "fields": [
+     {"name": "line_number", "type": "int", "doc" : "The line number for line"},
+     {"name": "line", "type": "string", "doc" : "The line from Shakespeare"}
+ ]
+}

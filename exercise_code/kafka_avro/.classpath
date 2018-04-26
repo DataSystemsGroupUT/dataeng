@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
+  <classpathentry kind="src" path="src/main/resources" excluding="**/*.java"/>
+  <classpathentry kind="output" path="target/classes"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+  <classpathentry kind="var" path="M2_REPO/io/confluent/kafka-avro-serializer/4.0.0/kafka-avro-serializer-4.0.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/avro/avro/1.7.7/avro-1.7.7.jar">
+    <attributes>
+      <attribute value="jar:file:/home/training/.m2/repository/org/apache/avro/avro/1.7.7/avro-1.7.7-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar">
+    <attributes>
+      <attribute value="jar:file:/home/training/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar">
+    <attributes>
+      <attribute value="jar:file:/home/training/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/thoughtworks/paranamer/paranamer/2.3/paranamer-2.3.jar">
+    <attributes>
+      <attribute value="jar:file:/home/training/.m2/repository/com/thoughtworks/paranamer/paranamer/2.3/paranamer-2.3-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/xerial/snappy/snappy-java/1.1.4/snappy-java-1.1.4.jar">
+    <attributes>
+      <attribute value="jar:file:/home/training/.m2/repository/org/xerial/snappy/snappy-java/1.1.4/snappy-java-1.1.4-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1.jar">
+    <attributes>
+      <attribute value="jar:file:/home/training/.m2/repository/org/apache/commons/commons-compress/1.4.1/commons-compress-1.4.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/tukaani/xz/1.0/xz-1.0.jar">
+    <attributes>
+      <attribute value="jar:file:/home/training/.m2/repository/org/tukaani/xz/1.0/xz-1.0-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar">
+    <attributes>
+      <attribute value="jar:file:/home/training/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/io/confluent/kafka-schema-registry-client/4.0.0/kafka-schema-registry-client-4.0.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-databind/2.9.1/jackson-databind-2.9.1.jar">
+    <attributes>
+      <attribute value="jar:file:/home/training/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.9.1/jackson-databind-2.9.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar">
+    <attributes>
+      <attribute value="jar:file:/home/training/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-core/2.9.1/jackson-core-2.9.1.jar">
+    <attributes>
+      <attribute value="jar:file:/home/training/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.9.1/jackson-core-2.9.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/io/confluent/common-utils/4.0.0/common-utils-4.0.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/zookeeper/zookeeper/3.4.10/zookeeper-3.4.10.jar">
+    <attributes>
+      <attribute value="jar:file:/home/training/.m2/repository/org/apache/zookeeper/zookeeper/3.4.10/zookeeper-3.4.10-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1.jar">
+    <attributes>
+      <attribute value="jar:file:/home/training/.m2/repository/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/log4j/log4j/1.2.16/log4j-1.2.16.jar">
+    <attributes>
+      <attribute value="jar:file:/home/training/.m2/repository/log4j/log4j/1.2.16/log4j-1.2.16-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/jline/jline/0.9.94/jline-0.9.94.jar"/>
+  <classpathentry kind="var" path="M2_REPO/junit/junit/3.8.1/junit-3.8.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/io/netty/netty/3.10.5.Final/netty-3.10.5.Final.jar">
+    <attributes>
+      <attribute value="jar:file:/home/training/.m2/repository/io/netty/netty/3.10.5.Final/netty-3.10.5.Final-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/101tec/zkclient/0.10/zkclient-0.10.jar">
+    <attributes>
+      <attribute value="jar:file:/home/training/.m2/repository/com/101tec/zkclient/0.10/zkclient-0.10-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/io/confluent/common-config/4.0.0/common-config-4.0.0.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/kafka/kafka-clients/1.0.0-cp1/kafka-clients-1.0.0-cp1.jar">
+    <attributes>
+      <attribute value="jar:file:/home/training/.m2/repository/org/apache/kafka/kafka-clients/1.0.0-cp1/kafka-clients-1.0.0-cp1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/lz4/lz4-java/1.4/lz4-java-1.4.jar">
+    <attributes>
+      <attribute value="jar:file:/home/training/.m2/repository/org/lz4/lz4-java/1.4/lz4-java-1.4-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/apache/avro/avro-tools/1.7.7/avro-tools-1.7.7.jar">
+    <attributes>
+      <attribute value="jar:file:/home/training/.m2/repository/org/apache/avro/avro-tools/1.7.7/avro-tools-1.7.7-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+</classpath>

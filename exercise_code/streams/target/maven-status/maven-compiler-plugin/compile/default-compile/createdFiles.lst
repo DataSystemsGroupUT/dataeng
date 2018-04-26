@@ -1,0 +1,13 @@
+shakespeare_example/model/ShakespeareKey.class
+stubs/OutputAvroTopic.class
+shakespeare_example/model/ShakespeareValue$1.class
+stubs/StreamsExercise.class
+shakespeare_example/StreamsVersionOfShakespeareAvroConversion.class
+solution/OutputAvroTopic.class
+partial/OutputAvroTopic.class
+shakespeare_example/model/ShakespeareValue$Builder.class
+shakespeare_example/model/ShakespeareKey$1.class
+shakespeare_example/model/ShakespeareValue.class
+shakespeare_example/model/ShakespeareKey$Builder.class
+solution/StreamsExercise.class
+partial/StreamsExercise.class

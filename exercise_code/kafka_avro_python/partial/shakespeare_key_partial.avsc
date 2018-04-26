@@ -1,0 +1,8 @@
+{"namespace": "partial.model",
+ "type": "record",
+ "name": "ShakespeareKey",
+ "fields": [
+     {"name": "work", "type": "string", "doc" : "The name of the work"},
+     {"name": "year", "type": "int", "doc" : "The year the work was published"}
+ ]
+}
