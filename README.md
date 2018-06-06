@@ -47,6 +47,7 @@ Le répertoire appelé `static` doit être dans le répertoire courant
 lors du lancement du serveur.
 
 Informations supplémentaires :
+
 - le serveur écoute sur le port 80
 - le compilateur go n'est plus nécessaire une fois le programme compilé
 
