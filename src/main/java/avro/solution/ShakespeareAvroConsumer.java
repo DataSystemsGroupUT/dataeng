@@ -19,9 +19,9 @@ public class ShakespeareAvroConsumer {
     public static void main(String[] args) {
         Properties props = new Properties();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
-        props.put(ConsumerConfig.GROUP_ID_CONFIG, "asdad");
-        props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, KafkaAvroDeserializer.class);
-        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, KafkaAvroDeserializer.class);
+        props.put(ConsumerConfig.GROUP_ID_CONFIG, "consgroup");
+        props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG,"io.confluent.kafka.serializers.KafkaAvroDeserializer");
+        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "io.confluent.kafka.serializers.KafkaAvroDeserializer");
         props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
 
         props.put(KafkaAvroDeserializerConfig.SPECIFIC_AVRO_READER_CONFIG, true);
@@ -39,8 +39,8 @@ public class ShakespeareAvroConsumer {
                     ShakespeareValue shakespeareLine = record.value();
 
                     // Output the information with the SpecificRecords
-                    System.out.println("From " + shakespeareKey.getWork() + " - "
-                        + shakespeareKey.getYear() + " Line:"
+                    System.out.println("From " + shakespeareKey.getYear() + " - "+
+                         " Line:"
                         + shakespeareLine.getLineNumber() + " "
                         + shakespeareLine.getLine());
                 }

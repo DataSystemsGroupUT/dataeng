@@ -1,5 +1,16 @@
 package avro.solution;
 
+import avro.solution.model.ShakespeareKey;
+import avro.solution.model.ShakespeareValue;
+import org.apache.kafka.clients.consumer.ConsumerConfig;
+import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.apache.kafka.clients.consumer.ConsumerRecords;
+import org.apache.kafka.clients.consumer.KafkaConsumer;
+import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.ProducerConfig;
+import org.apache.kafka.clients.producer.ProducerRecord;
+import org.apache.kafka.common.serialization.StringDeserializer;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Properties;
@@ -7,24 +18,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-import avro.solution.model.ShakespeareKey;
-import avro.solution.model.ShakespeareValue;
-import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.apache.kafka.clients.consumer.ConsumerRecords;
-import org.apache.kafka.clients.consumer.ConsumerConfig;
-import org.apache.kafka.clients.consumer.KafkaConsumer;
-import org.apache.kafka.clients.producer.KafkaProducer;
-import org.apache.kafka.clients.producer.ProducerConfig;
-import org.apache.kafka.clients.producer.ProducerRecord;
-import io.confluent.kafka.serializers.KafkaAvroSerializer;
-import org.apache.kafka.common.serialization.StringDeserializer;
-
-
-
-
 public class ShakespeareConverterConsumerProducer {
 
-    /** Regular expression for parsing the line number and line */
+    /**
+     * Regular expression for parsing the line number and line
+     */
     Pattern pattern = Pattern.compile("^\\s*(\\d*)\\s*(.*)$");
 
     static HashMap<String, Integer> shakespeareWorkToYearWritten = new HashMap<String, Integer>();
@@ -33,7 +31,7 @@ public class ShakespeareConverterConsumerProducer {
     /**
      * Creates a ConsumerConnector that reads a stream, converts to Avro and
      * publishes to a KafkaProducer
-     * 
+     *
      * @throws InterruptedException
      */
     public void createConsumer() throws InterruptedException {
@@ -49,13 +47,13 @@ public class ShakespeareConverterConsumerProducer {
 
         Properties prodProps = new Properties();
         prodProps.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
-        prodProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, KafkaAvroSerializer.class);
-        prodProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, KafkaAvroSerializer.class);
+        prodProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, io.confluent.kafka.serializers.KafkaAvroSerializer.class);
+        prodProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, io.confluent.kafka.serializers.KafkaAvroSerializer.class);
 
         // Configure schema repository server
         prodProps.put("schema.registry.url", "http://localhost:8081");
 
-        try (KafkaProducer<ShakespeareKey, ShakespeareValue> producer = new KafkaProducer<>(prodProps)) {
+        try (KafkaProducer<Object, Object> producer = new KafkaProducer<>(prodProps)) {
 
             // Properties for the Consumer
             Properties props = new Properties();
@@ -65,10 +63,10 @@ public class ShakespeareConverterConsumerProducer {
             props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
             props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
 
-            try (KafkaConsumer<String,String> consumer = new KafkaConsumer<>(props)) {
+            try (KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props)) {
                 consumer.subscribe(Arrays.asList("shakespeare_topic"));
 
-                while(true) {
+                while (true) {
                     ConsumerRecords<String, String> records = consumer.poll(100);
                     for (ConsumerRecord<String, String> record : records) {
 
@@ -79,7 +77,7 @@ public class ShakespeareConverterConsumerProducer {
                         System.out.print(shakespeareKey.toString() + " ");
                         System.out.println(shakespeareLine.toString());
                         // Create the ProducerRecord with the Avro objects and send them
-                        ProducerRecord<ShakespeareKey, ShakespeareValue> avroRecord = new ProducerRecord<>("shakespeare_avro_topic", shakespeareKey, shakespeareLine);
+                        ProducerRecord<Object, Object> avroRecord = new ProducerRecord<>("shakespeare_avro_topic", shakespeareKey, shakespeareLine);
 
                         producer.send(avroRecord);
                     }
@@ -98,11 +96,11 @@ public class ShakespeareConverterConsumerProducer {
             e.printStackTrace();
         }
     }
+
     /**
      * Creates the ShakespeareKeyPartial object with the work of Shakespeare
-     * 
-     * @param key
-     *            The name of the work of Shakespeare
+     *
+     * @param key The name of the work of Shakespeare
      * @return The ShakespeareKeyPartial object with the work of Shakespeare
      */
     private ShakespeareKey getShakespeareKey(String key) {
@@ -118,9 +116,8 @@ public class ShakespeareConverterConsumerProducer {
 
     /**
      * Creates the ShakespeareLine object with the line from Shakespeare
-     * 
-     * @param line
-     *            The line of Shakespeare to parse
+     *
+     * @param line The line of Shakespeare to parse
      * @return The ShakespeareLine object with the line from Shakespeare
      */
     private ShakespeareValue getShakespeareLine(String line) {

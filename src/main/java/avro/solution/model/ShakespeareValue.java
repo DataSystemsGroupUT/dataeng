@@ -7,7 +7,7 @@ package avro.solution.model;
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class ShakespeareValue extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-    public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"ShakespeareValue\",\"namespace\":\"solution.model\",\"fields\":[{\"name\":\"line_number\",\"type\":\"int\",\"doc\":\"The line number for line\"},{\"name\":\"line\",\"type\":\"string\",\"doc\":\"The line from Shakespeare\"}]}");
+    public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"ShakespeareValue\",\"namespace\":\"avro.solution.model\",\"fields\":[{\"name\":\"line_number\",\"type\":\"int\",\"doc\":\"The line number for line\"},{\"name\":\"line\",\"type\":\"string\",\"doc\":\"The line from Shakespeare\"}]}");
     public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
     /** The line number for line */
     @Deprecated public int line_number;

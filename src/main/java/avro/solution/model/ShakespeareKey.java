@@ -7,7 +7,7 @@ package avro.solution.model;
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class ShakespeareKey extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-    public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"ShakespeareKey\",\"namespace\":\"solution.model\",\"fields\":[{\"name\":\"work\",\"type\":\"string\",\"doc\":\"The name of the work\"},{\"name\":\"year\",\"type\":\"int\",\"doc\":\"The year the work was published\"}]}");
+    public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"ShakespeareKey\",\"namespace\":\"avro.solution.model\",\"fields\":[{\"name\":\"work\",\"type\":\"string\",\"doc\":\"The name of the work\"},{\"name\":\"year\",\"type\":\"int\",\"doc\":\"The year the work was published\"}]}");
     public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
     /** The name of the work */
     @Deprecated public java.lang.CharSequence work;
