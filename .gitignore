@@ -1,6 +1,7 @@
 # Compiled class file
 
 .DS_Store
+.settings/
 *.class
 
 # Log file
