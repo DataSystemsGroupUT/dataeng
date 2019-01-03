@@ -84,7 +84,7 @@ Additional informations:
 
 - the server listens on port 8080
 - compilation requires packages `maven` and `openjdk-8-jdk`
-- executaion requires package `openjdk-8-jdk` (`maven` is not necessary)
+- execution requires package `openjdk-8-jdk` (`maven` is not necessary)
 
 
 ### db
