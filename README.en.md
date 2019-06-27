@@ -176,6 +176,14 @@ Note: the `web` service should be exposed.
 
 ## Exercise 3: Kubernetes
 
+We want to deploy wordsmith on Kubernetes, and connect to the web interface from the outside.
+
+We will need to use images hosted on a reistry. For our convenient, the images are available on:
+
+- jpetazzo/wordsmith-db:latest
+- jpetazzo/wordsmith-words:latest
+- jpetazzo/wordsmith-web:latest
+
 Useful reminders for this exercise:
 
 - service `web` is listening on port 80, and we want it to be reachable

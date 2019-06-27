@@ -169,6 +169,14 @@ Note : le service `web` doit être accessible de l'extérieur.
 
 ## Exercice 3 : Kubernetes
 
+On veut maintenant déployer wordsmith sur Kubernetes, de manière à ce qu'on puisse se connecter à l'interface web depuis l'extérieur.
+
+On va devoir utiliser des images venant d'une *registry*. Pour nous faciliter la tâche, les images sont disponibles sur:
+
+- jpetazzo/wordsmith-db:latest
+- jpetazzo/wordsmith-words:latest
+- jpetazzo/wordsmith-web:latest
+
 Rappels utiles pour cet exercice :
 
 - le service web écoute sur le port 80, et on souhaite qu'il soit accessible depuis l'extérieur du cluster
