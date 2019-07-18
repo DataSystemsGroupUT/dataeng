@@ -178,7 +178,7 @@ Note: the `web` service should be exposed.
 
 We want to deploy wordsmith on Kubernetes, and connect to the web interface from the outside.
 
-We will need to use images hosted on a reistry. For our convenient, the images are available on:
+We will need to use images hosted on a reistry. For our convenience, the images are available on:
 
 - jpetazzo/wordsmith-db:latest
 - jpetazzo/wordsmith-words:latest
