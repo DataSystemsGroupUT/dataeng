@@ -27,6 +27,12 @@ in the corresponding directory (web, words, db).
 The following paragraphs describe the installation instructions
 for each service.
 
+Note: in this first exercise, we only want to build the images
+and check that they start correctly (`web` and `words` should display
+a short message to indicate that they're running), but we're not
+trying to run the whole application or to connect to the services.
+This will come later.
+
 
 ### web
 
@@ -165,11 +171,13 @@ Additional informations:
   is particularly useful to understand how to load `words.sql`
 
 
-
 ## Exercise 2: Compose file
 
 When the 3 images build correctly, we can move on and write the Compose
-file. We suggest to plcae the Compose file at the root of the repository.
+file. We suggest to place the Compose file at the root of the repository.
+
+At this point, we want to make sure that services can communicate
+together, and that we can connect to `web`.
 
 Note: the `web` service should be exposed.
 

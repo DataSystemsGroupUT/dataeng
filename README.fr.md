@@ -26,6 +26,12 @@ de placer chaque Dockerfile dans le répertoire correspondant
 Les paragraphes suivants décrivent les instructions d'installation
 pour chaque service.
 
+Note: à ce stade, on veut seulement construire les images et vérifier
+qu'elles se lancent (`web` et `words` doivent afficher un bref message
+pour indiquer qu'ils tournent), mais on ne cherche pas à lancer
+l'application en entier ou à se connecter aux services.
+Cela viendra plus tard.
+
 
 ### web
 
@@ -164,7 +170,10 @@ Une fois que les trois images se construisent correctement, vous pouvez
 passer à l'écriture du Compose file. Nous conseillons de placer le Compose
 file à la racine du projet.
 
-Note : le service `web` doit être accessible de l'extérieur.
+À ce stade, on veut s'assurer que les services communiquent bien
+entre eux, et que l'on peut se connecter à `web` de l'extérieur.
+
+Note : seul le service `web` doit être accessible de l'extérieur.
 
 
 ## Exercice 3 : Kubernetes
