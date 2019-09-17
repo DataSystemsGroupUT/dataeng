@@ -30,3 +30,6 @@ hs_err_pid*
 target/
 *.iml
 src/main/java/it/polimi/rsp/services/
+
+conf/
+kafka211/
