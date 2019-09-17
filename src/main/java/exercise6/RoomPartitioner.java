@@ -1,4 +1,4 @@
-package temperature.solutions.partitioning;
+package exercise6;
 
 import org.apache.kafka.clients.producer.Partitioner;
 import org.apache.kafka.common.Cluster;

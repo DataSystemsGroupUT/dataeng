@@ -1,4 +1,4 @@
-package exercise5;
+package exercise5.model;
 
 public class TemperatureKey {
     private String location;

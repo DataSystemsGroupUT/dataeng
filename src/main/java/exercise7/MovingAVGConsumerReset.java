@@ -1,9 +1,9 @@
-package temperature.solutions.consumers;
+package exercise7;
 
 import org.apache.kafka.clients.consumer.*;
 import org.apache.kafka.common.TopicPartition;
 import exercise5.model.TemperatureKey;
-import exercise5.model.TemperatureValue;
+import exercise5.model.Temperature;
 import exercise5.deserialization.TemperatureKeyDeserializer;
 import exercise5.deserialization.TemperatureValueDeserializer;
 
@@ -25,7 +25,7 @@ public class MovingAVGConsumerReset {
 
         // TODO: Create a new consumer, with the properties we've created above
 
-        Consumer<TemperatureKey, TemperatureValue> consumer = new KafkaConsumer<>(props);
+        Consumer<TemperatureKey, Temperature> consumer = new KafkaConsumer<>(props);
 
         consumer.subscribe(Arrays.asList("temperature"));
 
@@ -35,13 +35,13 @@ public class MovingAVGConsumerReset {
         while (true) {
 
             consumer.seekToBeginning(consumer.assignment());
-            ConsumerRecords<TemperatureKey, TemperatureValue> records = consumer.poll(Duration.ofMillis(100));
+            ConsumerRecords<TemperatureKey, Temperature> records = consumer.poll(Duration.ofMillis(100));
 
             for (TopicPartition tp : consumer.assignment()) {
 
-                List<ConsumerRecord<TemperatureKey, TemperatureValue>> records1 = records.records(tp);
+                List<ConsumerRecord<TemperatureKey, Temperature>> records1 = records.records(tp);
 
-                Map<String, List<ConsumerRecord<TemperatureKey, TemperatureValue>>> collect = records1.stream().collect(Collectors.groupingBy(o -> o.key().getLocation()));
+                Map<String, List<ConsumerRecord<TemperatureKey, Temperature>>> collect = records1.stream().collect(Collectors.groupingBy(o -> o.key().getLocation()));
 
                 collect.forEach((key, value) -> {
                     Integer reduce = value.stream().map(e -> e.value().getValue())

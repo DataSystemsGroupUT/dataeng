@@ -1,22 +1,23 @@
 package exercise14.model;
 
-public class ViewWithUser {
+public class RegionalView {
 
-    private User user;
+    public String getUser_region() {
+        return user_region;
+    }
+
+    public void setUser_region(String user_region) {
+        this.user_region = user_region;
+    }
+
+    private String user_region;
     private PageView view;
 
-    public ViewWithUser(User user, PageView view) {
-        this.user = user;
+    public RegionalView(String user_region, PageView view) {
+        this.user_region = user_region;
         this.view = view;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
 
     public PageView getView() {
         return view;
@@ -29,7 +30,7 @@ public class ViewWithUser {
     @Override
     public String toString() {
         return "ViewWithUser{" +
-                "user=" + user +
+                "user_region=" + user_region +
                 ", view=" + view +
                 '}';
     }

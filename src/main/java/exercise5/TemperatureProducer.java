@@ -1,13 +1,12 @@
-package temperature.solutions;
+package exercise5;
 
+import exercise5.model.TemperatureKey;
+import exercise5.model.Temperature;
+import exercise5.serialization.TemperatureKeySerializer;
+import exercise5.serialization.TemperatureValueSerializer;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
-import temperature.solutions.model.TemperatureKey;
-import temperature.solutions.model.TemperatureValue;
-import temperature.solutions.partitioning.RoomPartitioner;
-import temperature.solutions.serialization.TemperatureKeySerializer;
-import temperature.solutions.serialization.TemperatureValueSerializer;
 
 import java.util.Properties;
 import java.util.Random;
@@ -22,11 +21,10 @@ public class TemperatureProducer {
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, TemperatureKeySerializer.class.getName());
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, TemperatureValueSerializer.class.getName());
-        props.put(ProducerConfig.PARTITIONER_CLASS_CONFIG, RoomPartitioner.class.getName());
 
         // TODO: Create a KafkaProducer
 
-        try (KafkaProducer<TemperatureKey, TemperatureValue> termometer = new KafkaProducer<>(props)) {
+        try (KafkaProducer<TemperatureKey, Temperature> termometer = new KafkaProducer<>(props)) {
 
             while (true) {
 
@@ -37,10 +35,10 @@ public class TemperatureProducer {
                 if (random.nextBoolean())
                     temperature = -1 * temperature;
 
-                TemperatureValue value = new TemperatureValue(temperature, System.currentTimeMillis());
+                Temperature value = new Temperature(temperature, System.currentTimeMillis());
 
-                ProducerRecord<TemperatureKey, TemperatureValue> record =
-                        new ProducerRecord<>("temp-2p   ", key, value);
+                ProducerRecord<TemperatureKey, Temperature> record =
+                        new ProducerRecord<>("temperature", key, value);
 
                 termometer.send(record);
 

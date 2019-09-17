@@ -1,9 +1,9 @@
-package temperature.solutions.consumers;
+package exercise7;
 
 import org.apache.kafka.clients.consumer.*;
 import org.apache.kafka.common.TopicPartition;
 import exercise5.model.TemperatureKey;
-import exercise5.model.TemperatureValue;
+import exercise5.model.Temperature;
 import exercise5.deserialization.TemperatureKeyDeserializer;
 import exercise5.deserialization.TemperatureValueDeserializer;
 
@@ -22,25 +22,24 @@ public class MovingAVGConsumer {
 
         // TODO: Create a new consumer, with the properties we've created above
 
-        Consumer<TemperatureKey, TemperatureValue> consumer = new KafkaConsumer<>(props);
+        Consumer<TemperatureKey, Temperature> consumer = new KafkaConsumer<>(props);
 
         consumer.subscribe(Arrays.asList("temperature"));
 
         consumer.poll(1);
         consumer.seekToBeginning(consumer.assignment());
 
-        Map<String, List<ConsumerRecord<TemperatureKey, TemperatureValue>>> collect = new HashMap<>();
+        Map<String, List<ConsumerRecord<TemperatureKey, Temperature>>> collect = new HashMap<>();
 
         while (true) {
 
-            ConsumerRecords<TemperatureKey, TemperatureValue> records = consumer.poll(Duration.ofMillis(500));
-            System.out.println("---");
+            ConsumerRecords<TemperatureKey, Temperature> records = consumer.poll(Duration.ofMillis(500));
             if (!records.isEmpty()) {
                 for (TopicPartition tp : consumer.assignment()) {
 
-                    List<ConsumerRecord<TemperatureKey, TemperatureValue>> records1 = records.records(tp);
+                    List<ConsumerRecord<TemperatureKey, Temperature>> records1 = records.records(tp);
 
-                    records1.stream().collect(Collectors.groupingBy(o -> o.key().getLocation())).forEach((s, consumerRecords) -> {
+                    records1.stream().collect(Collectors.groupingBy(o -> o.key().getLocation())).forEach((String s, List<ConsumerRecord<TemperatureKey, Temperature>> consumerRecords) -> {
 
                         if (collect.containsKey(s)) {
                             collect.get(s).addAll(consumerRecords);
@@ -54,8 +53,9 @@ public class MovingAVGConsumer {
                     Integer reduce = value.stream().map(e -> e.value().getValue())
                             .reduce(0, (integer, integer2) -> integer + integer2);
 
-                    System.out.println(key.toString() + "  " + reduce / value.size());
+                    System.out.println(key + ": " + reduce / value.size());
                 });
+                System.out.println("---");
             }
         }
     }

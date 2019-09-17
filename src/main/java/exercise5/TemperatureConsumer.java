@@ -1,13 +1,14 @@
-package temperature.solutions.consumers;
+package exercise5;
 
+import exercise5.deserialization.TemperatureKeyDeserializer;
+import exercise5.deserialization.TemperatureValueDeserializer;
+import exercise5.model.TemperatureKey;
+import exercise5.model.Temperature;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.TopicPartition;
-import temperature.solutions.model.TemperatureKey;
-import temperature.solutions.serialization.TemperatureKeyDeserializer;
-import temperature.solutions.serialization.TemperatureValueDeserializer;
 
 import java.time.Duration;
 import java.util.Arrays;
@@ -26,9 +27,9 @@ public class TemperatureConsumer {
 
         // TODO: Create a new consumer, with the properties we've created above
 
-        Consumer<TemperatureKey, TemperatureKey> consumer = new KafkaConsumer<>(props);
+        Consumer<TemperatureKey, Temperature> consumer = new KafkaConsumer<>(props);
 
-        consumer.subscribe(Arrays.asList("temp-2-p"));
+        consumer.subscribe(Arrays.asList("temperature"));
 
         //todo explain 0 does not work.
         consumer.poll(1);
@@ -37,15 +38,14 @@ public class TemperatureConsumer {
 
 
         while (true) {
-            ConsumerRecords<TemperatureKey, TemperatureKey> records = consumer.poll(Duration.ofMillis(100));
+            ConsumerRecords<TemperatureKey, Temperature> records = consumer.poll(Duration.ofMillis(100));
 
             records.forEach(record -> {
 
                 System.out.println(record.offset());
                 System.out.println(record.key());
                 System.out.println(record.value());
-                System.out.println(record.timestamp());
-                System.out.println(record.timestampType());
+                System.out.println(record.timestampType() + ": " + record.timestamp());
 
             });
             // TODO: Read records using the poll() method

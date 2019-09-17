@@ -1,21 +1,21 @@
-package temperature.solutions.consumers;
+package exercise7;
 
-import org.apache.kafka.clients.consumer.*;
-import org.apache.kafka.common.TopicPartition;
-import temperature.commons.exceptions.OutOfOrderException;
-import temperature.commons.windowing.Window;
-import temperature.commons.windowing.WindowImpl;
-import exercise5.model.TemperatureKey;
-import exercise5.model.TemperatureValue;
 import exercise5.deserialization.TemperatureKeyDeserializer;
 import exercise5.deserialization.TemperatureValueDeserializer;
+import exercise5.model.TemperatureKey;
+import exercise5.model.Temperature;
+import exercise7.commons.exceptions.OutOfOrderException;
+import exercise7.commons.windowing.Window;
+import exercise7.commons.windowing.WindowImpl;
+import org.apache.kafka.clients.consumer.*;
+import org.apache.kafka.common.TopicPartition;
 
 import java.time.Duration;
 import java.util.*;
 
 public class MovingAVGConsumerLast20Seconds {
 
-    private Map<TemperatureKey, Map<Window, List<TemperatureValue>>> active_windows_tp = new HashMap<>();
+    private Map<TemperatureKey, Map<Window, List<Temperature>>> active_windows_tp = new HashMap<>();
 
     private Map<TemperatureKey, Long> t0map = new HashMap<>();
     private Map<TemperatureKey, Long> curr_time = new HashMap<>();
@@ -42,7 +42,7 @@ public class MovingAVGConsumerLast20Seconds {
 
         // TODO: Create a new consumer, with the properties we've created above
 
-        Consumer<TemperatureKey, TemperatureValue> consumer = new KafkaConsumer<>(props);
+        Consumer<TemperatureKey, Temperature> consumer = new KafkaConsumer<>(props);
 
         consumer.subscribe(Arrays.asList("temperature"));
 
@@ -50,10 +50,10 @@ public class MovingAVGConsumerLast20Seconds {
 
         Set<TopicPartition> assignment = consumer.assignment();
         consumer.seekToBeginning(assignment);
-        ConsumerRecords<TemperatureKey, TemperatureValue> poll = consumer.poll(Duration.ofMillis(300));
+        ConsumerRecords<TemperatureKey, Temperature> poll = consumer.poll(Duration.ofMillis(300));
 
         assignment.forEach(tp -> {
-            List<ConsumerRecord<TemperatureKey, TemperatureValue>> records = poll.records(tp);
+            List<ConsumerRecord<TemperatureKey, Temperature>> records = poll.records(tp);
             if (records != null && !records.isEmpty()) {
                 records.stream()
                         .min(Comparator.comparingLong(r -> r.value().getTimestamp()))
@@ -67,7 +67,7 @@ public class MovingAVGConsumerLast20Seconds {
                         .forEach(record -> {
                             try {
                                 TemperatureKey key = record.key();
-                                TemperatureValue value = record.value();
+                                Temperature value = record.value();
                                 long t_e = record.value().getTimestamp();
                                 curr_time.putIfAbsent(key, t_e);
                                 t0map.putIfAbsent(key, t_e);
@@ -81,13 +81,22 @@ public class MovingAVGConsumerLast20Seconds {
 
         report();
 
+        to_evict.forEach(window -> active_windows_tp.forEach((key, value) -> {
+
+            List<Temperature> remove = value.remove(window);
+            if (remove != null)
+                remove.clear();
+
+
+        }));
         to_evict.clear();
+
 
         System.out.println("----");
         consumer.poll(Duration.ZERO);
 
         while (true) {
-            ConsumerRecords<TemperatureKey, TemperatureValue> poll1 = consumer.poll(Duration.ofMillis(300));
+            ConsumerRecords<TemperatureKey, Temperature> poll1 = consumer.poll(Duration.ofMillis(300));
             if (poll1 != null && !poll1.isEmpty()) {
                 assignment.forEach(tp -> poll1.records(tp).stream()
                         .sorted(Comparator.comparingLong(ConsumerRecord::timestamp))
@@ -95,7 +104,7 @@ public class MovingAVGConsumerLast20Seconds {
                             try {
                                 long t_e = record.value().getTimestamp();
                                 TemperatureKey key = record.key();
-                                TemperatureValue value = record.value();
+                                Temperature value = record.value();
                                 curr_time.putIfAbsent(key, t_e);
                                 t0map.putIfAbsent(key, t_e);
                                 windowing(key, value, curr_time.get(key), t_e, t0map.get(key));
@@ -117,9 +126,9 @@ public class MovingAVGConsumerLast20Seconds {
                     .filter(w -> active_windows.get(w).size() > 0)
                     .sorted(Comparator.comparingLong(Window::getO))
                     .forEach(w -> {
-                        System.out.println(w);
-                        List<TemperatureValue> temperatureValues = active_windows.get(w);
-                        temperatureValues.stream().map(TemperatureValue::getValue).reduce((t1, t2) -> t1 + t2).ifPresent(integer -> {
+                        System.out.print(" " + w + " ");
+                        List<Temperature> temperatureValues = active_windows.get(w);
+                        temperatureValues.stream().map(Temperature::getValue).reduce((t1, t2) -> t1 + t2).ifPresent(integer -> {
                             System.out.println(integer / temperatureValues.size());
                         });
 
@@ -136,7 +145,7 @@ public class MovingAVGConsumerLast20Seconds {
     }
 
 
-    protected void windowing(TemperatureKey key, TemperatureValue value, Long apptime, long t_e, Long tc0) throws OutOfOrderException {
+    protected void windowing(TemperatureKey key, Temperature value, Long apptime, long t_e, Long tc0) throws OutOfOrderException {
 
         //log.debug("Received element (" + e + "," + timestamp + ")");
 
@@ -147,7 +156,7 @@ public class MovingAVGConsumerLast20Seconds {
 
         scope(key, t_e, tc0);
 
-        Map<Window, List<TemperatureValue>> active_windows = active_windows_tp.get(key);
+        Map<Window, List<Temperature>> active_windows = active_windows_tp.get(key);
         active_windows.keySet().forEach(
                 w -> {
                     //log.debug("Processing Window [" + w.getO() + "," + w.getC() + ") for element (" + e + "," + timestamp + ")");

@@ -1,16 +1,16 @@
 package exercise5.model;
 
-public class TemperatureValue {
+public class Temperature {
 
     private int value;
     private long timestamp;
 
-    public TemperatureValue(int value, long timestamp) {
+    public Temperature(int value, long timestamp) {
         this.value = value;
         this.timestamp = timestamp;
     }
 
-    public TemperatureValue() {
+    public Temperature() {
     }
 
     @Override

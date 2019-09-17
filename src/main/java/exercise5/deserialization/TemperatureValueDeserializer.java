@@ -1,23 +1,23 @@
-package exercise5;
+package exercise5.deserialization;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import exercise5.model.TemperatureValue;
+import exercise5.model.Temperature;
 import org.apache.kafka.common.serialization.Deserializer;
 
 import java.util.Map;
 
-public class TemperatureValueDeserializer implements Deserializer<TemperatureValue> {
+public class TemperatureValueDeserializer implements Deserializer<Temperature> {
     @Override
     public void configure(Map configs, boolean isKey) {
 
     }
 
     @Override
-    public TemperatureValue deserialize(String topic, byte[] data) {
+    public Temperature deserialize(String topic, byte[] data) {
         ObjectMapper mapper = new ObjectMapper();
-        TemperatureValue user = null;
+        Temperature user = null;
         try {
-            user = mapper.readValue(data, TemperatureValue.class);
+            user = mapper.readValue(data, Temperature.class);
         } catch (Exception e) {
 
             e.printStackTrace();

@@ -1,6 +1,8 @@
 # Kafka Training Middleware Course
 
 
+Download Kafka suite
+
 
 ## CLI Commands
 

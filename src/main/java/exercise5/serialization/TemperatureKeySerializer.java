@@ -1,4 +1,4 @@
-package exercise5;
+package exercise5.serialization;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import exercise5.model.TemperatureKey;

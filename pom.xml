@@ -15,7 +15,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
     </repositories>
 
     <properties>
-        <kafka.version>2.1.0</kafka.version>
+        <kafka.version>5.3.1-ccs</kafka.version>
         <slf4j.version>1.7.21</slf4j.version>
         <avro.version>1.8.2</avro.version>
         <confluent.version>5.0.1</confluent.version>
@@ -26,6 +26,11 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
         <dependency>
             <groupId>org.apache.kafka</groupId>
             <artifactId>kafka-clients</artifactId>
+            <version>${kafka.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-streams</artifactId>
             <version>${kafka.version}</version>
         </dependency>
         <dependency>
@@ -52,6 +57,11 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
             <groupId>org.apache.avro</groupId>
             <artifactId>avro-compiler</artifactId>
             <version>${avro.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.5</version>
         </dependency>
     </dependencies>
 
@@ -85,7 +95,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
                             <goal>schema</goal>
                         </goals>
                         <configuration>
-                            <sourceDirectory>./src/avro/</sourceDirectory>
+                            <sourceDirectory>./src/main/resources/avro/</sourceDirectory>
                             <outputDirectory>${project.basedir}/src/main/java/</outputDirectory>
                         </configuration>
                     </execution>

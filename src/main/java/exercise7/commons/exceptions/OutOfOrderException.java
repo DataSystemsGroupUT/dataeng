@@ -1,4 +1,4 @@
-package temperature.commons.exceptions;
+package exercise7.commons.exceptions;
 
 public class OutOfOrderException extends Exception{
     public OutOfOrderException() {
