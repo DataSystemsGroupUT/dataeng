@@ -1,4 +1,4 @@
-package streams;
+package utils;
 
 import com.google.gson.Gson;
 import org.apache.kafka.clients.admin.AdminClient;
@@ -20,7 +20,7 @@ public class HelloWorld {
         StreamsBuilder builder = new StreamsBuilder();
 
         Properties props = new Properties();
-        props.put(StreamsConfig.APPLICATION_ID_CONFIG, "streams-helloworld");
+        props.put(StreamsConfig.APPLICATION_ID_CONFIG, "utils-helloworld");
         props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         props.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass());
         props.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass());

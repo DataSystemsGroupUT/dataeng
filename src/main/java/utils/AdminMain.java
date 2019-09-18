@@ -1,4 +1,4 @@
-package streams;
+package utils;
 
 import org.apache.kafka.clients.admin.*;
 

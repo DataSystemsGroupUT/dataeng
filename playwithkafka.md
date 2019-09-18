@@ -76,10 +76,10 @@
    79  sublime parts/part0/content/background/
    80  ./checkrep.sh parts/part0/content/background/web.tex 
    81  ./checkrep.sh parts/part0/content/background/wod.tex 
-   82  ./checkrep.sh parts/part1/content/streams/content/intro.tex 
-   83  ./checkrep.sh parts/part1/content/streams/content/*
-   84  ./checkrep.sh parts/part1/content/streams/content/*.tex
-   85  ./checkrep.sh parts/part1/content/streams/content/examples.tex 
+   82  ./checkrep.sh parts/part1/content/utils/content/intro.tex 
+   83  ./checkrep.sh parts/part1/content/utils/content/*
+   84  ./checkrep.sh parts/part1/content/utils/content/*.tex
+   85  ./checkrep.sh parts/part1/content/utils/content/examples.tex 
    86  for i in /*.tex echo $i done; :
    87  for i in /*.tex echo $i done;
    88  for i in ./*.tex echo $i done;
@@ -92,7 +92,7 @@
    95  open mine.html 
    96  sublime mine.html 
    97  open mine.bib 
-   98  ./checkrep.sh parts/part1/content/streams/content/examples.tex 
+   98  ./checkrep.sh parts/part1/content/utils/content/examples.tex 
    99  ./checkrep.sh test.txt
   100  rm -rf thesis.bbl 
   101  wscat -c     wss://ws.cex.io/ws/
@@ -103,7 +103,7 @@
   106  wscat -c  "wss://api.newsriver.io/v2/search?query=brexit" -H "Authorization: sBBqsGXiYgF0Db5OV5tAwxsbpY1OQbbgv8y7Wg_1f12wNOJMafYInj8cRUqFolD3n2pHZrSf1gT2PUujH1YaQA"
   107  git add .
   108  git add .
-  109  git commit -m 'minor edits, removed rsplab as chapter, moved events before streams and services'
+  109  git commit -m 'minor edits, removed rsplab as chapter, moved events before utils and services'
   110  git push origin master 
   111  find . --name "*.tex" --print
   112  find
@@ -378,7 +378,7 @@
   381  kill -f 15725 54172
   382  kill 15725 54172
   383  ls
-  384  ./bin/kafka-streams-application-reset.sh
+  384  ./bin/kafka-utils-application-reset.sh
   385  rm -rf /tmp/zookeeper/
   386  rm -rf /tmp/
   387  ls
@@ -422,7 +422,7 @@
   425  rm -rf /tmp/zookeeper
   426  rm -rf /tmp/kafka-logs
   427  ls /tmp/
-  428  rm -rf /tmp/kafka-streams
+  428  rm -rf /tmp/kafka-utils
   429  ls /tmp/
   430  ls
   431  mv kafka_2.11-2.3.0/ kafka211
@@ -434,7 +434,7 @@
   437  ./bin/zookeeper-server-start config/zookeeper.properties
   438  ./bin/zookeeper-server-start config/zookeeper.properties
   439  rm -rf /tmp/kafka-logs
-  440  rm -rf /tmp/kafka-streams
+  440  rm -rf /tmp/kafka-utils
   441  rm -rf /tmp/zookeeper/
   442  rm -rf /tmp/zookeeper
   443  j kafka
