@@ -1,4 +1,4 @@
-{"namespace": "exercise10",
+{"namespace": "kstreams.exercise10",
  "type": "record",
  "name": "Poem",
  "fields": [
