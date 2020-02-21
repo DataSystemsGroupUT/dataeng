@@ -35,7 +35,11 @@ Cela viendra plus tard.
 
 ### web
 
-C'est un serveur web en go. Tout le code est contenu dans un fichier
+C'est un serveur web en Go. Pour compiler du Go, on peut utiliser
+l'image `golang`, ou bien installer les paquetages Go dans
+n'importe quelle image de base.
+
+Tout le code est contenu dans un fichier
 source unique (`dispatcher.go`), et se compile de la manière suivante :
 
 ```

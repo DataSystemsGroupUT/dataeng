@@ -36,7 +36,11 @@ This will come later.
 
 ### web
 
-This is a web server written in Go. The entire code is in a single
+This is a web server written in Go. To compile Go code, we can
+use the `golang` official image, or install Go packages in
+any of the official base images.
+
+The entire code is in a single
 source file (`dispatcher.go`), and should be compiled like this:
 
 ```
