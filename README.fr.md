@@ -195,4 +195,4 @@ Rappels utiles pour cet exercice :
 
 - le service web écoute sur le port 80, et on souhaite qu'il soit accessible depuis l'extérieur du cluster
 - le service `words` écoute sur le port 8080
-- la base de données écoute sur le port 5432
+- le service `db` écoute sur le port 5432

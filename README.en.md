@@ -201,4 +201,4 @@ Useful reminders for this exercise:
 - service `web` is listening on port 80, and we want it to be reachable
   from outside the cluster
 - service `words` is listening on port 8080
-- the database is listening on port 5432
+- service `db` is listening on port 5432
