@@ -173,7 +173,7 @@ Additional informations:
 - if we check the [page of that official image](https://hub.docker.com/_/postgres) on the Docker Hub, we
   will find a lot of documentation; the section "Initialization scripts"
   is particularly useful to understand how to load `words.sql`
-
+- it is advised to set up password authentication for the database; but in this case, to make our lives easier, we will simply authorize all connections (by setting environment variable `POSTGRES_HOST_AUTH_METHOD=trust`)
 
 ## Exercise 2: Compose file
 

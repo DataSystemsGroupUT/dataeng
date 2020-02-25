@@ -46,7 +46,7 @@ source unique (`dispatcher.go`), et se compile de la manière suivante :
 go build dispatcher.go
 ```
 
-Cela produit un exécutable appelá `dispatcher`, qui se lance comme suit :
+Cela produit un exécutable appelé `dispatcher`, qui se lance comme suit :
 
 ```
 ./dispatcher
@@ -166,6 +166,7 @@ Informations supplémentaires :
 
 - il est fortement conseillé d'utiliser l'image officielle PostgreSQL qui se trouve sur le Docker Hub (elle s'appelle `postgres`)
 - sur la [page de l'image officielle](https://hub.docker.com/_/postgres) sur le Docker Hub, vous trouverez une documentation abondante; la section "Initialization scripts" est particulièrement utile pour comprendre comment charger le fichier `words.sql`
+- il est conseillé de protéger l'accès à la base avec un mot de passe, mais dans le cas présent, on acceptera de se simplifier la vie en autorisant toutes les connexions (en positionnant la variable `POSTGRES_HOST_AUTH_METHOD=trust`)
 
 
 ## Exercice 2 : Compose file
