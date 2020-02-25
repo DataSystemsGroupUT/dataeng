@@ -170,8 +170,8 @@ Additional informations:
 
 - we strongly suggest to use the official PostgreSQL image that can
   be found on the Docker Hub (it's called `postgres`)
-- if we check the page of that official image on the Docker Hub, we
-  will find a lot of documentation; the section "How to extend this image"
+- if we check the [page of that official image](https://hub.docker.com/_/postgres) on the Docker Hub, we
+  will find a lot of documentation; the section "Initialization scripts"
   is particularly useful to understand how to load `words.sql`
 
 

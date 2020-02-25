@@ -165,7 +165,7 @@ INSERT INTO adjectives(word) VALUES
 Informations supplémentaires :
 
 - il est fortement conseillé d'utiliser l'image officielle PostgreSQL qui se trouve sur le Docker Hub (elle s'appelle `postgres`)
-- sur la page de l'image officielle sur le Docker Hub, vous trouverez une documentation abondante; la section "How to extend this image" est particulièrement utile pour comprendre comment charger le fichier `words.sql`
+- sur la [page de l'image officielle](https://hub.docker.com/_/postgres) sur le Docker Hub, vous trouverez une documentation abondante; la section "Initialization scripts" est particulièrement utile pour comprendre comment charger le fichier `words.sql`
 
 
 ## Exercice 2 : Compose file
