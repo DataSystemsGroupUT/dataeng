@@ -1,4 +1,4 @@
-package kafka.basic.exercise5.model;
+package kafka.basic.exercise5.exercise5a.model;
 
 public class Temperature {
 

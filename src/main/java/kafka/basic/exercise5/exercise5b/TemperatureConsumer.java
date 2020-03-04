@@ -1,9 +1,9 @@
-package kafka.basic.exercise5;
+package kafka.basic.exercise5.exercise5b;
 
-import kafka.basic.exercise5.deserialization.TemperatureKeyDeserializer;
-import kafka.basic.exercise5.deserialization.TemperatureValueDeserializer;
-import kafka.basic.exercise5.model.TemperatureKey;
-import kafka.basic.exercise5.model.Temperature;
+import kafka.basic.exercise5.exercise5b.deserialization.TemperatureKeyDeserializer;
+import kafka.basic.exercise5.exercise5b.deserialization.TemperatureValueDeserializer;
+import kafka.basic.exercise5.exercise5a.model.TemperatureKey;
+import kafka.basic.exercise5.exercise5a.model.Temperature;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecords;

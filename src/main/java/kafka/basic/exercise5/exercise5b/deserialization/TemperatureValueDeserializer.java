@@ -1,7 +1,7 @@
-package kafka.basic.exercise5.deserialization;
+package kafka.basic.exercise5.exercise5b.deserialization;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import kafka.basic.exercise5.model.Temperature;
+import kafka.basic.exercise5.exercise5a.model.Temperature;
 import org.apache.kafka.common.serialization.Deserializer;
 
 import java.util.Map;

@@ -1,9 +1,9 @@
-package kafka.basic.exercise6;
+package kafka.basic.exercise5.exercise5c;
 
-import kafka.basic.exercise5.model.TemperatureKey;
-import kafka.basic.exercise5.model.Temperature;
-import kafka.basic.exercise5.serialization.TemperatureKeySerializer;
-import kafka.basic.exercise5.serialization.TemperatureValueSerializer;
+import kafka.basic.exercise5.exercise5a.model.TemperatureKey;
+import kafka.basic.exercise5.exercise5a.model.Temperature;
+import kafka.basic.exercise5.exercise5a.serialization.TemperatureKeySerializer;
+import kafka.basic.exercise5.exercise5a.serialization.TemperatureValueSerializer;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;

@@ -1,9 +1,9 @@
-package kafka.basic.exercise6;
+package kafka.basic.exercise5.exercise5c;
 
 import org.apache.kafka.clients.producer.Partitioner;
 import org.apache.kafka.common.Cluster;
 import org.apache.kafka.common.PartitionInfo;
-import kafka.basic.exercise5.model.TemperatureKey;
+import kafka.basic.exercise5.exercise5a.model.TemperatureKey;
 
 import java.util.List;
 import java.util.Map;

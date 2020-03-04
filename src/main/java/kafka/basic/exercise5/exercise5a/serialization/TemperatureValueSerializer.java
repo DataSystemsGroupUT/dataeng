@@ -1,19 +1,19 @@
-package kafka.basic.exercise5.serialization;
+package kafka.basic.exercise5.exercise5a.serialization;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import kafka.basic.exercise5.model.TemperatureKey;
+import kafka.basic.exercise5.exercise5a.model.Temperature;
 import org.apache.kafka.common.serialization.Serializer;
 
 import java.util.Map;
 
-public class TemperatureKeySerializer implements Serializer<TemperatureKey> {
+public class TemperatureValueSerializer implements Serializer<Temperature> {
     @Override
     public void configure(Map configs, boolean isKey) {
 
     }
 
     @Override
-    public byte[] serialize(String topic, TemperatureKey data) {
+    public byte[] serialize(String topic, Temperature data) {
         byte[] retVal = null;
         ObjectMapper objectMapper = new ObjectMapper();
         try {
