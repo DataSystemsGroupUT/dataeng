@@ -1,5 +1,6 @@
 # 3 Days Kafka Training Course
 
+![img](qrcode.png)
 ## Prerequisites
     
     - Knowledge of Java
