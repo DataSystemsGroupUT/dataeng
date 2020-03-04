@@ -31,15 +31,16 @@
 
 #### List of Exercise in this module
 
-Basic
+- Basic
     - [Exercise 1](src/main/java/kafka/basics/exercise1/exercise1.md)
     - [Exercise 2](src/main/java/kafka/abasics/exercise1/exercise2.md)
 
-Advanced
+- Advanced
     - [Exercise 3](src/main/java/kafka/advanced/exercise3/Readme.md)
     - [Exercise 4](src/main/java/kafka/advanced/exercise4/Readme.md)
     - [Exercise 5](src/main/java/kafka/advanced/exercise5/Readme.md)
-Expert
+
+- Expert
     - [Exercise 6](src/main/java/kafka/expert/exercise6/Readme.md)
     - [Exercise 7](src/main/java/kafka/expert/exercise7/Readme.md)
     - [Exercise 8](src/main/java/kafka/expert/exercise8/Readme.md)
