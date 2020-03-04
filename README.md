@@ -29,6 +29,16 @@
             - Broker via Replication
             - Producer via Transactionality
 
+#### List of Exercise in this module
+
+Basic
+
+Advanced
+    - [Exercise 5](./src/main/java/kafka/basic/exercise5/Readme.md)
+
+Expert
+
+
 ###  Running Kafka 
 
 First of all we start zookeeper. It's address is *localhost:2181*
