@@ -34,7 +34,7 @@
 Basic
 
 Advanced
-    - [Exercise 5](./src/main/java/kafka/basic/exercise5/Readme.md)
+    - [Exercise 5](src/main/java/kafka/advanced/exercise5/Readme.md)
 
 Expert
 

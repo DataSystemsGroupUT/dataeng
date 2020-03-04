@@ -1,8 +1,8 @@
 package kstreams.exercise12.serdes;
 
-import kafka.basic.exercise5.exercise5b.deserialization.TemperatureValueDeserializer;
-import kafka.basic.exercise5.exercise5a.model.Temperature;
-import kafka.basic.exercise5.exercise5a.serialization.TemperatureValueSerializer;
+import kafka.advanced.exercise5.exercise5b.deserialization.TemperatureValueDeserializer;
+import kafka.advanced.exercise5.exercise5a.model.Temperature;
+import kafka.advanced.exercise5.exercise5a.serialization.TemperatureValueSerializer;
 import org.apache.kafka.common.serialization.Deserializer;
 import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serializer;
