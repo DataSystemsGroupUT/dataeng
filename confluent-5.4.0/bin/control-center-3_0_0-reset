@@ -1,0 +1,78 @@
+#!/bin/bash
+# (Copyright) [2016 - 2016] Confluent, Inc.
+
+#
+# Use shellcheck to lint this file
+#
+
+set -ue
+
+usage() {
+  echo "$(basename "$0")": ERROR: "$*" 1>&2
+  echo usage: "$(basename "$0")" 'props_file' 1>&2
+  exit 1
+}
+
+props_file=""
+EXTRA_ARGS=()
+while [ $# -gt 0 ]; do
+  case "$1" in
+    -*) #Pass through anything that begins with -
+      EXTRA_ARGS+=("$1")
+      shift
+      ;;
+    *) #Treat anything else as properties file
+      props_file="$1"
+      shift
+      ;;
+  esac
+done
+
+if [ -z "$props_file" ]
+then
+  usage "Properties file is required"
+fi
+
+extract_prop_value() {
+  PROP="$1"
+  DEFAULT="$2"
+  VALUE=$(grep -m 1 -e "^\s*${PROP}\s*=" "$props_file" | awk -F'=' '{ print $2 }')
+  if [ ! -z "$VALUE" ]
+  then
+    VALUE="${VALUE%\"}"
+    VALUE="${VALUE#\"}"
+    echo "$VALUE"
+    return;
+  fi
+  echo "$DEFAULT"
+}
+INTERMEDIATE_TOPICS=(aggregate-topic-partition-FIFTEEN_SECONDS aggregate-topic-partition-ONE_HOUR aggregate-topic-partition-ONE_WEEK error-topic group-aggregate-topic-FIFTEEN_SECONDS group-aggregate-topic-ONE_HOUR group-aggregate-topic-ONE_WEEK group-stream-extension-rekey-FIFTEEN_SECONDS group-stream-extension-rekey-ONE_HOUR group-stream-extension-rekey-ONE_WEEK monitoring-aggregate-rekey-FIFTEEN_SECONDS monitoring-aggregate-rekey-ONE_HOUR monitoring-aggregate-rekey-ONE_WEEK)
+ZK_CONNECT="localhost:2181"
+BOOTSTRAP_SERVERS="localhost:9092"
+CONTROL_CENTER_NAME="_confluent-controlcenter"
+CONTROL_CENTER_ID="0"
+MONITORING_TOPIC="_confluent-monitoring"
+DATA_DIR="/tmp/confluent/control-center"
+
+ZK_CONNECT=$(extract_prop_value "zookeeper.connect" "$ZK_CONNECT")
+BOOTSTRAP_SERVERS=$(extract_prop_value "bootstrap.servers" "$BOOTSTRAP_SERVERS")
+CONTROL_CENTER_NAME=$(extract_prop_value "confluent.controlcenter.name" "$CONTROL_CENTER_NAME")
+CONTROL_CENTER_ID=$(extract_prop_value "confluent.controlcenter.id" "$CONTROL_CENTER_ID")
+APP_ID="$CONTROL_CENTER_NAME-$CONTROL_CENTER_ID"
+MONITORING_TOPIC=$(extract_prop_value "confluent.monitoring.interceptor.topic" "$MONITORING_TOPIC")
+DATA_DIR=$(extract_prop_value "confluent.controlcenter.data.dir" "$DATA_DIR")
+
+bin_dir=$(dirname "$0")
+
+"$bin_dir"/control-center-run-class kafka.tools.StreamsResetter --zookeeper "$ZK_CONNECT" --bootstrap-servers "$BOOTSTRAP_SERVERS" --application-id "$APP_ID" --input-topics "$MONITORING_TOPIC" --intermediate-topics "$(IFS=,; echo "${APP_ID}-${INTERMEDIATE_TOPICS[*]}")"
+
+for topic_suffix in "${INTERMEDIATE_TOPICS[@]}"
+do
+  topic="$APP_ID-$topic_suffix"
+  echo "Deleting topic $topic"
+  "$bin_dir"/control-center-run-class kafka.admin.TopicCommand --zookeeper "$ZK_CONNECT" --topic "$topic" --delete > /dev/null 2>&1 || echo "Failed"
+done
+
+APP_DATA_DIR="${DATA_DIR:?}/$CONTROL_CENTER_ID"
+echo "Deleting local RocksDB data dir: $APP_DATA_DIR"
+rm -rf "${APP_DATA_DIR:?}"

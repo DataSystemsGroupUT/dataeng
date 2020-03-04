@@ -13,7 +13,8 @@ public class PageSerde implements Serde<PageView> {
 
     @Override
     public Serializer<PageView> serializer() {
-        return (topic, data) -> gson.toJson(data).getBytes(Charset.forName("UTF-8"));
+        return (topic, data) ->
+                gson.toJson(data).getBytes(Charset.forName("UTF-8"));
     }
 
     @Override

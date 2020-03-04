@@ -1,22 +1,94 @@
-# Kafka Training Middleware Course
+# 3 Days Kafka Training Course
+
+## Prerequisites
+    
+    - Knowledge of Java
+    - Knowledge of Bash
+    - Download Confluent Plaform
+
+## Day 1 Kafka
+
+[Slide]()
+[Detailed Program]()
+
+### Topics
+
+    - Publish Subscribe
+    - Kafka Concepts
+        - Topics
+        - Producers
+        - Consumers
+    - Kafka System
+        - Brokers
+        - Partitioning
+        - Serialization
+    - Kafka Internals
+        - Commit Log
+        - Log Compaction
+        - Fault Tolerance
+            - Broker via Replication
+            - Producer via Transactionality
+
+###  Running Kafka 
+
+First of all we start zookeeper. It's address is *localhost:2181*
+```bash
+bin/zookeeper-server-start etc/kafka/zookeeper.properties
+```
 
 
-Download Kafka suite
+Then we start a kafka broker
+
+```bash
+bin/kafka-server-start etc/kafka/server.properties
+
+```
+
+If you want to start a second broker you MUST change the ID in the configuration and the port
+as indicated below. Suggestion, also differentiate the log folder.
+```lombok.config
 
 
-## CLI Commands
+etc/kafka//server-1.properties:
+    broker.id=1
+    listeners=PLAINTEXT://:9092
+    log.dirs=/tmp/kafka-logs-1
+    
 
-/bin/zookeeper-server-start.sh config/zookeeper.properties
+etc/kafka//server-2.properties:
+    broker.id=2
+    listeners=PLAINTEXT://:9093
+    log.dirs=/tmp/kafka-logs-2
+```
 
-bin/kafka-server-start.sh config/server.properties
+### CLI Utilities
 
-bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+#### Create topics from the CLI
 
-bin/kafka-console-producer.sh --broker-list localhost:9092 --topic test
+```bash
+bin/kafka-topics --create --zookeeper localhost:2181 --replication-factor X --partitions Y --topic <name>
+```
 
-bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
+#### List existing topics 
+bin/kafka-topics --list --zookeeper localhost:2181 
 
-bin/kafka-topics.sh --list --zookeeper localhost:2181
+#### Describe a certain topic
+
+```bash
+bin/kafka-topics --describe --zookeeper localhost:2181 test
+```
+Output 
+
+Topic: test	PartitionCount: 1	ReplicationFactor: 1	Configs:
+Topic: test	Partition: 0	Leader: 0	Replicas: 0	Isr: 0	Offline:
+
+
+## Other Utilities
+
+bin/kafka-console-producer --broker-list localhost:9092 --topic test
+
+bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic test --from-beginning
+
+bin/kafka-topics --list --zookeeper localhost:2181
 
 bin/schema-registry-start ./etc/schema-registry/schema-registry.properties
-

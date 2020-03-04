@@ -2,10 +2,10 @@ package kafka.advanced.exercise7;
 
 import org.apache.kafka.clients.consumer.*;
 import org.apache.kafka.common.TopicPartition;
-import kafka.exercise5.model.TemperatureKey;
-import kafka.exercise5.model.Temperature;
-import kafka.exercise5.deserialization.TemperatureKeyDeserializer;
-import kafka.exercise5.deserialization.TemperatureValueDeserializer;
+import kafka.basic.exercise5.model.TemperatureKey;
+import kafka.basic.exercise5.model.Temperature;
+import kafka.basic.exercise5.deserialization.TemperatureKeyDeserializer;
+import kafka.basic.exercise5.deserialization.TemperatureValueDeserializer;
 
 import java.time.Duration;
 import java.util.*;

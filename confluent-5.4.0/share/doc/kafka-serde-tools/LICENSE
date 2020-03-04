@@ -1,0 +1,4 @@
+The project is licensed under the Confluent Community License, except for client
+libs, which is under the Apache 2.0 license.
+
+See LICENSE file in each subfolder for detailed license agreement.

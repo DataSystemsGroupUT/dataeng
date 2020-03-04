@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# (Copyright) [2018 - 2018] Confluent, Inc.
+
+class_pattern='mqtt\.KafkaMqttMain'
+
+TARGET=`ps ax | egrep -i "$class_pattern" | grep java | grep -v grep | awk '{print $1}'`
+if [ "x$TARGET" = "x" ]; then
+  >&2 echo "No running instance found."
+  exit 1
+fi
+
+kill "$TARGET"
+for i in `seq 20`; do
+  sleep 0.25
+  ps ax | egrep -i "$class_pattern" | grep "$TARGET" > /dev/null
+  if [ $? -ne 0 ]; then
+    #No running processes found, stop was successful
+    exit 0
+  fi
+done
+
+>&2 echo "Tried to kill $TARGET but never saw it die"
+exit 1

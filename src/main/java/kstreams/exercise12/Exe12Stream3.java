@@ -1,7 +1,7 @@
 package kstreams.exercise12;
 
-import kafka.exercise5.model.Temperature;
-import kafka.exercise5.model.TemperatureKey;
+import kafka.basic.exercise5.model.Temperature;
+import kafka.basic.exercise5.model.TemperatureKey;
 import kstreams.exercise12.model.Tuple;
 import kstreams.exercise12.serdes.TemperatureKeySerde;
 import kstreams.exercise12.serdes.TemperatureSerde;

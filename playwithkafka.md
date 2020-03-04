@@ -181,7 +181,7 @@
   184  ./dumptrainflux.sh 
   185  j kafka
   186  j kafka
-  187  bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+  187  bin/kafka-topics --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
   188  bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic lowercase-topic
   189  brew install kafkacat
   190  kafkacat -P lowercase-topic a b c d e f

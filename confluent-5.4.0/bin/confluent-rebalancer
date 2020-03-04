@@ -1,0 +1,99 @@
+#!/bin/bash
+# (Copyright) [2016 - 2016] Confluent, Inc.
+
+#
+# Use shellcheck to lint this file
+#
+
+set -ue
+
+usage() {
+    echo "$(basename "$0")": ERROR: "$*" 1>&2
+    echo usage: "$(basename "$0")" 1>&2
+exit 1
+}
+
+bin_dir=$(dirname "$0")
+
+#cd -P deals with symlink from /bin to /usr/bin
+base_dir=$( cd -P "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )
+
+: "${REBALANCER_CLASSPATH:=""}"
+: "${REBALANCER_LOG4J_OPTS:=""}"
+: "${REBALANCER_JMX_OPTS:=""}"
+: "${REBALANCER_OPTS:=""}"
+: "${REBALANCER_HEAP_OPTS:=""}"
+: "${REBALANCER_JVM_PERFORMANCE_OPTS:=""}"
+: "${JMX_PORT:=""}"
+: "${JAVA_HOME:=""}"
+
+# Development jars. `mvn package` should collect all the required dependency jars here
+for dir in "$base_dir"/confluent-rebalancer/target/confluent-rebalancer-*-development; do
+  REBALANCER_DIR="$dir/share/java/confluent-rebalancer"
+  if [ -d "$REBALANCER_DIR" ]; then
+    REBALANCER_CLASSPATH="$REBALANCER_CLASSPATH:$REBALANCER_DIR/*"
+  fi
+done
+
+# Production jars - rebalancer jars take precedence over other stuff passed in via CLASSPATH env var
+for library in "confluent-rebalancer"; do
+  DIR="$base_dir/share/java/$library"
+  if [ -d "$DIR" ]; then
+    REBALANCER_CLASSPATH="$DIR/*:$REBALANCER_CLASSPATH"
+  fi
+done
+
+# logj4 settings
+if [ -z "$REBALANCER_LOG4J_OPTS" ]; then
+  # Test for files from dev -> packages so this will work as expected in dev if you have packages
+  # installed
+  if [ -e "$base_dir/confluent-rebalancer/config/log4j.properties" ]; then # Dev environment
+    REBALANCER_LOG4J_OPTS="-Dlog4j.configuration=file:$base_dir/confluent-rebalancer/config/log4j.properties"
+  elif [ -e "$base_dir/etc/confluent-rebalancer/log4j.properties" ]; then # Simple zip file layout
+    REBALANCER_LOG4J_OPTS="-Dlog4j.configuration=file:$base_dir/etc/confluent-rebalancer/log4j.properties"
+  elif [ -e "/etc/confluent-rebalancer/log4j.properties" ]; then # Normal install layout
+    REBALANCER_LOG4J_OPTS="-Dlog4j.configuration=file:/etc/confluent-rebalancer/log4j.properties"
+  fi
+fi
+
+# JMX settings
+if [ -z "$REBALANCER_JMX_OPTS" ]; then
+  REBALANCER_JMX_OPTS="-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false "
+fi
+
+# JMX port to use
+if [ ! -z "$JMX_PORT" ]; then
+  REBALANCER_JMX_OPTS="$REBALANCER_JMX_OPTS -Dcom.sun.management.jmxremote.port=$JMX_PORT "
+fi
+
+# Generic jvm settings you want to add
+if [ -z "$REBALANCER_OPTS" ]; then
+  REBALANCER_OPTS=""
+fi
+
+# Which java to use
+if [ -z "$JAVA_HOME" ]; then
+  JAVA="java"
+else
+  JAVA="$JAVA_HOME/bin/java"
+fi
+
+# Memory options
+if [ -z "$REBALANCER_HEAP_OPTS" ]; then
+  REBALANCER_HEAP_OPTS="-Xmx3g"
+fi
+
+# JVM performance options
+if [ -z "$REBALANCER_JVM_PERFORMANCE_OPTS" ]; then
+  REBALANCER_JVM_PERFORMANCE_OPTS="-server -XX:+UseParallelGC -XX:+UseParallelOldGC -XX:+DisableExplicitGC -Djava.awt.headless=true"
+fi
+
+OPTIONS=($REBALANCER_HEAP_OPTS)
+OPTIONS+=($REBALANCER_JVM_PERFORMANCE_OPTS)
+OPTIONS+=($REBALANCER_JMX_OPTS)
+OPTIONS+=($REBALANCER_LOG4J_OPTS)
+OPTIONS+=($REBALANCER_OPTS)
+
+MAIN=io.confluent.kafka.databalancing.ConfluentRebalancerCommand
+
+exec "$JAVA" -cp "$REBALANCER_CLASSPATH" "${OPTIONS[@]}" "$MAIN" "$@"

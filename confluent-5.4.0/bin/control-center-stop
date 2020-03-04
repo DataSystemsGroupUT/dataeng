@@ -1,0 +1,14 @@
+#!/bin/bash
+# (Copyright) [2017 - 2017] Confluent, Inc.
+set -x
+C3PIDS=$(jcmd | grep -i 'controlcenter\.ControlCenter' | awk '{print $1}')
+
+if [ -z "$C3PIDS" ]; then
+  echo "No control center to stop"
+  exit 1
+fi
+
+for PID in $C3PIDS; do
+  kill -s TERM $PID
+  while kill -0 "$PID" >/dev/null 2>&1; do sleep 1; done
+done

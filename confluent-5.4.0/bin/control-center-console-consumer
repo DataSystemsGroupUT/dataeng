@@ -1,0 +1,47 @@
+#!/bin/bash
+# (Copyright) [2016 - 2016] Confluent, Inc.
+
+#
+# Use shellcheck to lint this file
+#
+set -ue
+
+base_dir=$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )
+: "${CONTROL_CENTER_CONFIG_DIR:="$base_dir/config"}"
+
+if [ "$#" -eq 0 ]; then
+  echo "Properties file is required as first argument" && exit 1
+fi
+
+props_file="$1"
+shift
+
+if [ ! -e "$props_file" ]; then
+  echo "Config file not found: $props_file" && exit 1
+fi
+
+: "${CONTROL_CENTER_LOG4J_OPTS:=""}"
+if [ -z "$CONTROL_CENTER_LOG4J_OPTS" ] && [ -e "$CONTROL_CENTER_CONFIG_DIR/log4j-silent.properties" ]; then
+  export CONTROL_CENTER_LOG4J_OPTS="-Dlog4j.configuration=file:$CONTROL_CENTER_CONFIG_DIR/log4j-silent.properties"
+fi
+
+extract_prop_value() {
+  PROP="$1"
+  DEFAULT="$2"
+  VALUE=$(grep -m 1 -e "^\s*${PROP}\s*=" "$props_file" | awk -F'=' '{ print $2 }')
+  if [ ! -z "$VALUE" ]
+  then
+    VALUE="${VALUE%\"}"
+    VALUE="${VALUE#\"}"
+    echo "$VALUE"
+    return;
+  fi
+  echo "$DEFAULT"
+}
+BROKER_LIST=$(extract_prop_value "bootstrap.servers" "localhost:9092")
+
+OPTIONS=(--formatter io.confluent.controlcenter.serialization.UberFormatter)
+OPTIONS+=(--bootstrap-server "$BROKER_LIST")
+
+OPTIONS+=(--property config="$props_file")
+exec "$base_dir"/bin/control-center-run-class kafka.tools.ConsoleConsumer "${OPTIONS[@]}" "$@"

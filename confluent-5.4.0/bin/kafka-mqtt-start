@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# (Copyright) [2018 - 2018] Confluent, Inc.
+
+exec $(dirname $0)/kafka-mqtt-run-class io.confluent.mqtt.KafkaMqttMain "$@"

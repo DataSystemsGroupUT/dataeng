@@ -1,0 +1,105 @@
+#!/usr/bin/env bash
+
+# (Copyright) [2018 - 2018] Confluent, Inc.
+
+base_dir=$(dirname $0)
+
+#cd -P deals with symlink from /bin to /usr/bin
+if [[  -d "$base_dir/../share/java" ]]; then
+  java_base_dir=$( cd -P "$base_dir/../share/java" && pwd )
+fi
+
+# Dev Jars
+for dir in "$base_dir/../target/kafka-connect-replicator-*-development"; do
+  expanded_dir=$( echo $dir )
+  if [ -d "${expanded_dir}" ]; then
+    classpath_prefix="$CLASSPATH:"
+    if [ "x$CLASSPATH" = "x" ]; then
+      classpath_prefix=""
+    fi
+    CLASSPATH="$classpath_prefix:$expanded_dir/share/java/kafka-connect-replicator/*"
+  fi
+done
+
+# Production Jars
+# kafka-serde-tools and confluent-common (required by AvroConverter). Although AvroConverter is
+# not used by default, it should be available
+for library in "kafka-connect-replicator" "confluent-security/connect" "kafka" "confluent-common" \
+    "kafka-serde-tools" "monitoring-interceptors" ; do
+  dir="$java_base_dir/$library"
+  if [ -d "$dir" ]; then
+    classpath_prefix="$CLASSPATH:"
+    if [ "x$CLASSPATH" = "x" ]; then
+      classpath_prefix=""
+    fi
+    CLASSPATH="$classpath_prefix$dir/*"
+  fi
+done
+
+if [ "x$KAFKA_LOG4J_OPTS" = "x" ]; then
+  LOG4J_CONFIG_NORMAL_INSTALL="/etc/kafka-connect-replicator/replicator-log4j.properties"
+  LOG4J_CONFIG_ZIP_INSTALL="$base_dir/../etc/kafka-connect-replicator/replicator-log4j.properties"
+  if [ -e "$LOG4J_CONFIG_NORMAL_INSTALL" ]; then # Normal install layout
+    KAFKA_LOG4J_OPTS="-Dlog4j.configuration=file:${LOG4J_CONFIG_NORMAL_INSTALL}"
+  elif [ -e "${LOG4J_CONFIG_ZIP_INSTALL}" ]; then # Simple zip file layout
+    KAFKA_LOG4J_OPTS="-Dlog4j.configuration=file:${LOG4J_CONFIG_ZIP_INSTALL}"
+  else # Fallback to normal default
+    KAFKA_LOG4J_OPTS="-Dlog4j.configuration=file:$base_dir/../config/replicator-log4j.properties"
+  fi
+fi
+export KAFKA_LOG4J_OPTS
+
+if [ "x$KAFKA_HEAP_OPTS" = "x" ]; then
+  export KAFKA_HEAP_OPTS="-Xms256M -Xmx2G"
+fi
+
+# Which java to use
+if [ -z "$JAVA_HOME" ]; then
+  JAVA="java"
+else
+  JAVA="$JAVA_HOME/bin/java"
+fi
+
+# JVM performance options
+if [ -z "$KAFKA_JVM_PERFORMANCE_OPTS" ]; then
+  KAFKA_JVM_PERFORMANCE_OPTS="-server -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:InitiatingHeapOccupancyPercent=35 -XX:+ExplicitGCInvokesConcurrent -Djava.awt.headless=true"
+fi
+
+# JMX settings
+if [ -z "$KAFKA_JMX_OPTS" ]; then
+  KAFKA_JMX_OPTS="-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false  -Dcom.sun.management.jmxremote.ssl=false "
+fi
+
+# JMX port to use
+if [  $JMX_PORT ]; then
+  KAFKA_JMX_OPTS="$KAFKA_JMX_OPTS -Dcom.sun.management.jmxremote.port=$JMX_PORT "
+fi
+
+DAEMON_NAME="Replicator"
+CONSOLE_OUTPUT_FILE="$LOG_DIR/$DAEMON_NAME.out"
+
+# GC options
+GC_FILE_SUFFIX='-gc.log'
+GC_LOG_FILE_NAME=''
+if [ "x$GC_LOG_ENABLED" = "xtrue" ]; then
+  GC_LOG_FILE_NAME=$DAEMON_NAME$GC_FILE_SUFFIX
+
+  # The first segment of the version number, which is '1' for releases before Java 9
+  # it then becomes '9', '10', ...
+  # Some examples of the first line of `java --version`:
+  # 8 -> java version "1.8.0_152"
+  # 9.0.4 -> java version "9.0.4"
+  # 10 -> java version "10" 2018-03-20
+  # 10.0.1 -> java version "10.0.1" 2018-04-17
+  # We need to match to the end of the line to prevent sed from printing the characters that do not match
+  JAVA_MAJOR_VERSION=$($JAVA -version 2>&1 | sed -E -n 's/.* version "([0-9]*).*$/\1/p')
+  if [[ "$JAVA_MAJOR_VERSION" -ge "9" ]] ; then
+    KAFKA_GC_LOG_OPTS="-Xlog:gc*:file=$LOG_DIR/$GC_LOG_FILE_NAME:time,tags:filecount=10,filesize=102400"
+  else
+    KAFKA_GC_LOG_OPTS="-Xloggc:$LOG_DIR/$GC_LOG_FILE_NAME -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 -XX:GCLogFileSize=100M"
+  fi
+fi
+
+export CLASSPATH
+
+exec $JAVA $KAFKA_HEAP_OPTS $KAFKA_JVM_PERFORMANCE_OPTS $KAFKA_GC_LOG_OPTS $KAFKA_JMX_OPTS $KAFKA_LOG4J_OPTS -cp $CLASSPATH $KAFKA_OPTS $EXTRA_ARGS io.confluent.connect.replicator.ReplicatorApp "$@"

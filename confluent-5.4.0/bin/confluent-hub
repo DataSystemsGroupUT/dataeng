@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# (Copyright) [2018 - 2018] Confluent, Inc.
+
+base_dir=$(dirname $0)
+
+if [ -L /usr/local/bin/confluent-hub ]; then
+    #brew cask installation
+    base_dir=$(dirname $( ls -l /usr/local/bin/confluent-hub | awk '{print $11}' ))
+    #base_dir refers to Caskrooom/confluent-hub-client
+fi
+#cd -P deals with symlink from /bin to /usr/bin
+java_base_dir=$( cd -P "$base_dir/../share/java" && pwd )
+HUB_CLI_CLASSPATH="${HUB_CLI_CLASSPATH}:${java_base_dir}/confluent-hub-client/*"
+BIN_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+exec java -cp "${HUB_CLI_CLASSPATH}" -Dbin.abs.path="${BIN_DIR}" io.confluent.connect.hub.cli.ConfluentHubClient "$@"

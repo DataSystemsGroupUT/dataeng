@@ -1,0 +1,96 @@
+[2020-02-20 12:10:41,964] INFO MetadataServerConfig values: 
+	confluent.http.server.listeners = [http://0.0.0.0:8090]
+	confluent.metadata.server.advertised.listeners = null
+	confluent.metadata.server.listeners = null
+ (org.apache.kafka.server.http.MetadataServerConfig)
+[2020-02-20 12:10:41,975] INFO RbacApiAppConfig values: 
+	access.control.allow.headers = 
+	access.control.allow.methods = 
+	access.control.allow.origin = 
+	authentication.method = NONE
+	authentication.realm = 
+	authentication.roles = [*]
+	authentication.skip.paths = []
+	compression.enable = true
+	debug = false
+	idle.timeout.ms = 30000
+	listeners = [http://0.0.0.0:8090]
+	metric.reporters = []
+	metrics.jmx.prefix = rest-utils
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	metrics.tag.map = []
+	openapi.enable = false
+	port = 8090
+	request.logger.name = io.confluent.rest-utils.requests
+	resource.extension.classes = []
+	response.mediatype.default = application/json
+	response.mediatype.preferred = [application/json]
+	rest.servlet.initializor.classes = []
+	shutdown.graceful.ms = 1000
+	ssl.cipher.suites = []
+	ssl.client.auth = false
+	ssl.client.authentication = NONE
+	ssl.enabled.protocols = []
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = [hidden]
+	ssl.keymanager.algorithm = 
+	ssl.keystore.location = 
+	ssl.keystore.password = [hidden]
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = 
+	ssl.trustmanager.algorithm = 
+	ssl.truststore.location = 
+	ssl.truststore.password = [hidden]
+	ssl.truststore.type = JKS
+	user.store = LDAP
+	user.store.file.path = 
+	websocket.path.prefix = /ws
+	websocket.servlet.initializor.classes = []
+ (io.confluent.rbacapi.app.RbacApiAppConfig)
+[2020-02-20 12:10:42,063] INFO Adding listener: http://0.0.0.0:8090 (io.confluent.rest.ApplicationServer)
+[2020-02-20 12:10:42,079] INFO MetadataApiConfig values: 
+	access.control.allow.headers = 
+	access.control.allow.methods = 
+	access.control.allow.origin = 
+	authentication.method = NONE
+	authentication.realm = 
+	authentication.roles = [*]
+	authentication.skip.paths = []
+	compression.enable = true
+	debug = false
+	idle.timeout.ms = 30000
+	listeners = [http://0.0.0.0:8090]
+	metric.reporters = []
+	metrics.jmx.prefix = rest-utils
+	metrics.num.samples = 2
+	metrics.sample.window.ms = 30000
+	metrics.tag.map = []
+	port = 8090
+	request.logger.name = io.confluent.rest-utils.requests
+	resource.extension.classes = []
+	response.mediatype.default = application/json
+	response.mediatype.preferred = [application/json]
+	rest.servlet.initializor.classes = []
+	shutdown.graceful.ms = 1000
+	ssl.cipher.suites = []
+	ssl.client.auth = false
+	ssl.client.authentication = NONE
+	ssl.enabled.protocols = []
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = [hidden]
+	ssl.keymanager.algorithm = 
+	ssl.keystore.location = 
+	ssl.keystore.password = [hidden]
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = 
+	ssl.trustmanager.algorithm = 
+	ssl.truststore.location = 
+	ssl.truststore.password = [hidden]
+	ssl.truststore.type = JKS
+	websocket.path.prefix = /ws
+	websocket.servlet.initializor.classes = []
+ (io.confluent.metadataapi.app.MetadataApiConfig)
+[2020-02-20 12:10:42,827] INFO MetadataServer started, listening for requests... (io.confluent.rbacapi.brokerplugin.MetadataServerImpl)

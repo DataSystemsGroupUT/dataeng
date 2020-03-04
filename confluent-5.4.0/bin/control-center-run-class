@@ -1,0 +1,169 @@
+#!/bin/bash
+# (Copyright) [2016 - 2016] Confluent, Inc.
+
+# Use shellcheck to lint this file
+
+set -ue
+
+#cd -P deals with symlink from /bin to /usr/bin
+base_dir=$( cd -P "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )
+
+: "${CONTROL_CENTER_CLASSPATH:=""}"
+: "${CONTROL_CENTER_LOG4J_OPTS:=""}"
+: "${CONTROL_CENTER_JMX_OPTS:=""}"
+: "${CONTROL_CENTER_OPTS:=""}"
+: "${CONTROL_CENTER_HEAP_OPTS:=""}"
+: "${CONTROL_CENTER_JVM_PERFORMANCE_OPTS:=""}"
+: "${JMX_PORT:=""}"
+: "${JAVA_HOME:=""}"
+
+# Development jars. `mvn package` should collect all the required dependency jars here
+for dir in "$base_dir"/control-center/target/control-center-*-development; do
+  C3_DIR="$dir/share/java/confluent-control-center"
+  if [ -d "$C3_DIR" ]; then
+    CONTROL_CENTER_CLASSPATH="$CONTROL_CENTER_CLASSPATH:$C3_DIR/*"
+  fi
+done
+
+# Production jars - each one is prepended so they will appear in reverse order.  C3 jars take precedence over other stuff passed in via CLASSPATH env var
+for library in "confluent-common" "rest-utils" "monitoring-interceptors" "confluent-control-center" "acl" ; do
+  DIR="$base_dir/share/java/$library"
+  if [ -d "$DIR" ]; then
+    CONTROL_CENTER_CLASSPATH="$DIR/*:$CONTROL_CENTER_CLASSPATH"
+  fi
+done
+
+for base_acl_dir in "$base_dir"/acl; do
+  ACL_DIR="$base_acl_dir/target"
+  if [ -d "$ACL_DIR" ]; then
+    CONTROL_CENTER_CLASSPATH="$CONTROL_CENTER_CLASSPATH:$ACL_DIR/*"
+  fi
+done
+
+# logj4 settings
+if [ -z "$CONTROL_CENTER_LOG4J_OPTS" ]; then
+  # Test for files from dev -> packages so this will work as expected in dev if you have packages
+  # installed
+  if [ -e "$base_dir/config/log4j.properties" ]; then # Dev environment
+    CONTROL_CENTER_LOG4J_OPTS="-Dlog4j.configuration=file:$base_dir/config/log4j.properties"
+  elif [ -e "$base_dir/etc/confluent-control-center/log4j.properties" ]; then # Simple zip file layout
+    CONTROL_CENTER_LOG4J_OPTS="-Dlog4j.configuration=file:$base_dir/etc/confluent-control-center/log4j.properties"
+  elif [ -e "/etc/confluent-control-center/log4j.properties" ]; then # Normal install layout
+    CONTROL_CENTER_LOG4J_OPTS="-Dlog4j.configuration=file:/etc/confluent-control-center/log4j.properties"
+  fi
+fi
+
+# Log directory to use
+if [ -z "${LOG_DIR:-}" ]; then
+  LOG_DIR="/tmp/control-center-logs"
+fi
+
+# create logs directory
+if [ ! -d "$LOG_DIR" ]; then
+  mkdir -p "$LOG_DIR"
+fi
+
+CONTROL_CENTER_LOG4J_OPTS="-Dconfluent.controlcenter.log.dir=$LOG_DIR ${CONTROL_CENTER_LOG4J_OPTS}"
+
+# JMX settings
+if [ -z "$CONTROL_CENTER_JMX_OPTS" ]; then
+  CONTROL_CENTER_JMX_OPTS="-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false "
+fi
+
+# JMX port to use
+if [ ! -z "$JMX_PORT" ]; then
+  CONTROL_CENTER_JMX_OPTS="$CONTROL_CENTER_JMX_OPTS -Dcom.sun.management.jmxremote.port=$JMX_PORT "
+fi
+
+# Generic jvm settings you want to add
+if [ -z "$CONTROL_CENTER_OPTS" ]; then
+  CONTROL_CENTER_OPTS=""
+fi
+
+# Which java to use
+if [ -z "$JAVA_HOME" ]; then
+  JAVA="java"
+else
+  JAVA="$JAVA_HOME/bin/java"
+fi
+
+# Memory options
+if [ -z "$CONTROL_CENTER_HEAP_OPTS" ]; then
+  CONTROL_CENTER_HEAP_OPTS="-Xmx6g"
+fi
+
+# JVM performance options
+if [ -z "$CONTROL_CENTER_JVM_PERFORMANCE_OPTS" ]; then
+  CONTROL_CENTER_JVM_PERFORMANCE_OPTS="-server -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:+CMSScavengeBeforeRemark -XX:+DisableExplicitGC -Djava.awt.headless=true"
+fi
+
+usage() {
+    echo "USAGE: $0 [-daemon] [opts] [-help]"
+    exit 1
+}
+
+if [ $# -lt 1 ];
+then
+  usage
+fi
+
+MAIN="$1"
+shift
+
+DAEMON_MODE=""
+HELP=""
+CHECK_DIR_EXECUTABLE=""
+
+while [ $# -gt 0 ]; do
+  COMMAND="$1"
+  case "$COMMAND" in
+    -help)
+      HELP="true"
+      shift
+      ;;
+    -daemon)
+      DAEMON_MODE="true"
+      shift
+      ;;
+    -check_dir)
+      CHECK_DIR_EXECUTABLE="true"
+      shift
+      ;;
+    *)
+      break
+      ;;
+  esac
+done
+
+if [ "x$HELP" = "xtrue" ]; then
+  usage
+fi
+
+OPTIONS=($CONTROL_CENTER_HEAP_OPTS)
+OPTIONS+=($CONTROL_CENTER_JVM_PERFORMANCE_OPTS)
+OPTIONS+=($CONTROL_CENTER_JMX_OPTS)
+OPTIONS+=($CONTROL_CENTER_LOG4J_OPTS)
+OPTIONS+=($CONTROL_CENTER_OPTS)
+
+if [[ "xtrue" = "x$CHECK_DIR_EXECUTABLE" ]]; then
+  TMP_DIR=`"$JAVA" -cp "$CONTROL_CENTER_CLASSPATH" "${OPTIONS[@]}" -XshowSettings 2>&1 /dev/null  | grep 'java.io.tmpdir' | cut -d'=' -f2 | tr -d '[:space:]'`
+
+  if ! [[ -w "$TMP_DIR" ]]; then
+    echo "Control Center needs write access to the configured java.io.tmpdir=$TMP_DIR"
+    exit 1
+  fi
+
+  if ! [[ -x "$TMP_DIR" ]]; then
+    echo "Control Center needs execute access to the configured java.io.tmpdir=$TMP_DIR"
+    exit 1
+  fi
+fi
+
+# Launch mode
+if [ "x$DAEMON_MODE" = "xtrue" ]; then
+  DAEMON_STDOUT_FILE="${LOG_DIR:-/tmp}/control-center.out"
+  echo "Writing console output to $DAEMON_STDOUT_FILE"
+  nohup "$JAVA" -cp "$CONTROL_CENTER_CLASSPATH" "${OPTIONS[@]}" "$MAIN" "$@" 2>&1 < /dev/null > "$DAEMON_STDOUT_FILE" &
+else
+  exec "$JAVA" -cp "$CONTROL_CENTER_CLASSPATH" "${OPTIONS[@]}" "$MAIN" "$@"
+fi

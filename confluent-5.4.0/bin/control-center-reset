@@ -1,0 +1,37 @@
+#!/bin/bash
+# (Copyright) [2016 - 2016] Confluent, Inc.
+
+#
+# Use shellcheck to lint this file
+#
+
+set -ue
+
+usage() {
+  echo "$(basename "$0")": ERROR: "$*" 1>&2
+  echo usage: "$(basename "$0")" 'props_file' 1>&2
+  exit 1
+}
+
+props_file=""
+EXTRA_ARGS=()
+while [ $# -gt 0 ]; do
+  case "$1" in
+    -*) #Pass through anything that begins with -
+      EXTRA_ARGS+=("$1")
+      shift
+      ;;
+    *) #Treat anything else as properties file
+      props_file="$1"
+      shift
+      ;;
+  esac
+done
+
+if [ -z "$props_file" ]
+then
+  usage "Properties file is required"
+fi
+
+bin_dir=$(dirname "$0")
+exec "$bin_dir"/control-center-run-class io.confluent.controlcenter.tools.Resetter "$props_file"

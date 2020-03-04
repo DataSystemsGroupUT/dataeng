@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+#
+# Copyright 2017 Confluent Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+if [ $# -lt 1 ];
+then
+  echo "USAGE: $0 classname [opts]"
+  exit 1
+fi
+
+base_dir=$(dirname $0)/..
+
+CLASSPATH=$CLASSPATH
+
+# Generic jvm settings you want to add
+if [ -z "$SECURITY_PLUGINS_OPTS" ]; then
+  SECURITY_PLUGINS_OPTS=""
+fi
+
+# Which java to use
+if [ -z "$JAVA_HOME" ]; then
+  JAVA="java"
+else
+  JAVA="$JAVA_HOME/bin/java"
+fi
+
+# Memory options
+if [ -z "$SECURITY_PLUGINS_HEAP_OPTS" ]; then
+  SCHEMA_REGISTRY_HEAP_OPTS="-Xmx512M"
+fi
+
+# JVM performance options
+if [ -z "$SECURITY_PLUGINS_JVM_PERFORMANCE_OPTS" ]; then
+  SCHEMA_REGISTRY_JVM_PERFORMANCE_OPTS="-server -XX:+UseG1GC -XX:MaxGCPauseMillis=20 -XX:InitiatingHeapOccupancyPercent=35 -XX:+DisableExplicitGC -Djava.awt.headless=true"
+fi
+
+# logj4 settings
+if [ "x$SECURITY_PLUGINS_LOG4J_OPTS" = "x" ]; then
+  # Test for files from dev -> packages so this will work as expected in dev if you have packages
+  # installed
+  if [ -e "$base_dir/config/tools-log4j.properties" ]; then # Dev environment
+    SECURITY_PLUGINS_LOG4J_OPTS="-Dlog4j.configuration=file:$base_dir/config/tools-log4j.properties"
+  elif [ -e "$base_dir/etc/confluent-security/tools-log4j.properties" ]; then # Simple zip file layout
+    SECURITY_PLUGINS_LOG4J_OPTS="-Dlog4j.configuration=file:$base_dir/etc/confluent-security/tools-log4j.properties"
+  elif [ -e "/etc/confluent-security/tools-log4j.properties" ]; then # Normal install layout
+    SECURITY_PLUGINS_LOG4J_OPTS="-Dlog4j.configuration=file:/etc/confluent-security/tools-log4j.properties"
+  fi
+fi
+
+
+if [ "x$$HELP" = "xtrue" ]; then
+  echo "USAGE: $0 classname [opts]"
+  exit 0
+fi
+
+
+
+MAIN=$1
+shift
+
+exec $JAVA $SECURITY_PLUGINS_HEAP_OPTS $SECURITY_PLUGINS_JVM_PERFORMANCE_OPTS $SECURITY_PLUGINS_LOG4J_OPTS -cp $CLASSPATH $SECURITY_PLUGINS_OPTS "$MAIN" "$@"
+

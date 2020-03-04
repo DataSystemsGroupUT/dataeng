@@ -1,0 +1,44 @@
+#!/bin/bash
+# (Copyright) [2019 - 2019] Confluent, Inc.
+
+#
+# Use shellcheck to lint this file
+#
+set -ue
+
+#cd -P deals with symlink from /bin to /usr/bin
+base_dir=$( cd -P "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )
+
+usage() {
+  echo "$(basename "$0")": ERROR: "$*" 1>&2
+  echo usage: "$(basename "$0")" 'props_file' 1>&2
+  exit 1
+}
+
+props_file=""
+EXTRA_ARGS=()
+while [ $# -gt 0 ]; do
+  case "$1" in
+    -*) #Pass through anything that begins with -
+      EXTRA_ARGS+=("$1")
+      shift
+      ;;
+    *) #Treat anything else as properties file
+      props_file="$1"
+      shift
+      ;;
+  esac
+done
+
+if [ -z "$props_file" ]
+then
+  usage "Properties file is required"
+fi
+
+: "${PRINCIPAL:="User:kafkaclient"}"
+
+user_name=$(echo "$PRINCIPAL" | cut -d":" -f2 )
+
+bin_dir=$(dirname "$0")
+
+"$bin_dir"/control-center-run-class io.confluent.controlcenter.acl.StartupAcl -c3Username "$user_name" -config "$props_file" > /dev/null 2>&1 || echo "Failed"
