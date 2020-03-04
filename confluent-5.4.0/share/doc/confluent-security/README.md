@@ -1,3 +1,0 @@
-# Confluent Security Plugins
-
-TODO
