@@ -57,6 +57,12 @@ enter the bin folder and verify if all the scrits are executable
 chmod +x *.sh
 ```
 
+ssh to the virtual machine with port forwarding
+
+```bash
+ssh -p 3022 -L 9092:localhost:9092 -L 2081:localhost:2081 tartu@localhost
+```
+
 
 Then start zookeeper. It's address is *localhost:2181*
 ```bash
