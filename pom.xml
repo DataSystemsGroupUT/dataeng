@@ -15,14 +15,20 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
     </repositories>
 
     <properties>
-        <kafka.version>5.3.1-ccs</kafka.version>
+        <kafka.version>2.4.0</kafka.version>
         <slf4j.version>1.7.21</slf4j.version>
         <avro.version>1.8.2</avro.version>
-        <confluent.version>5.0.1</confluent.version>
+        <confluent.version>5.3.0</confluent.version>
+        <schema.registry>5.3.0</schema.registry>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.thedeanda</groupId>
+            <artifactId>lorem</artifactId>
+            <version>2.1</version>
+        </dependency>
         <dependency>
             <groupId>org.apache.kafka</groupId>
             <artifactId>kafka-clients</artifactId>
