@@ -46,9 +46,25 @@
     - [Exercise 7](src/main/java/kafka/expert/exercise7/Readme.md)
     - [Exercise 8](src/main/java/kafka/expert/exercise8/Readme.md)
 
-###  Running Kafka 
+###  Running Kafka (Requires Linux)
 
-First of all we start zookeeper. It's address is *localhost:2181*
+Download Confluent Platform [here](https://www.confluent.io/download/)
+
+enter the bin folder and verify if all the scrits are executable
+
+```bash
+#grant permission
+chmod +x *.sh
+```
+
+ssh to the virtual machine with port forwarding
+
+```bash
+ssh -p 3022 -L 9092:localhost:9092 -L 2081:localhost:2081 tartu@localhost
+```
+
+
+Then start zookeeper. It's address is *localhost:2181*
 ```bash
 bin/zookeeper-server-start etc/kafka/zookeeper.properties
 ```
