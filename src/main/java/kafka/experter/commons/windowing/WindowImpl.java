@@ -1,4 +1,4 @@
-package kafka.expert.exercise7.commons.windowing;
+package kafka.experter.commons.windowing;
 
 
 public class WindowImpl implements Window {

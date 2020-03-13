@@ -1,4 +1,11 @@
-package kafka.expert.exercise8;
+package kafka.expert.exercise7;
+
+import org.apache.kafka.clients.consumer.ConsumerConfig;
+import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.apache.kafka.clients.consumer.ConsumerRecords;
+import org.apache.kafka.clients.consumer.KafkaConsumer;
+import org.apache.kafka.common.TopicPartition;
+import org.apache.kafka.common.serialization.StringDeserializer;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -6,13 +13,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Properties;
-
-import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.apache.kafka.clients.consumer.ConsumerRecords;
-import org.apache.kafka.clients.consumer.ConsumerConfig;
-import org.apache.kafka.clients.consumer.KafkaConsumer;
-import org.apache.kafka.common.TopicPartition;
-import org.apache.kafka.common.serialization.StringDeserializer;
+import java.util.UUID;
 
 
 public class ManualOffsetManagement {
@@ -21,7 +22,7 @@ public class ManualOffsetManagement {
 
         Properties props = new Properties();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
-        props.put(ConsumerConfig.GROUP_ID_CONFIG, "mygroup");
+        props.put(ConsumerConfig.GROUP_ID_CONFIG, "offsetconsumer" + UUID.randomUUID());
         props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false");
         props.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, "10");
         props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
@@ -34,7 +35,7 @@ public class ManualOffsetManagement {
             for (TopicPartition partition : consumer.assignment()) {
                 if (Files.exists(Paths.get(OFFSET_FILE_PREFIX + partition.partition()))) {
                     long offset = Long
-                        .parseLong(Files.readAllLines(Paths.get(OFFSET_FILE_PREFIX + partition.partition()),
+                            .parseLong(Files.readAllLines(Paths.get(OFFSET_FILE_PREFIX + partition.partition()),
                                     Charset.defaultCharset()).get(0));
                     consumer.seek(partition, offset);
                 }

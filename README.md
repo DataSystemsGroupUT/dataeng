@@ -33,7 +33,7 @@
 #### List of Exercise in this module
 
 - Basic
-    - [Exercise 1](src/main/java/kafka/basics/exercise1/exercise1.md)
+    - [Exercise 1](src/main/java/kafka/abc/exercise1/exercise1.md)
     - [Exercise 2](src/main/java/kafka/abasics/exercise1/exercise2.md)
 
 - Advanced
@@ -43,8 +43,8 @@
 
 - Expert
     - [Exercise 6](src/main/java/kafka/expert/exercise6/Readme.md)
-    - [Exercise 7](src/main/java/kafka/expert/exercise7/Readme.md)
-    - [Exercise 8](src/main/java/kafka/expert/exercise8/Readme.md)
+    - [Exercise 7](src/main/java/kafka/experter/exercise9/Readme.md)
+    - [Exercise 8](src/main/java/kafka/expert/exercise7/Readme.md)
 
 ###  Running Kafka (Requires Linux)
 

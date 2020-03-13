@@ -1,12 +1,12 @@
-package kafka.expert.exercise7;
+package kafka.experter.exercise9;
 
 import kafka.advanced.exercise5.exercise5b.deserialization.TemperatureKeyDeserializer;
 import kafka.advanced.exercise5.exercise5b.deserialization.TemperatureValueDeserializer;
 import kafka.advanced.exercise5.exercise5a.model.TemperatureKey;
 import kafka.advanced.exercise5.exercise5a.model.Temperature;
-import kafka.expert.exercise7.commons.exceptions.OutOfOrderException;
-import kafka.expert.exercise7.commons.windowing.Window;
-import kafka.expert.exercise7.commons.windowing.WindowImpl;
+import kafka.experter.commons.exceptions.OutOfOrderException;
+import kafka.experter.commons.windowing.Window;
+import kafka.experter.commons.windowing.WindowImpl;
 import org.apache.kafka.clients.consumer.*;
 import org.apache.kafka.common.TopicPartition;
 

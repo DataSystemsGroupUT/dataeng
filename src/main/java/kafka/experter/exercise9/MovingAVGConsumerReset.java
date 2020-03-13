@@ -1,4 +1,4 @@
-package kafka.expert.exercise7;
+package kafka.experter.exercise9;
 
 import org.apache.kafka.clients.consumer.*;
 import org.apache.kafka.common.TopicPartition;
@@ -8,10 +8,13 @@ import kafka.advanced.exercise5.exercise5b.deserialization.TemperatureKeyDeseria
 import kafka.advanced.exercise5.exercise5b.deserialization.TemperatureValueDeserializer;
 
 import java.time.Duration;
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
 import java.util.stream.Collectors;
 
-public class MovingAVGConsumer {
+public class MovingAVGConsumerReset {
     public static void main(String[] args) {
         Properties props = new Properties();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
@@ -27,35 +30,25 @@ public class MovingAVGConsumer {
         consumer.subscribe(Arrays.asList("temperature"));
 
         consumer.poll(1);
-        consumer.seekToBeginning(consumer.assignment());
 
-        Map<String, List<ConsumerRecord<TemperatureKey, Temperature>>> collect = new HashMap<>();
 
         while (true) {
 
-            ConsumerRecords<TemperatureKey, Temperature> records = consumer.poll(Duration.ofMillis(500));
-            if (!records.isEmpty()) {
-                for (TopicPartition tp : consumer.assignment()) {
+            consumer.seekToBeginning(consumer.assignment());
+            ConsumerRecords<TemperatureKey, Temperature> records = consumer.poll(Duration.ofMillis(100));
 
-                    List<ConsumerRecord<TemperatureKey, Temperature>> records1 = records.records(tp);
+            for (TopicPartition tp : consumer.assignment()) {
 
-                    records1.stream().collect(Collectors.groupingBy(o -> o.key().getLocation())).forEach((String s, List<ConsumerRecord<TemperatureKey, Temperature>> consumerRecords) -> {
+                List<ConsumerRecord<TemperatureKey, Temperature>> records1 = records.records(tp);
 
-                        if (collect.containsKey(s)) {
-                            collect.get(s).addAll(consumerRecords);
-                        } else
-                            collect.put(s, consumerRecords);
+                Map<String, List<ConsumerRecord<TemperatureKey, Temperature>>> collect = records1.stream().collect(Collectors.groupingBy(o -> o.key().getLocation()));
 
-                    });
-
-                }
                 collect.forEach((key, value) -> {
                     Integer reduce = value.stream().map(e -> e.value().getValue())
                             .reduce(0, (integer, integer2) -> integer + integer2);
 
-                    System.out.println(key + ": " + reduce / value.size());
+                    System.out.println(key.toString() + "  " + reduce / value.size());
                 });
-                System.out.println("---");
             }
         }
     }

@@ -1,4 +1,4 @@
-package kafka.expert.exercise7.commons.exceptions;
+package kafka.experter.commons.exceptions;
 
 public class OutOfOrderException extends Exception{
     public OutOfOrderException() {

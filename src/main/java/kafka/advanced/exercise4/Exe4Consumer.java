@@ -5,7 +5,7 @@ import org.apache.kafka.clients.consumer.*;
 import java.util.Properties;
 
 
-public class Exe3Consumer {
+public class Exe4Consumer {
     public static void main(String[] args) {
 
         Properties props = new Properties();
