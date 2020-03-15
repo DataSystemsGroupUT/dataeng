@@ -1,5 +1,15 @@
 # Exercize 6: Word Count in Vanilla Kafka
 
+
+## Before Starting
+```bash
+bin/kafka-topics --bootstrap-server localhost:9092 --create --topic paragraphs 
+
+bin/kafka-topics --bootstrap-server localhost:9092 --create --topic words
+```
+
+# TODOS
+
 Write a java application using Kafka producer/consumer APIs that performs wordcount
 
 - populate a topic of sentences
