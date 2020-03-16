@@ -7,8 +7,6 @@
     - Knowledge of Bash
     - Download Confluent Plaform
 
-## Day 1 Kafka
-
 [Slide](./kafka.pdf)
 
 
@@ -35,26 +33,48 @@
 
 [ ] Exercise 14 Join KGlobal Table
 [ ] Exercise X on Join Stream-Stream
+[ ] Exercise X on Session Windows
 [ ] KSQL in Java
-
 [ ] Exercise 17-18 Readme
 
 
-#### List of Exercise in this module
+## Day 1 Kafka Basics: List of Exercises
 
-- Basic
-    - [Exercise 1](src/main/java/kafka/abc/exercise1/exercise1.md)
-    - [Exercise 2](src/main/java/kafka/abasics/exercise1/exercise2.md)
+- ABC
+    - [Exercise 1: Console 1](src/main/java/kafka/abc/exercise1/exercise1.md)
+    - [Exercise 2: Console 2](src/main/java/kafka/abasics/exercise1/exercise2.md)
 
 - Advanced
-    - [Exercise 3](src/main/java/kafka/advanced/exercise3/Readme.md)
-    - [Exercise 4](src/main/java/kafka/advanced/exercise4/Readme.md)
-    - [Exercise 5](src/main/java/kafka/advanced/exercise5/Readme.md)
+    - [Exercise 3: Producer ](src/main/java/kafka/advanced/exercise3/Readme.md)
+    - [Exercise 4: Consumer](src/main/java/kafka/advanced/exercise4/Readme.md)
+    - [Exercise 5: P/C](src/main/java/kafka/advanced/exercise5/Readme.md)
+        - Serialization
+        - Deserialization
+        - Partitioning
 
 - Expert
-    - [Exercise 6](src/main/java/kafka/expert/exercise6/Readme.md)
-    - [Exercise 7](src/main/java/kafka/experter/exercise9/Readme.md)
-    - [Exercise 8](src/main/java/kafka/expert/exercise7/Readme.md)
+    - [Exercise 6: Word Count P/C](src/main/java/kafka/expert/exercise6/Readme.md)
+    - [Exercise 7: Offset Management](src/main/java/kafka/experter/exercise9/Readme.md)
+    - [Exercise 8: Homework](src/main/java/kafka/expert/exercise7/Readme.md)
+
+## Day 2 Kafka Stream: List of Exercises
+
+ - [Exercise 10: Pipes](src/main/java/kstreams/exercise10/Readme.md)
+ - [Exercise 11: Word Count](src/main/java/kstreams/exercise11/Readme.md)
+    - Processor
+    - Kafka Stream
+ - [Exercise 12: Rolling Average](src/main/java/kstreams/exercise12/Readme.md)
+ - [Exercise 13: Time-Based Window](src/main/java/kstreams/exercise13/Readme.md)
+    - Processing Time
+    - Event Time
+ - [Exercise 14: Stream Enrichment](src/main/java/kstreams/exercise14/Readme.md)
+ - [Exercise 15: TBD](src/main/java/kstreams/exercise15/Readme.md)
+ - [Exercise 16: Homework](src/main/java/kstreams/exercise16/Readme.md)
+ - [Exercise 17: Pageviews](src/main/java/kstreams/exercise17/Readme.md)
+
+## Day 3 KSQL: List of Exercises
+
+TBD
 
 ###  Running Kafka (Requires Linux)
 
