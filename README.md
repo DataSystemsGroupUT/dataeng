@@ -124,7 +124,13 @@ etc/kafka//server-2.properties:
     log.dirs=/tmp/kafka-logs-2
 ```
 
-### CLI Utilities
+## Utilities
+
+[Topology-Viz](https://zz85.github.io/kafka-streams-viz/)
+
+
+
+### CLI 
 
 #### Create topics from the CLI
 
