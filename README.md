@@ -29,6 +29,16 @@
         - Fault Tolerance
             - Broker via Replication
             - Producer via Transactionality
+            
+            
+### TODO
+
+[ ] Exercise 14 Join KGlobal Table
+[ ] Exercise X on Join Stream-Stream
+[ ] KSQL in Java
+
+[ ] Exercise 17-18 Readme
+
 
 #### List of Exercise in this module
 
