@@ -9,8 +9,8 @@
 
 ## Day 1 Kafka
 
-[Slide]()
-[Detailed Program]()
+[Slide](./kafka.pdf)
+
 
 ### Topics
 
