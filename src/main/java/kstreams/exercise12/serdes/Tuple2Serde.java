@@ -6,13 +6,17 @@ import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serializer;
 
 public class Tuple2Serde implements Serde<Tuple> {
+
+    TupleSerializer serializer = new TupleSerializer();
+    TupleDeserializer deserializer = new TupleDeserializer();
+
     @Override
     public Serializer<Tuple> serializer() {
-        return null;
+        return serializer;
     }
 
     @Override
     public Deserializer<Tuple> deserializer() {
-        return null;
+        return deserializer;
     }
 }

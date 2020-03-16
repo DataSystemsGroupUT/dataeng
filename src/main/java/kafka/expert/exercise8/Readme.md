@@ -10,7 +10,7 @@ Create the various sensors:
 - Termometer (Temperature Producer)
 
 ## Creating the Avro Schemas
-You need to create an Avro schema for the key and value of the message.
+You need to create an Avro schema for the key and prefVal of the message.
 
 1. Make sure you are in the right directory. The *.avsc schema files should be in the relative path
 kafka_avro/src/main/avro
@@ -19,7 +19,7 @@ kafka_avro/src/main/avro
 • A unique namespace, e.g. partial.model
 • The schema should have a field for the name of the work, e.g., Julius Caesar
 • The schema should have a field for the year the work was published, e.g., 1599
-3. Create a schema for the value with following characteristics: • The name should be ShakespeareValue
+3. Create a schema for the prefVal with following characteristics: • The name should be ShakespeareValue
 • A unique namespace, e.g. partial.model
 • The schema should have a field for the line number
 • The schema should have a field for the line itself
@@ -44,7 +44,7 @@ kafka_avro/src/main/avro
  "name": "Observation",
  "fields": [
      {"name": "id", "type": "long", "doc" : "The observation id"},
-     {"name": "value", "type": "double", "doc" : "The actual measurement from the sensor"},
+     {"name": "prefVal", "type": "double", "doc" : "The actual measurement from the sensor"},
      {"name": "measurement", "type": "string", "doc" : "The measurement type, e.g., temperature"},
      {"name": "timestamp", "type": "long", "doc" : "The measurement timestamp"}
  ]

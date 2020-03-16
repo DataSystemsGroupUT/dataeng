@@ -9,7 +9,7 @@ faster than having multiple instances
 - Useful Property reference:
     - bootstrap.servers=List of Broker host/port pairs used to establish the initial connection to the cluster
     - key.serializer=Class used to serialize the key. Must implement the Serializer interface
-    - value.serializer=Class used to serialize the value. Must implement the Serializer interface
+    - prefVal.serializer=Class used to serialize the prefVal. Must implement the Serializer interface
     - compression.type=How data should be compressed. Values are none, snappy, gzip, lz4. Compression is performed on batches of records
     - acks=Number of acknowledgment the Producer requires the leader 
             to have before considering the request complete. 

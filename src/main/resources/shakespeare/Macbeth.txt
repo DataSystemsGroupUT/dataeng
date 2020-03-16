@@ -66,7 +66,7 @@
     66  time it takes us, a rather conservative estimate, is fifty hours
     67  to get any etext selected, entered, proofread, edited, copyright
     68  searched and analyzed, the copyright letters written, etc.  This
-    69  projected audience is one hundred million readers.  If our value
+    69  projected audience is one hundred million readers.  If our prefVal
     70  per text is nominally estimated at one dollar then we produce $2
     71  million dollars per hour this year as we release thirty-six text
     72  files per month, or 432 more Etexts in 1999 for a total of 2000+

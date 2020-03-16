@@ -1,8 +1,8 @@
 package kafka.advanced.exercise5.exercise5b;
 
-import kafka.advanced.exercise5.exercise5b.deserialization.TemperatureKeyDeserializer;
-import kafka.advanced.exercise5.exercise5b.deserialization.TemperatureValueDeserializer;
-import kafka.advanced.exercise5.exercise5a.model.TemperatureKey;
+import kafka.advanced.exercise5.exercise5b.deserialization.RoomDeserializer;
+import kafka.advanced.exercise5.exercise5b.deserialization.TemperatureDeserializer;
+import kafka.advanced.exercise5.exercise5a.model.Room;
 import kafka.advanced.exercise5.exercise5a.model.Temperature;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
@@ -22,12 +22,12 @@ public class TemperatureConsumer {
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         props.put(ConsumerConfig.GROUP_ID_CONFIG, "tempgroup");
         props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "true");
-        props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, TemperatureKeyDeserializer.class);
-        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, TemperatureValueDeserializer.class);
+        props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, RoomDeserializer.class);
+        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, TemperatureDeserializer.class);
 
         // TODO: Create a new consumer, with the properties we've created above
 
-        Consumer<TemperatureKey, Temperature> consumer = new KafkaConsumer<>(props);
+        Consumer<Room, Temperature> consumer = new KafkaConsumer<>(props);
 
         consumer.subscribe(Arrays.asList("temperature"));
 
@@ -38,7 +38,7 @@ public class TemperatureConsumer {
 
 
         while (true) {
-            ConsumerRecords<TemperatureKey, Temperature> records = consumer.poll(Duration.ofMillis(100));
+            ConsumerRecords<Room, Temperature> records = consumer.poll(Duration.ofMillis(100));
 
             records.forEach(record -> {
 

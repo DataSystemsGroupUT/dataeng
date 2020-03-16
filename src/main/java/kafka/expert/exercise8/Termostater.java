@@ -7,18 +7,11 @@ import io.confluent.kafka.schemaregistry.client.rest.exceptions.RestClientExcept
 import io.confluent.kafka.schemaregistry.testutil.MockSchemaRegistry;
 import io.confluent.kafka.serializers.KafkaAvroDeserializer;
 import io.confluent.kafka.serializers.KafkaAvroDeserializerConfig;
-import io.confluent.kafka.serializers.KafkaAvroSerializer;
-import kafka.advanced.exercise5.exercise5a.model.Temperature;
-import kafka.advanced.exercise5.exercise5a.model.TemperatureKey;
-import kafka.advanced.exercise5.exercise5b.deserialization.TemperatureKeyDeserializer;
-import kafka.advanced.exercise5.exercise5b.deserialization.TemperatureValueDeserializer;
+import kafka.advanced.exercise5.exercise5a.model.Room;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
-import org.apache.kafka.clients.producer.KafkaProducer;
-import org.apache.kafka.clients.producer.ProducerConfig;
-import org.apache.kafka.clients.producer.ProducerRecord;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -46,15 +39,14 @@ public class Termostater {
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, KafkaAvroDeserializer.class);
         props.put(KafkaAvroDeserializerConfig.SCHEMA_REGISTRY_URL_CONFIG, "mock://" + scope);
 
-
         schemaRegistryClient.register(Observation.class.getName(), Observation.getClassSchema());
-        schemaRegistryClient.register(Location.class.getName(), Location.getClassSchema());
+        schemaRegistryClient.register(Room.class.getName(), Location.getClassSchema());
 
-        Consumer<Location, Observation> consumer = new KafkaConsumer<>(props);
+        Consumer<Room, Observation> consumer = new KafkaConsumer<>(props);
 
         consumer.subscribe(Arrays.asList("observations"));
         while (true) {
-            ConsumerRecords<Location, Observation> records = consumer.poll(Duration.ofMillis(100));
+            ConsumerRecords<Room, Observation> records = consumer.poll(Duration.ofMillis(100));
 
             records.forEach(record -> {
 

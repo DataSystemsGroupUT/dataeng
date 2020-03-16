@@ -2,10 +2,10 @@ package kafka.experter.exercise9;
 
 import org.apache.kafka.clients.consumer.*;
 import org.apache.kafka.common.TopicPartition;
-import kafka.advanced.exercise5.exercise5a.model.TemperatureKey;
+import kafka.advanced.exercise5.exercise5a.model.Room;
 import kafka.advanced.exercise5.exercise5a.model.Temperature;
-import kafka.advanced.exercise5.exercise5b.deserialization.TemperatureKeyDeserializer;
-import kafka.advanced.exercise5.exercise5b.deserialization.TemperatureValueDeserializer;
+import kafka.advanced.exercise5.exercise5b.deserialization.RoomDeserializer;
+import kafka.advanced.exercise5.exercise5b.deserialization.TemperatureDeserializer;
 
 import java.time.Duration;
 import java.util.*;
@@ -17,29 +17,29 @@ public class MovingAVGConsumer {
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         props.put(ConsumerConfig.GROUP_ID_CONFIG, "avggroup");
         props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "true");
-        props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, TemperatureKeyDeserializer.class);
-        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, TemperatureValueDeserializer.class);
+        props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, RoomDeserializer.class);
+        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, TemperatureDeserializer.class);
 
         // TODO: Create a new consumer, with the properties we've created above
 
-        Consumer<TemperatureKey, Temperature> consumer = new KafkaConsumer<>(props);
+        Consumer<Room, Temperature> consumer = new KafkaConsumer<>(props);
 
         consumer.subscribe(Arrays.asList("temperature"));
 
         consumer.poll(1);
         consumer.seekToBeginning(consumer.assignment());
 
-        Map<String, List<ConsumerRecord<TemperatureKey, Temperature>>> collect = new HashMap<>();
+        Map<String, List<ConsumerRecord<Room, Temperature>>> collect = new HashMap<>();
 
         while (true) {
 
-            ConsumerRecords<TemperatureKey, Temperature> records = consumer.poll(Duration.ofMillis(500));
+            ConsumerRecords<Room, Temperature> records = consumer.poll(Duration.ofMillis(500));
             if (!records.isEmpty()) {
                 for (TopicPartition tp : consumer.assignment()) {
 
-                    List<ConsumerRecord<TemperatureKey, Temperature>> records1 = records.records(tp);
+                    List<ConsumerRecord<Room, Temperature>> records1 = records.records(tp);
 
-                    records1.stream().collect(Collectors.groupingBy(o -> o.key().getLocation())).forEach((String s, List<ConsumerRecord<TemperatureKey, Temperature>> consumerRecords) -> {
+                    records1.stream().collect(Collectors.groupingBy(o -> o.key().getLocation())).forEach((String s, List<ConsumerRecord<Room, Temperature>> consumerRecords) -> {
 
                         if (collect.containsKey(s)) {
                             collect.get(s).addAll(consumerRecords);

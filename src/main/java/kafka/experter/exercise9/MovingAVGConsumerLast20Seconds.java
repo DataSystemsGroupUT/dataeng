@@ -1,8 +1,8 @@
 package kafka.experter.exercise9;
 
-import kafka.advanced.exercise5.exercise5b.deserialization.TemperatureKeyDeserializer;
-import kafka.advanced.exercise5.exercise5b.deserialization.TemperatureValueDeserializer;
-import kafka.advanced.exercise5.exercise5a.model.TemperatureKey;
+import kafka.advanced.exercise5.exercise5b.deserialization.RoomDeserializer;
+import kafka.advanced.exercise5.exercise5b.deserialization.TemperatureDeserializer;
+import kafka.advanced.exercise5.exercise5a.model.Room;
 import kafka.advanced.exercise5.exercise5a.model.Temperature;
 import kafka.experter.commons.exceptions.OutOfOrderException;
 import kafka.experter.commons.windowing.Window;
@@ -15,11 +15,11 @@ import java.util.*;
 
 public class MovingAVGConsumerLast20Seconds {
 
-    private Map<TemperatureKey, Map<Window, List<Temperature>>> active_windows_tp = new HashMap<>();
+    private Map<Room, Map<Window, List<Temperature>>> active_windows_tp = new HashMap<>();
 
-    private Map<TemperatureKey, Long> t0map = new HashMap<>();
-    private Map<TemperatureKey, Long> curr_time = new HashMap<>();
-    private Map<TemperatureKey, Long> last_open = new HashMap<>();
+    private Map<Room, Long> t0map = new HashMap<>();
+    private Map<Room, Long> curr_time = new HashMap<>();
+    private Map<Room, Long> last_open = new HashMap<>();
 
     private long a = 5000 * 60, b = 1000 * 60;
 
@@ -37,12 +37,12 @@ public class MovingAVGConsumerLast20Seconds {
         props.put(ConsumerConfig.GROUP_ID_CONFIG, "avggroup2");
         props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "true");
         props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "latest");
-        props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, TemperatureKeyDeserializer.class);
-        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, TemperatureValueDeserializer.class);
+        props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, RoomDeserializer.class);
+        props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, TemperatureDeserializer.class);
 
         // TODO: Create a new consumer, with the properties we've created above
 
-        Consumer<TemperatureKey, Temperature> consumer = new KafkaConsumer<>(props);
+        Consumer<Room, Temperature> consumer = new KafkaConsumer<>(props);
 
         consumer.subscribe(Arrays.asList("temperature"));
 
@@ -50,10 +50,10 @@ public class MovingAVGConsumerLast20Seconds {
 
         Set<TopicPartition> assignment = consumer.assignment();
         consumer.seekToBeginning(assignment);
-        ConsumerRecords<TemperatureKey, Temperature> poll = consumer.poll(Duration.ofMillis(300));
+        ConsumerRecords<Room, Temperature> poll = consumer.poll(Duration.ofMillis(300));
 
         assignment.forEach(tp -> {
-            List<ConsumerRecord<TemperatureKey, Temperature>> records = poll.records(tp);
+            List<ConsumerRecord<Room, Temperature>> records = poll.records(tp);
             if (records != null && !records.isEmpty()) {
                 records.stream()
                         .min(Comparator.comparingLong(r -> r.value().getTimestamp()))
@@ -66,7 +66,7 @@ public class MovingAVGConsumerLast20Seconds {
                 records.stream().sorted(Comparator.comparingLong(r -> r.value().getTimestamp()))
                         .forEach(record -> {
                             try {
-                                TemperatureKey key = record.key();
+                                Room key = record.key();
                                 Temperature value = record.value();
                                 long t_e = record.value().getTimestamp();
                                 curr_time.putIfAbsent(key, t_e);
@@ -96,14 +96,14 @@ public class MovingAVGConsumerLast20Seconds {
         consumer.poll(Duration.ZERO);
 
         while (true) {
-            ConsumerRecords<TemperatureKey, Temperature> poll1 = consumer.poll(Duration.ofMillis(300));
+            ConsumerRecords<Room, Temperature> poll1 = consumer.poll(Duration.ofMillis(300));
             if (poll1 != null && !poll1.isEmpty()) {
                 assignment.forEach(tp -> poll1.records(tp).stream()
                         .sorted(Comparator.comparingLong(ConsumerRecord::timestamp))
                         .forEach(record -> {
                             try {
                                 long t_e = record.value().getTimestamp();
-                                TemperatureKey key = record.key();
+                                Room key = record.key();
                                 Temperature value = record.value();
                                 curr_time.putIfAbsent(key, t_e);
                                 t0map.putIfAbsent(key, t_e);
@@ -145,7 +145,7 @@ public class MovingAVGConsumerLast20Seconds {
     }
 
 
-    protected void windowing(TemperatureKey key, Temperature value, Long apptime, long t_e, Long tc0) throws OutOfOrderException {
+    protected void windowing(Room key, Temperature value, Long apptime, long t_e, Long tc0) throws OutOfOrderException {
 
         //log.debug("Received element (" + e + "," + timestamp + ")");
 
@@ -175,7 +175,7 @@ public class MovingAVGConsumerLast20Seconds {
         to_evict.add(w);
     }
 
-    private void scope(TemperatureKey key, long t_e, long tc0) {
+    private void scope(Room key, long t_e, long tc0) {
         long o_i;
         if (!last_open.containsKey(key)) {
             long c_sup = ((long) Math.ceil(((double) Math.abs(t_e - tc0) / (double) b)) * b);

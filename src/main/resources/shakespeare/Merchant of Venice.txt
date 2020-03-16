@@ -66,7 +66,7 @@
     66  time it takes us, a rather conservative estimate, is fifty hours
     67  to get any etext selected, entered, proofread, edited, copyright
     68  searched and analyzed, the copyright letters written, etc.  This
-    69  projected audience is one hundred million readers.  If our value
+    69  projected audience is one hundred million readers.  If our prefVal
     70  per text is nominally estimated at one dollar then we produce $2
     71  million dollars per hour this year as we release thirty-six text
     72  files per month, or 432 more Etexts in 1999 for a total of 2000+
@@ -1630,7 +1630,7 @@
   1630  What saies the Siluer with her virgin hue?
   1631  Who chooseth me, shall get as much as he deserues.
   1632  As much as he deserues; pause there Morocho,
-  1633  And weigh thy value with an euen hand,
+  1633  And weigh thy prefVal with an euen hand,
   1634  If thou beest rated by thy estimation
   1635  Thou doost deserue enough, and yet enough
   1636  May not extend so farre as to the Ladie:
@@ -1872,7 +1872,7 @@
   1872  To signifie th' approaching of his Lord,
   1873  From whom he bringeth sensible regreets;
   1874  To wit (besides commends and curteous breath)
-  1875  Gifts of rich value; yet I haue not seene
+  1875  Gifts of rich prefVal; yet I haue not seene
   1876  So likely an Embassador of loue.
   1877  A day in Aprill neuer came so sweete
   1878  To show how costly Sommer was at hand,
@@ -2388,7 +2388,7 @@
   2388     Iessi. When I was with him, I haue heard him sweare
   2389  To Tuball and to Chus, his Countri-men,
   2390  That he would rather haue Anthonio's flesh,
-  2391  Then twenty times the value of the summe
+  2391  Then twenty times the prefVal of the summe
   2392  That he did owe him: and I know my Lord,
   2393  If law, authoritie, and power denie not,
   2394  It will goe hard with poore Anthonio
@@ -3166,7 +3166,7 @@
   3166  
   3167     Gra. Beg that thou maist haue leaue to hang thy selfe,
   3168  And yet thy wealth being forfeit to the state,
-  3169  Thou hast not left the value of a cord,
+  3169  Thou hast not left the prefVal of a cord,
   3170  Therefore thou must be hang'd at the states charge
   3171  
   3172     Duk. That thou shalt see the difference of our spirit,

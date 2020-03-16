@@ -2,7 +2,7 @@
 
 ## Model
 
-The temperature observation records a value and the timestamp.
+The temperature observation records a prefVal and the timestamp.
 Moreover, we want to carry on the information about the room where the sensor is installed.
 
 ## Part A

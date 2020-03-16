@@ -10,5 +10,5 @@
 /bin/kafka-console-consumer --bootstrap-server localhost:9092 \
                                --from-beginning \
                                --property key.deserializer=org.apache.kafka.common.serialization.IntegerDeserializer \
-                               --property value.deserializer=org.apache.kafka.common.serialization.IntegerDeserializer
+                               --property prefVal.deserializer=org.apache.kafka.common.serialization.IntegerDeserializer
                                --topic evens

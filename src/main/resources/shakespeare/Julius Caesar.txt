@@ -67,7 +67,7 @@
     67  time it takes us, a rather conservative estimate, is fifty hours
     68  to get any etext selected, entered, proofread, edited, copyright
     69  searched and analyzed, the copyright letters written, etc.  This
-    70  projected audience is one hundred million readers.  If our value
+    70  projected audience is one hundred million readers.  If our prefVal
     71  per text is nominally estimated at one dollar then we produce $2
     72  million dollars per hour this year as we release thirty-six text
     73  files per month, or 432 more Etexts in 1999 for a total of 2000+
@@ -580,7 +580,7 @@
    580  CASSIUS.
    581  Then, Brutus, I have much mistook your passion;
    582  By means whereof this breast of mine hath buried
-   583  Thoughts of great value, worthy cogitations.
+   583  Thoughts of great prefVal, worthy cogitations.
    584  Tell me, good Brutus, can you see your face?
    585  
    586  BRUTUS.

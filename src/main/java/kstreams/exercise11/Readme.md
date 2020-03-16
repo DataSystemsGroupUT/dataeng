@@ -33,7 +33,7 @@ Two main state-storage
   - Stores its data on local disk.
   - Storage capacity: managed local state can be larger than the memory (heap space) of an application instance, but must fit into the available local disk space.
   - RocksDB settings can be fine-tuned, see RocksDB configuration.
-  - Available store variants: time window key-value store, session window key-value store.
+  - Available store variants: time window key-prefVal store, session window key-prefVal store.
   
 - in-memory (used here):
   - Stores its data in memory.
@@ -65,7 +65,7 @@ We create a KStream out of the *paragraph* topic and, using a flatmap operation
 we are going to split words into sentences.
 
 In order to count this time we can perform an aggregation, groping by the 
-new value *word* and turn the KStream into a KTable.
+new prefVal *word* and turn the KStream into a KTable.
 
 
 Notice the different topology this time.
