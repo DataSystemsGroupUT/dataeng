@@ -26,17 +26,27 @@ de placer chaque Dockerfile dans le répertoire correspondant
 Les paragraphes suivants décrivent les instructions d'installation
 pour chaque service.
 
+Note: à ce stade, on veut seulement construire les images et vérifier
+qu'elles se lancent (`web` et `words` doivent afficher un bref message
+pour indiquer qu'ils tournent), mais on ne cherche pas à lancer
+l'application en entier ou à se connecter aux services.
+Cela viendra plus tard.
+
 
 ### web
 
-C'est un serveur web en go. Tout le code est contenu dans un fichier
+C'est un serveur web en Go. Pour compiler du Go, on peut utiliser
+l'image `golang`, ou bien installer les paquetages Go dans
+n'importe quelle image de base.
+
+Tout le code est contenu dans un fichier
 source unique (`dispatcher.go`), et se compile de la manière suivante :
 
 ```
 go build dispatcher.go
 ```
 
-Cela produit un exécutable appelá `dispatcher`, qui se lance comme suit :
+Cela produit un exécutable appelé `dispatcher`, qui se lance comme suit :
 
 ```
 ./dispatcher
@@ -155,7 +165,8 @@ INSERT INTO adjectives(word) VALUES
 Informations supplémentaires :
 
 - il est fortement conseillé d'utiliser l'image officielle PostgreSQL qui se trouve sur le Docker Hub (elle s'appelle `postgres`)
-- sur la page de l'image officielle sur le Docker Hub, vous trouverez une documentation abondante; la section "How to extend this image" est particulièrement utile pour comprendre comment charger le fichier `words.sql`
+- sur la [page de l'image officielle](https://hub.docker.com/_/postgres) sur le Docker Hub, vous trouverez une documentation abondante; la section "Initialization scripts" est particulièrement utile pour comprendre comment charger le fichier `words.sql`
+- il est conseillé de protéger l'accès à la base avec un mot de passe, mais dans le cas présent, on acceptera de se simplifier la vie en autorisant toutes les connexions (en positionnant la variable `POSTGRES_HOST_AUTH_METHOD=trust`)
 
 
 ## Exercice 2 : Compose file
@@ -164,13 +175,24 @@ Une fois que les trois images se construisent correctement, vous pouvez
 passer à l'écriture du Compose file. Nous conseillons de placer le Compose
 file à la racine du projet.
 
-Note : le service `web` doit être accessible de l'extérieur.
+À ce stade, on veut s'assurer que les services communiquent bien
+entre eux, et que l'on peut se connecter à `web` de l'extérieur.
+
+Note : seul le service `web` doit être accessible de l'extérieur.
 
 
 ## Exercice 3 : Kubernetes
+
+On veut maintenant déployer wordsmith sur Kubernetes, de manière à ce qu'on puisse se connecter à l'interface web depuis l'extérieur.
+
+On va devoir utiliser des images venant d'une *registry*. Pour nous faciliter la tâche, les images sont disponibles sur:
+
+- jpetazzo/wordsmith-db:latest
+- jpetazzo/wordsmith-words:latest
+- jpetazzo/wordsmith-web:latest
 
 Rappels utiles pour cet exercice :
 
 - le service web écoute sur le port 80, et on souhaite qu'il soit accessible depuis l'extérieur du cluster
 - le service `words` écoute sur le port 8080
-- la base de données écoute sur le port 5432
+- le service `db` écoute sur le port 5432

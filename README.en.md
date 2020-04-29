@@ -27,10 +27,20 @@ in the corresponding directory (web, words, db).
 The following paragraphs describe the installation instructions
 for each service.
 
+Note: in this first exercise, we only want to build the images
+and check that they start correctly (`web` and `words` should display
+a short message to indicate that they're running), but we're not
+trying to run the whole application or to connect to the services.
+This will come later.
+
 
 ### web
 
-This is a web server written in Go. The entire code is in a single
+This is a web server written in Go. To compile Go code, we can
+use the `golang` official image, or install Go packages in
+any of the official base images.
+
+The entire code is in a single
 source file (`dispatcher.go`), and should be compiled like this:
 
 ```
@@ -84,7 +94,7 @@ Additional informations:
 
 - the server listens on port 8080
 - compilation requires packages `maven` and `openjdk-8-jdk`
-- executaion requires package `openjdk-8-jdk` (`maven` is not necessary)
+- execution requires package `openjdk-8-jdk` (`maven` is not necessary)
 
 
 ### db
@@ -160,25 +170,35 @@ Additional informations:
 
 - we strongly suggest to use the official PostgreSQL image that can
   be found on the Docker Hub (it's called `postgres`)
-- if we check the page of that official image on the Docker Hub, we
-  will find a lot of documentation; the section "How to extend this image"
+- if we check the [page of that official image](https://hub.docker.com/_/postgres) on the Docker Hub, we
+  will find a lot of documentation; the section "Initialization scripts"
   is particularly useful to understand how to load `words.sql`
-
-
+- it is advised to set up password authentication for the database; but in this case, to make our lives easier, we will simply authorize all connections (by setting environment variable `POSTGRES_HOST_AUTH_METHOD=trust`)
 
 ## Exercise 2: Compose file
 
 When the 3 images build correctly, we can move on and write the Compose
-file. We suggest to plcae the Compose file at the root of the repository.
+file. We suggest to place the Compose file at the root of the repository.
+
+At this point, we want to make sure that services can communicate
+together, and that we can connect to `web`.
 
 Note: the `web` service should be exposed.
 
 
 ## Exercise 3: Kubernetes
 
+We want to deploy wordsmith on Kubernetes, and connect to the web interface from the outside.
+
+We will need to use images hosted on a registry. For our convenience, the images are available on:
+
+- jpetazzo/wordsmith-db:latest
+- jpetazzo/wordsmith-words:latest
+- jpetazzo/wordsmith-web:latest
+
 Useful reminders for this exercise:
 
 - service `web` is listening on port 80, and we want it to be reachable
   from outside the cluster
 - service `words` is listening on port 8080
-- the database is listening on port 5432
+- service `db` is listening on port 5432
