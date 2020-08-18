@@ -1,0 +1,1 @@
+[[Ephemeral AI]]  ==AGENTS  that incorporate only one sing inference action and produce on deduction (ideas)==

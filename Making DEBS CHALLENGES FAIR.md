@@ -1,0 +1,11 @@
+- https://project-hobbit.eu/challenges/debs2018-grand-challenge/
+- https://project-hobbit.eu/challenges/debs-grand-challenge/
+- http://www.debs2019.org/Calls/Call_for_Grand_Challenge_Solutions.html
+- https://2020.debs.org/call-for-grand-challenge-solutions/
+- https://debs.org/grand-challenges/2016/
+- https://debs.org/grand-challenges/2015
+- https://debs.org/grand-challenges/2014
+- https://debs.org/grand-challenges/2013
+- https://debs.org/grand-challenges/2012
+- [[FAIR Principles]]
+- 

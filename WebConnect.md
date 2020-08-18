@@ -1,0 +1,7 @@
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation
+- ```Accept: text/html, application/xhtml+xml, application/xml;q=0.9, image/webp, */*;q=0.8```
+- We need to consider how to extent MIME Types https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types
+- https://docs.cask.co/cdap/4.3.0/en/developer-manual/building-blocks/streams.html#streams
+- consider what they are doing in HTTP/2 https://developers.google.com/web/fundamentals/performance/http2#streams_messages_and_frames
+- 

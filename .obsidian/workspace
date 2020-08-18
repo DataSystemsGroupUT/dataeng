@@ -1,0 +1,109 @@
+{
+  "main": {
+    "id": "1fe3c1c74f32d647",
+    "type": "split",
+    "children": [
+      {
+        "id": "f57b4d91fcd7dfa4",
+        "type": "leaf",
+        "pinned": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "DataEng Introduction.md",
+            "mode": "source"
+          },
+          "pinned": true
+        }
+      },
+      {
+        "id": "142b7409a293c56a",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Data Engineering.md",
+            "mode": "source"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8f294035c19f01a2",
+    "type": "split",
+    "children": [
+      {
+        "id": "a223fe617c41b003",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "96baf723ad71c03f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "41975ff2f65cc1c7",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 304.00868225097656
+  },
+  "right": {
+    "id": "7acdcab2807df17c",
+    "type": "split",
+    "children": [
+      {
+        "id": "b643f6e7d5093796",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c8980ac6af43e616",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {}
+            }
+          },
+          {
+            "id": "b6a7a9d08246385e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {}
+            }
+          },
+          {
+            "id": "bef910126a7ff67f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 326.7863464355469
+  },
+  "lastOpenFiles": [
+    "Data Engineering.md",
+    "DataEng Introduction.md",
+    "TODOs on Data Eng.md",
+    "Untitled 1.md",
+    "kafka.md"
+  ]
+}

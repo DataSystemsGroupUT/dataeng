@@ -1,0 +1,32 @@
+{
+  "theme": "moonstone",
+  "pluginEnabledStatus": {
+    "File explorer": true,
+    "Search": true,
+    "Quick switcher": true,
+    "Graph view": true,
+    "Backlinks": true,
+    "Command palette": true,
+    "Markdown format importer": true,
+    "Word count": true,
+    "Page preview": true,
+    "Slides": true,
+    "Daily notes": true,
+    "Tag pane": true,
+    "Custom CSS": false,
+    "Audio recorder": true,
+    "Open with default app": true,
+    "Outline": true
+  },
+  "isSidebarCollapsed": false,
+  "isRightSidedockCollapsed": false,
+  "lastOpenSidebarTab": "File explorer",
+  "alwaysUpdateLinks": true,
+  "lastOpenRightSidedockTab": "Backlinks",
+  "sideDockWidth": {
+    "left": 345,
+    "right": 173
+  },
+  "promptDelete": false,
+  "attachmentFolderPath": "attachments"
+}
