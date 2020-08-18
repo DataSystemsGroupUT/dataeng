@@ -26,6 +26,7 @@ Repository fo Data Engineering Course
 
 ### Extras
 
+[ ] Modelling and Querying RDF data: SPARQL
 [ ] Domain Driven Design: a summary
 [ ] Event Sourcing: a Summary
 
