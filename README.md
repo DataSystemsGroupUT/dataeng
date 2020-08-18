@@ -64,5 +64,8 @@ Repository fo Data Engineering Course
 - Cleansing examples using OpenRefine
 - Augumentation examples using Pandas and Tensorflow
 
-[Contributing.md](./Contributing.md)
+
+
+[Contributing](./Contributing.md)
+
 [Lecturers](./Lecturers.md)
