@@ -1,3 +1,0 @@
-# Emanuele Della Valle
-
-#person

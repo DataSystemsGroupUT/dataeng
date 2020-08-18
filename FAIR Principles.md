@@ -1,4 +1,0 @@
--  {{pdf: https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Frictomm%2Ftj9fV76oFr.pdf?alt=media&token=1aa64229-df13-47ed-bcae-a26a8b7b814d}}
-- https://www.go-fair.org/fair-principles/
-- https://www.nature.com/articles/sdata201618
-- 

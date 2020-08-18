@@ -1,1 +1,0 @@
-This document includes a number of topics that can be expanded by the students to receive extra points

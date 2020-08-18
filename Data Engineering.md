@@ -1,4 +1,4 @@
-footer:  [Riccardo Tommasini](http://rictomm.me) - riccardo.tommasini@ut.ee - @rictomm - 
+open footer:  [Riccardo Tommasini](http://rictomm.me) - riccardo.tommasini@ut.ee - @rictomm - 
 slidenumbers: true
 <!-- : #course, #topic -->
 

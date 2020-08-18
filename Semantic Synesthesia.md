@@ -1,6 +1,0 @@
-- ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Frictomm%2FprOQwiKDjs.jpg?alt=media&token=88fa8fe7-28f6-4f81-9c14-ecfc7fa23d58)
-    - This image encapsulates one of the issues in current AI.
-    - the algorithms have to drop some details to understand the overall message
-    - "Will Smith" is the entity, but only will has to be used here
-    - "The Rock" is the entity, but only "Rock" has to be used here
-    - Fist and Hands are proxy for the respective sound

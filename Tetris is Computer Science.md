@@ -1,8 +1,0 @@
-- in particular for [[stream processing]], tetris seems to be an unsolved problem. it requires to react to a new piece of information to decide how it fits with the current state of data. time passes discretely. the assumption is that the time required to apply a move (rotation or translation) is the one step of time progress.
-    - Simulators
-        - https://github.com/mbrenman/TetrisPlayground (c++)
-        - https://github.com/salifm/Tetris.git (java)
-    - **References**
-        - [Tetris is Hard, Even to Approximate](https://arxiv.org/pdf/cs/0210020.pdf)
-        - [The Game of Tetris in Machine Learning](https://arxiv.org/pdf/1905.01652.pdf)
-        - [The Theory of Tetris](https://liacs.leidenuniv.nl/~kosterswa/tetris/tot.pdf)

@@ -1,1 +1,0 @@
-![cookbook.pdf](cookbook.png)
