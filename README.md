@@ -26,9 +26,9 @@ Repository fo Data Engineering Course
 
 ### Extras
 
-[ ] Modelling and Querying RDF data: SPARQL
-[ ] Domain Driven Design: a summary
-[ ] Event Sourcing: a Summary
+- [ ] Modelling and Querying RDF data: SPARQL
+- [ ] Domain Driven Design: a summary
+- [ ] Event Sourcing: a Summary
 
 ## Part 2: Data Transformation & Data Systems
 
@@ -50,9 +50,9 @@ Repository fo Data Engineering Course
 
 ### Extras
 
-[ ] Data Pipelines with Luigi
-[ ] Data Pipelines with Apachi Nifi 
-[ ] Data Processing with Apache Flink
+- [ ] Data Pipelines with Luigi
+- [ ] Data Pipelines with Apachi Nifi 
+- [ ] Data Processing with Apache Flink
 
 ## Part 3: Data Wrangling
 
