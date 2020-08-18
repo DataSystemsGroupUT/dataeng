@@ -23,7 +23,7 @@ slidenumbers: true
 	-  Extra on [[Functional Programming]]
 - Relational Algebra and SQL
 - Graph Query Languages
-- Datalog
+- [[Datalog]]
 - Map-Reduce
 ### ![[Data Ingestion]]
 
