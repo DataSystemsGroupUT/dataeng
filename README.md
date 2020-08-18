@@ -26,8 +26,8 @@ Repository fo Data Engineering Course
 
 ### Extras
 
-[] Domain Driven Design: a summary
-[] Event Sourcing: a Summary
+[ ] Domain Driven Design: a summary
+[ ] Event Sourcing: a Summary
 
 ## Part 2: Data Transformation & Data Systems
 
@@ -49,9 +49,9 @@ Repository fo Data Engineering Course
 
 ### Extras
 
-[] Data Pipelines with Luigi
-[] Data Pipelines with Apachi Nifi 
-[] Data Processing with Apache Flink
+[ ] Data Pipelines with Luigi
+[ ] Data Pipelines with Apachi Nifi 
+[ ] Data Processing with Apache Flink
 
 ## Part 3: Data Wrangling
 
@@ -62,3 +62,5 @@ Repository fo Data Engineering Course
 ### Practices
 - Cleansing examples using OpenRefine
 - Augumentation examples using Pandas and Tensorflow
+
+[./Contributing.md]
