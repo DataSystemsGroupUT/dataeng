@@ -1,16 +1,23 @@
 # dataeng
-Repository fo Data Engineering Course  
+Repository fo Data Engineering Course
 
 # Syllabus
 
 ## Introduction
+
+### Lecture
 - What is (Big) Data?
 - The Role of Data Engineer
 - From Data Wharehouse to Data Lakes
 
+### Practice
+- [ ] Setup Docker
+- [ ] Introduction to Jupyter Notebooks
+
+
 ## Part 1: Data Modelling and Query Languages
 
-### Lectures
+### Lecture
 - Relational Data
 - NoSQL
   - Document
@@ -19,7 +26,7 @@ Repository fo Data Engineering Course
   - Star and Snowflake schemas
 - Data Vault 
 
-### Practices
+### Practice
 - Modelling and Querying Relational data: MySQL
 - Modelling and Querying Document data: MongoDB
 - Modelling and Querying Graph data: Cypher
@@ -32,7 +39,7 @@ Repository fo Data Engineering Course
 
 ## Part 2: Data Transformation & Data Systems
 
-### Lectures
+### Lecture
 
 - Big Data Systems Architectures
 - ETL and Data Pipelines
@@ -42,7 +49,7 @@ Repository fo Data Engineering Course
 - Data Partitioning
 - Transactions
 
-### Practices
+### Practice
 
 - Data Ingestion with Apache Kafka
 - Data Pipelines with Apache Airflow
@@ -56,11 +63,11 @@ Repository fo Data Engineering Course
 
 ## Part 3: Data Wrangling
 
-### Lectures
+### Lecture
 - Cleansing
 - Augumentation
 
-### Practices
+### Practice
 - Cleansing examples using OpenRefine
 - Augumentation examples using Pandas and Tensorflow
 
