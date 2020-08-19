@@ -1,5 +1,5 @@
 # dataeng
-Repository fo Data Engineering Course
+Repository for the Data Engineering Course
 
 # Syllabus
 
@@ -8,7 +8,7 @@ Repository fo Data Engineering Course
 ### Lecture
 - What is (Big) Data?
 - The Role of Data Engineer
-- From Data Wharehouse to Data Lakes
+- From Data Warehouse to Data Lakes
 
 ### Practice
 - [ ] Setup Docker
@@ -22,7 +22,7 @@ Repository fo Data Engineering Course
 - NoSQL
   - Document
   - Graph
-- Data Wharehousing
+- Data Warehousing
   - Star and Snowflake schemas
 - Data Vault 
 
@@ -35,7 +35,7 @@ Repository fo Data Engineering Course
 
 - [ ] Modelling and Querying RDF data: SPARQL
 - [ ] Domain Driven Design: a summary
-- [ ] Event Sourcing: a Summary
+- [ ] Event Sourcing: a summary
 
 ## Part 2: Data Transformation & Data Systems
 
