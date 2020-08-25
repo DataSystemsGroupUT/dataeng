@@ -61,54 +61,9 @@ The literatrure of data management is rich of data models that aim at providing 
 
 [^5]: [by Ilya Katsov](https://highlyscalable.wordpress.com/2012/03/01/nosql-data-modeling-techniques/)
 
-### Querying the Data
-[.text: text-scale(2.0)]
-
-![left](./attachments/Processing%20and%20Querying.png)
-
-Generic term that describes data manipulation.
 
 
-A query is a request for data or information from a database.
-
-
-### Relational Data [^6]
--  Data Model Definition
--  Modeling Techniques: Entity-Relationship Model/UML
--  Normal Forms
--  Star and Snowflake Schema
--  Reference Systems: MySQL, Postgress
-	
-[^6]: TODO Add reference book
-
-###  NoSQL Data[^7]
-- Key-Value: redis or memcache
-- Document
-- -Full-Text Search--
-- Graph 
-	- RDFdata
-	- Property Graph
-	
-[^7]:[Ilya Katsov](https://highlyscalable.wordpress.com/2012/03/01/nosql-data-modeling-techniques/)
-
-### Key-Value:
--  Data Model Definition
--  Modeling Techniques
--  Normal Forms?
--  Reference Systems: redis or memcache
-
-### Document
--  Data Model Definition
--  Modeling Techniques
--  Normal Forms?
--  Reference Systems: mongodb
-
-### Graph: Property Graphs
--  Data Model Definition
--  Modeling Techniques
--  Normal Forms?
--  Reference Systems: neo4j
-
+### Extras
 
 	-  Current Trends extending Relational	
 		-  NewSQL

@@ -1,0 +1,5 @@
+![[SPARQL]]
+
+![[Cypher]]
+
+![[GQL]]
