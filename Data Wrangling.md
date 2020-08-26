@@ -42,16 +42,14 @@ slidenumbers: true
 * Vague
   * The conventional definitions provide no guidance towards practical improvements of the data
 
---- 
-
-![inline](./attachments/17-dataWrangling4.png)
-
 ---
 
 # Isn’t data science sexy?
 
+![original](./attachments/17-dataWrangling4.png)
+
 ---
-### 1. When Data Is Wrong
+# When Data Is Wrong
 
 ### The skeptic approach
 
@@ -59,7 +57,7 @@ slidenumbers: true
 
 ### The pragmatic approach
 
-![[Pasted image.png]]
+![inline](./attachments/pseudopractitioner.png)
 
 ### The (pseudo) practioner approach
 ![inline](./attachments/pseudo-practitioner.png)
@@ -88,6 +86,8 @@ By 2017, 33% of the largest global companies will experience an information cris
 ---
 ### Data Wrangling is …
 
+![inline](./attachments/datawranglingpipeline.png)
+
 The process of transforming “raw” data into data that can be analyzed to generate valid actionable insights
 
 Data scientists spend more timeon preparing data than on analyzing it.
@@ -103,8 +103,9 @@ Data Fold, Spindle, Mutilate…
 (good old ETL)
 
 
-
 ### Data Wrangling Steps
+
+![right fit](./attachments/wranglingsteps.png)
 
 - Iterative process
 - Understand
@@ -306,12 +307,15 @@ Understanding pattern of missing data unearths data integrity issues
 
 * Better imputation \-  use attribute relationships
 * Assume : all prior attributes are populated
-  * That is, _monotonicity_ in missing values
-  * _X1| X2| X3| X4| X5_
-  * 10| 20| 35|   4| 
-  * 11| 18| 40|   2| 
-  * 19| 22| 22|    | 
-  * 09| 15|     |    | 
+* That is, _monotonicity_ in missing values
+ 
+ _X1| X2| X3| X4| X5_
+ ---|---|----|---|----|
+10| 20| 35|   4| 
+11| 18| 40|   2| 
+19| 22| 22|    | 
+09| 15|     |    | 
+
 * Two techniques
   * Regression (parametric(,
   * Propensity score (nonparametric(
@@ -320,8 +324,8 @@ Understanding pattern of missing data unearths data integrity issues
 
 * Regression method
   * Use linear regression, sweep left\-to\-right
-  * X3=a\+b\*X2\+c\*X1;
-  * X4=d\+e\*X3\+f\*X2\+g\*X1,  and so on
+  *$X3=a+b*X2+c*X1;$
+  * X4=d+e*X3+f*X2+g*X1,  and so on
   * X3 in the second equation is estimated from the first equation if it is missing
 
 * Propensity Scores (nonparametric(
