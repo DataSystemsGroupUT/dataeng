@@ -1,6 +1,7 @@
 # dataeng
 Repository for the Data Engineering Course
 
+[Course Homepage](https://courses.cs.ut.ee/2020/dataeng)
 # Syllabus
 
 ## Introduction
@@ -29,6 +30,7 @@ Repository for the Data Engineering Course
 ### Practice
 - Modelling and Querying Relational data: MySQL
 - Modelling and Querying Document data: MongoDB
+- Modelling and Querying Key-Value data: Redis
 - Modelling and Querying Graph data: Cypher
 
 ### Extras
@@ -64,8 +66,8 @@ Repository for the Data Engineering Course
 ## Part 3: Data Wrangling
 
 ### Lecture
-- Cleansing
-- Augumentation
+- Data Cleansing
+- Data Augumentation
 
 ### Practice
 - Cleansing examples using OpenRefine
