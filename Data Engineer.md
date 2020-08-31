@@ -5,14 +5,13 @@ slidenumbers: true
 # Data Engineering
 #### LTAT.02.007
 #### Ass Prof. Riccardo Tommasini
-#### Assistants: Mohamed Ragab, Samuele Langhi, Hassan Elsaeeb
+#### Fabiano Spiga, Assistants: Mohamed Ragab,  Hassan Elsaeeb
 - [https://courses.cs.ut.ee/2020/dataeng](https://courses.cs.ut.ee/2020/dataeng)
 - [Forum]() 
 
 ---
-# Introduction
+# Who I Am
 
-[[Data Driven Decision Making]] (by Emanuele Della Valle)
 
 ---
 
