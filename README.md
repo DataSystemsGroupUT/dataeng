@@ -37,7 +37,7 @@ Repository for the Data Engineering Course
 - [ ] Domain Driven Design: a summary
 - [ ] Event Sourcing: a summary
 
-## Part 2: Data Transformation & Data Systems
+## Part 2: (Big) Data Pipelines
 
 ### Lecture
 
@@ -70,7 +70,6 @@ Repository for the Data Engineering Course
 ### Practice
 - Cleansing examples using OpenRefine
 - Augumentation examples using Pandas and Tensorflow
-
 
 
 [Contributing](./CONTRIBUTING.md)
