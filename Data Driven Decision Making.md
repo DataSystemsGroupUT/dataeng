@@ -1,6 +1,8 @@
-footer:  Emanuele Della Valle - emanuele.dellavalle@p![[Processing and Querying.png]]olimi.it - @manudellavalle - [http://emanueledellavalle.org](http://emanueledellavalle.org)
+footer:  Emanuele Della Valle - emanuele.dellavalle@polimi.it - @manudellavalle - [http://emanueledellavalle.org](http://emanueledellavalle.org)
 slidenumbers: true
 slide-transition: fadeThroughColor(#ffffff)
+
+
 # Data-driven Decision Making for Data-driven Organiza5ons 
 
 ### Taking Decisions 
@@ -39,7 +41,7 @@ In many organizations decisions are made by "questionable" methodologies such as
 ### Data-Driven Decisions 
 **Decisions** no longer have to be made in the dark or based on gut instinct; they can be based on** evidence, experiments** and more **accurate** forecasts. 
 																										-- McKinsey 
-### Data-driven organiza/ons 
+### Data-driven organizations 
 - perform better 
 	-  The data shows where they can streamline their processes 
 -  are operationally more predictable 

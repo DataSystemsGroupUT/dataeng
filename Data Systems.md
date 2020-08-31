@@ -1,4 +1,4 @@
-### Relational Data  [^6]
+e### Relational Data  [^6]
 -  Modeling Techniques: Entity-Relationship Model/UML
 -  Normal Forms
 -  Star and Snowflake Schema
