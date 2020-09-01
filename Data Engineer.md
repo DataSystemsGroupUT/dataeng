@@ -79,7 +79,7 @@ Data engineering field could be thought of as a superset of business intelligenc
  ---
 [.background-color: #ffffff]
 
-# Phylosophy of (Data) Sience
+# Philosophy of (Data) Science
 ![inline](https://upload.wikimedia.org/wikipedia/commons/6/6d/Data_types_-_en.svg) 
 
 ^ Nowdays we deal with a number of data from different domains.
@@ -132,13 +132,13 @@ Surprisingly, Data Warehouse isn’t a regular database.
 
 - A regular database normalizes separating related data into tables and avoiding redundancies and 
 - It supports arbitrary workload and complex queries 
-- do not store multiple version of data 
+- do not store multiple versions of data 
  
 [.column]
 
 - a Data Warehouse uses few tables to improve performance and analytics.
 - a Data Warehouse allows simple queries 
-- support version for complex analsysis
+- supports versioning for complex analysis
 
 
 ### Data Pipeline
@@ -287,7 +287,7 @@ Data Engineers are still a critical part of any high-functioning data team.
 
 
 ### Data Lake
-A Data lake is a vast pool of raw data (i.e., data as thye are natively, unprocessed). A data lake stands out for its high agility as it isn’t limited to a warehouse’s fixed configuration. [^8]
+A Data lake is a vast pool of raw data (i.e., data as they are natively, unprocessed). A data lake stands out for its high agility as it isn’t limited to a warehouse’s fixed configuration. [^8]
 
 [^8]:[ https://medium.com/datadriveninvestor/what-is-data-engineering]( https://medium.com/datadriveninvestor/what-is-data-engineering-explaining-the-data-pipeline-data-warehouse-and-data-engineer-role-1a4b182e0d16)
 
@@ -297,9 +297,9 @@ A Data lake is a vast pool of raw data (i.e., data as thye are natively, unproce
 [Full Inforgraphic](./attachments/emc_understanding_data_lakes_infographic.pdf)
 
 ^ 
-- In Data Lake, the raw data is loaded as-is, when the data is used it is given structure and it is called schema-on-read.
+- In Data Lake, the raw data is loaded as-is, when the data is used it is given structure, and it is called schema-on-read.
 - Data Lake gives engineers the ability to easily change.
-- In practice, Data Lake is a commerical term so don't sweat it.
+- In practice, Data Lake is a commercial term so don't sweat it.
 
 ---
 
