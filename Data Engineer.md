@@ -1,5 +1,7 @@
 footer:  [Riccardo Tommasini](http://rictomm.me) - riccardo.tommasini@ut.ee - @rictomm - 
+autoscale: true
 slidenumbers: true
+slide-dividers: ###,
 <!-- : #course, #topic -->
 
 # Data Engineering
@@ -8,20 +10,48 @@ slidenumbers: true
 #### Fabiano Spiga, Assistants: Mohamed Ragab,  Hassan Elsaeeb
 - [https://courses.cs.ut.ee/2020/dataeng](https://courses.cs.ut.ee/2020/dataeng)
 - [Forum]() 
+- [Moodle]()
 
 ---
 # Who I Am
 
+Riccardo Tommasini, PhD :it: 
+
+Assistant Professor of Data Management
+
+Expert in graph and streaming data processing, data integration and semantic technologies
+
+Main contributor of the RSP-QL stack Engine, author of VoCaLS ontology
+
+~5 years experience in innovation and research projects
+
+![right fit](attachments/dsglogo.png)
+
+[Apache Flink](Apache%20Flink.md)
+
+### Data Science[^11]
+
+![inline](./attachments/what-is-data-science.jpg)
+
+[^11]:[Source](https://thedatascientist.com/data-science-considered-own-discipline/)
+
+### Roles in a Data Science Project[^5] 
+
+<br>
+<br>
+
+![inline](http://emanueledellavalle.org/slides/dspm/img/DS-roles.png)
+
+[^5]: http://emanueledellavalle.org/slides/dspm/ds4biz.html#25 
 
 ---
+### Roles in a Data Science Project[^5] 
 
-### Data Engineering
+<br>
+<br>
 
-Data engineering is a set of operations aimed at creating interfaces and mechanisms for the flow and access of information[^0].
+![inline](./attachments/DS-roles.png)
 
-[^0]:[What is Data Engineering](https://medium.com/datadriveninvestor/what-is-data-engineering-explaining-the-data-pipeline-data-warehouse-and-data-engineer-role-1a4b182e0d16)
-
---- 
 ### The Data Engineer
 
  ![](https://www.clandestinecritic.co.uk/wp-content/uploads/2012/08/the-dark-knight-rises-poster-landscape.jpg)
@@ -36,17 +66,26 @@ Data engineering field could be thought of as a superset of business intelligenc
  
 [^2]: [Source: The Rise of Data Engineer](https://www.freecodecamp.org/news/the-rise-of-the-data-engineer-91be18f1e603/)
 
+### Data Engineering
+
+<br>
+
+![](./attachments/dataengineer.png)
+
+> Data engineering is a set of operations aimed at creating interfaces and mechanisms for the flow and access of information[^0].
+
+[^0]:[What is Data Engineering](https://medium.com/datadriveninvestor/what-is-data-engineering-explaining-the-data-pipeline-data-warehouse-and-data-engineer-role-1a4b182e0d16)
+
+---
+
+![inline 99%](./attachments/seth-rosen-twitter-pull-data.png)
+
 ---
 
 ![inline](./attachments/dataengineer.png)
 
-
-### Roles in a Data Science Project[^5] 
-
-![inline central](http://emanueledellavalle.org/slides/dspm/img/DS-roles.png)
-[^5]: http://emanueledellavalle.org/slides/dspm/ds4biz.html#25 
-
 ---
+
 ### Netflix's Perspective[^3]
 
 ![inline 90%](https://miro.medium.com/max/700/1*NRoFl1l4lIVQAAvmBOKd4A.jpeg)
@@ -57,19 +96,14 @@ Data engineering field could be thought of as a superset of business intelligenc
 - a data engineer might create a new aggregate of a dataset containing trillions of streaming events 
 -  analytics engineer might use that aggregate in a new report on global streaming quality 
 -  a data scientist might build a new streaming compression model reading the report
- 
-  each of these workflows has multiple overlapping tasks:
+
+^ each of these workflows has multiple overlapping tasks:
 
  ---
 ###  The Knowledge Scientist[^4]
 ![inline](./attachments/The Gift Of Knowledge.jpeg)
 
 [^4]: [The Manifesto](https://www.knowledgescientist.org/)
-
-
----
- 
-![inline](./attachments/seth-rosen-twitter-pull-data.png)
 
 ---
 ### Google's Two-Cents
@@ -97,6 +131,8 @@ Data engineering field could be thought of as a superset of business intelligenc
 
 ### Oxford Dictionary
 
+<br>
+
 *Data \[__uncountable, plural__\] facts or information, especially when examined and used to find out things or to make decisions.* [^oxford]
 [^oxford]:[Def](https://www.oxfordlearnersdictionaries.com/definition/english/data)
 
@@ -105,7 +141,7 @@ Data (treated as singular, plural, or as a mass noun) is any sequence of one or 
 
 [^wiki]:[Data in Computing](https://en.wikipedia.org/wiki/Data_(computing)
 ---
-[.background-color: #ffffff]
+[.background-color: #ffffff] <!-- deckset -->
 
 ![right](https://upload.wikimedia.org/wikipedia/commons/0/06/DIKW_Pyramid.svg)
 
@@ -130,7 +166,7 @@ Surprisingly, Data Warehouse isn’t a regular database.
 
 [.column]
 
-- A regular database normalizes separating related data into tables and avoiding redundancies and 
+- A database normalizes data separating them into tables and avoiding redundancies 
 - It supports arbitrary workload and complex queries 
 - do not store multiple versions of data 
  
@@ -157,8 +193,6 @@ Surprisingly, Data Warehouse isn’t a regular database.
 - data wrangling 
 - data integration
 
-Big data engineering is about building massive reservoirs and highly scalable and fault-tolerant distributed systems able to inherently store and process data.
-
 ---
 
 ### Transporting data from sources into a warehouse[^10]
@@ -171,13 +205,12 @@ Big data engineering is about building massive reservoirs and highly scalable an
 
 - **SQL-centric Pipelines** uses SQL dialects from Presto or Hive.  Pipelines (ETLs) are defined in a declarative way, and almost everything centers around SQL and tables. 
 
-
 ^ 
 - PROs: SQL is easier to learn and can rely on good optimizers
 - CONSs: 
 	- Writing UDFs is troublesome because one has to write it in a different language (e.g. Java or Python)	
 	- testing can be a lot more challenging due to this. 
-	- 
+
 - **JVM-centric Pipelines** uses languages like Java or Scala and often involves thinking data transformation in an imperative manner, e.g. in terms of key-value pairs. 
 
 ^ PROs: 
@@ -233,7 +266,6 @@ Data Engineers are still a critical part of any high-functioning data team.
 
 ---
 # Big Data 
---- 
 
 <!-- ### Refining Crude Oil
 
@@ -350,7 +382,9 @@ Therefore  data engineers are challenged with the task of wrangling, cleansing, 
 - **Assistants:  Fabiano Spiga, Mohamed Ragab, Hassan Elsaeeb**
 
 ## Next on Data Engineering
-- [[Data Modeling]]
+-  Intro to Lab Material: Docker and Jupyter
+-  Data Modeling
+	
 	
 
 
