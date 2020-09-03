@@ -52,7 +52,7 @@ $$(o1,1), (o2,2), (o3,3), (o4,4),(o5,5), (oi,i) .....$$
 
 ### What for?
 
-Three interesting characteristics distinguish streams from ther data:
+Three interesting characteristics distinguish streams from the data:
 
 -  Unbounded data, i.e., infinite
 -  Data are ordered, typically time-wise.
@@ -573,7 +573,7 @@ parallel tasks of two connected logical operators.
   the next operator.
 
 -  **Partitioning by key**: guarantees that records with the same key
-  (e.g., declared by the user) are sent to the same par- allel task of
+  (e.g., declared by the user) are sent to the same parallel task of
   consuming operators
 
 -  **User defined partitioning functions**: (e.g., geo-partitioning or
