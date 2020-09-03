@@ -280,7 +280,7 @@ Not necessarily in a mutually exclusive manner:
 - AP:  A partitioned node returns
 	- a correct value, if in a consistent state;
 	- a timeout error or an error, otherwise
-- CP: A partitioned note returns the most recent version of the data, which could be stale.
+- CP: A partitioned node returns the most recent version of the data, which could be stale.
 	
 ## Indexing
 
@@ -415,7 +415,7 @@ Because these applications are interactive, the access pattern became known as *
 - ACID, which stands for Atomicity, Consistency, Isolation, and Durability[^10]
 - **Atomicity** refers to something that cannot be broken down into smaller parts.
 	- It is not about concurrency (which comes with the I)
-- **Consistency** (overused term), that here relates to the data *invariants* (integrity would be a better term IHMO)
+- **Consistency** (overused term), that here relates to the data *invariants* (integrity would be a better term IMHO)
 - **Isolation** means that concurrently executing transactions are isolated from each other.
 	- Typically associated with serializability, but there weaker options.
 - **Durability** means (fault-tolerant) persistency of the data, once the transaction is completed.

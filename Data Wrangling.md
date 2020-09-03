@@ -294,7 +294,7 @@ __Overtly missing data__
 - Rough checks:  file sizes; \#files, \#records, or \#duplicates.
 - Compare estimates (e.g., medians) with “expected” values and bounds.
 
-^ more estimates are averages, fequencies
+^ more estimates are averages, frequencies
 ^ check at various levels of granularity since aggregates can be misleading
 
 ### Missing data: Detection (cont.)
@@ -422,7 +422,7 @@ $$Y_j=1 = \begin{cases}
 
 ### Censoring and Truncation
 
-Well studied in Biostatistics, relevant to time dependent data egduration
+Well studied in Biostatistics, relevant to time dependent data e.g. duration
 
 <span style="color:#0000FF"> _Censored_ </span> \- Measurement is bounded but not precise eg Call duration > 20 are recorded as 20
 
@@ -622,7 +622,7 @@ Many DBs \-\-> Many keys
 
 How to align?
 
-Identification to certaindegree of accuracylikely\-identities
+Identification to a certain degree of accuracy likely\-identities
 
 eg, same user match
 
@@ -640,7 +640,7 @@ eg, duplicate posts
 
 Related to Key problem
 
-Identification to certain degree ofaccuracy likely\-duplicates
+Identification to certain degree of accuracy likely\-duplicates
 
 ### Lessons Learnt on Tables
 
