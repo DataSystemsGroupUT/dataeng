@@ -48,8 +48,8 @@ autoscale: true
 
 ### Part 2: [[Data Pipelines]]
 - ETL vs ELT
-- [[Data Pipelines]]
-- SQL-based vs JVM-bsed data Transformation
+- [[Data Pipeline]]
+- SQL-based vs JVM-based data Transformation
  - Apache Kafka  
 - Provenance and Lineage
  - Data Pipeline
@@ -68,7 +68,7 @@ autoscale: true
 
 ### Evaluation
 
-The course will have assignements for each part 
+The course will have assignments for each part 
 An ass
 
 ### Tooling
@@ -87,7 +87,7 @@ An ass
 	- Apache Kafka
 - Data Pipeline (1 class + 1 practice)
 	- Apache Airflow
-- Data Wrangling (3 classes + 3 pracrices)
+- Data Wrangling (3 classes + 3 practices)
 	- Cleansing
 		- OpenRefine
 	- Enrichment
