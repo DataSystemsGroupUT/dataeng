@@ -219,7 +219,7 @@ A compacted log retains at least the last known message value for each key withi
 
 ### Important: Clients do not Access Followers
 
-It is important to understand that Producers and Consumers only write/read to/fromb the leader
+It is important to understand that Producers and Consumers only write/read to/from the leader
 
 -   Replicas only exist to provide reliability in case of\
     Broker failure
