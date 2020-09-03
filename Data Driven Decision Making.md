@@ -3,7 +3,7 @@ slidenumbers: true
 slide-transition: fadeThroughColor(#ffffff)
 
 
-# Data-driven Decision Making for Data-driven Organiza5ons 
+# Data-driven Decision Making for Data-driven Organizations 
 
 ### Taking Decisions 
 In many organizations decisions are made by "questionable" methodologies such as 
@@ -55,5 +55,5 @@ Winning 20 consecutive games by building a team of undervalued talent by using d
 ![inline](./attachments/01a_Data-driven-decisions-030.jpg)![inline](https://www.youtube.com/watch?v=KWPhV6PUr9o&t=85s )
 
 ### Credits 
-- [Becoming a data-driven organiza?on The what, why and how. SAS, 2018 ](https://www.sas.com/en_us/whitepapers/becoming-data-driven-organiza?on-109150.html)
+- [Becoming a data-driven organization The what, why and how. SAS, 2018 ](https://www.sas.com/en_us/whitepapers/becoming-data-driven-organiza?on-109150.html)
 - [The Age Of Analytics: Competing In A Data-driven World. McKinsey, 2016](http://www.mckinsey.com/business-func?ons/mckinsey-analy?cs/our-insights/the-age-of-analy?cs-compe?ng-in-a-data-driven-world )
