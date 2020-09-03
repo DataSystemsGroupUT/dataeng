@@ -1,5 +1,5 @@
 ### ETL (Extract-Transform-Load)
 
-Information architecture pattern fordata warehouse solutions
+Information architecture pattern for data warehouse solutions
 
 Batch oriented data integration and delivery
