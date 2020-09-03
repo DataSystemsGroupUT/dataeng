@@ -3,13 +3,13 @@ slide-dividers: #, ##, ###
 slidenumbers: true
 autoscale: true
 
-# Data Modeling
+# Data Engineering: Data Modeling
 #### LTAT.02.007
 #### Ass Prof. Riccardo Tommasini
-#### Fabiano Spiga, Assistants: Mohamed Ragab,  Hassan Elsaeeb
+#### Assistants: [Fabiano Spiga](mailto:),  [Mohamed Ragab](mailto:mohamed.ragab@ut.ee),  [Hassan Eldeeb](mailto:hassan.eldeeb@ut.ee)
 - [https://courses.cs.ut.ee/2020/dataeng](https://courses.cs.ut.ee/2020/dataeng)
-- [Forum]() 
-- [Moodle]()
+- [Forum](https://piazza.com/ut.ee/fall2020/ltat02007/home) 
+- [Moodle](https://moodle.ut.ee/course/view.php?id=10457)
 
 ### What is Data Modeling?
 
@@ -696,7 +696,6 @@ According to Len Silverston (1997) only two modeling methodologies stand out, to
 
 [^15]: by Bill Inmon
 [^16]: Ralph Kimball, book ‘The Data Warehouse Toolkit — The Complete Guide to Dimensional Modeling"
-
 [^19]: [source](https://dzone.com/articles/a-comparison-of-data-modeling-methods-for-big-data)
 
 ### Event Sourcing[^18]

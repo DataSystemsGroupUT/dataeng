@@ -2,23 +2,59 @@
 Repository for the Data Engineering Course
 
 [Course Homepage](https://courses.cs.ut.ee/2020/dataeng)
+§
+[Lecturers](./LECTURERS.md)
+
+# Lectures
+
+- [x] Introduction: [Who is the Data Engineer](./Data%20Engineer.md) [pdf](pdfs/Data%20Engineer.pdf)
+- [x] [Data Modeling](Data%20Modeling.md) 
+- [ ] Relational Databases
+- [ ] No SQL
+	- [ ] Key Value Stores
+	- [ ] Document Data Bases
+	- [ ] Graph Data Bases
+- [ ] Data Engineering Pipelines
+	- [ ] ETL and Apache Airflow
+	- [ ] Streaming Data Ingestion
+	- [ ] Streaming Data Pipeline
+	- [ ] Streaming SQL
+- [ ] Data Wrangling
+	- [ ]  Cleansing
+	- [ ]  Argumentation
+
+# Practices
+- [ ] Docker 
+- [ ] Modeling and Querying Relational Data with MySQL
+- [ ] Modeling and Querying Key Value Data with Redis
+- [ ] Modeling and Querying Document Data with MongoDB
+- [ ] Modeling and Querying Graph Data with Neo4J
+- [ ] Apache Airflow
+- [ ] Apache Kafka
+- [ ] Data Processing with  Kafka Streams
+- [ ] Data Processing with  KSQL
+- [ ] Cleansing 
+- [ ] Augmentation
+
+# Extras
+
+[Contributing](./CONTRIBUTING.md)
+
+- [ ] Modeling and Querying RDF data: SPARQL
+- [ ] Domain Driven Design: a summary
+- [ ] Event Sourcing: a summary
+- [ ] Data Pipelines with Luigi
+- [ ] Data Pipelines with Apachi Nifi 
+- [ ] Data Processing with Apache Flink
+
 # Syllabus
 
-## Introduction
-
-### Lecture
 - What is (Big) Data?
 - The Role of Data Engineer
-- From Data Warehouse to Data Lakes
-
-### Practice
-- [ ] Setup Docker
-- [ ] Introduction to Jupyter Notebooks
-
-
-## Part 1: Data Modelling and Query Languages
-
-### Lecture
+- Data Modeling
+  	- Data Replication
+	- Data Partitioning
+	- Transactions
 - Relational Data
 - NoSQL
   - Document
@@ -26,54 +62,12 @@ Repository for the Data Engineering Course
 - Data Warehousing
   - Star and Snowflake schemas
 - Data Vault 
-
-### Practice
-- Modelling and Querying Relational data: MySQL
-- Modelling and Querying Document data: MongoDB
-- Modelling and Querying Key-Value data: Redis
-- Modelling and Querying Graph data: Cypher
-
-### Extras
-
-- [ ] Modelling and Querying RDF data: SPARQL
-- [ ] Domain Driven Design: a summary
-- [ ] Event Sourcing: a summary
-
-## Part 2: (Big) Data Pipelines
-
-### Lecture
-
-- Big Data Systems Architectures
-- ETL and Data Pipelines
-  - Best Practices and Anti-Patterns
-- Batch vs Streaming Processing
-- Data Replication
-- Data Partitioning
-- Transactions
-
-### Practice
-
-- Data Ingestion with Apache Kafka
-- Data Pipelines with Apache Airflow
-- Data Processing with Kafka Streams/KSQL
-
-### Extras
-
-- [ ] Data Pipelines with Luigi
-- [ ] Data Pipelines with Apachi Nifi 
-- [ ] Data Processing with Apache Flink
-
-## Part 3: Data Wrangling
-
-### Lecture
+- (Big) Data Pipelines
+	- Big Data Systems Architectures
+	- ETL and Data Pipelines
+	  - Best Practices and Anti-Patterns
+	- Batch vs Streaming Processing
 - Data Cleansing
 - Data Augumentation
 
-### Practice
-- Cleansing examples using OpenRefine
-- Augumentation examples using Pandas and Tensorflow
 
-
-[Contributing](./CONTRIBUTING.md)
-
-[Lecturers](./LECTURERS.md)
