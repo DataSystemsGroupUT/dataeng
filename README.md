@@ -2,8 +2,12 @@
 Repository for the Data Engineering Course
 
 [Course Homepage](https://courses.cs.ut.ee/2020/dataeng)
-§
+
 [Lecturers](./LECTURERS.md)
+
+## Acknowledgments
+
+Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di Milano to letting me "steal" some of their great slides.
 
 # Lectures
 
