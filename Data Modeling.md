@@ -58,7 +58,7 @@ The literature of data management is rich of data models that aim at providing i
 
 ^ Physical model is typically created by DBA and developers. The purpose is actual implementation of the database. Trade-offs are explored by in terms of data structures and algorithms.
 
-![right 90%](https://image.slidesharecdn.com/datamodelingbigdatadataversityaugust2016-160830052651/95/data-modeling-for-big-data-25-1024.jpg?cb=1472534835)
+![right 95%](https://image.slidesharecdn.com/datamodelingbigdatadataversityaugust2016-160830052651/95/data-modeling-for-big-data-25-1024.jpg?cb=1472534835)
 
 [^4]: [physical](https://www.databass.dev/)
 
@@ -282,11 +282,30 @@ Not necessarily in a mutually exclusive manner:
 	- a timeout error or an error, otherwise
 - CP: A partitioned note returns the most recent version of the data, which could be stale.
 	
-## Indexing (TODO)[^todo]
+## Indexing
+
+- Indices are critical for efficient processing of queries in (any kind of) databases.
+- basic idea is trading some computational cost for space, i.e., materialize a convenient data structure to answer a set of queries.
+- The caveat is that we must maintain indexes up-to-date upon changes
+
+^ 
+- Without indices, query cost will blow up quickly making the database unusable
+- databases don’t usually index everything by default
+
+### Basics Terms
+	
+- Ordered indices. Based on a sorted ordering of the values.
+- Hash indices. Using an hash-function that assigns values across a range of buckets.
+
+- Primary Index: denotes an index on a primary key
+- Secondary Index: denotes an index on non primary values
+
 
 ## Data Replication
 
 > Replication means keeping a copy of the same data on multiple machines that are connected via a network
+
+![right fit](https://images.theconversation.com/files/171410/original/file-20170530-16298-5xn3ob.png?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop)
 
 ### Reasons for Replication
 
@@ -314,6 +333,8 @@ Not necessarily in a mutually exclusive manner:
 - Write requests go to the leader
 - leader sends data to followers to replication
 - Read request may be direct to leaders or followers
+
+![right fit](https://cdn3.whatculture.com/images/2014/04/leader.jpg)
 
 ---
 
@@ -382,7 +403,7 @@ Let's consider some partitioning strategies, for simplicity we consider Key,Valu
 ^ 
 - **OLTP** systems are usually expected to be **highly available** and to process transactions with low latency, since they are often critical to the operation of the business.
 - **OLAP** queries are often written by business analysts, and feed into reports that help the management of a company make better decisions (business intelligence).
-- 
+
 ### Online Transactional Processing
 
 Because these applications are interactive, the access pattern became known as **online**
@@ -542,19 +563,178 @@ dimensions are fixed.
 
 ### Big Data Storage
 
+- Distributed File Systems, e.g., HDFS
+- Distributed Databases, e.g., VoltDB
+- Key-Value Storage Systems, e.g., Redis or Cassandra
+- Queues, e.g., Pulsar or Kafka
+
+^ A distributed file system stores files across a large collection of machines while giving a single-file-system view to clients.
+
+## Let's Talk  Distributed File Systems
+
+A distributed file system stores files across a large collection of machines while giving a single-file-system view to clients.
+
+### Hadoop Distributed File System (HDFS)[^12]
+
+-   Abstracts physical location (Which node in the cluster) from the application
+-   Partition at ingestion time
+-   Replicate for high-availability and fault tolerance
 
 
+[^12]: Inspired by [Google File System](https://static.googleusercontent.com/media/research.google.com/en/archive/gfs-sosp2003.pdf)
 
-### Data Modeling Techniques (TODO)[^todo]
+![right fit](./attachments/HDFS.png)
 
-There are many ways to create data models, but according to Len Silverston (1997)[6] only two modeling methodologies stand out, top-down and bottom-up:
+### Design Objectives
+   -   Partition and distribute a single file across different machines
+   -   Favor larger partition sizes
+   -   Data replication
+   -   Local processing (as much as possible)
 
-- consider big data as a thing
-https://dzone.com/articles/a-comparison-of-data-modeling-methods-for-big-data
+### Optimizations
+   -   Reading sequentially versus (random access and writing)
+   -   No updates on files
+   -   No local caching
 
-## History of Data Models[^5]
+### HDFS Architecture[^13]
 
-![inline](https://miro.medium.com/max/1225/1*V2zU24JMyIuCKV3wkDN26A.png)
+![inline fit](./attachments/img0034.png)
+
+[^13]: Figure 2-1 in book Professional Hadoop Solutions
+
+### HDFS Files
+-   A single large file is partitioned into several blocks
+    -   Size of either 64 MB or 128MB
+    -   Compare that to block sizes on ordinary file systems
+    -   This is why sequential access is much better as the disk will make less numbers of seeks
+
+^ Question: What would be the costs/benefits if we use smaller block sizes?
+
+### Data Node
+- It  stores the received blocks in a local file system;
+- It forwards that portion of data to the next DataNode in the list.
+-   The operation is repeated by the next receiving DataNode until the last node in the replica set receives data.
+
+### Name Node
+
+-   A single node that keeps the metadata of HDFS
+    -   Keeps the metedata in memory for fast access
+    -   Periodically flushes to the disk (FsImage file) for durability
+    -   Name node maintains a daemon process to handle the requests and to receive heartbeats from other data nodes
+
+^
+    -   In some high-availability setting, there is a secondary name node
+	- As a name node can be accessed concurrently, a logging mechanism similar to databases is used to track the updates on the catalog.
+
+### HDFS Federation
+-   By default, HDFS has a single NameNode. What is wrong with that? If NameNode daemon process goes down, the cluster is inaccessible
+
+-   A solution: HDFS Federation
+
+    -   Namespace Scalability: Horizontal scalability to access meta data as to access the data itself
+    -   Performance: Higher throughput as NameNodes can be queried concurrently
+    -   Isolation: Serve blocking applications by different NameNodes
+-   Is it more reliable?
+
+![right fit](./attachments/img0036.png)
+
+### Writing to HDSF
+
+-   When a client is writing data to an HDFS file, this data is first written to a local file.
+-   When the local file accumulates a full block of data, the client consults the NameNode to get a list of DataNodes that are assigned to host replicas of that block.
+-   The client then writes the data block from its local storage to the first DataNode in 4K portions.
+
+### Writing a File to HDSF Cont.
+
+-   This DataNode stores data locally without sending it any further
+-   If one of the DataNodes fails while the block is being written, it is removed from the pipeline
+-   The NameNode re-replicates it to make up for the missing replica caused by the failed DataNode
+-   When a file is closed, the remaining data in the temporary local file is pipelined to the DataNodes
+-   If the NameNode dies before the file is closed, the file is lost.
+
+### Replica Placement
+
+-   Replica placement is crucial for reliability of HDFS
+    -   Should not place the replicas on the same rack
+-   All decisions about placement of partitions/replicas are made by the NameNode
+-   NameNode tracks the availability of Data Nodes by means of Heartbeats
+    -   Every 3 seconds, NameNode should receive a heartbeat and a block report from each data node
+    -   Block report allows verifying the list of stored blocks on the data node
+    -   Data node with a missing heartbeat is declared dead, based on the catalog, replicas missing on this node are made up for through NameNode sending replicas to other available data nodes
+
+
+### HDFS High-availability
+
+-   Each NameNode is backedup with a slave other NameNode that keeps a copy of the catalog
+
+-   The slave node provides a failover replacement of the primary NameNode
+
+-   Both nodes must have access to a shared storage area
+
+-   Data nodes have to send heartbeats and block reports to both the master and slave NameNodes.
+
+![right fit](./attachments/img0037.png)
+
+## Data Modeling Techniques 
+
+According to Len Silverston (1997) only two modeling methodologies stand out, top-down and bottom-up[^14].
+
+![right fit](https://pbs.twimg.com/profile_images/974019987630301184/kr2LdIyL.jpg)
+
+### Data Modeling Techniques[^19]
+
+- **Entity-Relationship (ER) Modeling**[^15] prescribes to design  model encompassing the whole company and describe enterprise business through Entities and the relationships between them	
+		-   it complies with 3rd normal form
+		-   tailored for OLTP
+- **Dimensional Modeling** (DM)[^16] focuses on enabling complete requirement analysis while maintaining high performance when handling large and complex (analytical) queries
+	-  The star model and the snowflake model are examples of DM
+	-  tailored for OLAP
+ 
+- **Data Vault  (DV) Modeling**[^17] focuses on data integration trying to take the best of ER 3NF and DM
+		-  emphasizes establishment of an auditable basic data layer focusing on data history, traceability, and atomicity
+		-   one cannot use it directly for data analysis and decision making
+
+[^15]: by Bill Inmon
+[^16]: Ralph Kimball, book ‘The Data Warehouse Toolkit — The Complete Guide to Dimensional Modeling"
+
+[^19]: [source](https://dzone.com/articles/a-comparison-of-data-modeling-methods-for-big-data)
+
+### Event Sourcing[^18]
+
+> The fundamental idea of Event Sourcing is ensuring that every change to the state of an application is captured in an event object, 
+
+> Event objects are immutable and stored in the sequence they were applied for the same lifetime as the application state itself.
+
+[^18]: Martin Fowler, [link](https://martinfowler.com/eaaDev/EventSourcing.html)
+
+### Events
+
+Events are both a fact and a notification. 
+
+They represent something that happened in the real world but include no expectation of any future action. 
+
+They travel in only one direction and expect no response (sometimes called “fire and forget”), but one may be “synthesized” from a subsequent event.
+
+---
+
+![original fit](./attachments/seen.png)
+
+---
+
+![original fit](./attachments/brandnew.png)
+
+---
+
+![original fit](attachments/4doohb.jpg)
+
+---
+
+
+# History of Data Models[^5]
+
+--- 
+
+![original fit](https://miro.medium.com/max/1225/1*V2zU24JMyIuCKV3wkDN26A.png)
 
 [^5]: [by Ilya Katsov](https://highlyscalable.wordpress.com/2012/03/01/nosql-data-modeling-techniques/)
 
@@ -587,19 +767,3 @@ A log is an append-only sequence of records. It doesn’t have to be human-reada
 - What is the cost of write O(1)
 - What is the cost of read from the head O(1).
 
-
-
-### Extras
-
-	-  Current Trends extending Relational	
-		-  NewSQL
-		-  ModernSQL
-		- **IDEA**: Ragab Seminars of Relational meets Graph
-    - Related work on data modelling techniques
-		 - UML (just mentioned)
-		 - Knowledge Representation
-- Query Languages and APIs
-	- Query Languages
-	- Dataflow
-	- APIs
-[^todo]: TODOs
