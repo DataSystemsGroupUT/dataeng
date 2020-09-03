@@ -46,9 +46,9 @@ autoscale: true
 - Batch vs Streaming Ingestion 
 - [[Data Velocity]]
 
-### Part 2: [[Data Transformation ]]
+### Part 2: [[Data Pipelines]]
 - ETL vs ELT
-- [[Data Pipeline]]
+- [[Data Pipelines]]
 - SQL-based vs JVM-bsed data Transformation
  - Apache Kafka  
 - Provenance and Lineage
