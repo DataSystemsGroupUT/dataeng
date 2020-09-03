@@ -322,17 +322,17 @@ Not necessarily in a mutually exclusive manner:
 
 - Synchronous vs Asynchronous Replication
 	- The advantage of synchronous replication is that the follower is guaranteed to have an up-to-date copy 
-	- The advantage of asynchronous replication is that followers availability is not a requirement (cf CAP Theorem)
+	- The advantage of asynchronous replication is that follower's availability is not a requirement (cf CAP Theorem)
 
 - Leader - Follower (Most common cf Kafka)
 
 
 ### Leaders and Followers
 
-- One of the replicas is designated the leader
+- One of the replicas is designated as the leader
 - Write requests go to the leader
-- leader sends data to followers to replication
-- Read request may be direct to leaders or followers
+- leader sends data to followers for replication
+- Read request may be directed to leaders or followers
 
 ![right fit](https://cdn3.whatculture.com/images/2014/04/leader.jpg)
 
@@ -415,7 +415,7 @@ Because these applications are interactive, the access pattern became known as *
 - ACID, which stands for Atomicity, Consistency, Isolation, and Durability[^10]
 - **Atomicity** refers to something that cannot be broken down into smaller parts.
 	- It is not about concurrency (which comes with the I)
-- **Consistency** (overused term), that here relates to the data *invariants* (integrity would be a better term IHMO)
+- **Consistency** (overused term), that here relates to the data *invariants* (integrity would be a better term IMHO)
 - **Isolation** means that concurrently executing transactions are isolated from each other.
 	- Typically associated with serializability, but there weaker options.
 - **Durability** means (fault-tolerant) persistency of the data, once the transaction is completed.
@@ -423,7 +423,7 @@ Because these applications are interactive, the access pattern became known as *
 - 
 ^ The terms was coined in 1983 by Theo Härder and Andreas Reuter [^10]
 
-[^10]: Theo Härder and Andreas Reuter: “Principles of Transaction-Oriented Database Recovery,” ACM Computing Surveys, volume 15, number 4, pages 287–317, Decem‐ber 1983. doi:10.1145/289.291
+[^10]: Theo Härder and Andreas Reuter: “Principles of Transaction-Oriented Database Recovery,” ACM Computing Surveys, volume 15, number 4, pages 287–317, December 1983. doi:10.1145/289.291
 
 ### Online Analytical Processing
 
