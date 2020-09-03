@@ -10,7 +10,7 @@ In many organizations decisions are made by "questionable" methodologies such as
 - Highest Paid Person Opinion (HiPPO) - 
 - Flipism (all decisions are made by flipping a coin) 
 
-### Taking Decisions: HiPPO vs Flippism
+### Taking Decisions: HiPPO vs Flipism
 ![inline](./attachments/01a_Data-driven-decisions-006.jpg)
 
 ### Taking Decisions:  
