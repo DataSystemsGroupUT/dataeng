@@ -219,7 +219,7 @@ A compacted log retains at least the last known message value for each key withi
 
 ### Important: Clients do not Access Followers
 
-It is important to understand that Producers and Consumers only write/read to/fromb the leader
+It is important to understand that Producers and Consumers only write/read to/from the leader
 
 -   Replicas only exist to provide reliability in case of\
     Broker failure
@@ -308,7 +308,9 @@ Provide the correct relationship - 1:1, 1:N, N:1, or N:N -
     -   Consider storing offsets with data
 
 
-### Systems Overview: [[Apache Kafka]] ![inline](./attachments/Images/Kafka.png)
+### Systems Overview: [[Apache Kafka]] 
+
+![inline](./attachments/Images/Kafka.png)
 
 -  Apache Kafka is a scalable replicated commit log that enables stream
   processing at scale.

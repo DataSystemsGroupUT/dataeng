@@ -68,7 +68,7 @@ autoscale: true
 
 ### Evaluation
 
-The course will have assignements for each part 
+The course will have assignments for each part 
 An ass
 
 ### Tooling
@@ -87,7 +87,7 @@ An ass
 	- Apache Kafka
 - Data Pipeline (1 class + 1 practice)
 	- Apache Airflow
-- Data Wrangling (3 classes + 3 pracrices)
+- Data Wrangling (3 classes + 3 practices)
 	- Cleansing
 		- OpenRefine
 	- Enrichment
