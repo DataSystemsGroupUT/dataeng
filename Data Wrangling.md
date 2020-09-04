@@ -294,7 +294,7 @@ __Overtly missing data__
 - Rough checks:  file sizes; \#files, \#records, or \#duplicates.
 - Compare estimates (e.g., medians) with “expected” values and bounds.
 
-^ more estimates are averages, fequencies
+^ more estimates are averages, frequencies
 ^ check at various levels of granularity since aggregates can be misleading
 
 ### Missing data: Detection (cont.)
