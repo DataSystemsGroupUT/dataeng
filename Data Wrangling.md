@@ -105,7 +105,7 @@ Data Fold, Spindle, Mutilate…
 
 ### Data Wrangling Steps
 
-![right fit](./attachments/wranglingsteps.png)
+[.column]
 
 - Iterative process
 - Understand
@@ -114,25 +114,36 @@ Data Fold, Spindle, Mutilate…
 - Augment
 - Visualize
 
+[.column]
+
+![inline fit](./attachments/wranglingsteps.png)
+
+
 ### What is Data Cleansing?
 
-__Data cleansing__ or __data scrubbing__ is the act of __detecting and correcting (or removing corrupt or inaccurate records__) from a data set
+__Data cleansing__ or __data scrubbing__ is the act of __detecting and correcting (or removing corrupt or inaccurate records__) from a data set.
 
-The term refers to identifying incomplete, incorrect, inaccurate, partial or irrelevant parts of the data and then replacing, modifying, filling in or deleting this dirty data
+The term refers to identifying incomplete, incorrect, inaccurate, partial or irrelevant parts of the data and then replacing, modifying, filling in or deleting this dirty data.	
+
+![right fit](./attachments/cleansing.png)
 
 ### Why is Data “Dirty” ?
 
-Dummy Values,
-Absence of Data,
-Multipurpose Fields,
-Cryptic Data,
-Contradicting Data,
-Shared Field Usage,
-Inappropriate Use of Fields,
-Violation of Business Rules,
-Reused Primary Keys,
-Non-Unique Identifiers,
-Data Integration Problems
+[.column]
+
+- Dummy Values
+- Absence of Data
+- Multipurpose Fields
+- Cryptic Data
+- Contradicting Data
+
+[.column]
+
+- Shared Field Usage
+- Inappropriate Use of Fields
+- Violation of Business Rules
+- Non-Unique Identifiers
+- Data Integration Problems
 
 ### Data Cleansing in Practice
 
@@ -150,73 +161,73 @@ Consolidating
 
 Parsing locates and identifies individual data elements in the source files and then isolates these data elements in the target files
 
-![[parsing.png]]
+![inline](./attachments/parsing.png)
 
 ### Correcting
 
 Corrects parsed individual data components using sophisticated data algorithms and secondary data sources
 
+![inline](./attachments/correcting.png)
+
 ### Standardizing
 
 Standardizing applies conversion routines to __transform data into its preferred (and consistent( format__ using both standard and custom business rules, as well as coherent measurement units,…
+
+![inline](./attachments/standardizing.png)
+
 
 ### Matching
 
 Searching and __matching records__ within and across the parsed, corrected and standardized data based on predefined business rules to __eliminate duplications__ 
 
+
 ### Match Patterns
 
-__Customer__
-
-__\#__  __/__  __Tax ID__
+![inline](./attachments/match-pattern.png)
 
 ### Matching
+
+![inline](./attachments/matching.png)
 
 ### Consolidating
 
 Analyzing and __identifying relationships__ between matched records and consolidating/merging them into ONE representation
 
+![inline](./attachments/consolidating.png)
+
 ### Understanding Data: PDF
 
-![inline](./attachments/17-dataWrangling12.png)
-
----
-
-![inline](./attachments/17-dataWrangling13.png)
-
----
-
-![inline](./attachments/17-dataWrangling14.png)
+![inline](./attachments/Understandingdata.png)
 
 ### Understanding Data: Free Text
 
-![inline](./attachments/17-dataWrangling15.png)
-
-Python \+Textract\+Tesseract
-
-![inline](./attachments/17-dataWrangling16.png)
-
-![inline](./attachments/17-dataWrangling17.png)
-
-[ ] TODO
+![inline](./attachments/UnderstandingDataFreeText.png)
 
 ### Understanding Data: more
 
-<span style="color:#008000">“Looks like my V8 Chevy is running low on fuel Didn’t I fill up just the day before?”</span>
+#### Unstructured
 
-![inline](./attachments/17-dataWrangling18.png)
+			> Looks like my V8 Chevy is running low on fuel Didn’t I fill up just the day before?
 
-![inline](./attachments/17-dataWrangling19.png)
+#### Structured
 
-![inline](./attachments/17-dataWrangling20.png)
+|Owner|Vehicle|Type|Fuel Level|Engine|Last Fill|
+|-------|-------|-----|----------|------|--------|
+|AK  |Chevy|Gas|5%|V8|05/04/16
+
+---
+
+### Understanding Data: more
+
 
 Decode the following secret message:
 
-$DALDFWSFOEWRBOSDCALAXORDJFKMCO$
+$$DALDFWSFOEWRBOSDCALAXORDJFKMCO$$
 
 ↓
 
-$DAL DFW SFO EWR BOSDCA LAX ORD JFK MCO$
+$$DAL~DFW~SFO~EWR~BOSDCA~LAX~ORD~JFK~MCO$$
+
 
 ### Data Munging
 
@@ -229,72 +240,116 @@ Eg, removing punctuation or html tags, data parsing, filtering, and transformati
 ---
 # Semantics
 
----
+[.column]
+|???|
+|:---:|
+|75|
+|80|
+|65|
+|55|
+|67|
+|78|
+|88|
+|90|
+|45|
+|58|
+|69|
+|80|
+|110|
+
+[.column]
+
+![inline](./attachments/questionmark.png)
+
 ### Semantics and Outliers
+The value stands in the abnormal
+	
+|Age(Years)|
+|:---:|
+|75|
+|80|
+|65|
+|55|
+|67|
+|78|
+|88|
+|90|
+|45|
+|58|
+|69|
+|80|
+|110|
 
-![inline](./attachments/17-dataWrangling21.png)
 
-The value stands inthe abnormal
+![right fit](./attachments/17-dataWrangling21.png)
+
 
 ### Missing Data: Detection
 
 __Overtly missing data__
 
-Match data specifications against data \- are all the attributes present?
+- Match data specs against data - are all the attributes present?
+- Scan individual records - are there gaps?
+- Rough checks:  file sizes; \#files, \#records, or \#duplicates.
+- Compare estimates (e.g., medians) with “expected” values and bounds.
 
-Scan individual records \- are there gaps?
-
-Rough checks : number of files, file sizes, number of records, number of duplicates
-
-Compare estimates (averages, frequencies, medians( with “expected” values and bounds; check at various levels of granularity since aggregates can be misleading
+^ more estimates are averages, fequencies
+^ check at various levels of granularity since aggregates can be misleading
 
 ### Missing data: Detection (cont.)
-
 __Hidden damage to data__
 
-Values are truncated or censored \- check for spikes and dips in distributions and histograms
+- Values are truncated or censored 
 
-Missing values and defaults are indistinguishable \- too many missing values? metadata or domain expertise can help
+^	- check for spikes and dips in distributions and histograms
 
-Errors of omission eg all calls from a particular area are missing \- check if data are missing randomly or are localized in some way
+- Missing values and defaults are indistinguishable 
+
+^ - too many missing values? metadata or domain expertise can help
+
+- Errors of omission eg all calls from a particular area are missing 
+
+^	- check if data are missing randomly or are localized in some way
 
 ### Missing Values: Random
 
-System failures
+- System failures
+- Complete miss
 
-Complete miss
-
-![inline](./attachments/17-dataWrangling22.png)
+![left fit](./attachments/randommissingvalues.png)
 
 ### Missing Values: Wrong Ingestion
 
+[.column]
 CSV to table / excel
 
 Merged fields
 
 Missing fields
 
-![inline](./attachments/17-dataWrangling23.png)
+[.column]
+![inline](./attachments/wrongingestion1.png)
 
-Missing due to invalid data and ingestion
+![inline 4%](./attachments/1280px-Arrow_west.svg.png)[^1]
 
-![inline](./attachments/17-dataWrangling24.png)
+![inline](./attachments/wrongingestion2.png)
+
+[^1]:Missing due to invalid data and ingestion
 
 ### Missing Values: Inapplicability
 
-Partial data by nature
+- Partial data by nature
+- Remember to leave empty slots
 
-Remember to leave empty slots
+![left fit](./attachments/inapplicability.png)
 
 ### Imputing Values to Missing Data
 
-In federated data, between 30%\-70% of the data points will have at least one missing attribute \- data wastage if we ignore all records with a missing value
-
-Remaining data is seriously biased
-
-Lack of confidence in results
-
-Understanding pattern of missing data unearths data integrity issues
+- In federated data, between 30%-70% of the data points will have at least one missing attribute 
+- data wastage if we ignore all records with a missing value
+- Remaining data is seriously biased
+- Lack of confidence in results
+- Understanding pattern of missing data unearths data integrity issues
 
 ### Missing Value Imputation - 1
 
@@ -305,49 +360,68 @@ Understanding pattern of missing data unearths data integrity issues
   * Introduces bias
   * Convenient, easy to implement
 
+### Missing Value Imputation - 2
+
+[.column]
+
 * Better imputation \-  use attribute relationships
 * Assume : all prior attributes are populated
 * That is, _monotonicity_ in missing values
- 
- _X1| X2| X3| X4| X5_
- ---|---|----|---|----|
-10| 20| 35|   4| 
-11| 18| 40|   2| 
-19| 22| 22|    | 
-09| 15|     |    | 
 
-* Two techniques
-  * Regression (parametric(,
-  * Propensity score (nonparametric(
+[.column]
+
+|X1|X2|X3|X4|X5|	
+|:---:|:---:|:----:|:---:|:----:|
+10| 20| 35|   4| .
+11| 18| 40|   2| .
+19| 22| 22|  .  | .
+09| 15|   .  |  . | .
 
 ### Missing Value Imputation –3
 
-* Regression method
+ * Two techniques
+  * Regression (parametric)
+  * Propensity score (non parametric)
+  
+### Regression method (parametric)
+
   * Use linear regression, sweep left\-to\-right
-  *$X3=a+b*X2+c*X1;$
-  * X4=d+e*X3+f*X2+g*X1,  and so on
+ 
+  $$X3=a+b*X2+c*X1;$$
+  
+  $$X4=d+e*X3+f*X2+g*X1$$
+ 
+ and so on
   * X3 in the second equation is estimated from the first equation if it is missing
 
-* Propensity Scores (nonparametric(
-  * Let Yj=1 if Xjis missing, 0 otherwise
-  * Estimate P(Yj=1( based on X1through X(j\-1(using logistic regression
-  * Group by propensity score P(Yj=1(
-  * Within each group, estimate missing Xjs from known Xjs using approximate Bayesian bootstrap
+### Propensity Scores (nonparametric)
+  * Let 
+$$Y_j=1 = \begin{cases} 
+				1~if~X_{ji}~is~missing; \\
+                0~otherwise
+		\end{cases}$$
+				 
+
+  * Estimate P(Y<sub>j</sub>=1) based on  X<sub>1</sub>through X<sub>1-j</sub>using logistic regression
+  * Group by propensity score P(Y<sub>1</sub>=1)
+  * Within each group, estimate missing X<sub>j</sub>s from known X<sub>j</sub>s using approximate Bayesian bootstrap
   * Repeat until all attributes are populated
 
 ### Missing Value Imputation - 4
 
 * Arbitrary missing pattern
   * Markov Chain Monte Carlo (MCMC(
-  * Assume data is multivariate Normal,with parameterQ
-  * (1( Simulate missing X, givenQestimated from observed X ; (2( Re\-computeQusing filled in X
+  * Assume data is multivariate Normal,with parameter $$\Theta$$ 	
+	  * (1) Simulate missing X, given $$\Theta$$  estimated from observed X ; 
+	  * (2) Re-compute $$\Theta$$ using filled in X
   * Repeat until stable
   * Expensive: Used most often to induce monotonicity
-* __Note that imputed values are useful in aggregates but can’t be trusted individually__
+
+^ __Note that imputed values are useful in aggregates but can’t be trusted individually__
 
 ### Censoring and Truncation
 
-Well studied in Biostatistics, relevant to time dependent data egduration
+Well studied in Biostatistics, relevant to time dependent data e.g. duration
 
 <span style="color:#0000FF"> _Censored_ </span> \- Measurement is bounded but not precise eg Call duration > 20 are recorded as 20
 
@@ -547,7 +621,7 @@ Many DBs \-\-> Many keys
 
 How to align?
 
-Identification to certaindegree of accuracylikely\-identities
+Identification to a certain degree of accuracy likely\-identities
 
 eg, same user match
 
@@ -565,7 +639,7 @@ eg, duplicate posts
 
 Related to Key problem
 
-Identification to certain degree ofaccuracy likely\-duplicates
+Identification to certain degree of accuracy likely\-duplicates
 
 ### Lessons Learnt on Tables
 

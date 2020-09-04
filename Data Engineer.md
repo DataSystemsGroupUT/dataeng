@@ -16,7 +16,7 @@ slidenumbers: true
 
 ---
 
-### [[Data Engineering]]
+### Data Engineering
 
 Data engineering is a set of operations aimed at creating interfaces and mechanisms for the flow and access of information[^0].
 
@@ -31,13 +31,17 @@ A dedicated specialist that maintain data available and usable by others (Data S
 
 Data engineers set up and operate the organization’s data infrastructure preparing it for further analysis by data analysts and scientists.[^0]
 
- Data engineering field could be thought of as a superset of business intelligence and data warehousing that brings more elements from software engineering.[^2] 
+Data engineering field could be thought of as a superset of business intelligence and data warehousing that brings more elements from software engineering.[^2] 
  
 [^0]:[What is Data Engineering](https://medium.com/datadriveninvestor/what-is-data-engineering-explaining-the-data-pipeline-data-warehouse-and-data-engineer-role-1a4b182e0d16)
  
 [^2]: [Source: The Rise of Data Engineer](https://www.freecodecamp.org/news/the-rise-of-the-data-engineer-91be18f1e603/)
 
 ---
+
+![inline](./attachments/dataengineer.png)
+
+
 ### Roles in a Data Science Project[^5] 
 
 ![inline central](http://emanueledellavalle.org/slides/dspm/img/DS-roles.png)
@@ -49,22 +53,30 @@ Data engineers set up and operate the organization’s data infrastructure prepa
 ![inline 90%](https://miro.medium.com/max/700/1*NRoFl1l4lIVQAAvmBOKd4A.jpeg)
 [^3]: [Netflix Innovation](https://netflixtechblog.com/notebook-innovation-591ee3221233)
  
+
+^ 
+- a data engineer might create a new aggregate of a dataset containing trillions of streaming events 
+-  analytics engineer might use that aggregate in a new report on global streaming quality 
+-  a data scientist might build a new streaming compression model reading the report
+ 
+  each of these workflows has multiple overlapping tasks:
+
  ---
 ###  The Knowledge Scientist[^4]
-![inline ](https://via.placeholder.com/300)
+![inline](./attachments/The Gift Of Knowledge.jpeg)
+
 [^4]: [The Manifesto](https://www.knowledgescientist.org/)
-
-
 
 
 ---
  
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Them: Can you just quickly pull this data for me?<br><br>Me: Sure, let me just: <br><br>SELECT * FROM some_ideal_clean_and_pristine.table_that_you_think_exists</p>&mdash; Seth Rosen (@sethrosen) <a href="https://twitter.com/sethrosen/status/1252291581320757249?ref_src=twsrc%5Etfw">April 20, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+![inline](./attachments/seth-rosen-twitter-pull-data.png)
 
 ---
 ### Google's Two-Cents
  ![inline](./attachments/google-dataeng.png)
  
+
  ---
 [.background-color: #ffffff]
 
@@ -86,27 +98,149 @@ Data engineers set up and operate the organization’s data infrastructure prepa
 
 ### Oxford Dictionary
 
-*Data \[uncountable, plural\] facts or information, especially when examined and used to find out things or to make decisions.* [^5]
-[^5]:[Def](https://www.oxfordlearnersdictionaries.com/definition/english/data)
+*Data \[__uncountable, plural__\] facts or information, especially when examined and used to find out things or to make decisions.* [^oxford]
+[^oxford]:[Def](https://www.oxfordlearnersdictionaries.com/definition/english/data)
 
 ### Wikipedia
-Data (treated as singular, plural, or as a mass noun) is any sequence of one or more symbols given meaning by specific act(s) of interpretation. [^6]
+Data (treated as singular, plural, or as a mass noun) is any sequence of one or more symbols given meaning by specific act(s) of interpretation. [^wiki]
 
-[^6]:[Data in Computing](https://en.wikipedia.org/wiki/Data_(computing)
+[^wiki]:[Data in Computing](https://en.wikipedia.org/wiki/Data_(computing)
 ---
 [.background-color: #ffffff]
 
-![inline](https://upload.wikimedia.org/wikipedia/commons/0/06/DIKW_Pyramid.svg)
+![right](https://upload.wikimedia.org/wikipedia/commons/0/06/DIKW_Pyramid.svg)
+
+--- 
+
+### Data Warehouse: A Traditional Approach: 
+
+> A data warehouse is a copy of transaction data specifically structured for query and analysis. — [Ralph Kimball](https://en.wikipedia.org/wiki/Ralph_Kimball)
+
+<br>
+
+> A data warehouse is a subject-oriented, integrated, time-variant and non-volatile collection of data in support of management’s decision making process.-- [Bill Inmon](https://en.wikipedia.org/wiki/Bill_Inmon)
+
+^ 
+- A data warehouse is a central repository where raw data is transformed and stored in query-able forms.[^0]
+- Data Warehouse are still relevant today and their maintenance is part of Data Engineers' resposibilities.
+- The warehouse is created with structure and model first before the data is loaded and it is called schema-on-write.
+
+###  Data Warehouse vs Data Bases
+
+Surprisingly, Data Warehouse isn’t a regular database. 
+
+[.column]
+
+- A regular database normalizes separating related data into tables and avoiding redundancies and 
+- It supports arbitrary workload and complex queries 
+- do not store multiple version of data 
+ 
+[.column]
+
+- a Data Warehouse uses few tables to improve performance and analytics.
+- a Data Warehouse allows simple queries 
+- support version for complex analsysis
+
+
+### Data Pipeline
+
+ A Data pipeline is a sum of tools and processes for performing data integration [^0]
+ 
+ Constructing data pipelines is the core responsibility of data engineering.
+
+![](./attachments/1_62WJpBzEdlsjlc2TtjFf3g.jpg)
+
+^  While data warehouse concerns the storage of data, data pipeline ensures the consumption and handling of it. 
+
+### Data pipelines are used for
+
+- moving data to the cloud or to a data warehouse
+- data wrangling 
+- data integration
+
+Big data engineering is about building massive reservoirs and highly scalable and fault-tolerant distributed systems able to inherently store and process data.
+
+---
+
+### Transporting data from sources into a warehouse[^10]
+
+![inline](./attachments/word-image-29.png)
+
+[^10]:[Source](https://www.altexsoft.com/blog/datascience/what-is-data-engineering-explaining-data-pipeline-data-warehouse-and-data-engineer-role/)
+
+### Two Paradigms (and a half): SQL- v.s. JVM-Centric Pipelines[^etls]
+
+- **SQL-centric Pipelines** uses SQL dialects from Presto or Hive.  Pipelines (ETLs) are defined in a declarative way, and almost everything centers around SQL and tables. 
+
+
+^ 
+- PROs: SQL is easier to learn and can rely on good optimizers
+- CONSs: 
+	- Writing UDFs is troublesome because one has to write it in a different language (e.g. Java or Python)	
+	- testing can be a lot more challenging due to this. 
+	- 
+- **JVM-centric Pipelines** uses languages like Java or Scala and often involves thinking data transformation in an imperative manner, e.g. in terms of key-value pairs. 
+
+^ PROs: 
+	- Writing User Defined Functions (UDFs) is less painful;
+	- and testing jobs is relatively easy;
+   CONs: Requires strong programming skills
+
+* Drag & Drop...
+
+[^etls]: we are focusing on ETL
+
+### Skill Set: SQL mastery[^2]
+
+If english is the language of business, SQL is the language of data.  
+
+- SQL/DML/DDL primitives are simple enough that it should hold no secrets to a data engineer. Beyond the declarative nature of SQL, she/he should be able to read and
+- understand database execution plans, and have an understanding of what
+all the steps are, 
+- understand how indices work, 
+- understand the different join algorithms 
+
+### Skill Set: Data modeling[^2]
+
+For a data engineer, entity-relationship modeling should be a cognitive reflex, along with a clear understanding of normalization, and have a sharp intuition around denormalization tradeoffs. 
+
+The data engineer should be familiar with dimensional modeling and the related concepts and lexical field.
+
+--- 
+
+# But...
+
+
+### Engineers Shouldn’t (only) Write (SQL-based) ETL[^JeffMagnusson2016]
+
+- Unless you need to process over many petabytes of data, or you’re ingesting hundreds of billions of events a day, most technologies have evolved to a point where they can trivially scale to your needs.
+
+- Unless you need to push the boundaries of what these technologies are capable of, you probably don’t need a highly specialized team of dedicated engineers to build solutions on top of them. 
+
+
+[^JeffMagnusson2016]: [https://multithreaded.stitchfix.com/blog/2016/03/16/engineers-shouldnt-write-etl/](https://multithreaded.stitchfix.com/blog/2016/03/16/engineers-shouldnt-write-etl/)
+
+### If Not (only) ETL, Then…What?[^TristanHandy2019]
+
+Data Engineers are still a critical part of any high-functioning data team.
+- managing and optimizing core data infrastructure,
+- building and maintaining custom ingestion pipelines,
+- supporting data team resources with design and performance optimization, and
+- building non-SQL transformation pipelines.
+
+^ Instead of building ingestion pipelines that are available off-the-shelf and implementing SQL-based data transformations, here’s what your data engineers should be focused on:
+
+[^TristanHandy2019]:[https://www.kdnuggets.com/2019/01/role-data-engineer-changing.htm](https://www.kdnuggets.com/2019/01/role-data-engineer-changing.html)
 
 ---
 # Big Data 
 --- 
 
-### Refining Crude Oil
+<!-- ### Refining Crude Oil
 
 ![inline](https://1.bp.blogspot.com/-TSvZKkzZ9mY/V9PhdzD344I/AAAAAAAAAGI/3B3Q4EkLhAMfY6es3CeUYzzDTxlWGEavACLcB/s1600/oil-distillation.gif)
 
----
+-->
 
 ### Challenges [^Lanely2001]
 
@@ -114,11 +248,7 @@ Data (treated as singular, plural, or as a mass noun) is any sequence of one or 
 
 <!-- Joke About Growing number of Vs -->
 
-[^Lanely2001]:[Lanely2001](x-bdsk://laney20013d)
----
-- [[Data Variety]] 
-- [[Data Velocity]] 
-- [[Data Volume]] 
+[^Lanely2001]:[x-bdsk://laney20013d](x-bdsk://laney20013d)
 
 ---
 ###  Paradigm Shift
@@ -154,17 +284,8 @@ Data (treated as singular, plural, or as a mass noun) is any sequence of one or 
 
 ![inline](./attachments/velocity.pdf)
  
----
 [.slide-transition: reveal(top)]
 
-### Traditional Approach: Data Warehouse 
-
-A data warehouse is a copy of transaction data specifically structured for query and analysis. — [Ralph Kimball](https://en.wikipedia.org/wiki/Ralph_Kimball)
-
-A data warehouse is a subject-oriented, integrated, time-variant and non-volatile collection of data in support of management’s decision making process.-- [Bill Inmon](https://en.wikipedia.org/wiki/Bill_Inmon)
-
-^ Data Warehouse are still relevant today and their maintenance is part of Data Engineers' resposibilities.
-^ The warehouse is created with structure and model first before the data is loaded and it is called schema-on-write.
 
 ### Data Lake
 A Data lake is a vast pool of raw data (i.e., data as thye are natively, unprocessed). A data lake stands out for its high agility as it isn’t limited to a warehouse’s fixed configuration. [^8]
@@ -179,6 +300,7 @@ A Data lake is a vast pool of raw data (i.e., data as thye are natively, unproce
 ^ 
 - In Data Lake, the raw data is loaded as-is, when the data is used it is given structure and it is called schema-on-read.
 - Data Lake gives engineers the ability to easily change.
+- In practice, Data Lake is a commerical term so don't sweat it.
 
 ---
 
@@ -188,28 +310,45 @@ A Data lake is a vast pool of raw data (i.e., data as thye are natively, unproce
 
 [.column]
 
-- Use Structured Data
-- Schema On Write
-- Extract-Transform-Load Pipelines
-- Priviledges Batch Processing
+- **Structured Data**
+- **Schema On Write**
+- **Data Pipelines: Extract-Transform-Load**
+- **Processing Model: Batch**
 
 [.column]
 
- - Unstructured Data
-- Schema on Read
-- Uses ELT (Extract-Load-Transform) pipelines 
-- Priviledges Stream Processing
+- **Unstructured Data**
+- **Schema on Read**
+- **Data Pipelines: Extract-Load-Transform**
+- **Processing Model: Streaming**
 
-### Thinking About Data Systems
+### (Big) Data Engineer
+ 
+In the contex of Big Data, a data engineer must focus on **distributed systems**, and **programming languages** such as Java and Scala is recommended.
+ 
+### New Tasks
 
----
+Since data lake are taking data from a wide range of systems, data can be in **structured** or **unstructured** formats, and usually **not clean**, e.g., with missing fields, mismatched data types, and other data-related issues.
+
+Therefore  data engineers are challenged with the task of wrangling, cleansing, and integrating data.
+
+### The Future of Data Engineering
+
+- there has been a significant shift toward real-time data pipelines
+- Increased connectivity between data sources and the data warehouse
+- Self-service analytics via smart tools, made possible by data engineering
+- Automation of Data Science functions
+- Hybrid data architectures spanning on-premise and cloud environments
+
+--- 
+
 
 ![](./attachments/theend2.png)
 
 # Conclusion
 #### LTAT.02.007: [Website](https://courses.cs.ut.ee/2020/dataeng) and [Forum]() 
 - **Ass Prof. Riccardo Tommasini**
-- **Assistants: Mohamed Ragab, Samuele Langhi, Hassan Elsaeeb**
+- **Assistants:  Fabiano Spiga, Mohamed Ragab, Hassan Elsaeeb**
 
 ## Next on Data Engineering
 - [[Data Modeling]]
