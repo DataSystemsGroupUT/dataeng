@@ -24,3 +24,4 @@ Moreover, given the volume, variety and velocity of the data, metadata managemen
 -  deriving upstream dependencies in workflows, and 
 -  building visibility of jobs writing to downstream tables.
 
+foo bar
