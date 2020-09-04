@@ -25,3 +25,5 @@ Moreover, given the volume, variety and velocity of the data, metadata managemen
 -  building visibility of jobs writing to downstream tables.
 
 foo bar
+
+![[Distributed-Data-Processing-min-1.jpg]]
