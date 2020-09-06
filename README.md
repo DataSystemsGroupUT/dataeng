@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # dataeng
 Repository for the Data Engineering Course
 
@@ -75,3 +76,8 @@ Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di M
 - Data Augumentation
 
 
+=======
+# [English](README.en.md)
+
+# [French](README.fr.md)
+>>>>>>> wordsmith/dockerfiles-1-basic
