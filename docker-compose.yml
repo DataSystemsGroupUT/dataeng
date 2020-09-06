@@ -16,5 +16,5 @@ services:
     ports:
       - 8888:8888
     volumes:
-       - ./res:/home/jovyan/work/data
+       - ./data:/home/jovyan/work/data
       
