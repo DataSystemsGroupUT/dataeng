@@ -457,7 +457,7 @@ sales (item_name, color, clothes_size, quantity)
 
 ### Cross-tabulation of sales by item name and color
 
-|dark|pastel|white|total
+||dark|pastel|white|total
 |----|----|----|----|----|
 |skirt  | 8 | 35 | 10 |53|
 |dress|20|11   |5    |36|
