@@ -1,7 +1,7 @@
 footer:  [Riccardo Tommasini](http://rictomm.me) - riccardo.tommasini@ut.ee - @rictomm 
-slide-dividers: #, ##, ###
 slidenumbers: true
 autoscale: true
+theme: Plain Jane
 
 # Data Engineering: Docker 101
 #### LTAT.02.007
@@ -268,6 +268,7 @@ bash: figlet: command not found
 
 * Let's see in the next chapters how to bake a custom image with `figlet`!
 
+---
 # Build first Image
 
 ![inline](../attachments/title-understanding-docker-images.png)
@@ -373,7 +374,7 @@ If an image is read-only, how do we change it?
 
 * Help!
 
-![](https://images-na.ssl-images-amazon.com/images/I/515qtu1LfUL._AC_SL1000_.jpg)
+![inline](https://images-na.ssl-images-amazon.com/images/I/515qtu1LfUL._AC_SL1000_.jpg)
 
 ---
 
@@ -472,46 +473,6 @@ clock
 
 ---
 
-## Self-hosted namespace
-
-This namespace holds images which are not hosted on Docker Hub, but on third
-party registries.
-
-They contain the hostname (or IP address), and optionally the port, of the
-registry server.
-
-For example:
-
-```bash
-localhost:5000/wordpress
-```
-
-* `localhost:5000` is the host and port of the registry
-* `wordpress` is the name of the image
-
-Other examples:
-
-```bash
-quay.io/coreos/etcd
-gcr.io/google-containers/hugo
-```
-
----
-
-## How do you store and manage images?
-
-Images can be stored:
-
-* On your Docker host.
-* In a Docker registry.
-
-You can use the Docker client to download (pull) or upload (push) images.
-
-To be more accurate: you can use the Docker client to tell a Docker Engine
-to push and pull images to and from a registry.
-
----
-
 ## Showing current images
 
 Let's look at what images are on our host now.
@@ -530,30 +491,6 @@ busybox          latest    3240943c9ea3   2 weeks ago     1.114 MB
 training/namer   latest    902673acc741   9 months ago    289.3 MB
 jpetazzo/clock   latest    12068b93616f   12 months ago   2.433 MB
 ```
-
----
-
-## Searching for images
-
-We cannot list *all* images on a remote registry, but
-we can search for a specific keyword:
-
-```bash
-$ docker search marathon
-NAME                     DESCRIPTION                     STARS  OFFICIAL  AUTOMATED
-mesosphere/marathon      A cluster-wide init and co...   105              [OK]
-mesoscloud/marathon      Marathon                        31               [OK]
-mesosphere/marathon-lb   Script to update haproxy b...   22               [OK]
-tobilg/mongodb-marathon  A Docker image to start a ...   4                [OK]
-```
-
-
-* "Stars" indicate the popularity of the image.
-
-* "Official" images are those in the root namespace.
-
-* "Automated" images are built automatically by the Docker Hub.
-  <br/>(This means that their build recipe is always available.)
 
 ---
 
@@ -627,6 +564,7 @@ We've learned how to:
 * Understand Docker image namespacing.
 * Search and download images.
 
+---
 # Compose for development stacks
 
 Dockerfiles are great to build container images.
@@ -709,9 +647,11 @@ First step: clone the source code for the app we will be working on.
 $ cd
 $ git clone --branch docker https://github.com/DataSystemsGroupUT/dataeng.git
 ...
-$ cd trainingwheels
+$ cd dataeng	
 ```
 
+---
+## Launching Our First Stack with Compose
 
 Second step: start your app.
 
@@ -724,18 +664,19 @@ including linking the relevant containers together.
 
 ---
 
-## Launching Our First Stack with Compose
-
-In a new termina
-```bash
-
-docker ps
-
-```
+![inline](../attachments/composeup.gif)
 
 ---
+## Launching Our First Stack with Compose
 
-![[composeup.gif]]
+In a new terminal
+
+```bash
+$ docker ps
+```
+
+![inline](../attachments/Screenshot 2020-09-06 at 7.52.55 PM.png)
+
 
 ---
 
@@ -753,25 +694,23 @@ them.
 Here is the file used in the demo:
 
 ```yaml
-version: "2"
+version: "3"
 
 services:
-  www:
-    build: www
+  web:
+    build: web
     ports:
-      - 8000:5000
-    user: nobody
-    environment:
-      DEBUG: 1
-    command: python counter.py
-    volumes:
-      - ./www:/src
-
-  redis:
-    image: redis
+    - 80
+  db:
+    build: db
+  words:
+    build: words
+    ports:
+    - 8080
 ```
 
 ---
+
 
 ## Compose file structure
 
@@ -940,27 +879,3 @@ new image and just restarting your stack with Compose.
 
 * The project name can be overridden with `docker-compose -p`.
 
----
-
-## Running two copies of the same app
-
-If you want to run two copies of the same app simultaneously, all you have to do is to
-make sure that each copy has a different project name.
-
-You can:
-
-* copy your code in a directory with a different name
-
-* start each copy with `docker-compose -p myprojname up`
-
-Each copy will run in a different network, totally isolated from the other.
-
-This is ideal to debug regressions, do side-by-side comparisons, etc.
-
-???
-
-:EN:- Using compose to describe an environment
-:EN:- Connecting services together with a *Compose file*
-
-:FR:- Utiliser Compose pour décrire son environnement
-:FR:- Écrire un *Compose file* pour connecter les services entre eux

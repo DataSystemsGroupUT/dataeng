@@ -2,6 +2,7 @@ footer:  [Riccardo Tommasini](http://rictomm.me) - riccardo.tommasini@ut.ee - @r
 slide-dividers: #, ##, ###
 slidenumbers: true
 autoscale: true
+theme: Plain Jane
 
 # Data Engineering: Data Engineer
 #### LTAT.02.007
@@ -10,7 +11,6 @@ autoscale: true
 - [https://courses.cs.ut.ee/2020/dataeng](https://courses.cs.ut.ee/2020/dataeng)
 - [Forum](https://piazza.com/ut.ee/fall2020/ltat02007/home) 
 - [Moodle](https://moodle.ut.ee/course/view.php?id=10457)
-
 
 ---
 ## Course Overview 

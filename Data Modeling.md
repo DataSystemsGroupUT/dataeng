@@ -2,6 +2,7 @@ footer:  [Riccardo Tommasini](http://rictomm.me) - riccardo.tommasini@ut.ee - @r
 slide-dividers: #, ##, ###
 slidenumbers: true
 autoscale: true
+theme: Plain Jane
 
 # Data Engineering: Data Modeling
 #### LTAT.02.007
