@@ -278,7 +278,7 @@ The remaining option is choosing between **Consistency** and **Availability**.
 Not necessarily in a mutually exclusive manner:
 	
 - CP:  A partitioned node returns
-	- a correct value, if in a consistent state;
+	- the correct value
 	- a timeout error or an error, otherwise
 - AP: A partitioned node returns the most recent version of the data, which could be stale.
 	
