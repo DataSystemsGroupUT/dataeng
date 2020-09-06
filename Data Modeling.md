@@ -277,10 +277,10 @@ The remaining option is choosing between **Consistency** and **Availability**.
 #### We cannot neglect Partition Tolerance
 Not necessarily in a mutually exclusive manner:
 	
-- AP:  A partitioned node returns
+- CP:  A partitioned node returns
 	- a correct value, if in a consistent state;
 	- a timeout error or an error, otherwise
-- CP: A partitioned node returns the most recent version of the data, which could be stale.
+- AP: A partitioned node returns the most recent version of the data, which could be stale.
 	
 ## Indexing
 
