@@ -70,7 +70,7 @@ Don't worry, we will get to that fast enough!
 
 ## The deployment problem
 
-![original](../attachments/shipping-software-problem.png)
+![inline](../attachments/shipping-software-problem.png)
 
 ---
 
@@ -78,7 +78,7 @@ Don't worry, we will get to that fast enough!
 
 ## The matrix from hell
 
-![original](../attachments/shipping-matrix-from-hell.png)
+![inline](../attachments/shipping-matrix-from-hell.png)
 
 ---
 
@@ -86,7 +86,7 @@ Don't worry, we will get to that fast enough!
 
 ## The parallel with the shipping industry
 
-![original](../attachments/shipping-industry-problem.png)
+![inline](../attachments/shipping-industry-problem.png)
 
 ---
 
@@ -94,7 +94,7 @@ Don't worry, we will get to that fast enough!
 
 ## Intermodal shipping containers
 
-![original](../attachments/shipping-industry-solution.png)
+![inline](../attachments/shipping-industry-solution.png)
 
 ---
 
@@ -102,7 +102,7 @@ Don't worry, we will get to that fast enough!
 
 ## A new shipping ecosystem
 
-![original](../attachments/shipping-indsutry-results.png)
+![inline](../attachments/shipping-indsutry-results.png)
 
 ---
 
@@ -110,7 +110,7 @@ Don't worry, we will get to that fast enough!
 
 ## A shipping container system for applications
 
-![original](../attachments/shipping-software-solution.png)
+![inline](../attachments/shipping-software-solution.png)
 
 ---
 
@@ -118,7 +118,7 @@ Don't worry, we will get to that fast enough!
 
 ## Eliminate the matrix from hell
 
-![original](../attachments/shipping-matrix-solved.png)
+![inline](../attachments/shipping-matrix-solved.png)
 
 ---
 
