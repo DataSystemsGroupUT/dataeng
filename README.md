@@ -28,7 +28,7 @@ Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di M
 	- [ ]  Argumentation
 
 # Practices
-- [ ] Docker 
+- [x] [Docker](./docker/README.md) - [Lab Branch](https://github.com/DataSystemsGroupUT/dataeng/tree/docker)
 - [ ] Modeling and Querying Relational Data with MySQL
 - [ ] Modeling and Querying Key Value Data with Redis
 - [ ] Modeling and Querying Document Data with MongoDB
