@@ -11,8 +11,12 @@ Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di M
 
 # Lectures
 
-- [x] Introduction: [Who is the Data Engineer](./Data%20Engineer.md) [pdf](pdfs/Data%20Engineer.pdf)
-- [x] [Data Modeling](Data%20Modeling.md) 
+| Date | Title       | Material | Reads |
+|------|-------------|----------|-------|
+|01/09 | Introduction |[Who is the Data Engineer](./Data%20Engineer.md)/ [pdf](pdfs/Data%20Engineer.pdf) | |
+| 02/09| Data Modeling | [Data Modeling](Data%20Modeling.md) |
+- [x] : 
+- [x] 
 - [ ] Relational Databases
 - [ ] No SQL
 	- [ ] Key Value Stores
@@ -28,7 +32,11 @@ Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di M
 	- [ ]  Argumentation
 
 # Practices (Videos Will be Available after Group 2 issue)
-- [x] [Docker](./docker/README.md) - [Lab Branch](https://github.com/DataSystemsGroupUT/dataeng/tree/docker) 
+- [x] [Docker](./docker/README.md) - 
+	- [Lab Branch](https://github.com/DataSystemsGroupUT/dataeng/tree/docker) 
+	- [QA GP2 only](https://docs.google.com/document/d/134YKfqp49-rtAXa0FJO30LJonHVO-PeYLqqeo8DQY9I/) 
+	- [Video GP1](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=31e77abe-b51e-4a39-8c33-ac30009b7ba6) 
+	- [Video GP2](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=31e77abe-b51e-4a39-8c33-ac30009b7ba6) 
 - [ ] Modeling and Querying Relational Data with MySQL
 - [ ] Modeling and Querying Key Value Data with Redis
 - [ ] Modeling and Querying Document Data with MongoDB
@@ -74,4 +82,10 @@ Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di M
 - Data Cleansing
 - Data Augumentation
 
+# Books
+
+- [1] Database System Concepts 7th Edition Avi Silberschatz Henry F. Korth S. Sudarshan McGraw-Hill ISBN 9780078022159
+  - [Table of contents](https://www.db-book.com/db7/toc-dir/toc.pdf)
+  - [slides](https://www.db-book.com/db7/slides-dir/index.html)
+  
 
