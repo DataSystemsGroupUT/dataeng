@@ -969,6 +969,7 @@ Four-Step Dimensional Design Process
 - **Business processes** are crtical activities that your organization performs, e.g., registering students for a class.
 - The **grain** establishes exactly what a single fact table row represents.  Three common grains categorize all fact tables: transactional, periodic snapshot, or accumulating snapshot. 
 - **Dimensions** provide contex to business process events, e.g.,  who, what, where, when, why, and how. 
+- :wq
 - **Facts** are the measurements that result from a business process event and are almost always numeric. 
 
 ### Dimensional Modelling: Fact Table
