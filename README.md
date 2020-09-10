@@ -11,8 +11,12 @@ Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di M
 
 # Lectures
 
-- [x] Introduction: [Who is the Data Engineer](./Data%20Engineer.md) [pdf](pdfs/Data%20Engineer.pdf)
-- [x] [Data Modeling](Data%20Modeling.md) 
+| Date | Title       | Material | Reads |
+|------|-------------|----------|-------|
+|01/09 | Introduction |[Who is the Data Engineer](./Data%20Engineer.md)/ [pdf](pdfs/Data%20Engineer.pdf) | |
+| 02/09| Data Modeling | [Data Modeling](Data%20Modeling.md) |
+- [x] : 
+- [x] 
 - [ ] Relational Databases
 - [ ] No SQL
 	- [ ] Key Value Stores
@@ -78,4 +82,10 @@ Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di M
 - Data Cleansing
 - Data Augumentation
 
+# Books
+
+- [1] Database System Concepts 7th Edition Avi Silberschatz Henry F. Korth S. Sudarshan McGraw-Hill ISBN 9780078022159
+  - [Table of contents](https://www.db-book.com/db7/toc-dir/toc.pdf)
+  - [slides](https://www.db-book.com/db7/slides-dir/index.html)
+  
 
