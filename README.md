@@ -11,13 +11,13 @@ Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di M
 
 # Lectures
 
-| Date   | Title              | Material | Reads | Extras |
-|-------|-------------|----------|-------|-------|
-| 01/09  | Course Intro |[Who is the Data Engineer](./Data%20Engineer.md) - [pdf](./pdfs/Data%20Engineer.pdf) slide 45-109) | ||
-| 03/09 | Data Modeling | [Data Modeling](Data%20Modeling.md) - [pdf](./pdfs/Data%20Modeling.pdf) slide 1-44 | Chp 4 p111-127, Chp 5 p151-156, Chp 6 p199-205 of [3]
-|   |  DM for Relational Databases |   [Data Modeling](Data%20Modeling.md) - [pdf](./pdfs/Data%20Modeling.pdf) slide 45-109 | Chp 2, 6, and 7 (Normal Forms) of [1] | [Relational Model](https://course.ccs.neu.edu/cs3200sp18s3/ssl/readings/codd.pdf) | 
-|   |  DM for Data Warehouse         |  [Data Modeling](Data%20Modeling.md)  - [pdf](./pdfs/Data%20Modeling.pdf)slide 109-118|  [pdf](http://www.kimballgroup.com/wp-content/uploads/2013/08/2013.09-Kimball-Dimensional-Modeling-Techniques11.pdf) [video](http://slideshot.epfl.ch/play/suri_stonebraker)|  Chp 2 of [2] | 
-|   |  DM for Big Data         |  |  Chp 2 of [3]|  | TODO|
+| Date   | Title              | Material | Mandatory Reads | Extras |
+|-------|---------------------|----------|-----------------|--------|
+| 01/09  | Course Intro |[Slides](./Data%20Engineer.md) - [pdf](./pdfs/Data%20Engineer.pdf) slide 45-109) | ||
+| 03/09 | Data Modeling | [Slides](Data%20Modeling.md) - [pdf](./pdfs/Data%20Modeling.pdf) slide 1-44 | Chp 4 p111-127, Chp 5 p151-156, Chp 6 p199-205 of [3]
+| 10/09 |  DM for Relational Databases |   [Slides](Data%20Modeling.md) - [pdf](./pdfs/Data%20Modeling.pdf) slide 45-109 | Chp 2, 6, and 7 (Normal Forms) of [1] | [Relational Model](https://course.ccs.neu.edu/cs3200sp18s3/ssl/readings/codd.pdf) | 
+|10/09. |  DM for Data Warehouse         |  [Slides](Data%20Modeling.md)  - [pdf](./pdfs/Data%20Modeling.pdf)slide 109-118|  [pdf](http://www.kimballgroup.com/wp-content/uploads/2013/08/2013.09-Kimball-Dimensional-Modeling-Techniques11.pdf) [video](http://slideshot.epfl.ch/play/suri_stonebraker)|  Chp 2 of [2] | 
+|   |  DM for Big Data         |  |  Chp 2 of [3]|  | TODO| 
 |   |  Key Value Stores ||||
 |   |  Document Databases  ||||
 |   |  Graph Databases ||||
@@ -30,7 +30,7 @@ Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di M
 # Practices (Videos Will be Available after Group 2 issue)
 
 | Date     | Title              | Material | Reads | Videos | Assignment | Notes |
-|--------|-------------|----------|-------|-------|-------|----|
+|----------|-------------|----------|-------|-------|-------|----|
 | 07-8/09  | Docker |  [Slides](./docker/README.md) - [Lab Branch](https://github.com/DataSystemsGroupUT/dataeng/tree/docker) | |[Video GP1](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=31e77abe-b51e-4a39-8c33-ac30009b7ba6) [Video GP2](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=31e77abe-b51e-4a39-8c33-ac30009b7ba6) ||  [QA GP2 only](https://docs.google.com/document/d/134YKfqp49-rtAXa0FJO30LJonHVO-PeYLqqeo8DQY9I/) 
 | 14-15 /09  |Modeling and Querying Relational Data with Postgres||[Chp 32 of [1]§](https://www.db-book.com/db7/online-chapters-dir/32.pdf) ||||
 | 21-22 /09  |Modeling and Querying Key Value Data with Redis||||||
