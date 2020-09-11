@@ -14,7 +14,7 @@ go to [google cloud](console.cloud.google.com) and register, put your credit car
 
 On console.cloud.google.com, with your newly created account, click on "Compute Engine" on the left side of the screen.
 
-![inline](./attachments/compute_engine.png)
+![inline](../attachments/compute_engine.png)
 
 Now, create your virtual machine, with DEBIAN as the OS. Get one whose specs cost at max 30 bucks a month.
 
@@ -40,7 +40,7 @@ Now, select create firewall rule
 
 Make sure your firewall rule looks like this:
 
-![inline](./attachments/firewall_rules.png)
+![inline](../attachments/firewall_rules.png)
 
 ### Step 4 -
 
