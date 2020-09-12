@@ -1,11 +1,27 @@
-# dataeng
-Repository for the Data Engineering Course
 
-[Course Homepage](https://courses.cs.ut.ee/2020/dataeng)
+# Data Engineering:
+## Repository for the Data Engineering Course (LTAT.02.007)
 
-[Lecturers](./LECTURERS.md)
+![logout](https://upload.wikimedia.org/wikipedia/en/3/39/Tartu_%C3%9Clikool_logo.svg)
 
-## Acknowledgments
+![logodsg](./attachments/logo dsg vettoriale.png)
+
+## Lecturer: [Riccardo Tommasini, PhD](https://riccardotommasini.com)
+
+### Teaching Assistants: 
+- [Fabiano Spiga](mailto:),  
+- [Mohamed Ragab](mailto:mohamed.ragab@ut.ee), 
+- [Hassan Eldeeb](mailto:hassan.eldeeb@ut.ee)
+
+### [Home Page](https://courses.cs.ut.ee/2020/dataeng)
+
+### [Forum](https://piazza.com/ut.ee/fall2020/ltat02007/home) 
+
+### [Moodle](https://moodle.ut.ee/course/view.php?id=10457)
+
+### [Twitter](https://twitter.com/hashtag/DataEngUT?src=hashtag_click)
+
+### Acknowledgments
 
 Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di Milano to letting me "steal" some of their great slides.
 
