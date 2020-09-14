@@ -669,14 +669,14 @@ Examples of entities:
 	- Courses
 - Examples of entity sets
 	- Professors and Students 
-	- Data Science coruses: curriculms
+	- Data Science courses: curriculums
 
 ---
 #### Syntax
 
 ![inline](./attachments/entities.png)
 
-^ fields are what we call attribtues
+^ fields are what we call attributes
 
 ### Relationships and  Relationship Sets
 
@@ -690,7 +690,7 @@ Examples of entities:
 	- attendee
 	- enrollment
 
-### Intution
+### Intuition
 
 ![inline](./attachments/Relationship-syntax.png)
 
@@ -707,9 +707,9 @@ Examples of entities:
  
  Each entity has a **value** for each of its attributes. 
  
- Also relationshis may have attributes called **descriptive attributes**. 
+ Also relationships may have attributes called **descriptive attributes**. 
 
-### Intution
+### Intuition
 
 ![inline 25%](./attachments/attrrel.png)
 
@@ -777,7 +777,7 @@ A professor advises many students but a student has only one advisor.
 
 ![inline](./attachments/many-to-many.png)
 
-A course is associated to many insitute in the context of a curriculum
+A course is associated to many institute in the context of a curriculum
 An institute offers many courses within a curriculum
 
 ###  Keys 
@@ -895,7 +895,7 @@ Curriculum(<u>Institute\_ID</u>,<u>Course\_ID</u>)
 ### Normal Forms (Refresh)
 
 - First Normal Form (1NF) 
-	- A table has only atomic valued clumns.
+	- A table has only atomic valued columns.
 	- Values stored in a column should be of the same domain
 	- All the columns in a table should have unique names.
 	-  And the order in which data is stored, does not matter.
@@ -912,7 +912,7 @@ Curriculum(<u>Institute\_ID</u>,<u>Course\_ID</u>)
 ### Modeling for Database: A note on Storage
 
 - Storage is laid out in a row-oriented fashion
-- For relational this is as close as the the tabular representation
+- For relational this is as close as the tabular representation
 - All the values from one row of a table are stored next to each other. 
 - This is true also for some NoSQL (we will see it again)
 	- Document databases stores documents a contiguous bit sequence 
@@ -966,9 +966,9 @@ Four-Step Dimensional Design Process
 [Mandatory Read](http://www.kimballgroup.com/wp-content/uploads/2013/08/2013.09-Kimball-Dimensional-Modeling-Techniques11.pdf)
 
 ^ 
-- **Business processes** are crtical activities that your organization performs, e.g., registering students for a class.
+- **Business processes** are critical activities that your organization performs, e.g., registering students for a class.
 - The **grain** establishes exactly what a single fact table row represents.  Three common grains categorize all fact tables: transactional, periodic snapshot, or accumulating snapshot. 
-- **Dimensions** provide contex to business process events, e.g.,  who, what, where, when, why, and how. 
+- **Dimensions** provide context to business process events, e.g.,  who, what, where, when, why, and how. 
 - :wq
 - **Facts** are the measurements that result from a business process event and are almost always numeric. 
 
@@ -1089,7 +1089,7 @@ A distributed file system stores files across a large collection of machines whi
 ### Name Node
 
 -   A single node that keeps the metadata of HDFS
-    -   Keeps the metedata in memory for fast access
+    -   Keeps the metadata in memory for fast access
     -   Periodically flushes to the disk (FsImage file) for durability
     -   Name node maintains a daemon process to handle the requests and to receive heartbeats from other data nodes
 
@@ -1136,7 +1136,7 @@ A distributed file system stores files across a large collection of machines whi
 
 ### HDFS High-availability
 
--   Each NameNode is backedup with a slave other NameNode that keeps a copy of the catalog
+-   Each NameNode is backed up with a slave other NameNode that keeps a copy of the catalog
 
 -   The slave node provides a failover replacement of the primary NameNode
 
