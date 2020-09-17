@@ -1,10 +1,16 @@
 
+
 # Data Engineering:
 ## Repository for the Data Engineering Course (LTAT.02.007)
 
 ![logout](https://upload.wikimedia.org/wikipedia/en/3/39/Tartu_%C3%9Clikool_logo.svg)
 
 ![logodsg](./attachments/logo_dsg_vettoriale.png)
+
+
+## Graph View
+
+![inline](./attachments/Thursday, September 17, 2020.png)
 
 ## Lecturer: [Riccardo Tommasini, PhD](https://riccardotommasini.com)
 

@@ -27,4 +27,5 @@ Research on AutoML
 
 ## Prof [[Emanuele Della Valle]]
 
-## Prof [[Marco Brambilla]]
+## Prof 
+[[Marco Brambilla]]
