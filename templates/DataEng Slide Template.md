@@ -4,7 +4,7 @@ slidenumbers: true
 autoscale: true
 theme: Plain Jane
 
-# Data Engineering: Topic
+# Data Engineering
 #### LTAT.02.007
 #### Ass Prof. Riccardo Tommasini
 #### Assistants: [Fabiano Spiga](mailto:),  [Mohamed Ragab](mailto:mohamed.ragab@ut.ee),  [Hassan Eldeeb](mailto:hassan.eldeeb@ut.ee)

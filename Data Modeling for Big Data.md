@@ -1,17 +1,3 @@
-footer:  [Riccardo Tommasini](http://rictomm.me) - riccardo.tommasini@ut.ee - @rictomm 
-slide-dividers: #, ##, ###
-slidenumbers: true
-autoscale: true
-theme: Plain Jane
-
-# Data Engineering: Topic
-#### LTAT.02.007
-#### Ass Prof. Riccardo Tommasini
-#### Assistants: [Fabiano Spiga](mailto:),  [Mohamed Ragab](mailto:mohamed.ragab@ut.ee),  [Hassan Eldeeb](mailto:hassan.eldeeb@ut.ee)
-- [https://courses.cs.ut.ee/2020/dataeng](https://courses.cs.ut.ee/2020/dataeng)
-- [Forum](https://piazza.com/ut.ee/fall2020/ltat02007/home) 
-- [Moodle](https://moodle.ut.ee/course/view.php?id=10457)
-
 # Data Modeling for Big Data
 
 ![inline](https://upload.wikimedia.org/wikipedia/commons/6/6d/Data_types_-_en.svg) 
@@ -73,13 +59,77 @@ theme: Plain Jane
 
 ![inline](./attachments/datalakewf.png)
 
+## Horizontal vs Vertical Scalability
+
+[.footer: Curtesy of Emanuele Della Valle and Marco Brambilla]
+
+### Introduction
+[.footer: Curtesy of Emanuele Della Valle and Marco Brambilla]
+
+- "Traditional" SQL system scale **vertically** (scale up)	- Adding data to a "traditional" SQL system may degrade its performances
+	- When the machine, where the SQL system runs, no longer performs as required, the solution is to buy a better machine (with more RAM, more cores and more disk)
+- Big Data solutions scale **horizontally** (scale out)
+	- Adding data to a Big Data solution may degrade its performances
+	- When the machines, where the big data solution runs, no longer performs as required, the solution is to add another machine
+
+###  hardware
+[.footer: Curtesy of Emanuele Della Valle and Marco Brambilla]
+
+[.column]
+#### Commodity
+
+- CPU: 8-32 cores
+- RAM: 16-64 GB
+- Disk: 1-3 TB
+- Network: 10 GE
+
+[.column]
+#### Appliance
+
+- CPU: 576 cores 
+- RAM: 24TB
+- Disk: 360TB of SSD/rack
+- Network: 40 Gb/second InfiniBand 
+
+^ ORACLE EXADATA DATABASE MACHINE X6-8
+
+### Vertical Scalability
+[.footer: Curtesy of Emanuele Della Valle and Marco Brambilla]
+
+![inline](./attachments/verticalscalability.png)
+
+
+### Horizontal Scalability
+[.footer: Curtesy of Emanuele Della Valle and Marco Brambilla]
+
+![inline](./attachments/horizontalscalability.png)
+
+### Vertical vs Horizontal Scalability
+[.footer: Curtesy of Emanuele Della Valle and Marco Brambilla]
+
+![inline](./attachments/verticalvshorizontalscalability.png)
+
+
+### Vertical vs Horizontal Scalability
+
+[.footer: Curtesy of Emanuele Della Valle and Marco Brambilla]
+![inline](./attachments/grayareahv.png)
+
+
+### Grey Area is Time-Dependent
+
+[.footer: Curtesy of Emanuele Della Valle and Marco Brambilla]
+
+![inline](./attachments/greyarea2.png)
 
 ### Big Data Storage
 
 - Distributed File Systems, e.g., HDFS
-- Distributed Databases, e.g., VoltDB
-- Queues, e.g., Pulsar or Kafka
 - NoSQL Databases
+- NewSQL Databases[^65] e.g., VoltDB
+- Distributed Queues, e.g., Pulsar or Kafka
+
+[^65]: a modern form of relational databases that aim for comparable scalability with NoSQL databases while maintaining the transactional guarantees made by traditional database systems
 
 ^ A distributed file system stores files across a large collection of machines while giving a single-file-system view to clients.
 
@@ -98,6 +148,8 @@ A distributed file system stores files across a large collection of machines whi
 
 - ![[HDFS]]
 
+![inline](https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSn-w26lhLU7DoR89tUA8ST9Dlb4GfCkuJY4A&usqp=CAU)
+
 ![right fit](./attachments/nottoday.png)
 
 ### Will Will Talk  About Distributed Message Queues
@@ -106,6 +158,7 @@ A distribured message quque stores file in a log an allos sequential reads.
 
 - ![[Apache Kafka]]
 
+![inline](https://i.pinimg.com/originals/a1/82/b0/a182b0d8caa7627e288fb2a67395c263.png)
 
 ![right fit](./attachments/nottoday.png)
 
@@ -139,7 +192,9 @@ The results is data in the best format (e.g., columnar) for the analysis to perf
 
 ![right 150%](./attachments/wranglingsteps4.png)
 
-## The Advent of NoSQL
+# The Advent of NoSQL
+
+### Quote time
 
 > Google, Amazon, Facebook, and DARPA all recognized that when you scale systems large enough, you can never put enough iron in one place to get the job done (and you wouldn’t want to, to prevent a single point of failure). 
 <br>
@@ -150,18 +205,18 @@ The results is data in the best format (e.g., columnar) for the analysis to perf
 
 ### The Reasons Behind
 
-- Big Data: need for greater scalability than relational databases can easily achieve *in write*
-- Open Source: a widespread preference for free and open source software 
-- Queryability: need for specialized query operations that are not well supported by the relational model
-- Schemaless:  desire for a more dynamic and expressive data model than relational
+- **Big Data**: need for greater scalability than relational databases can easily achieve *in write*
+- **Open Source:** a widespread preference for free and open source software 
+- **Queryability**: need for specialized query operations that are not well supported by the relational model
+- **Schemaless**:  desire for a more dynamic and expressive data model than relational
 
 ### Object-Relational Mismatch 
 
-Most application development today is done in object-oriented programming languages
+Most application development today is done in **object-oriented** programming languages
 
-An awkward translation layer is required between the objects in the application code and the database model of tables, rows, and columns
+An **awkward translation** layer is required between the **objects** in the application code and the database model of **tables**, **rows**, and **columns**
 
-Object-relational mapping (ORM) frameworks like Hibernate try to mild the mismatch, but they can’t completely hide the differences
+Object-relational mapping (**ORM**) frameworks like **Hibernate** try to mild the mismatch, but they **can’t completely hide** the differences
  
 ---
 
@@ -175,7 +230,7 @@ Object-relational mapping (ORM) frameworks like Hibernate try to mild the mismat
 
 NoSQL solutions fall into four major areas:
 
--** Key-Value Store**
+- **Key-Value Store**
 	- A key that refers to a payload (actual content / data)
 	- Examples: MemcacheDB, Azure Table Storage, Redis, HDFS
 
@@ -219,7 +274,7 @@ NoSQL solutions fall into four major areas:
 
 ---
 
-### NOSQL Complexity
+### NoSQL Complexity
 
 ![inline](https://slideplayer.com/slide/16139843/95/images/16/NoSQL.jpg)
 
@@ -238,11 +293,11 @@ NoSQL solutions fall into four major areas:
 | Well structured data| Not necessarily well structured – e.g., pictures, documents, web page description, video clips, etc.|
 | Focus on data integrity|focuses on availability of data even in the presence of multiple failures|
 | Mostly Centralized|spread data across many storage systems with a high degree of replication.|
-| ACID properties should hold|ACID properties may not hold[^2]|
+| ACID properties should hold|ACID properties may not hold[^62]|
 
-[^2]: no properties at all???
+[^6 g2]: no properties at all???
 
-### ACID vs. BASE properties[^61]
+## ACID vs. BASE properties[^61]
 
 [^61]:Do you recall the CAP theorem? 🎩
 
@@ -259,7 +314,7 @@ NoSQL solutions fall into four major areas:
 
 ---
 
-### CAP Theorem Trade-off Remember?
+### CAP Theorem is a Trade-off, remember?
 
 ---
 
@@ -269,10 +324,12 @@ NoSQL solutions fall into four major areas:
 
 - **Basic Availability**: fulfill request, even in partial consistency.
 - **Soft State**: abandon the consistency requirements of the ACID model pretty much completely
--**Eventual Consistency**: at some point in the future, data will converge to a consistent state; delayed consistency, as opposed to immediate consistency of the ACID properties.
-  - purely alivenessguarantee (reads eventually return the requested value); but
-  - does not makesafetyguarantees, i.e.,
+- **Eventual Consistency**: delayed consistency, as opposed to immediate consistency of the ACID properties.[^67]
+  - purely aliveness guarantee (reads eventually return the requested value); but
+  - does not make safety guarantees, i.e.,
   - an eventually consistent system can return any value before it converges
+
+[^67]: at some point in the future, data will converge to a consistent state; 
 
 ---
 ![original fit](./attachments/media_httpfarm5static_mevIk.png)
@@ -281,13 +338,13 @@ NoSQL solutions fall into four major areas:
 
 ### ACID vs. BASE trade-off
 
-No general answer to whether your application needs an ACID versus BASE consistency model.
+**No general answer** to whether your application needs an ACID versus BASE consistency model.
 
-Given BASE ’s loose consistency, developers need to be more knowledgeable and rigorous about consistent data if they choose a BASE store for their application.
+Given **BASE** ’s loose consistency, developers **need to** be more knowledgeable and **rigorous** about **consistent** data if they choose a BASE store for their application.
 
-Planning around BASE limitations can sometimes be a major disadvantage when compared to the simplicity of ACID transactions.
+Planning around **BASE** limitations can sometimes be a major **disadvantage** when compared to the simplicity of ACID transactions.
 
-A fully ACID database is the perfect fit for use cases where data reliability and consistency are essential.
+A fully **ACID** database is the perfect fit for use cases where data **reliability** and **consistency** are essential.
 
 # History of Data Models[^5]
 
@@ -308,21 +365,37 @@ A fully ACID database is the perfect fit for use cases where data reliability an
 
 ###  Data Modeling for Big Data
 
-- Conceptual Level Remains:
+- **Conceptual Level** remains:
 	- ER, UML diagram can still be used for no SQL as they output a model that encompasses the whole company.
 
-- Phsyical Level remains: NoSQL solutions often expose internals for obtaining flexibility, e.g., 
+- **Phsyical Level** remains: NoSQL solutions often expose internals for obtaining flexibility, e.g., 
 	- Key-value stores API
 	- Column stores
 	- Log structures
 
 - _Logical level no longer make sense. Schema on read focuses on the query side.__
 
-## Domain Driven Design
+## Domain Driven Design[^68]
 
-Domain-Driven Design is a language- and domain-centric approach to software design for complex problem domains.
+Domain-Driven Design is a **language**- and **domain-centric** approach to software design for complex problem domains.
 
-DDD promotes the reduction of the translation cost between business and technical terminology.
+DDD promotes the reduction of the translation cost between business and technical terminology by developing an **ubiquitus language**  that embeds domain terminology into the software systems.
+
+DDD consists of a collection of **patterns**, **principles**, and **practices** that allows teams to **focus** **on** the core **business** goals while **crafting** software.
+
+[intro](https://martinfowler.com/bliki/DomainDrivenDesign.html)
+
+![right fit](https://image.slidesharecdn.com/b00794taug-domain-drivendesignbyericevans-190925204437/95/2003-domaindriven-design-pdf-tackling-complexity-in-the-heart-of-software-by-eric-evans-addisonwesley-professional-1-638.jpg?cb=1569444406)
+
+
+
+[^68]:[book](https://www.amazon.com/gp/product/0321125215?ie=UTF8&tag=martinfowlerc-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0321125215)
+
+### Domain Driven Design[^68]
+
+Domain-Driven Design is a **language**- and **domain-centric** approach to software design for complex problem domains.
+
+DDD promotes the reduction of the translation cost between business and technical terminology by developing an **ubiquitus language**  that embeds domain terminology into the software systems.
 
 DDD consists of a collection of patterns, principles, and practices that allows teams to focus on the core t business goels while crafting software.
 
@@ -383,43 +456,49 @@ DDD consists of a collection of patterns, principles, and practices that allows 
  
 ### The Lifecycle of a Domain Object
 
-Every object has a lifecycle. It is born, it may go through various states, it eventually dies and is either archived or deleted.
+Every object has a lifecycle. It is **born**, it may go **through** various **states**, it eventually is either **archived** or **deleted**.
 
 The problems fall into two categories:
-- Maintaining integrity throughout the lifecycle
-- Preventing the model from getting swamped by the complexity of managing the lifecycle.
-
-The most important concepts for this are Aggregates and Repositories[^3]
-
-[^3]: an Aggregate is always associated with one and only one Repository.
+- **Maintaining** **integrity** throughout the lifecycle
+- **Preventing** the model from getting swamped by the **complexity** of managing the lifecycle.
 
 
 ### Aggregates and Repositories
+The most important concepts for this are Aggregates and Repositories[^63]
 
+[^63]: an Aggregate is always associated with one and only one Repository.
+
+[.column]
 **Aggregates** are a cluster of Entities and Value Objects that make sense domain-wise and are retrieved and persisted together.
 
 E.g. A Car is an aggregate of wheel, engine, and the customer
 
+[.column]
+
 **Repositories** offer an interface to retrieve and persist aggregates, hiding lower level details from the domain. 
 
+E.g. Sold cars catalogue
 
-### Spin Off DDD: Event Sourcing (More when dealing with Streaming)
 
-### Event Sourcing[^51]
+### Event Sourcing[^64]
 
-> The fundamental idea of Event Sourcing is ensuring that every change to the state of an application is captured in an event object, 
+- The fundamental idea of Event Sourcing is ensuring that every change to the state of an application is captured in an event object, 
 
-> Event objects are immutable and stored in the sequence they were applied for the same lifetime as the application state itself.
+- Event objects are immutable and stored in the sequence they were applied for the same lifetime as the application state itself.
 
-[^51]: Martin Fowler, [link](https://martinfowler.com/eaaDev/EventSourcing.html)
+![right fit](https://www.kcrw.com/culture/shows/the-spin-off/@@images/rectangular_image/page-header?v=1525906101.26)
 
-### Events
+[^64]: Martin Fowler, [link](https://martinfowler.com/eaaDev/EventSourcing.html)
 
-Events are both a fact and a notification. 
+### The Power of Events
 
-They represent something that happened in the real world but include no expectation of any future action. 
+Events are both a **fact** and a **notification**. 
 
-They travel in only one direction and expect no response (sometimes called “fire and forget”), but one may be “synthesized” from a subsequent event.
+They represent **something** that **happened** in the **real world** but include no expectation of any future action. 
+
+They **travel** in only **one direction** and expect no response (sometimes called “fire and forget”), but one **may be “synthesized” from a subsequent event**.
+
+![right fit](https://images-na.ssl-images-amazon.com/images/I/51NS8A8JT5L._AC_UL600_SR468,600_.jpg)
 
 ---
 

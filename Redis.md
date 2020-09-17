@@ -1,4 +1,4 @@
-# Redis a [[Key-Value Stores]]
+# Redis 
 
 ![inline](https://upload.wikimedia.org/wikipedia/en/thumb/6/6b/Redis_Logo.svg/1200px-Redis_Logo.svg.png)
 
@@ -14,8 +14,8 @@
 [^75]: No official support for Windows, but Microsoft develops and maintains an open source Win-64 port of Redis*
 
 ### What is Redis
-
-- An advanced key-value store, where keys can contain data structures such as strings, hashes, lists, sets, and sorted sets. 
+ 
+- An advanced [[Key-Value Store]]s, where keys can contain data structures such as strings, hashes, lists, sets, and sorted sets. 
 - It supports a set of atomic operations on these data types.
 - Redis is a different evolution path in the key-value databases where values are complex data types that are closely related to fundamental data structures and are exposed to the programmer as such, without additional abstraction layers.
 - Redis Can be used as **Database** [^71], a **Caching layer** [^72] or a **Message broker** [^73]

@@ -1,4 +1,4 @@
-### Hadoop Distributed File System (HDFS)[^12]
+# Hadoop Distributed File System (HDFS)[^12]
 
 -   Abstracts physical location (Which node in the cluster) from the application
 -   Partition at ingestion time
