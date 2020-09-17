@@ -1,3 +1,7 @@
 .obsidian
 .obsidian/*
 ./todos
+
+out.md
+
+*.slide.md
