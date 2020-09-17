@@ -4,7 +4,7 @@
 
 ![logout](https://upload.wikimedia.org/wikipedia/en/3/39/Tartu_%C3%9Clikool_logo.svg)
 
-![logodsg](./attachments/logo dsg vettoriale.png)
+![logodsg](./attachments/logo_dsg_vettoriale.png)
 
 ## Lecturer: [Riccardo Tommasini, PhD](https://riccardotommasini.com)
 
@@ -101,3 +101,5 @@ Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di M
 - [2] The Data Warehouse Toolkit - The Definitive Guide to Dimensional Modeling Third Edition  Ralph Kimball Margy Ross
 - [3] [Designing Data-Intensive Applications - Martin Kleppmann ](https://dataintensive.net/)
 - [4] [Designing Event-Driven Systems](https://www.oreilly.com/library/view/designing-event-driven-systems/9781492038252/)
+
+[[slides/Slides]]

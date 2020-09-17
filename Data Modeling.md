@@ -1,24 +1,10 @@
-footer:  [Riccardo Tommasini](http://rictomm.me) - riccardo.tommasini@ut.ee - @rictomm 
-slide-dividers: #, ##, ###
-slidenumbers: true
-autoscale: true
-theme: Plain Jane
+# Data Modeling
 
-# Data Engineering: Data Modeling
-#### LTAT.02.007
-#### Ass Prof. Riccardo Tommasini
-#### Assistants: [Fabiano Spiga](mailto:),  [Mohamed Ragab](mailto:mohamed.ragab@ut.ee),  [Hassan Eldeeb](mailto:hassan.eldeeb@ut.ee)
-- [https://courses.cs.ut.ee/2020/dataeng](https://courses.cs.ut.ee/2020/dataeng)
-- [Forum](https://piazza.com/ut.ee/fall2020/ltat02007/home) 
-- [Moodle](https://moodle.ut.ee/course/view.php?id=10457)
+It is the process of defining the structure of the data for the purpose of communicating[^11] or to develop an information systems[^12].
 
-### What is Data Modeling?
+[^11]: between functional and technical people to show data needed for business processes
 
-It is the process of defining the structure of the data for the purpose of communicating[^1] or to develop an information systems[^2].
-
-[^1]: between functional and technical people to show data needed for business processes
-
-[^2]: between components of the information system, how data is stored and accessed.
+[^12]: between components of the information system, how data is stored and accessed.
 
 ###  What is a data model? 
 
@@ -32,10 +18,10 @@ The literature of data management is rich of data models that aim at providing i
 
 <br>
 
-> Data models are perhaps the most important part of developing software. They have such a profound effect not only on how the software is written, but also on how we think about the problem that we are solving[^1].
+> Data models are perhaps the most important part of developing software. They have such a profound effect not only on how the software is written, but also on how we think about the problem that we are solving[^13].
 > --Martin Kleppmann
 
-[^3]:[Designing Data-Intensive Applications](https://dataintensive.net/)
+[^13]:[Designing Data-Intensive Applications](https://dataintensive.net/)
 
 # Any Example?
 
@@ -55,18 +41,18 @@ The literature of data management is rich of data models that aim at providing i
 
 ^ Logical model is typically created by Data Architects and Business Analysts. The purpose is to developed technical map of rules and data structures. Business rules, relationships, attribute become visible. Conceptual definitions become metadata.
 
-**Physical**: This Data Model describes *HOW* the system will be implemented using a specific DBMS system [^3].
+**Physical**: This Data Model describes *HOW* the system will be implemented using a specific DBMS system [^14].
 
 ^ Physical model is typically created by DBA and developers. The purpose is actual implementation of the database. Trade-offs are explored by in terms of data structures and algorithms.
 
 ![right 95%](https://image.slidesharecdn.com/datamodelingbigdatadataversityaugust2016-160830052651/95/data-modeling-for-big-data-25-1024.jpg?cb=1472534835)
 
-[^4]: [physical](https://www.databass.dev/)
+[^14]: [physical](https://www.databass.dev/)
 
-### A Closer Look[^4]
+### A Closer Look[^15]
 ![inline](https://image.slidesharecdn.com/datamodelingbigdatadataversityaugust2016-160830052651/95/data-modeling-for-big-data-25-1024.jpg?cb=1472534835)
 
-[^5]: [slides](https://www.slideshare.net/Dataversity/data-modeling-for-big-data) & [video](https://www.dataversity.net/ldm-webinar-data-modeling-big-data/) by Donna Burbank
+[^15]: [slides](https://www.slideshare.net/Dataversity/data-modeling-for-big-data) & [video](https://www.dataversity.net/ldm-webinar-data-modeling-big-data/) by Donna Burbank
 
 ^ The variety of data available today encourages the design and development of dedicated data models and query languages that can improve both BI as well as the engineering process itself.
 
@@ -220,7 +206,7 @@ record Person {
 - forward compatibility: there is a new version of the writer's schema and an old version of the reader's schema
 - backwards compatibility: there is a new version of the reader's schema and an old version of the writer's schema
 
-### Worth Mentioning[^8]
+### Worth Mentioning[^13]
 
 - Apache Thrift and Protocol Buffers are binary encoding libraries	
 	-  require a schema for any data that is encoded.
@@ -243,8 +229,6 @@ message Person {
 	repeated string interests       = 3; 
 }
 ```
-[^8]:[Chapter 4. Encoding and Evolution](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/ch04.html)
-
 
 ## Distribution
 ![](./attachments/rick-mason-2FaCKyEEtis-unsplash.jpg)
@@ -260,10 +244,9 @@ It is impossible for a distributed computer system to simultaneously provide a
 A distributed system can satisfy any two of these guarantees at the same time but not all three.
 
 ---
-![original](./attachments/media_httpfarm5static_mevIk.png)
 
-[.text: #ffffff]
-[source](https://blog.nahurst.com/visual-guide-to-nosql-systems)
+![original fit](https://player.slideplayer.com/95/16139843/slides/slide_30.jpg)
+
 
 
 ### The network is not reliable
@@ -341,7 +324,7 @@ Not necessarily in a mutually exclusive manner:
 
 ![inline](https://miro.medium.com/max/2450/1*WTkANoAmRq9WUmU0v9sV9Q.png)
 
-Source is [^3]
+Source is [^13]
 
 ### Caveats
 
@@ -357,7 +340,7 @@ Only one: handling changes to replicated data is extremely hard.
 
 ### Reasons for Partitioning
 
-- The main reason for wanting to partition data is scalability[^3]
+- The main reason for wanting to partition data is scalability[^13]
 
 ^ 
 - Different partitions can be placed on different nodes in a shared-nothing cluster
@@ -413,7 +396,7 @@ Because these applications are interactive, the access pattern became known as *
 
 ### Refresh on ACID Properties
 
-- ACID, which stands for Atomicity, Consistency, Isolation, and Durability[^10]
+- ACID, which stands for Atomicity, Consistency, Isolation, and Durability[^11]
 - **Atomicity** refers to something that cannot be broken down into smaller parts.
 	- It is not about concurrency (which comes with the I)
 - **Consistency** (overused term), that here relates to the data *invariants* (integrity would be a better term IMHO)
@@ -422,9 +405,9 @@ Because these applications are interactive, the access pattern became known as *
 - **Durability** means (fault-tolerant) persistency of the data, once the transaction is completed.
 
 - 
-^ The terms was coined in 1983 by Theo Härder and Andreas Reuter [^10]
+^ The terms was coined in 1983 by Theo Härder and Andreas Reuter [^16]
 
-[^10]: Theo Härder and Andreas Reuter: “Principles of Transaction-Oriented Database Recovery,” ACM Computing Surveys, volume 15, number 4, pages 287–317, December 1983. doi:10.1145/289.291
+[^16]: Theo Härder and Andreas Reuter: “Principles of Transaction-Oriented Database Recovery,” ACM Computing Surveys, volume 15, number 4, pages 287–317, December 1983. doi:10.1145/289.291
 
 ### Online Analytical Processing
 
@@ -432,7 +415,7 @@ An OLAP system allows a data analyst to look at different cross-tabs on the same
 
 Statistical analysis often requires grouping on multiple attributes.
 
-### Example[^9]
+### Example[^121]
 
 Consider this is a simplified version of the sales fact table joined with the dimension tables, and many attributes removed (and some renamed)
 
@@ -468,13 +451,13 @@ sales (item_name, color, clothes_size, quantity)
 columns header: color
 rows header: item name
 
-###  Data Cube[^9]
+###  Data Cube[^121]
 
 - It is the generalization of a Cross-tabulation
 
 ![right fit](./attachments/Screenshot%202020-09-03%20at%209.25.34%20AM.png)
 
-### Cheat Sheet of OLAP Operations[^9]
+### Cheat Sheet of OLAP Operations[^17]
 
 - **Pivoting**: changing the dimensions used in a cross-tab
 	- E.g. moving colors to column names
@@ -487,10 +470,10 @@ dimensions are fixed.
 	- E.g. moving from aggregates by day to aggregates by month or year
 - **Drill down**: The opposite operation - that of moving from coarser granularity data to finer-granularity data
 
-[^9]: Database System Concepts Seventh Edition Avi Silberschatz  Henry F. Korth, S. Sudarshan McGraw-Hill ISBN 9780078022159 [link](https://www.db-book.com/db7/slides-dir/PDF-dir/ch11.pdf)
+[^17]: Database System Concepts Seventh Edition Avi Silberschatz  Henry F. Korth, S. Sudarshan McGraw-Hill ISBN 9780078022159 [link](https://www.db-book.com/db7/slides-dir/PDF-dir/ch11.pdf)
 
 
-### Summary OLTP vs OLAP[^3]
+### Summary OLTP vs OLAP[^13]
 
 | Property | OLTP | OLAP |
 |----------|----------|----------|
@@ -502,738 +485,40 @@ dimensions are fixed.
 
 ---
 
-# Modeling for (relational) Database[^6]
+[[Data Modeling for Databases]]
 
-- Works in phases related to the aforementioned levels of abstractions
-- Uses different data models depending on the need:
-	- Relational, Graph, Document...
-- Tries to avoid two major pitfalls:
-	- **Redundancy**: A design should not repeat information
-	- **Incompleteness**:  A design should not make certain aspects of the enterprise difficult or impossible to model
-- Optimized for OLTP
-	
-[^6]: Also known as Database Design
+[[Data Modeling for Data Warehouses]]
 
-^ The biggest problem with redundancy is that information may become inconsistent in case of update
+[[Data Modeling for Big Data]]	
 
----
+## Summary of Data Modeling Techniques 
 
-Before, let's refresh
-
----
-
-###
-
-## Relational Database
-
-A relational database consists of…
--  a set of relations (tables)
-- a set of integrity constraints
-
-If the database satisfies all the constraints we said it is in a valid state.
-
-An important distinction regards the **database schema**, which is the logical design of the database, and the **database instance**, which is a snapshot of the data in the database at a given instant in time.
-
-
-## Relational Model [^17]
-
-A formal mathematical basis for databases based on set theory and first-order predicate logic
-
-Underpins of SQL 
-
-![right fit](./attachments/codd.png)
-
-[^17]: Extra Read [Codd, Edgar F. "A relational model of data for large shared data
-banks." Communications of the ACM 13.6 (1970): 377-38z](https://course.ccs.neu.edu/cs3200sp18s3/ssl/readings/codd.pdf)
-
-### Relation
-
-> Relation R is a set of tuples (d<sub>1</sub>, d<sub>2</sub>, ..., d<sub>n</sub>), where each element d<sub>j</sub> is a member of D<sub>j</sub>, a data domain.
-
-<br>
-
-> A Data Domain refers to all the values which a data element may contain, e.g., N.
-
-Note that in the relational model the **term relation is used to refer to a table**, while the term **tuple is used to refer to a row**
-
-^ In mathematical terms, a tuple indicates a sequence of values. 
-A relationship between n values is represented mathematically by an n-tuple of values, that is, a tuple with n values, which corresponds to a row in a table.
-
----
-
-![inline](./attachments/tableex1.png)
-
----
-
-### Relation Schema
-
--  corresponds to the notion of **type** in programming languages
--  consists of a list of **attributes** and their corresponding domains
--  a **relation instance** corresponds to the programming-language no- tion of a value of a variable
-
----
-
-![inline](./attachments/tableex2.png)
-
-### Keys
-
-- A **superkey** is a set of one or more attributes that, taken collectively, allow us to identify uniquely a tuple in the relation
-- **candidate keys** are  superkeys for which no proper subset is a superkey
--  primary key is the chosen candidate key
--  foreign key is s set of attributes from a referenced relation.
-
-^ If K is a superkey, then so is any superset of K
-
----
-
-![inline](./attachments/keystable.png)
-
----
-
-### Relational Algebra (On Practice)
-
-is a procedural language consisting of a six basic operations that take one or two relations as input and produce a new relation as their result:
-
-- select: σ
-- project: ∏
-- union: ∪
-- set difference: –
-- Cartesian product: x
-- rename: ρ
-
-^ Question: What is an algebra?
-
----
-### Two Sets
-![inline](./attachments/2setvisual.png)
-
----
-
-### Intersection
-
-![inline](./attachments/intersectionvisual.png)
-
----
-### Difference
-![inline](./attachments/differencevisual.png)
-
----
-### Union
-![inline](./attachments/unisionvisual.png)
-
----
-
-![inline](./attachments/productvisual.png)
-
----
-### Projection
-
-![inline](./attachments/projectionvisual.png)
-
----
-### Selection
-![inline](./attachments/selectvisual.png)
-
-
----
-
-### Natural JOIN
-![inline](./attachments/naturaljoin.png)
-
----
-
-## Entity-Relationship (ER) Model
-
-- Outputs a conceptual schema.
-- The ER data model employs three basic concepts: 
-	- entity sets
-	- relationship sets and 
-	- attributes.
-- It is also associated with diagrammatic representation [try out](https://erdplus.com/)
-
-### Entities And Entity Sets
-
-An entity can be any object in the real world that is distinguishable from all other objects.
-
-
-An **entity set** contains entities of the same type that share the same properties, or attributes. 
-
-
-NB We work at *set* level
-
-^ Ask the students
-Examples of entities:
-	- University
-	- Department
-	- Persons
-	- Courses
-- Examples of entity sets
-	- Professors and Students 
-	- Data Science coruses: curriculms
-
----
-#### Syntax
-
-![inline](./attachments/entities.png)
-
-^ fields are what we call attribtues
-
-### Relationships and  Relationship Sets
-
-A **relationship** is an association among several entities. 
-
- A **relationship set** is a set of relationships of the same type.
-
-^
-Examples of entities:
-	- advisor
-	- attendee
-	- enrollment
-
-### Intution
-
-![inline](./attachments/Relationship-syntax.png)
-
----
-#### Syntax
-
-![inline](./attachments/Pasted image 4.png)
-
-^^ ER works under the assumption that  most relationship sets in a database system are binary. Relationships between more than two entity sets are rare. 
-
-### Attributes and Values
-
- attributes. Attributes are descriptive properties possessed by each member of an entity set. 
- 
- Each entity has a **value** for each of its attributes. 
- 
- Also relationshis may have attributes called **descriptive attributes**. 
-
-### Intution
-
-![inline 25%](./attachments/attrrel.png)
-
----
-#### Syntax
-
-![inline](./attachments/attrer2.png)
-
-### Cardinality
-
-For a binary relationship set the mapping cardinality must be one of the following types:
-- One to one 
-- One to many
-- Many to one 
-- Many to many 
-
----
-#### Cardinality Visualized
-- (a) One to One
-- (b) One to Many
-
-![right fit](./attachments/o2o-o2m.png)
-
----
-#### Cardinality Visualized
-
-- (a) Many to One
-- (b) Many to Many
-
-![right fit](./attachments/o2m-m2m.png)
-
-### University of Tartu Example
-
-![inline 90%](https://www.ut.ee/sites/default/files/styles/ut_content_width/public/tu_struktuurijoonis_2020_eng_0.png)
-
-[source](https://www.ut.ee/sites/default/files/styles/ut_content_width/public/tu_struktuurijoonis_2020_eng_0.png?itok=7l0q6cxg)
-
----
-#### One to Many
-
-![inline](./attachments/Pasted image 8.png)
-
-A (full) professor has one office
-an office hosts one full professor
-
----
-#### One to Many
-
-![inline](./attachments/One-to-Many.png)
-
-A Dean is associated with many institutes
-An Institute has only one dean
-
----
-#### Many to One
-
-![inline](./attachments/many-to-one.png)
-
-A professor advises many students but a student has only one advisor.
-
-^ Many students share the same advisor but they only have one.
-
----
-#### Many to Many
-
-![inline](./attachments/many-to-many.png)
-
-A course is associated to many insitute in the context of a curriculum
-An institute offers many courses within a curriculum
-
-###  Keys 
-
-- Provide a way to specify how entities and  relations are distinguished.  
-- *Primary key* for Entity Sets
-	- By definition, individual entities are distinct (set)
-	- From database perspective, the differences among them must be expressed in terms of their attributes
-- *Primary Key* for Relationship Sets
-	- We use the individual  primary keys of the entities in the relationship set.
-	- The choice depends on the mapping cardinality of the relationship set.
-
----
-#### Choice of Primary key for Binary Relationship
-
-- One-to-one relationships. The primary key of either one of the participating entity sets forms a minimal superkey, and either one can be chosen as the primary key.
-- One-to-Many relationships and Many-to-one relationships
-	- The primary key of the “Many” side is a minimal superkey and is used as the primary key.
-- Many-to-Many relationships:   
-	- The preceding union of the primary keys is a minimal superkey and is chosen  as the primary key.
-
----
-#### Weak Entity Sets
-
-- A weak entity set is one whose existence is dependent on another entity,
-called its **identifying entity**
-
--  A weak entity set is one whose existence is dependent on another entity,
-called its identifying entity
-
-
-### Summary of Symbols
-
-![inline](./attachments/er-syntax-summary-1.png)
-
----
-
-![inline](./attachments/er-syntax-summary-2.png)
-
-### From ER to Relational Model
-
-- Entity and relationship sets can be expressed as relation
-schemas that represent the contents of the database.
-
-- A database which conforms to an E-R diagram can be represented by a
-collection of schemas.
-
---- 
-####  Reduction of Entities
-
-- For each **entity** set there is a unique schema with the same name
-
-- Each schema has a number of columns (generally corresponding to
-attributes), which have unique names
-
-![right fit](./attachments/entities.png)
-
-Professor(<u>ID</u>,Name,Age)
-Student(<u>ID</u>,Name,GPA)
-
-^ Weak entities set becomes a relation that includes a column for the primary
-key of the identifying entity.
-
---- 
-####  Reduction of Relationships
-
-[.column]
-
-- For each **relationship** set there is a unique schema with the same name
-
-- A **many-to-many** relationship (figure) is represented as a schema with attributes for the primary keys of the two participating entity sets, and any descriptive attributes of the relationship set. 
-
-[.column]
-
-![inline](./attachments/many-to-many.png)
-
-Curriculum(<u>Institute\_ID</u>,<u>Course\_ID</u>)
-
----
-#### Reduction of Relationships
-
-- **Many-to-one** and one-to-many** relationship  can be represented by adding an extra attribute to the "many" side
-
-- For **one-to-one** relationship, either side can be chosen to act as the "many" side
-
-
-### Normalisation 
-
-- Typically decomposes tables to avoid redundancy
-- Spans both logical and physical database design
-- Aims at **improving** the database design
-
----
-
-#### Goals
-
-- Make the schema informative
-- Minimize information duplication
-- Avoid modification anomalies
-- Disallow spurious tuples
-
---- 
-
-![inline](./attachments/Pasted image 7.png)
-
----
-
-![inline](./attachments/Pasted image 9.png)
-
----
-
-![inline](./attachments/image3.jpeg)
-
----
-### Normal Forms (Refresh)
-
-- First Normal Form (1NF) 
-	- A table has only atomic valued clumns.
-	- Values stored in a column should be of the same domain
-	- All the columns in a table should have unique names.
-	-  And the order in which data is stored, does not matter.
-- Second Normal Form (2NF)
-	- A table is in the First Normal form and every non-prime attribute is fully functional dependent[^20] on the primary key
-- Third Normal Form (3NF)
-	- A table is in the Second Normal form and every non-prime attribute is non-transitively dependent[^21] on every key
-
-[^20]: $$X \rightarrow Y, \forall A \in X ((X -{A}) \nrightarrow Y)$$
-[^21]:
-
----
-
-### Modeling for Database: A note on Storage
-
-- Storage is laid out in a row-oriented fashion
-- For relational this is as close as the the tabular representation
-- All the values from one row of a table are stored next to each other. 
-- This is true also for some NoSQL (we will see it again)
-	- Document databases stores documents a contiguous bit sequence 
-
-
-## Data Modeling for Data Warehouse
-
-- Works in phases related to the aforementioned levels of abstractions
-- Less diversity in the data model, usually relational in the form of a star schema (also known as dimensional modeling[^7]).
-- Redundancy and incompleteness are not avoided, fact tables often have over 100 columns, sometimes several hundreds.
-- Optimized for OLAP
-
-^ 
-- The data model of a data warehouse is most commonly relational, because SQL is generally a good fit for analytic queries.
-- Do not associate SQL with analytic, it depends on the data modeling. 
-
-[^7]: Ralph Kimball and Margy Ross: The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling, 3rd edition. John Wiley & Sons, July 2013. ISBN: 978-1-118-53080-1
-
-### A Star is Born
-
-[.column]
-
-![inline](https://docs.microsoft.com/en-us/power-bi/guidance/media/star-schema/star-schema-example1.png)
-
-[.column]
-
-![inline](https://m.media-amazon.com/images/M/MV5BNmE5ZmE3OGItNTdlNC00YmMxLWEzNjctYzAwOGQ5ODg0OTI0XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg)
-
-### A Star is Born
-
-[.column]
-
-![inline](https://docs.microsoft.com/en-us/power-bi/guidance/media/star-schema/star-schema-example2.png)
-
-[.column]
-
-![inline](https://m.media-amazon.com/images/M/MV5BNmE5ZmE3OGItNTdlNC00YmMxLWEzNjctYzAwOGQ5ODg0OTI0XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg)
-
-
-### Dimensional Modelling
-
-Four-Step Dimensional Design Process
-
-1. Select the business process.
-2. Declare the grain.
-3. Identify the dimensions.
-4. Identify the facts.
-
-![right fit](https://images-na.ssl-images-amazon.com/images/I/51dvU76edNL._SX399_BO1,204,203,200_.jpg)
-
-[Mandatory Read](http://www.kimballgroup.com/wp-content/uploads/2013/08/2013.09-Kimball-Dimensional-Modeling-Techniques11.pdf)
-
-^ 
-- **Business processes** are crtical activities that your organization performs, e.g., registering students for a class.
-- The **grain** establishes exactly what a single fact table row represents.  Three common grains categorize all fact tables: transactional, periodic snapshot, or accumulating snapshot. 
-- **Dimensions** provide contex to business process events, e.g.,  who, what, where, when, why, and how. 
-- :wq
-- **Facts** are the measurements that result from a business process event and are almost always numeric. 
-
-### Dimensional Modelling: Fact Table
-
-A **fact table** contains the numeric measures produced by an operational measurement event in the real world. 
-
-A **single fact** table row has a one-to-one relationship to a measurement event as described by the fact table’s grain.
-
-A **surrogate key** is a unique identifier that you add to a table to support star schema modeling. By definition, it's not defined or stored in the source data
-
-### Dimensional Modelling: Dimension Table
-
-Dimension tables contain the descriptive attributes used by BI applications for filtering and grouping the facts. 
-
-Every dimension table has a single **primary key** column , which is embedded as a foreign key in any associated fact table.
-
-
-### The 10 Essential Rules of Dimensional Modeling (Read)[^23]
-
-1. Load detailed atomic data into dimensional structures.
-2. Structure dimensional models around business processes.
-3. Ensure that every fact table has an associated date dimension table.
-4. Ensure that all facts in a single fact table are at the same grain or level of detail.
-5. Resolve many-to-many relationships in fact tables.
-6. Resolve many-to-one relationships in dimension tables.
-7.  Store report labels and filter domain values in dimension tables.
-8.  Make certain that dimension tables use a surrogate key.
-9.  Create conformed dimensions to integrate data across the enterprise.
-10. Continuously balance requirements and realities to deliver a DW/BI solution that’s accepted by business users and that supports their decision-making.
-
-[^23]:https://www.kimballgroup.com/2009/05/the-10-essential-rules-of-dimensional-modeling/
-
-
-### The Traditional RDBMS Wisdom Is (Almost Certainly) All Wrong[^22]
-
-![inline](https://youtu.be/qyDPqbpbA60)
-
-[^22]: Source with slides: [The Traditional RDBMS Wisdom Is (Almost Certainly) All Wrong,” presentation at EPFL, May 2013](http://slideshot.epfl.ch/play/suri_stonebraker)
-
-### A note on Storage
-
-- Data warehouse typically interact with OLTP database to expose one or more OLAP system. 
-- Such OLAP system adopt storage optimized for analytics, i.e., Column Oriented
-- The column-oriented storage layout relies on each column file containing the rows in the same order.
-- Not just relational data, e.g., Apache Parquet
-
-![inline](./attachments/5e08f341edb7545ceaa16494_672340c374e04c44b8d01a085a93ad5f.png)
-
-## Data Modeling for Big Data
-
-![inline](https://upload.wikimedia.org/wikipedia/commons/6/6d/Data_types_-_en.svg) 
-
-^ The Data Landscape: Variety is the Driver
-
-### The Data Landscape
-
-![inline](./attachments/m2_structure.png)
-
-^ Structured data are organized and labeled according to a precise model (e.g., relational data)
-^ Unstructured data, on the other hand, are not constrained (e.g., text, video, audio)
-^ In between, there are many form of semi-structured data, e.g., JSON and XML, whose models do not impose a strict structure but provide means for validation. 
-
-### Big Data Storage
-
-- Distributed File Systems, e.g., HDFS
-- Distributed Databases, e.g., VoltDB
-- Key-Value Storage Systems, e.g., Redis or Cassandra
-- Queues, e.g., Pulsar or Kafka
-
-^ A distributed file system stores files across a large collection of machines while giving a single-file-system view to clients.
-
-## Let's Talk  Distributed File Systems
-
-A distributed file system stores files across a large collection of machines while giving a single-file-system view to clients.
-
-### Hadoop Distributed File System (HDFS)[^12]
-
--   Abstracts physical location (Which node in the cluster) from the application
--   Partition at ingestion time
--   Replicate for high-availability and fault tolerance
-
-
-[^12]: Inspired by [Google File System](https://static.googleusercontent.com/media/research.google.com/en/archive/gfs-sosp2003.pdf)
-
-![right fit](./attachments/HDFS.png)
-
-### Design Objectives
-   -   Partition and distribute a single file across different machines
-   -   Favor larger partition sizes
-   -   Data replication
-   -   Local processing (as much as possible)
-
-### Optimizations
-   -   Reading sequentially versus (random access and writing)
-   -   No updates on files
-   -   No local caching
-
-### HDFS Architecture[^13]
-
-![inline fit](./attachments/img0034.png)
-
-[^13]: Figure 2-1 in book Professional Hadoop Solutions
-
-### HDFS Files
--   A single large file is partitioned into several blocks
-    -   Size of either 64 MB or 128MB
-    -   Compare that to block sizes on ordinary file systems
-    -   This is why sequential access is much better as the disk will make less numbers of seeks
-
-^ Question: What would be the costs/benefits if we use smaller block sizes?
-
-### Data Node
-- It  stores the received blocks in a local file system;
-- It forwards that portion of data to the next DataNode in the list.
--   The operation is repeated by the next receiving DataNode until the last node in the replica set receives data.
-
-### Name Node
-
--   A single node that keeps the metadata of HDFS
-    -   Keeps the metedata in memory for fast access
-    -   Periodically flushes to the disk (FsImage file) for durability
-    -   Name node maintains a daemon process to handle the requests and to receive heartbeats from other data nodes
-
-^
-    -   In some high-availability setting, there is a secondary name node
-	- As a name node can be accessed concurrently, a logging mechanism similar to databases is used to track the updates on the catalog.
-
-### HDFS Federation
--   By default, HDFS has a single NameNode. What is wrong with that? If NameNode daemon process goes down, the cluster is inaccessible
-
--   A solution: HDFS Federation
-
-    -   Namespace Scalability: Horizontal scalability to access meta data as to access the data itself
-    -   Performance: Higher throughput as NameNodes can be queried concurrently
-    -   Isolation: Serve blocking applications by different NameNodes
--   Is it more reliable?
-
-![right fit](./attachments/img0036.png)
-
-### Writing to HDSF
-
--   When a client is writing data to an HDFS file, this data is first written to a local file.
--   When the local file accumulates a full block of data, the client consults the NameNode to get a list of DataNodes that are assigned to host replicas of that block.
--   The client then writes the data block from its local storage to the first DataNode in 4K portions.
-
-### Writing a File to HDSF Cont.
-
--   This DataNode stores data locally without sending it any further
--   If one of the DataNodes fails while the block is being written, it is removed from the pipeline
--   The NameNode re-replicates it to make up for the missing replica caused by the failed DataNode
--   When a file is closed, the remaining data in the temporary local file is pipelined to the DataNodes
--   If the NameNode dies before the file is closed, the file is lost.
-
-### Replica Placement
-
--   Replica placement is crucial for reliability of HDFS
-    -   Should not place the replicas on the same rack
--   All decisions about placement of partitions/replicas are made by the NameNode
--   NameNode tracks the availability of Data Nodes by means of Heartbeats
-    -   Every 3 seconds, NameNode should receive a heartbeat and a block report from each data node
-    -   Block report allows verifying the list of stored blocks on the data node
-    -   Data node with a missing heartbeat is declared dead, based on the catalog, replicas missing on this node are made up for through NameNode sending replicas to other available data nodes
-
-
-### HDFS High-availability
-
--   Each NameNode is backedup with a slave other NameNode that keeps a copy of the catalog
-
--   The slave node provides a failover replacement of the primary NameNode
-
--   Both nodes must have access to a shared storage area
-
--   Data nodes have to send heartbeats and block reports to both the master and slave NameNodes.
-
-![right fit](./attachments/img0037.png)
-
-## Data Modeling Techniques 
-
-According to Len Silverston (1997) only two modeling methodologies stand out, top-down and bottom-up[^14].
+According to Len Silverston (1997) only two modeling methodologies stand out, top-down and bottom-up.
 
 ![right fit](https://pbs.twimg.com/profile_images/974019987630301184/kr2LdIyL.jpg)
 
-### Data Modeling Techniques[^19]
+### Data Modeling Techniques[^18]
 
-- **Entity-Relationship (ER) Modeling**[^15] prescribes to design  model encompassing the whole company and describe enterprise business through Entities and the relationships between them	
+- **Entity-Relationship (ER) Modeling**[^19] prescribes to design model encompassing the whole company and describe enterprise business through Entities and the relationships between them	
 		-   it complies with 3rd normal form
 		-   tailored for OLTP
-- **Dimensional Modeling** (DM)[^16] focuses on enabling complete requirement analysis while maintaining high performance when handling large and complex (analytical) queries
+
+- **Dimensional Modeling** (DM)[^110] focuses on enabling complete requirement analysis while maintaining high performance when handling large and complex (analytical) queries
 	-  The star model and the snowflake model are examples of DM
 	-  tailored for OLAP
  
-- **Data Vault  (DV) Modeling**[^17] focuses on data integration trying to take the best of ER 3NF and DM
+- **Data Vault  (DV) Modeling**[^111] focuses on data integration trying to take the best of ER 3NF and DM
 		-  emphasizes establishment of an auditable basic data layer focusing on data history, traceability, and atomicity
-		-   one cannot use it directly for data analysis and decision making
+		-  one cannot use it directly for data analysis and decision making
+- **Domain Driven Design**[^112]  focuses on designing software based on the underlying domain.
+	- promotes the usage of an ubiquitus languageo help communication between software developers and domain experts.
+	- replaces the conceptual level for NOSQL
 
-[^15]: by Bill Inmon
-[^16]: Ralph Kimball, book ‘The Data Warehouse Toolkit — The Complete Guide to Dimensional Modeling"
-[^19]: [source](https://dzone.com/articles/a-comparison-of-data-modeling-methods-for-big-data)
-
-### Event Sourcing[^18]
-
-> The fundamental idea of Event Sourcing is ensuring that every change to the state of an application is captured in an event object, 
-
-> Event objects are immutable and stored in the sequence they were applied for the same lifetime as the application state itself.
-
-[^18]: Martin Fowler, [link](https://martinfowler.com/eaaDev/EventSourcing.html)
-
-### Events
-
-Events are both a fact and a notification. 
-
-They represent something that happened in the real world but include no expectation of any future action. 
-
-They travel in only one direction and expect no response (sometimes called “fire and forget”), but one may be “synthesized” from a subsequent event.
-
----
-
-![original fit](./attachments/seen.png)
-
----
-
-![original fit](./attachments/brandnew.png)
-
----
-
-![original fit](attachments/4doohb.jpg)
-
----
+[^18]: [source](https://dzone.com/articles/a-comparison-of-data-modeling-methods-for-big-data)
+[^19]: by Bill Inmon
+[^110]: Ralph Kimball, book ‘The Data Warehouse Toolkit — The Complete Guide to Dimensional Modeling"
+[^111]: [https://en.wikipedia.org/wiki/Data_vault_modeling](https://en.wikipedia.org/wiki/Data_vault_modeling)
+[^112]: Evans, Eric. Domain-driven design: tackling complexity in the heart of software. Addison-Wesley Professional, 2004.
 
 
-# History of Data Models[^5]
-
---- 
-
-![original fit](https://miro.medium.com/max/1225/1*V2zU24JMyIuCKV3wkDN26A.png)
-
-[^5]: [by Ilya Katsov](https://highlyscalable.wordpress.com/2012/03/01/nosql-data-modeling-techniques/)
-
-### The World's most simple database	
-
-```bash
-#!/bin/bash 
-
-db_set () {     
-	echo "$1,$2" >> db 
-
-} 
-
-db_get () { 
-	grep "^$1," db | sed -e "s/^$1,//" | tail -n 1 
-}
-```
-
-^ db_set is appending data to a file. This is generally quite efficient.
-Indeed, many databases internally use the same strategy, but it is not a normal file, is a log.
-
-### The Log
-
-A log is an append-only sequence of records. It doesn’t have to be human-readable; it might be binary and intended only for other programs to read.
-
-![inline](./attachments/commitlog.pdf)
-
-^ Questions:
-- What is the cost of lookup O(n)
-- What is the cost of write O(1)
-- What is the cost of read from the head O(1).
 
