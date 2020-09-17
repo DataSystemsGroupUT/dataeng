@@ -53,7 +53,7 @@ Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di M
 | Date     | Title              | Material | Reads | Videos | Assignment | Notes |
 |----------|-------------|----------|-------|-------|-------|----|
 | 07-8/09  | Docker |  [Slides](./docker/README.md) - [Lab Branch](https://github.com/DataSystemsGroupUT/dataeng/tree/docker) | |[Video GP1](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=31e77abe-b51e-4a39-8c33-ac30009b7ba6) [Video GP2](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=31e77abe-b51e-4a39-8c33-ac30009b7ba6) ||  [QA GP2 only](https://docs.google.com/document/d/134YKfqp49-rtAXa0FJO30LJonHVO-PeYLqqeo8DQY9I/) 
-| 14-15 /09  |Modeling and Querying Relational Data with Postgres||[Chp 32 of [1]§](https://www.db-book.com/db7/online-chapters-dir/32.pdf) ||||
+| 14-15 /09  |Modeling and Querying Relational Data with Postgres||[Chp 32 of [1]§](https://www.db-book.com/db7/online-chapters-dir/32.pdf) |[Video](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=b3221179-fd3a-4b4e-9a67-ac38008f7fbe)|||
 | 21-22 /09  |Modeling and Querying Key Value Data with Redis||||||
 |28-29/09   |Modeling and Querying Document Data with MongoDB||||||
 |5-6/10        | Modeling and Querying Graph Data with Neo4J||||||
