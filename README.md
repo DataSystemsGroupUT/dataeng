@@ -33,22 +33,20 @@ Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di M
 
 # Lectures
 
-| Date   | Title              | Material | Mandatory Reads | Extras |
-|-------|---------------------|----------|-----------------|--------|
-| 01/09  | Course Intro |[Slides](./Data%20Engineer.md) - [pdf](./pdfs/Data%20Engineer.pdf) slide 45-109) | ||
-| 03/09 | Data Modeling | [Slides](Data%20Modeling.md) - [pdf](./pdfs/Data%20Modeling.pdf) slide 1-44 | Chp 4 p111-127, Chp 5 p151-156, Chp 6 p199-205 of [3]
+| Date  | Title              | Material | Mandatory Reads | Extras |
+|-------|--------------------|----------|-----------------|--------|
+| 01/09 | Course Intro       | [Slides](./Data%20Engineer.md) - [pdf](./pdfs/Data%20Engineer.pdf) slide 45-109) | ||
+| 03/09 | Data Modeling      | [Slides](Data%20Modeling.md) - [pdf](./pdfs/Data%20Modeling.pdf) slide 1-44 | Chp 4 p111-127, Chp 5 p151-156, Chp 6 p199-205 of [3]
 | 10/09 |  DM for Relational Databases |   [Slides](Data%20Modeling.md) - [pdf](./pdfs/Data%20Modeling.pdf) slide 45-109 | Chp 2, 6, and 7 (Normal Forms) of [1] | [Relational Model](https://course.ccs.neu.edu/cs3200sp18s3/ssl/readings/codd.pdf) | 
-|10/09. |  DM for Data Warehouse         |  [Slides](Data%20Modeling.md)  - [pdf](./pdfs/Data%20Modeling.pdf)slide 109-118|  [pdf](http://www.kimballgroup.com/wp-content/uploads/2013/08/2013.09-Kimball-Dimensional-Modeling-Techniques11.pdf) [video](http://slideshot.epfl.ch/play/suri_stonebraker)|  Chp 2 of [2] | 
-| 17/09  |  DM for Big Data         | [Slides](Data%20Modeling%20for%20Big%20Data.md) - [pdf](./pdfs/Data%20Modeling%20Big%20Data.pdf)|  Chp 2 of [3], [video](https://www.youtube.com/watch?v=LDW0QWie21s)|[paper](https://www.ics.uci.edu/~cs223/papers/cidr07p15.pdf)| 
-| 
-|   |  Key Value Stores ||||
-|   |  Document Databases  ||||
-|   |  Graph Databases ||||
+|10/09  |  DM for Data Warehouse         |  [Slides](Data%20Modeling.md)  - [pdf](./pdfs/Data%20Modeling.pdf)slide 109-118|  [pdf](http://www.kimballgroup.com/wp-content/uploads/2013/08/2013.09-Kimball-Dimensional-Modeling-Techniques11.pdf) [video](http://slideshot.epfl.ch/play/suri_stonebraker)|  Chp 2 of [2] | 
+| 17/09 |  DM for Big Data   | [Slides](Data%20Modeling%20for%20Big%20Data.md) - [pdf](./pdfs/Data%20Modeling%20Big%20Data.pdf)| Chp 2 of [3], [video](https://www.youtube.com/watch?v=LDW0QWie21s)|[paper](https://www.ics.uci.edu/~cs223/papers/cidr07p15.pdf)| 
+| 17/09 |  Key Value Stores ||||
+|| Document Databases  ||||
+|| Graph Databases ||||
 || Data Engineering Pipelines ||Chp 1 of [3]||
 || Keynote TBA||||
 || Streaming Data ||Chp 11 of [3]||
 || Data Wrangling ||||
-
 
 # Practices (Videos Will be Available after Group 2 issue)
 
