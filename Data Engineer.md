@@ -1,51 +1,26 @@
-footer:  [Riccardo Tommasini](http://rictomm.me) - riccardo.tommasini@ut.ee - @rictomm - 
 autoscale: true
-slidenumbers: true
-slide-dividers: ###,
-<!-- : #course, #topic -->
 
-# Data Engineering
-#### LTAT.02.007
-#### Ass Prof. Riccardo Tommasini
-#### Fabiano Spiga, Assistants: Mohamed Ragab,  Hassan Elsaeeb
-- [https://courses.cs.ut.ee/2020/dataeng](https://courses.cs.ut.ee/2020/dataeng)
-- [Forum]() 
-- [Moodle]()
+# Data Engineer
 
----
-# Who I Am
+![original](https://upload.wikimedia.org/wikipedia/commons/5/57/Who_is_it.png)
 
-Riccardo Tommasini, PhD :it: 
-
-Assistant Professor of Data Management
-
-Expert in graph and streaming data processing, data integration and semantic technologies
-
-Main contributor of the RSP-QL stack Engine, author of VoCaLS ontology
-
-~5 years experience in innovation and research projects
-
-![right fit](attachments/dsglogo.png)
-
-[Apache Flink](Apache%20Flink.md)
-
-### Data Science[^11]
+### Data Science[^01]
 
 ![inline](./attachments/what-is-data-science.jpg)
 
-[^11]:[Source](https://thedatascientist.com/data-science-considered-own-discipline/)
+[^01]:[Source](https://thedatascientist.com/data-science-considered-own-discipline/)
 
-### Roles in a Data Science Project[^5] 
+### Roles in a Data Science Project[^02] 
 
 <br>
 <br>
 
 ![inline](http://emanueledellavalle.org/slides/dspm/img/DS-roles.png)
 
-[^5]: http://emanueledellavalle.org/slides/dspm/ds4biz.html#25 
+[^02]: http://emanueledellavalle.org/slides/dspm/ds4biz.html#25 
 
 ---
-### Roles in a Data Science Project[^5] 
+### Roles in a Data Science Project[^02] 
 
 <br>
 <br>
@@ -56,15 +31,15 @@ Main contributor of the RSP-QL stack Engine, author of VoCaLS ontology
 
  ![](https://www.clandestinecritic.co.uk/wp-content/uploads/2012/08/the-dark-knight-rises-poster-landscape.jpg)
  
-A dedicated specialist that maintain data available and usable by others (Data Scientists).[^0]
+A dedicated specialist that maintain data available and usable by others (Data Scientists).[^03]
 
-Data engineers set up and operate the organization’s data infrastructure preparing it for further analysis by data analysts and scientists.[^0]
+Data engineers set up and operate the organization’s data infrastructure preparing it for further analysis by data analysts and scientists.[^03]
 
-Data engineering field could be thought of as a superset of business intelligence and data warehousing that brings more elements from software engineering.[^2] 
+Data engineering field could be thought of as a superset of business intelligence and data warehousing that brings more elements from software engineering.[^04] 
  
-[^0]:[What is Data Engineering](https://medium.com/datadriveninvestor/what-is-data-engineering-explaining-the-data-pipeline-data-warehouse-and-data-engineer-role-1a4b182e0d16)
+[^03]:[What is Data Engineering](https://medium.com/datadriveninvestor/what-is-data-engineering-explaining-the-data-pipeline-data-warehouse-and-data-engineer-role-1a4b182e0d16)
  
-[^2]: [Source: The Rise of Data Engineer](https://www.freecodecamp.org/news/the-rise-of-the-data-engineer-91be18f1e603/)
+[^04]: [Source: The Rise of Data Engineer](https://www.freecodecamp.org/news/the-rise-of-the-data-engineer-91be18f1e603/)
 
 ### Data Engineering
 
@@ -72,9 +47,7 @@ Data engineering field could be thought of as a superset of business intelligenc
 
 ![](./attachments/dataengineer.png)
 
-> Data engineering is a set of operations aimed at creating interfaces and mechanisms for the flow and access of information[^0].
-
-[^0]:[What is Data Engineering](https://medium.com/datadriveninvestor/what-is-data-engineering-explaining-the-data-pipeline-data-warehouse-and-data-engineer-role-1a4b182e0d16)
+> Data engineering is a set of operations aimed at creating interfaces and mechanisms for the flow and access of information[^03].
 
 ---
 
@@ -86,10 +59,10 @@ Data engineering field could be thought of as a superset of business intelligenc
 
 ---
 
-### Netflix's Perspective[^3]
+### Netflix's Perspective[^05]
 
 ![inline 90%](https://miro.medium.com/max/700/1*NRoFl1l4lIVQAAvmBOKd4A.jpeg)
-[^3]: [Netflix Innovation](https://netflixtechblog.com/notebook-innovation-591ee3221233)
+[^05]: [Netflix Innovation](https://netflixtechblog.com/notebook-innovation-591ee3221233)
  
 
 ^ 
@@ -100,10 +73,11 @@ Data engineering field could be thought of as a superset of business intelligenc
 ^ each of these workflows has multiple overlapping tasks:
 
  ---
-###  The Knowledge Scientist[^4]
-![inline](./attachments/The Gift Of Knowledge.jpeg)
+###  The Knowledge Scientist[^06]
 
-[^4]: [The Manifesto](https://www.knowledgescientist.org/)
+![inline](./attachments/the_gift_of_knowledge.jpeg)
+
+[^06]: [The Manifesto](https://www.knowledgescientist.org/)
 
 ---
 ### Google's Two-Cents
@@ -113,12 +87,12 @@ Data engineering field could be thought of as a superset of business intelligenc
  ---
 [.background-color: #ffffff]
 
-# Philosophy of (Data) Science
+# Philosophy of (Data) Science[^07]
 ![inline](https://upload.wikimedia.org/wikipedia/commons/6/6d/Data_types_-_en.svg) 
 
 ^ Nowdays we deal with a number of data from different domains.
 
-[^7]: [Data as Fact](https://en.wikipedia.org/wiki/DIKW_pyramid#Data_as_fact)
+[^07]: [Data as Fact](https://en.wikipedia.org/wiki/DIKW_pyramid#Data_as_fact)
 
 --- 
 
@@ -133,13 +107,15 @@ Data engineering field could be thought of as a superset of business intelligenc
 
 <br>
 
-*Data \[__uncountable, plural__\] facts or information, especially when examined and used to find out things or to make decisions.* [^oxford]
-[^oxford]:[Def](https://www.oxfordlearnersdictionaries.com/definition/english/data)
+*Data \[__uncountable, plural__\] facts or information, especially when examined and used to find out things or to make decisions.* [^08]
+
+[^08]:[Def](https://www.oxfordlearnersdictionaries.com/definition/english/data)
 
 ### Wikipedia
-Data (treated as singular, plural, or as a mass noun) is any sequence of one or more symbols given meaning by specific act(s) of interpretation. [^wiki]
+Data (treated as singular, plural, or as a mass noun) is any sequence of one or more symbols given meaning by specific act(s) of interpretation [^09]
 
-[^wiki]:[Data in Computing](https://en.wikipedia.org/wiki/Data_(computing)
+[^09]: [Data in Computing](https://en.wikipedia.org/wiki/Data_(computing))
+
 ---
 [.background-color: #ffffff] <!-- deckset -->
 
@@ -156,7 +132,7 @@ Data (treated as singular, plural, or as a mass noun) is any sequence of one or 
 > A data warehouse is a subject-oriented, integrated, time-variant and non-volatile collection of data in support of management’s decision making process.-- [Bill Inmon](https://en.wikipedia.org/wiki/Bill_Inmon)
 
 ^ 
-- A data warehouse is a central repository where raw data is transformed and stored in query-able forms.[^0]
+- A data warehouse is a central repository where raw data is transformed and stored in query-able forms.[^03]
 - Data Warehouse are still relevant today and their maintenance is part of Data Engineers' resposibilities.
 - The warehouse is created with structure and model first before the data is loaded and it is called schema-on-write.
 
@@ -179,7 +155,7 @@ Surprisingly, Data Warehouse isn’t a regular database.
 
 ### Data Pipeline
 
- A Data pipeline is a sum of tools and processes for performing data integration [^0]
+ A Data pipeline is a sum of tools and processes for performing data integration[^03]
  
  Constructing data pipelines is the core responsibility of data engineering.
 
@@ -195,13 +171,13 @@ Surprisingly, Data Warehouse isn’t a regular database.
 
 ---
 
-### Transporting data from sources into a warehouse[^10]
+### Transporting data from sources into a warehouse[^010]
 
 ![inline](./attachments/word-image-29.png)
 
-[^10]:[Source](https://www.altexsoft.com/blog/datascience/what-is-data-engineering-explaining-data-pipeline-data-warehouse-and-data-engineer-role/)
+[^010]:[Source](https://www.altexsoft.com/blog/datascience/what-is-data-engineering-explaining-data-pipeline-data-warehouse-and-data-engineer-role/)
 
-### Two Paradigms (and a half): SQL- v.s. JVM-Centric Pipelines[^etls]
+### Two Paradigms (and a half): SQL- v.s. JVM-Centric Pipelines[^011]
 
 - **SQL-centric Pipelines** uses SQL dialects from Presto or Hive.  Pipelines (ETLs) are defined in a declarative way, and almost everything centers around SQL and tables. 
 
@@ -220,9 +196,9 @@ Surprisingly, Data Warehouse isn’t a regular database.
 
 * Drag & Drop...
 
-[^etls]: we are focusing on ETL
+[^011]: we are focusing on ETL
 
-### Skill Set: SQL mastery[^2]
+### Skill Set: SQL mastery[^03]
 
 If english is the language of business, SQL is the language of data.  
 
@@ -232,7 +208,7 @@ all the steps are,
 - understand how indices work, 
 - understand the different join algorithms 
 
-### Skill Set: Data modeling[^2]
+### Skill Set: Data modeling[^03]
 
 For a data engineer, entity-relationship modeling should be a cognitive reflex, along with a clear understanding of normalization, and have a sharp intuition around denormalization tradeoffs. 
 
@@ -243,16 +219,15 @@ The data engineer should be familiar with dimensional modeling and the related c
 # But...
 
 
-### Engineers Shouldn’t (only) Write (SQL-based) ETL[^JeffMagnusson2016]
+### Engineers Shouldn’t (only) Write (SQL-based) ETL[^012]
 
 - Unless you need to process over many petabytes of data, or you’re ingesting hundreds of billions of events a day, most technologies have evolved to a point where they can trivially scale to your needs.
 
 - Unless you need to push the boundaries of what these technologies are capable of, you probably don’t need a highly specialized team of dedicated engineers to build solutions on top of them. 
 
+[^012]: [JeffMagnusson, 2016](https://multithreaded.stitchfix.com/blog/2016/03/16/engineers-shouldnt-write-etl/)
 
-[^JeffMagnusson2016]: [https://multithreaded.stitchfix.com/blog/2016/03/16/engineers-shouldnt-write-etl/](https://multithreaded.stitchfix.com/blog/2016/03/16/engineers-shouldnt-write-etl/)
-
-### If Not (only) ETL, Then…What?[^TristanHandy2019]
+### If Not (only) ETL, Then…What?[^013]
 
 Data Engineers are still a critical part of any high-functioning data team.
 - managing and optimizing core data infrastructure,
@@ -262,7 +237,7 @@ Data Engineers are still a critical part of any high-functioning data team.
 
 ^ Instead of building ingestion pipelines that are available off-the-shelf and implementing SQL-based data transformations, here’s what your data engineers should be focused on:
 
-[^TristanHandy2019]:[https://www.kdnuggets.com/2019/01/role-data-engineer-changing.htm](https://www.kdnuggets.com/2019/01/role-data-engineer-changing.html)
+[^013]:[TristanHandy, 2019](https://www.kdnuggets.com/2019/01/role-data-engineer-changing.html)
 
 ---
 # Big Data 
@@ -273,13 +248,13 @@ Data Engineers are still a critical part of any high-functioning data team.
 
 -->
 
-### Challenges [^Lanely2001]
+### Challenges [^014]
 
 ![inline](https://www.ec-better.eu/img/upload/galeria/5a50c3f0b37206930825bb69578686454adae022.png)
 
 <!-- Joke About Growing number of Vs -->
 
-[^Lanely2001]:[x-bdsk://laney20013d](x-bdsk://laney20013d)
+[^014]:[Lanely, 2001](x-bdsk://laney20013d)
 
 ---
 ###  Paradigm Shift
@@ -319,9 +294,7 @@ Data Engineers are still a critical part of any high-functioning data team.
 
 
 ### Data Lake
-A Data lake is a vast pool of raw data (i.e., data as they are natively, unprocessed). A data lake stands out for its high agility as it isn’t limited to a warehouse’s fixed configuration. [^8]
-
-[^8]:[ https://medium.com/datadriveninvestor/what-is-data-engineering]( https://medium.com/datadriveninvestor/what-is-data-engineering-explaining-the-data-pipeline-data-warehouse-and-data-engineer-role-1a4b182e0d16)
+A Data lake is a vast pool of raw data (i.e., data as they are natively, unprocessed). A data lake stands out for its high agility as it isn’t limited to a warehouse’s fixed configuration[^03].
 
 ---
 ![inline](./attachments/datalake.png)
@@ -371,21 +344,6 @@ Therefore  data engineers are challenged with the task of wrangling, cleansing, 
 - Automation of Data Science functions
 - Hybrid data architectures spanning on-premise and cloud environments
 
---- 
-
-
-![](./attachments/theend2.png)
-
-# Conclusion
-#### LTAT.02.007: [Website](https://courses.cs.ut.ee/2020/dataeng) and [Forum]() 
-- **Ass Prof. Riccardo Tommasini**
-- **Assistants:  Fabiano Spiga, Mohamed Ragab, Hassan Elsaeeb**
-
-## Next on Data Engineering
--  Intro to Lab Material: Docker and Jupyter
--  Data Modeling
-	
-	
 
 
 	
