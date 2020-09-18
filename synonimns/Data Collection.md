@@ -1,1 +1,0 @@
-Synonym for ![[Data Acquisition]]
