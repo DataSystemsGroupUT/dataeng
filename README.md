@@ -17,18 +17,18 @@
 - For more info follow this setup-video tutourial (https://www.youtube.com/watch?v=188Fy-oCw4w)
 
 
-#### Linux and Debian 
+#### 2. Linux and Debian 
 
 - Even quicker and dirtier instructions for Debian-based Linux distributions are as follows:
     - download Redis from http://redis.io/download 
     - extract, run make && sudo make install
     - Then run sudo python -m easy_install redis hiredis (hiredis is an optional performance-improving C library).
 
-#### 2. Install the Python Package ("<a href='https://pypi.org/project/redis/'>redis</a>") to connecto to Redis 
+#### 3. Install the Python Package ("<a href='https://pypi.org/project/redis/'>redis</a>") to connecto to Redis 
 - use th command ```pip install redis``` in your command line.
 
 
-#### (Extra) Accessing Redis from Command Line:
+#### 4. Accessing Redis from Command Line:
 - Add the Redis installation "/home" and "/bin" directories to the enviroment variables.
 - start Redis server in one command window(CMD, poweshell, ..etc)using the command ```redis-server```.
 - In anoher command window, start your Redis Client using the command ```redis-cli```
