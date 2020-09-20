@@ -1,10 +1,15 @@
 version: "3"
 
 services:
-  redis: 
-    image: redis
+  neo4j:
+    image: neo4j
     ports:
-      - 6379:6379
+      - 7474:7474 
+      - 7687:7687
+    volumes:
+      - ./Neo4j:/var/lib/neo4j/import
+    environment:
+      - NEO4J_AUTH=none
   notebook:
     build: notebook/
     ports:
