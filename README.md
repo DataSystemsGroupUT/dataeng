@@ -10,7 +10,8 @@
 
 # Instructions 
 
-Installing "Python", "Jupyter Notebook", and "PostgreSQL" 
+Installing "Python", "Jupyter Notebook", and "PostgreSQL".
+
 
 ### Windows Users:
 
