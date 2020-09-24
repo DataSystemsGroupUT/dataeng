@@ -11,7 +11,7 @@ Research on ML explainability and AutoML
 
 # Teaching Assistants
 
-## [[[Mohamed Ragab]]]
+## [[Mohamed Ragab]]
 PhD Student at University of Tartu
 Research on Big Graph Processing
 

@@ -1,5 +1,7 @@
 
-### Systems Overview: [[Apache Spark]] ![inline](./attachments/Images/Spark.png)
+### Systems Overview: [[Apache Spark]] 
+
+![[attachments/Images/sparklogo.png]]
 
 Spark's extensions for stream processing include
 

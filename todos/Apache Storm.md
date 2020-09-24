@@ -1,4 +1,6 @@
-### Systems Overview: [[Apache Storm]]![inline](./attachments/Images/Storm.png)
+### Systems Overview: [[Apache Storm]]
+
+![[attachments/Images/stormlogo.png]]
 
 -  First Big Data Stream Processing platform
 

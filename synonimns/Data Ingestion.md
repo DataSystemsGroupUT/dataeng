@@ -1,1 +1,2 @@
 Synonym for ![[Data Acquisition]]
+

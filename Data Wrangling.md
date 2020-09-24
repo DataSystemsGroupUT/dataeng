@@ -626,8 +626,6 @@ Identification to a certain degree of accuracy likely\-identities
 
 eg, same user match
 
-![inline](./attachments/17-dataWrangling30.tiff)
-
 ### The “Duplicates” problem
 
 Related to Key problem
@@ -636,7 +634,6 @@ Identification to certain degree of accuracy likely\-duplicates
 
 eg, duplicate posts
 
-![inline](./attachments/17-dataWrangling31.tiff)
 
 Related to Key problem
 
@@ -750,9 +747,6 @@ http://okfnlabsorg/
 
 http://schoolofdataorg/
 
-![inline](./attachments/17-dataWrangling58.tiff)
-
-![inline](./attachments/17-dataWrangling59.tiff)
 
 # Marco Brambilla,       @marcobrambi, marco.brambilla@polimi.it
 http://datascience.deib.polimi.it

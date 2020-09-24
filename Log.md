@@ -16,13 +16,14 @@ db_get () {
 ```
 
 ^ db_set is appending data to a file. This is generally quite efficient.
+
 Indeed, many databases internally use the same strategy, but it is not a normal file, is a log.
 
 ### The Log
 
 A log is an append-only sequence of records. It doesn’t have to be human-readable; it might be binary and intended only for other programs to read.
 
-![inline](./attachments/commitlog.pdf)
+![inline](./attachments/commitlog.png)
 
 ^ Questions:
 - What is the cost of lookup O(n)

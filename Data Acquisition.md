@@ -32,3 +32,6 @@ Additionally, data can be Structured or Unstructured
 - Crowling the Web
 - Log processing
 
+[[HDFS]]
+
+[[Apache Kafka]]

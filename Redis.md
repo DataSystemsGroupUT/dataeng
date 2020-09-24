@@ -5,26 +5,26 @@
 ### Redis History
 - Written in ANSI C by [Salvatore Sanfilippo](https://twitter.com/antirez) :it: 
 - Works in most POSIX systems like Linux, BSD and OS X.
-- **Linux is the recommended** [^75]
+- **Linux is the recommended** [^65]
 - Redis is a single-threaded server, not designed to benefit from multiple CPU cores.
 - Several Redis instances can be launched to scale out on several cores.
 - All operations are atomic (no two commands can run at the same time).
 - It executes most commands in O(1) complexity and with minimal lines of code.
 
-[^75]: No official support for Windows, but Microsoft develops and maintains an open source Win-64 port of Redis*
+[^65]: No official support for Windows, but Microsoft develops and maintains an open source Win-64 port of Redis*
 
-### What is Redis
+### What Redis is
  
 - An advanced [[Key-Value Store]]s, where keys can contain data structures such as strings, hashes, lists, sets, and sorted sets. 
 - It supports a set of atomic operations on these data types.
 - Redis is a different evolution path in the key-value databases where values are complex data types that are closely related to fundamental data structures and are exposed to the programmer as such, without additional abstraction layers.
-- Redis Can be used as **Database** [^71], a **Caching layer** [^72] or a **Message broker** [^73]
+- Redis Can be used as **Database** [^ 61], a **Caching layer** [^62] or a **Message broker** [^63]
 
-[^72]: it is fast
+[^62]: it is fast
 
-[^71]: it is durable
+[^61]: it is durable
 
-[^73]: is not only a key-value store
+[^63]: is not only a key-value store
 
 ### What Redis is NOT 
 
@@ -41,10 +41,10 @@
 - Pub/Sub (service bus)
 - MVC Output Cache provider
 - Backplane for SignalR
-- ASP.NET Session State provider[^74]
+- ASP.NET Session State provider[^64]
 - Online user data (shopping cart,…Any real-time, cross-platform, cross-application communication
 
-[^74]: ASP.NET session state providers comparison: http://www.slideshare.net/devopsguys/best-performing-aspnet-session-state-providers
+[^64]: ASP.NET session state providers comparison: http://www.slideshare.net/devopsguys/best-performing-aspnet-session-state-providers
 
 ### When to consider Redis
 - Speed is critical
@@ -52,7 +52,7 @@
 - Dataset can fit in memory
 - Dataset is not critical
 
-### Redis advantages
+### Advantages
 
 - Performance
 - Availability
@@ -65,7 +65,7 @@
 ![right fit](https://redislabs.com/wp-content/uploads/2014/04/redis_proven_performance_2.png)
 
 
-### Logical Data Model
+### Data Model
 
 [.column]
 - Key

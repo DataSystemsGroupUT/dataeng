@@ -1,4 +1,6 @@
-### Systems Overview: [[Apache Samza]] ![inline](./attachments/Images/Samza.png)
+# Apache Samza
+
+![[attachments/Images/samzalogo.png]]
 
 Apache Samza is a stream processing engine built at LinkedIn in 2013. It
 enables stateless and stateful computation. It offer both functional and
