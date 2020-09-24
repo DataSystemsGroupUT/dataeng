@@ -7,10 +7,10 @@
 
 ![logodsg](./attachments/logo_dsg_vettoriale.png)
 
-
 ## Graph View
 
 ![inline](./attachments/Thursday-September-17-2020.png)
+![[attachments/Thursday-September-24-2020.png.png]]
 
 ## Lecturer: [Riccardo Tommasini, PhD](https://riccardotommasini.com)
 
@@ -40,7 +40,8 @@ Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di M
 | 10/09 |  DM for Relational Databases |   [Slides](Data%20Modeling.md) - [pdf](./pdfs/Data%20Modeling.pdf) slide 45-109 | Chp 2, 6, and 7 (Normal Forms) of [1] | [Relational Model](https://course.ccs.neu.edu/cs3200sp18s3/ssl/readings/codd.pdf) | 
 |10/09  |  DM for Data Warehouse         |  [Slides](Data%20Modeling.md)  - [pdf](./pdfs/Data%20Modeling.pdf)slide 109-118|  [pdf](http://www.kimballgroup.com/wp-content/uploads/2013/08/2013.09-Kimball-Dimensional-Modeling-Techniques11.pdf) [video](http://slideshot.epfl.ch/play/suri_stonebraker)|  Chp 2 of [2] | 
 | 17/09 |  DM for Big Data   | [Slides](Data%20Modeling%20for%20Big%20Data.md) - [pdf](./pdfs/Data%20Modeling%20Big%20Data.pdf)| Chp 2 of [3], [video](https://www.youtube.com/watch?v=LDW0QWie21s)|[paper](https://www.ics.uci.edu/~cs223/papers/cidr07p15.pdf)| 
-| 17/09 |  Key Value Stores ||||
+| 17/09 |  Key Value Stores |[Slides]()|||
+|| Column Oriented Databases  ||||
 || Document Databases  ||||
 || Graph Databases ||||
 || Data Engineering Pipelines ||Chp 1 of [3]||
