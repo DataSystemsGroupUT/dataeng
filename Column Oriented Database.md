@@ -47,8 +47,8 @@ The class of column-oriented stores, which sees in Google's BigTable it's first 
     - Can use extra space to store multiple copies of data in different sort orders
     - Techniques such as run length encoding far more useful
 
-
-**Extra Avaiable**![inline 40%](https://icons.iconarchive.com/icons/pixelkit/swanky-outlines/256/15-Light-Bulb-icon.png)[Paper Summary](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.296.6581&rep=rep1&type=pdf)
+<br>
+**Extra Available**![inline 30%](https://icons.iconarchive.com/icons/pixelkit/swanky-outlines/256/15-Light-Bulb-icon.png)[Paper Summary](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.296.6581&rep=rep1&type=pdf)
 
 ### Example (String): Run-Length Encoding
 <br><br><br><br>

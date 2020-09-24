@@ -1,3 +1,4 @@
+
 # Cassandra
 
 ![inline](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Cassandra_logo.svg/1280px-Cassandra_logo.svg.png)
@@ -13,7 +14,8 @@ Open-sourced and now within Apache foundation
 - A Wide [[Column Oriented Database]]
 - *tuneably* consistent (**~~C~~**)
 - very fast in writes
-- highly available (**A**)
+- highly avaeng
+- ailable (**A**)
 - fault tolerant (**P**)
 -  linearly scalable, elastic scalability
 - Cassandra is very good at writes, okay with reads. 
@@ -117,7 +119,7 @@ An instance of Cassandra typically consists of a one distributed multidimensiona
 - Some settings are configurable only per keyspace
 - Each Row must have a key
 
-![inline](./attachments/cassandra-32.png)
+![right fit](./attachments/cassandra-32.png)
 
 ### Columns Families
 
@@ -147,7 +149,7 @@ A Column consists of three parts
   -  top level columns (Super Column Family Name) are **always** indexed
 - often used for **denormalizing** data from standard Column Families
 
-![inline](./attachments/cassandra-36.png)
+![right fit](./attachments/supercolumn.png)
 
 ---
 #### Example
@@ -187,7 +189,7 @@ A data structure describing columns to return
 - reverse
 - count (like LIMIT) -->
   
-## Architecture
+# Architecture
 
 Cassandra is required to be incrementally scalable. 
 
@@ -195,14 +197,14 @@ Therefore machines can join and leave a cluster (or they may crash).
 
 Data have to be **partitioned** and **distributed** among the nodes of a cluster in a fashion that allows *repartitioning* and *redistribution*.
 
-### Partitioning
+## Partitioning
 
 - Data of a Cassandra table get partitioned and distributed among the nodes by a consistent **order-preserving** hashing function. 
 - The order preservation property of the hash function is important to support **range scans** over the data of a table.
 - Cassandra performs a **deterministic** load balancing
   - it measures and analyzes the load information of servers and moves nodes on the consistent hash ring to get the data and processing load balanced. 
 
-### Replication
+## Replication
 
 ^ Cassandra is configured such that each row is replicated across multiple data centers. In essence, the preference list of a key is constructed such that the storage nodes are spread across multiple data centers
 
@@ -210,15 +212,13 @@ Data have to be **partitioned** and **distributed** among the nodes of a cluster
 - Replication is managed by a **coordinator node** for the particular **key** being modified. 
 - The coordinator node for any key is the **first node on the consistent hash ring** that is visited when walking from the key’s position on the ring in **clockwise** direction.
 
----
-#### ~~Replication Strategies~~ (Used to be)
+### ~~Replication Strategies~~ (Used to be)
 
   - **Rack Unaware**: the non-coordinator replicas are chosen by picking N-1 successors of the coordinator on the ring
   - **Rack Aware** and **Datacenter Aware** rely on Zookeeper for leader election.
     - the elected leader is in charge of maintaining the invariant that no node is responsible for more than N-1 ranges in the ring
 
----
-#### Replica placement strategies Today [^81]
+### Replica placement strategies Today [^81]
 
 [^81]: [docs](https://cassandra.apache.org/doc/latest/architecture/dynamo.html)
 
@@ -317,13 +317,13 @@ When all replicas are down, the Coordinator (front end) buffers writes (for up t
 
 ### Write Consistency
 
-|     Level                           |     Description                          |
-|-------------------------------------|------------------------------------------|
-|     ZERO                            |     Good   luck with that                |
-|     ANY                             |     1   replica (hints count)            |
-|     ONE                             |     1   replica. read repair in bkgnd    |
-|     QUORUM   (DCQ for RackAware)    |     (N   /2) + 1                         |
-|     ALL                             |     N =   replication factor             |
+| Level         | Description                                                                                                                                                                                                                                                                                                        | Usage                                                                                                                                                                                                                                                      |
+|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ALL           | A write must be written to the commit log and memtable on all replica nodes in the cluster for that partition.                                                                                                                                                                                                     | Provides the highest consistency and the lowest availability of any other level.                                                                                                                                                                           |
+| QUORUM        | A write must be written to the commit log and memtable on a quorum of replica nodes across all datacenters.                                                                                                                                                                                                        | Used in either single or multiple datacenter clusters to maintain strong consistency across the cluster. Use if you can tolerate some level of failure.                                                                                                    |
+| ONE/TWO/THREE | A write must be written to the commit log and memtable of at least one/two/three replica node.                                                                                                                                                                                                                     | Satisfies the needs of most users because consistency requirements are not stringent.                                                                                                                                                                      |
+| ANY           | A write must be written to at least one node. If all replica nodes for the given partition key are down, the write can still succeed after a hinted handoff has been written. If all replica nodes are down at write time, an ANY write is not readable until the replica nodes for that partition have recovered. | Provides low latency and a guarantee that a write never fails. Delivers the lowest consistency and highest availability.                                                                                                                                   |
+|...|...|...|
 
 ## Reads
 
@@ -345,15 +345,15 @@ When all replicas are down, the Coordinator (front end) buffers writes (for up t
 
 [source](https://subscription.packtpub.com/book/big_data_and_business_intelligence/9781789131499/2/ch02lvl1sec20/cassandra-s-write-path)
  
-### Read Consistency
+### Read Consistency: Read count
 
-|     Level                           |     Description                                        |
-|-------------------------------------|--------------------------------------------------------|
-|     ZERO             |     Ummm…                                              |
-|     ANY                         |     Try   ONE instead                                  |
-|     ONE                             |     1   replica                                        |
-|     QUORUM   (DCQ for RackAware)    |     Return   most recent TS after (N /2) + 1 report    |
-|     ALL                             |     N =   replication factor                           |
+| Level          | Description                                                                                                                                                               | Usage                                                                                                                                                                                                          |
+|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ALL            | Returns the record after all replicas have responded. The read operation will fail if a replica does not respond.                                                         | Provides the highest consistency of all levels and the lowest availability of all levels.                                                                                                                      |
+| QUORUM         | Returns the record after a quorum of replicas from all datacenters has responded.                                                                                         | Used in either single or multiple datacenter clusters to maintain strong consistency across the cluster. Ensures strong consistency if you can tolerate some level of failure.                                 |
+| ONE/TWO/Threee | Returns a response from the closest (1/2/3) replica, as determined by the snitch. By default, a read repair runs in the background to make the other replicas consistent. | Provides the highest availability of all the levels if you can tolerate a comparatively high probability of stale data being read. The replicas contacted for reads may not always have the most recent write. |       |
+
+We are discussing the number of replicas that are contacted when a data object is accessed through a read operation
 
 ### Read-Repair[^84]
 
@@ -368,20 +368,20 @@ The most recent data is sent to the client and asynchronously, the coordinator i
 ### Consistency Level: Quorum
 
 [.column]
-- N is replication factor
-- R is read replica count, 
-- W is write replica count
+- N **is replication factor**: the number of copies of each data item
+- R **is read replica count**: the number of replicas that are contacted when a data object is accessed through a read operation
+- W **is write replica count**: the number of replicas that need to acknowledge the receipt of the update before the update completes
 
 [.column]
 - Quorum Q = N/2 + 1
-- If W+R > N and W > N/2, you have consistency
+- If W+R > N and W > N/2, you have *strong* consistency
 - Allowed:
 
-|W |R   |
-|---|---|
-|1 |N |
-|N |1 |
-|Q|Q|
+|W |R   | Comment
+|---|---|---------|
+|1   |N  | In a write-intensive application, setting W=1 and R=RF can affect durability, as failures can result in conflicting writes|
+|N |1 |In read-intensive applications, setting W=RF and R=1 can affect the probability of the write succeeding.|
+|Q|Q| balanced mix of reads and writes|
 
 ### Consistency Level: Explained
 
@@ -411,13 +411,11 @@ The most recent data is sent to the client and asynchronously, the coordinator i
 
 ### [[Log]]
 
-A log is an append-only sequence of records. It doesn’t have to be human-readable; 
+- A log is an append-only sequence of records. It doesn’t have to be human-readable; 
+- Log-structured storage segments are typically a sequence of key-value pairs.
+- These pairs appear in the order that they were written, and values later in the log take precedence over values for the same key earlier in the log. 
 
-log-structured storage segments are typically a sequence of key-value pairs.
-
-These pairs appear in the order that they were written, and values later in the log take precedence over values for the same key earlier in the log. 
-
-![inline](./attachments/commitlog.png)
+![right fit](./attachments/commitlog.png)
 
 ^ Questions:
 - What is the cost of lookup O(n)
@@ -432,12 +430,11 @@ Merging segments is simple and efficient, even if the files are bigger than the 
 
 In order to find a particular key in the file, you no longer just need a spare index of the offsets
 
-
 ### [[Bloom Filter]]
 
 - Compact way of representing a set of items
 - Checking for existence in set is cheap
-- Some probability of false positives:an item not in set maycheck true as being in set
+- Some probability of false positives and item not in set may check true as being in set
 - Never false negatives
 
 ![right fit](./attachments/bloomfilter.png)
@@ -508,7 +505,7 @@ How to support this query?
 
 
 ```sql
-SELECT * FROM User WHERE city = ‘Scottsdae’
+SELECT * FROM User WHERE city = ‘Scottsdale’
 ```
 
 Create a new columns family called **UserCity**:

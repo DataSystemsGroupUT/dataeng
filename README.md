@@ -9,8 +9,7 @@
 
 ## Graph View
 
-![inline](./attachments/Thursday-September-17-2020.png)
-![[attachments/Thursday-September-24-2020.png.png]]
+![inline](./attachments/latest.png)
 
 ## Lecturer: [Riccardo Tommasini, PhD](https://riccardotommasini.com)
 
