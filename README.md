@@ -2,12 +2,12 @@
 
 
 
-### 1. Install MongoDB on Windows
+### Windows users:
 
 - We install it on windows using the MSI version (https://www.mongodb.com/try/download/community?tck=docs_server), cutomize the installation to "c:/mongodb"
 - Add the "data/db"  and "logs"" dirs into the installation directory which you already customized.
-- From the CMD "As administrator", configure the logs and databases directories, and start the mongoDB service:
-    -  from the "bin "directory run the following command>>> mongod --directorydb --dpath c:\mongodb\data\db --logpath c:\mongodb\log\mongo.log --logappend --rest --install 
+- From the CMD **"As administrator"**, configure the logs and databases directories, and start the mongoDB service:
+    -  from the "bin "directory run the following command>>> <code>mongod --directorydb --dpath c:\mongodb\data\db --logpath c:\mongodb\log\mongo.log --logappend --rest --install </code>
 
 - Now we can run the mongodb service 
     - net start mongodb
