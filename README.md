@@ -55,3 +55,10 @@ services:
     environment:
       - GRANT_SUDO=yes
 ```     
+
+
+#### Good to know (MongoDB in the Cloud ([Mongo-Atlas](https://docs.atlas.mongodb.com/getting-started/)))
+
+- If you are using MongoDB in the Cloud (Atlas), you will need to:
+    - [Create an Atlas Account and Cluster](https://docs.atlas.mongodb.com/getting-started/)
+    - [Set Up Connectivity to Atlas](https://docs.mongodb.com/guides/cloud/connectionstring/)
