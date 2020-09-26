@@ -15,7 +15,7 @@
 
 ### Teaching Assistants: 
 - [Fabiano Spiga](mailto:),  
-- [Mohamed Ragab](mailto:mohamed.ragab@ut.ee), 
+- [Mohamed Ragab](https://bigdata.cs.ut.ee/mohamed-ragab), 
 - [Hassan Eldeeb](mailto:hassan.eldeeb@ut.ee)
 
 ### [Home Page](https://courses.cs.ut.ee/2020/dataeng)
