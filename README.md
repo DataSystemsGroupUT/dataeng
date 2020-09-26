@@ -1,4 +1,21 @@
-### PreLab
+## PreLab
+
+
+
+### 1. Install MongoDB on Windows
+
+- We install it on windows using the MSI version (https://www.mongodb.com/try/download/community?tck=docs_server), cutomize the installation to "c:/mongodb"
+- Add the "data/db"  and "logs"" dirs into the installation directory which you already customized.
+- From the CMD "As administrator", configure the logs and databases directories, and start the mongoDB service:
+    -  from the "bin "directory run the following command>>> mongod --directorydb --dpath c:\mongodb\data\db --logpath c:\mongodb\log\mongo.log --logappend --rest --install 
+
+- Now we can run the mongodb service 
+    - net start mongodb
+- Putting your mongoDBHome/bin to the enviroment variables Paths:
+    - so you can run the Shell of MongoDb using the command '>mongo'
+
+
+
 
 ### Docker users
 
