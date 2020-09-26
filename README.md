@@ -14,8 +14,8 @@
 - Putting your mongoDBHome/bin to the enviroment variables Paths:
     - so you can run the Shell of MongoDb using the command '>mongo'
 
-
-
+### Windows users (ubuntu):
+- Follow the instructions in this [tutourial] to install MongoDB 4.4 Community Edition on LTS (long-term support) releases of Ubuntu Linux using the apt package manager.
 
 ### Docker users
 
