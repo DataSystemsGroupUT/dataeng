@@ -51,8 +51,9 @@ Data engineering field could be thought of as a superset of business intelligenc
 
 ---
 
-![inline 99%](./attachments/seth-rosen-twitter-pull-data.png)
-
+<iframe border=0 frameborder=0 height=250 width=550
+ src="https://twitframe.com/show?url=https://twitter.com/sethrosen/status/1252291581320757249?s=20"></iframe>
+ 
 ---
 
 ![inline](./attachments/dataengineer.png)
