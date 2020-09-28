@@ -3,14 +3,14 @@ version: "3"
 services:
  mongo:
     image: mongo
-  postgres:
+ postgres:
     image: postgres
     restart: always
     ports:
         - 5432:5432
     environment:
       - POSTGRES_HOST_AUTH_METHOD=trust
-  notebook:
+ notebook:
     build: notebook/
     ports:
       - 8888:8888
