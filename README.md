@@ -37,15 +37,15 @@ Services are also exposed to the host network so you can connect to the via loca
 version: "3"
 
 services:
-  neo4j:
-    image: neo4j
+  mongo:
+    image: mongo
+  postgres:
+    image: postgres
+    restart: always
     ports:
-      - 7474:7474 
-      - 7687:7687
-    volumes:
-      - ./Neo4j:/var/lib/neo4j/import
+        - 5432:5432
     environment:
-      - NEO4J_AUTH=none
+      - POSTGRES_HOST_AUTH_METHOD=trust
   notebook:
     build: notebook/
     ports:
