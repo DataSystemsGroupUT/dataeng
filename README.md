@@ -39,13 +39,13 @@ version: "3"
 services:
   mongo:
     image: mongo
-  postgres:
-    image: postgres
-    restart: always
     ports:
-        - 5432:5432
+        - 27017:27017
+        - 27018:27018
+    restart: always
     environment:
-      - POSTGRES_HOST_AUTH_METHOD=trust
+      MONGO_INITDB_ROOT_USERNAME: 
+      MONGO_INITDB_ROOT_PASSWORD: 
   notebook:
     build: notebook/
     ports:
