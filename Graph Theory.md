@@ -1,4 +1,4 @@
-### History
+# History
 
 ![right fit](./attachments/03-USDE-graph-db14.png)
 
@@ -6,7 +6,7 @@ Leonhard Euler's paper on "Seven Bridges of Königsberg", published in 1736.
 
 ![inline](./attachments/03-USDE-graph-db13 1.png)![inline](./attachments/03-USDE-graph-db11 1.png)![inline](./attachments/03-USDE-graph-db12 1.png)
 
-### Famous problems
+## Famous problems
 
  - The traveling salesman problem: A traveling salesman is to visit a number of cities.
 		 - how to plan the trip so every city is visited once and just once and the whole trip is as short as possible ?
@@ -15,7 +15,7 @@ Leonhard Euler's paper on "Seven Bridges of Königsberg", published in 1736.
 
 [^100]:  Francis Guthrie,1852
 
-### Other Examples of Graph Problems
+## Other Examples of Graph Problems
 
 - Cost of wiring electronic components
 - Shortest route between two cities.
