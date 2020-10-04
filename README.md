@@ -44,4 +44,4 @@ https://adoptopenjdk.net/variant=openjdk11&jvmVariant=openj9
 - 3. Launch Neo4J via CL:
     1. cd to the neo4j bin directory and
     2. /.neo4j start
-- 4. Verify that Neo4J is reachable at the URL  http://localhost:7474/ (edited) 
+- 4. Verify that Neo4J is reachable at the URL  http://localhost:7474/
