@@ -37,11 +37,10 @@ Follow this detailed instructions in this [link](https://neo4j.com/docs/operatio
 
 #### MacOs users
 
-- 0. Download Neo4J last version
-- 1. Download JVM vs. 11:
-https://adoptopenjdk.net/variant=openjdk11&jvmVariant=openj9
-- 2. Set HOME PATH for Neo4J on ~/.bash_profile file
-- 3. Launch Neo4J via CL:
-    1. cd to the neo4j bin directory and
-    2. /.neo4j start
-- 4. Verify that Neo4J is reachable at the URL  http://localhost:7474/
+- Download Neo4J last version
+- Download JVM vs. 11: https://adoptopenjdk.net/variant=openjdk11&jvmVariant=openj9
+- Set HOME PATH for Neo4J on ~/.bash_profile file
+- Launch Neo4J via CL:
+    - cd to the neo4j bin directory and
+    -  /.neo4j start
+- Verify that Neo4J is reachable at the URL  http://localhost:7474/
