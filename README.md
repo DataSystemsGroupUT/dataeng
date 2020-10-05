@@ -57,7 +57,7 @@ Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di M
 | 14-15 /09  |Modeling and Querying Relational Data with Postgres|[Slides](https://github.com/DataSystemsGroupUT/dataeng/blob/Homework1/PostgreSQL.pdf)|[Chp 32 of [1]§](https://www.db-book.com/db7/online-chapters-dir/32.pdf) |[Video](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=b3221179-fd3a-4b4e-9a67-ac38008f7fbe)|||
 | 21-22 /09  |Modeling and Querying Key Value Data with Redis|[Slides](https://github.com/DataSystemsGroupUT/dataeng/blob/Homework2/REDIS.pdf)||[Video](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=0e659b03-7d3e-4b4c-a0f9-ac3d00f462a7)|||
 |28-29/09   |Modeling and Querying Document Data with MongoDB|[Slides](https://github.com/DataSystemsGroupUT/dataeng/blob/Homework3/slides/MongoDB.pdf)||[Video](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=9ffba354-a2a1-4131-967e-ac4400c8f226)|||
-|5-6/10        | Modeling and Querying Graph Data with Neo4J||||||
+|5-6/10        | Modeling and Querying Graph Data with Neo4J|[Slides](https://github.com/DataSystemsGroupUT/dataeng/blob/Homework4/Neo4j_lab_Slides.pptx.pdf)||[Video](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=1c9e44d6-d3a0-44ed-a012-ac4b00bb831b)|||
 || Data Ingestion with Apache Kafka||||||
 || Apache Airflow Data Pipelines||||||
 || Stream Processing with  Kafka Streams||||||
