@@ -164,7 +164,7 @@ A distribured message quque stores file in a log an allos sequential reads.
 
 ---
 
-##  ~~ETL~~ [[Data Pipelines]]
+##  ~~ETL~~ [[Data Pipeline (Intro)]]
 
 A data pipeline aggregates, organizes, and moves data to a destination for storage, insights, and analysis. 
 

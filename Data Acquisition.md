@@ -1,18 +1,27 @@
-Synonsymns: [[Data Ingestion]] [[Data Collection ]]
+# Data Acquisition[^120]
 
-It is the process of collecting raw data from various silo databases or files and integrating it into a data lake on the data processing platform, e.g., Hadoop data lake.
+[^120]: Synonsymns: [[Data Ingestion]] [[synonimns/Data Collection]]llection]]
 
-Data collection corresponds the extract (E) in an ETL/ELT pipeline.
+### Let's fix the naming (arbitrary)
 
-Two forms of data collection: Collection and Ingestion
+- We call [[synonimns/Data Collection]] the process of finding and accessing new data sources
+- We call [[Data Ingestion]] the process of filling our Data Lake with new data
 
-- Batch vs Streaming
-- Pull vs Push
-- Data flow vs Query Languages
+### Data Collection Examples 
 
-Additionally, data can be Structured or Unstructured
+- Accessing Databases  :white_check_mark:
+- Crowling the Web
+- Calling APIs
+- Consuming WebSockets
 
-### Two Schools
+
+### Data Ingestion Examples 
+
+- Maintaining a Distributed File Systems
+- Using a Distributed Message Queue
+- Using a Publishing Subscribe System
+
+## Two Schools
 
 [.column]
 
@@ -26,12 +35,15 @@ Additionally, data can be Structured or Unstructured
 - Push
 - Dataflow based
 
-### Data Collection vs  Ingestion examples 
 
-- Accessing Databases
-- Crowling the Web
-- Log processing
+# [[REST API | REST API and Beyond ]]
 
-[[HDFS]]
+The standard way to interact with Web data sources in a programmatic manner.
 
-[[Apache Kafka]]
+#  [[HDFS | Distributed File Systems]]
+
+A distributed file system stores files across a large collection of machines while giving a single-file-system view to clients.
+
+# [[Apache Kafka | Distributed Message Queues ]]
+
+A distribured message quque stores file in a log an allos sequential reads. 
