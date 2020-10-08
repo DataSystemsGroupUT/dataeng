@@ -15,7 +15,7 @@
 
 ## Data Engineering is...
 
-![[attachments/refinery.png]]
+![inline](./attachments/refinery.png)
 
 ...build the refinery.
 

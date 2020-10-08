@@ -1,6 +1,6 @@
 # REST API
 
-![](https://www.seobility.net/en/wiki/images/f/f1/Rest-API.png)
+![inline](https://www.seobility.net/en/wiki/images/f/f1/Rest-API.png)
 
 ## World Wide Web
 
