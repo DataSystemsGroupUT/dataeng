@@ -10,7 +10,7 @@ It is the process of defining the structure of the data for the purpose of commu
 
 A data model represents the structure and the integrity of the data elements of a (single) applications [2](x-bdsk://DBLP:journals/sigmod/SpynsMJ02) 
 
-Data models provide a framework for data to be used within information systems by providing specific definition and format.
+Data models provide a framework for data to be used within information systems by giving specific definitions and formats.
 
 The literature of data management is rich of data models that aim at providing increased expressiveness to the modeler and capturing a richer set of semantics.
 
@@ -35,13 +35,13 @@ The literature of data management is rich of data models that aim at providing i
 
 **Conceptual**: The data model defines *WHAT* the system contains.
 
-^ Conceptual model is typically created by Business stakeholders and Data Architects. The purpose is to organize, scope and define business concepts and rules. Definitions are most important this level.
+^ Conceptual model is typically created by Business stakeholders. The purpose is to organize, scope and define business concepts and rules. Definitions are most important this level.
 
 **Logical**: Defines *HOW* the system should be implemented regardless of the DBMS. 
 
-^ Logical model is typically created by Data Architects and Business Analysts. The purpose is to developed technical map of rules and data structures. Business rules, relationships, attribute become visible. Conceptual definitions become metadata.
+^ Logical model is typically created by Data Architects. The purpose is to developed technical map of rules and data structures. Business rules, relationships, attribute become visible. Conceptual definitions become metadata.
 
-**Physical**: This Data Model describes *HOW* the system will be implemented using a specific DBMS system [^14].
+**Physical**: This Data Model describes *HOW* the information system will be implemented using a specific technology [^14].
 
 ^ Physical model is typically created by DBA and developers. The purpose is actual implementation of the database. Trade-offs are explored by in terms of data structures and algorithms.
 
