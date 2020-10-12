@@ -3,9 +3,11 @@
 ./todos
 
 out.md
-out.markdown
+*.markdown
 
 *.slide.md
 SLIDES.md
 
 obsidian.css
+
+Questions.md
