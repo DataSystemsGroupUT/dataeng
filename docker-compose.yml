@@ -2,7 +2,7 @@ version: "3"
 
 services:
   neo:
-    image: neo4j
+    image: neo4j:3.5.22
     ports:
         - 7474:7474
         - 7687:7687
@@ -11,6 +11,7 @@ services:
       - NEO4J_AUTH=none
     volumes:
       - ./neo4j/data:/data
+      - ./neo4j/conf:/var/lib/neo4j/conf
   notebook:
     build: notebook/
     ports:

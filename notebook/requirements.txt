@@ -1,8 +1,7 @@
 psycopg2-binary
 
 redis
-py2
-neo
+py2neo
 neo4j
 
 pymongo
