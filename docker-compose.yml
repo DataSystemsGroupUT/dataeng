@@ -1,21 +1,104 @@
-version: "3"
-
+version: '2.2'
 services:
-  neo:
-    image: neo4j
-    ports:
-        - 7474:7474
-        - 7687:7687
+  zookeeper:
+    hostname: zookeeper
+    container_name: zookeeper
+    image: "confluentinc/cp-zookeeper:5.5.0-1-ubi8"
+    restart: always
+    networks:
+      - kafka-net
     restart: always
     environment:
-      - NEO4J_AUTH=none
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+
+  kafka1:
+    image: "confluentinc/cp-enterprise-kafka:5.5.0-1-ubi8"
+    restart: always
+    hostname: kafka
+    container_name: kafka1
+    ports:
+      - "9092:9092"
+    networks:
+      - kafka-net
+    restart: always
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka1:9092
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+      KAFKA_DELETE_TOPIC_ENABLE: "true"
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_METRIC_REPORTERS: "io.confluent.metrics.reporter.ConfluentMetricsReporter"
+      CONFLUENT_METRICS_REPORTER_BOOTSTRAP_SERVERS: "kafka1:9092"
+      CONFLUENT_METRICS_REPORTER_TOPIC_REPLICAS: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 100
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+  
+  kafka2:
+    image: "confluentinc/cp-enterprise-kafka:5.5.0-1-ubi8"
+    restart: always
+    hostname: kafka
+    container_name: kafka2
+    ports:
+      - "9093:9093"
+    networks:
+      - kafka-net
+    restart: always
+    environment:
+      KAFKA_BROKER_ID: 2
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka2:9093
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+      KAFKA_DELETE_TOPIC_ENABLE: "true"
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_METRIC_REPORTERS: "io.confluent.metrics.reporter.ConfluentMetricsReporter"
+      CONFLUENT_METRICS_REPORTER_BOOTSTRAP_SERVERS: "kafka2:9093"
+      CONFLUENT_METRICS_REPORTER_TOPIC_REPLICAS: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 100
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+  schema-registry:
+    hostname: schema-registry
+    container_name: schema-registry
+    image: "confluentinc/cp-schema-registry:5.5.0-1-ubi8"
+    restart: always
+    networks:
+      - kafka-net
+    restart: always
+    environment:
+      SCHEMA_REGISTRY_HOST_NAME: schema-registry
+      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: kafka1:9092
+      SCHEMA_REGISTRY_LISTENERS: http://schema-registry:8081
+  
+  tools:
+    image: cnfltraining/training-tools:5.5
+    restart: always
+    hostname: tools
+    container_name: tools
+    restart: always
+    networks:
+      - kafka-net
     volumes:
-      - ./neo4j/data:/data
+      - .:/root/confluent-streams/labs/using-ksql
+    working_dir: /root/confluent-streams/labs/using-ksql
+    command: /bin/bash
+    tty: true
+
   notebook:
     build: notebook/
+    networks:
+      - kafka-net
     ports:
       - 8888:8888
     volumes:
        - ./:/home/jovyan/work/data
     environment:
       - GRANT_SUDO=yesd
+
+networks:
+  kafka-net:

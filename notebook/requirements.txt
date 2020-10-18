@@ -16,3 +16,8 @@ rdflib
 tf-nightly
 
 pandasql
+
+confluent_kafka
+avro
+lorem
+fastavro
