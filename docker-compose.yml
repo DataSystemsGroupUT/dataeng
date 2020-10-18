@@ -67,6 +67,8 @@ services:
     container_name: schema-registry
     image: "confluentinc/cp-schema-registry:5.5.0-1-ubi8"
     restart: always
+    ports:
+      - 8081:8081
     networks:
       - kafka-net
     restart: always
