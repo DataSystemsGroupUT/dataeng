@@ -12,7 +12,7 @@ For running Kafka We recommend a virtual machine or using Docker.
 
 #### Linux/MacOs users
 
-Download Confluent Platform [here](https://www.confluent.io/download/)
+Download Confluent Platform [here](https://packages.confluent.io/archive/5.5/confluent-community-5.5.2-2.12.tar.gz?_ga=2.109919813.1538540511.1603024157-1065440358.1582035676)
 
 enter the bin folder and verify if all the scripts are executable
 
