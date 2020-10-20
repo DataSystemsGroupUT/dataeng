@@ -43,7 +43,9 @@ Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di M
 |24/10| Column Oriented Databases |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Column%20Oriented%20Database.md) [Slides 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Cassandra.md) [pdf](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Column%20Stores%20-%20Cassandra.pdf)||[nosql](https://www.christof-strauch.de/nosqldbs.pdf)|
 |24/10| Document Databases  |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Document%20Databases.md) [Slides 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/MongoDB.md) [pdf](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Document%20Stores%20-%20MongoDB.pdf)||[nosql](https://www.christof-strauch.de/nosqldbs.pdf)|
 |01/10| Graph Databases |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Graph%20Theory.md) [Slides 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Graph%20Databases.md) [pdf1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Graph%20Theory.pdf) [pdf2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Graph%20Databases.pdf)|Chp 3 and 5 of [5]|[book](https://neo4j.com/graph-databases-book/)|
-|| Data Ingestion ||Chp 1 of [3]||
+|08/10| Data Ingestion |||
+|15/10| Part 1 Recap |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Part%201%20-%20Recap.md)  [pdf](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Part%201%20-%20Recap.pdf)|||
+
 || Data Engineering Pipelines ||Chp 1 of [3]||
 || Keynote TBA||||
 || Streaming Data ||Chp 11 of [3]||
