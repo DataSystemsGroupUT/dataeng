@@ -1,6 +1,6 @@
 .obsidian
 .obsidian/*
-./todos
+todos/
 
 out.md
 out.markdown
@@ -9,3 +9,6 @@ out.markdown
 SLIDES.md
 
 obsidian.css
+
+.ipynb_checkpoints/
+
