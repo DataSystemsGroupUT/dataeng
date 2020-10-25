@@ -193,3 +193,11 @@ services:
 networks:
   kafka-net:
 ```
+
+### Kafka-Training
+
+The kafka-training submodule links to a complete kafka training in java.
+
+Java Exercises 1 to 6 concern this practice.
+
+

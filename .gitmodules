@@ -1,0 +1,3 @@
+[submodule "kafka-training"]
+	path = kafka-training
+	url = https://github.com/riccardotommasini/kafka-training/
