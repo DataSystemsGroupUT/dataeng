@@ -1,7 +1,7 @@
 package kstreams.exercise13;
 
-import kafka.advanced.exercise5.exercise5a.model.Temperature;
-import kafka.advanced.exercise5.exercise5a.model.Room;
+import kafka.advanced.exercise6.solution.exercise6a.model.Temperature;
+import kafka.advanced.exercise6.solution.exercise6a.model.Room;
 import kstreams.exercise12.model.Tuple;
 import kstreams.exercise12.serdes.RoomSerde;
 import kstreams.exercise12.serdes.TemperatureSerde;

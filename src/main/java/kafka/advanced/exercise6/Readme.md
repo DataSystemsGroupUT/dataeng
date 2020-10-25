@@ -1,32 +1,30 @@
-# Exercize 6: Word Count in Vanilla Kafka
+# Exercize 5: Working with temperature data
 
+## Part A
 
-## Before Starting
+## Model
+
+The temperature observation records a prefVal and the timestamp.
+Moreover, we want to carry on the information about the room where the sensor is deployed.
+
+## producer
+
+Write a Kafka producer that generates the observation every 5 seconds (system time)
+and pushes them to a temperature topic.
+
+Before starting, recall to create the topic, with with two partitions
+
 ```bash
-bin/kafka-topics --bootstrap-server localhost:9092 --create --topic paragraphs 
-
-bin/kafka-topics --bootstrap-server localhost:9092 --create --topic words
+bin/kafka-topics --bootstrap-server localhost:9092 --create \
+                      --partitions 2 \
+                      --replication-factor 2 \
+                      --topic temperature
 ```
 
-# TODOS
+## Part B
 
-Write a java application using Kafka producer/consumer APIs that performs wordcount
+Write a Kafka consumer that reads the topic observations from the topic temperature
 
-- populate a topic of sentences
+## Part C
 
-- read the topic with a consumer
-
-- split on space
-
-- count the occurrence of each word 
-
-extra
-
-5) try to make restrict the count to the last 30 seconds
-
-
-Useful library to generate the text (already in maven dependencies)
-
-https://github.com/mdeanda/lorem
-
-Producer so that it partition the observation per room.
+Modify the Kafka Producer so that it partition the observation per room.

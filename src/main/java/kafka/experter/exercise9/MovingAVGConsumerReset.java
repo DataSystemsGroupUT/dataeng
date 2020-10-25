@@ -2,10 +2,10 @@ package kafka.experter.exercise9;
 
 import org.apache.kafka.clients.consumer.*;
 import org.apache.kafka.common.TopicPartition;
-import kafka.advanced.exercise5.exercise5a.model.Room;
-import kafka.advanced.exercise5.exercise5a.model.Temperature;
-import kafka.advanced.exercise5.exercise5b.deserialization.RoomDeserializer;
-import kafka.advanced.exercise5.exercise5b.deserialization.TemperatureDeserializer;
+import kafka.advanced.exercise6.solution.exercise6a.model.Room;
+import kafka.advanced.exercise6.solution.exercise6a.model.Temperature;
+import kafka.advanced.exercise6.solution.exercise6b.deserialization.RoomDeserializer;
+import kafka.advanced.exercise6.solution.exercise6b.deserialization.TemperatureDeserializer;
 
 import java.time.Duration;
 import java.util.Arrays;

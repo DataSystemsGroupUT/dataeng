@@ -1,6 +1,6 @@
 package kstreams.exercise13;
 
-import kafka.advanced.exercise5.exercise5a.model.Temperature;
+import kafka.advanced.exercise6.solution.exercise6a.model.Temperature;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.streams.processor.TimestampExtractor;
 

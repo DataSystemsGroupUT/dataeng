@@ -1,7 +1,7 @@
 package kstreams.exercise14;
 
-import kafka.advanced.exercise5.exercise5a.model.Room;
-import kafka.advanced.exercise5.exercise5a.serialization.RoomSerializer;
+import kafka.advanced.exercise6.solution.exercise6a.model.Room;
+import kafka.advanced.exercise6.solution.exercise6a.serialization.RoomSerializer;
 import kstreams.exercise14.model.ConfigSerializer;
 import kstreams.exercise14.model.Configuration;
 import org.apache.kafka.clients.producer.KafkaProducer;
@@ -9,7 +9,6 @@ import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 
 import java.util.Properties;
-import java.util.Random;
 
 
 public class RoomMetadataProducerUpdate {

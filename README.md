@@ -41,13 +41,13 @@
 ## Day 1 Kafka Basics: List of Exercises
 
 - ABC
-    - [Exercise 1: Console 1](src/main/java/kafka/abc/exercise1/exercise1.md)
+    - [Exercise 1: Console 1](src/main/bash/exercise1/exercise1.md)
     - [Exercise 2: Console 2](src/main/java/kafka/abasics/exercise1/exercise2.md)
 
 - Advanced
     - [Exercise 3: Producer ](src/main/java/kafka/advanced/exercise3/Readme.md)
     - [Exercise 4: Consumer](src/main/java/kafka/advanced/exercise4/Readme.md)
-    - [Exercise 5: P/C](src/main/java/kafka/advanced/exercise5/Readme.md)
+    - [Exercise 5: P/C](src/main/java/kafka/advanced/exercise6/Readme.md)
         - Serialization
         - Deserialization
         - Partitioning

@@ -1,6 +1,6 @@
 package kstreams.exercise14.model;
 
-import kafka.advanced.exercise5.exercise5a.model.Temperature;
+import kafka.advanced.exercise6.solution.exercise6a.model.Temperature;
 
 public class RichTemperature {
 

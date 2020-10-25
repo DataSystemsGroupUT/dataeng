@@ -1,9 +1,9 @@
 package kstreams.exercise12.serdes;
 
 
-import kafka.advanced.exercise5.exercise5a.model.Room;
-import kafka.advanced.exercise5.exercise5a.serialization.RoomSerializer;
-import kafka.advanced.exercise5.exercise5b.deserialization.RoomDeserializer;
+import kafka.advanced.exercise6.solution.exercise6a.model.Room;
+import kafka.advanced.exercise6.solution.exercise6a.serialization.RoomSerializer;
+import kafka.advanced.exercise6.solution.exercise6b.deserialization.RoomDeserializer;
 import org.apache.kafka.common.serialization.Deserializer;
 import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serializer;

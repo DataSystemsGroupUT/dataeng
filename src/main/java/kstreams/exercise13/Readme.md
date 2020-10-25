@@ -2,7 +2,7 @@
 
 ## Before
 
-Re-run [exercise 5](../../kafka/advanced/exercise5/Readme.md).
+Re-run [exercise 5](../../kafka/advanced/exercise6/Readme.md).
 Re-run [exercise 12](../../kstreams/exercise12/Readme.md).
 
 or

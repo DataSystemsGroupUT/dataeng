@@ -1,9 +1,9 @@
 package kafka.experter.exercise9;
 
-import kafka.advanced.exercise5.exercise5b.deserialization.RoomDeserializer;
-import kafka.advanced.exercise5.exercise5b.deserialization.TemperatureDeserializer;
-import kafka.advanced.exercise5.exercise5a.model.Room;
-import kafka.advanced.exercise5.exercise5a.model.Temperature;
+import kafka.advanced.exercise6.solution.exercise6b.deserialization.RoomDeserializer;
+import kafka.advanced.exercise6.solution.exercise6b.deserialization.TemperatureDeserializer;
+import kafka.advanced.exercise6.solution.exercise6a.model.Room;
+import kafka.advanced.exercise6.solution.exercise6a.model.Temperature;
 import kafka.experter.commons.exceptions.OutOfOrderException;
 import kafka.experter.commons.windowing.Window;
 import kafka.experter.commons.windowing.WindowImpl;
