@@ -12,3 +12,7 @@ obsidian.css
 
 .ipynb_checkpoints/
 
+.DS_Store
+
+*.class
+target/
