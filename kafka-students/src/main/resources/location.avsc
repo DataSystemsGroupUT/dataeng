@@ -1,0 +1,9 @@
+{"namespace": "kafka.exercise.avro",
+ "type": "record",
+ "name": "Location",
+ "fields": [
+     {"name": "building", "type": "int", "doc" : "The building address"},
+     {"name": "floor", "type": "int", "doc" : "The floor number"},
+     {"name": "room", "type": "int", "doc" : "The room number"}
+ ]
+}

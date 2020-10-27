@@ -1,0 +1,11 @@
+{
+"namespace": "kafka.exercise.avro",
+ "type": "record",
+ "name": "Observation",
+ "fields": [
+     {"name": "id", "type": "long", "doc" : "The observation id"},
+     {"name": "value", "type": "double", "doc" : "The actual measurement from the sensor"},
+     {"name": "measurement", "type": "string", "doc" : "The measurement type, e.g., temperature"},
+     {"name": "timestamp", "type": "long", "doc" : "The measurement timestamp"}
+ ]
+}
