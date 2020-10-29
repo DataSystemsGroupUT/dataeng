@@ -101,7 +101,7 @@ The results is data in the best format (e.g., columnar) for the analysis to perf
 
 ![right 150%](./attachments/wranglingsteps4.png)
 
-##  ~~ETL~~ Data Pipelines
+##  ~~ETL~~ [[Data Pipelines]]
 
 A data pipeline aggregates, organizes, and moves data to a destination for storage, insights, and analysis. 
 

@@ -2,14 +2,11 @@
 
 -   A simple abstraction for distributed data processing
 
--   Invented by Google in 2
+-   Invented by Google
 
 -   Two operations
-
     -   Map: think of it as a transformation either 1:1 or 1:M that will be applied to each element of your data
-
     -   Reduce: think of it as a form of aggregating or compacting the data M:1
-
 -   Hadoop provides the open source implementation of that model
 
 -   It was believed that all sorts of large-scale data processing can be tackled by MapReduce, [this is not true as you will see in future lectures]{style="color: red"}
