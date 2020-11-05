@@ -243,7 +243,7 @@ B[node_2] --> D[node_4]
 C[node_3] --> D[node_4]
 ```
 
-and one to many:
+### and one to many:
 
 ```python
 
@@ -286,7 +286,6 @@ dataproc_ingest_one
 		dataproc_ingest_three] >> end
 
 ```
-
 
 ![right 90%](./attachments/etl_process_dataproc.png) 
 
