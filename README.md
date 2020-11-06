@@ -3,9 +3,9 @@
 # Data Engineering:
 ## Repository for the Data Engineering Course (LTAT.02.007)
 
-![logout](https://upload.wikimedia.org/wikipedia/en/3/39/Tartu_%C3%9Clikool_logo.svg)
+<img src="https://upload.wikimedia.org/wikipedia/en/3/39/Tartu_%C3%9Clikool_logo.svg" width="250">
+<img src="./attachments/logo_dsg_vettoriale.png" width="250">
 
-![logodsg](./attachments/logo_dsg_vettoriale.png)
 
 ## Graph View
 
@@ -45,12 +45,13 @@ Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di M
 |01/10| Graph Databases |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Graph%20Theory.md) [Slides 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Graph%20Databases.md) [pdf1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Graph%20Theory.pdf) [pdf2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Graph%20Databases.pdf)|Chp 3 and 5 of [5]|[book](https://neo4j.com/graph-databases-book/)|
 |08/10| Data Ingestion |||
 |15/10| Part 1 Recap |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Part%201%20-%20Recap.md)  [pdf](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Part%201%20-%20Recap.pdf)|||
-
-|| Data Engineering Pipelines ||Chp 1 of [3]||
+|22/10| Midterm |||||
+|29/10| Data Engineering Pipelines (Part1) ||||
+|05/11| Data Engineering Pipelines (Part1) ||||
+|12/11| Streaming Data ||||
 || Keynote TBA||||
-|| Streaming Data ||Chp 11 of [3]||
+||  ||||
 || Data Wrangling ||||
-
 # Practices (Videos Will be Available after Group 2 issue)
 
 | Date     | Title              | Material | Reads | Videos | Assignment | Notes |
