@@ -42,7 +42,7 @@ Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di M
 |24/10| Column Oriented Databases |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Column%20Oriented%20Database.md) [Slides 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Cassandra.md) [pdf](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Column%20Stores%20-%20Cassandra.pdf)||[nosql](https://www.christof-strauch.de/nosqldbs.pdf)|
 |24/10| Document Databases  |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Document%20Databases.md) [Slides 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/MongoDB.md) [pdf](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Document%20Stores%20-%20MongoDB.pdf)||[nosql](https://www.christof-strauch.de/nosqldbs.pdf)|
 |01/10| Graph Databases |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Graph%20Theory.md) [Slides 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Graph%20Databases.md) [pdf1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Graph%20Theory.pdf) [pdf2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Graph%20Databases.pdf)|Chp 3 and 5 of [5]|[book](https://neo4j.com/graph-databases-book/)|
-|08/10| Data Ingestion |||
+|08/10| Data Ingestion ||||
 |15/10| Part 1 Recap |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Part%201%20-%20Recap.md)  [pdf](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Part%201%20-%20Recap.pdf)|||
 |22/10| Midterm |||||
 |29/10| Data Engineering Pipelines (Part1) ||||
@@ -60,7 +60,7 @@ Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di M
 | 21-22 /09  |Modeling and Querying Key Value Data with Redis|[Slides](https://github.com/DataSystemsGroupUT/dataeng/blob/Homework2/REDIS.pdf)||[Video](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=0e659b03-7d3e-4b4c-a0f9-ac3d00f462a7)|||
 |28-29/09   |Modeling and Querying Document Data with MongoDB|[Slides](https://github.com/DataSystemsGroupUT/dataeng/blob/Homework3/slides/MongoDB.pdf)||[Video](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=9ffba354-a2a1-4131-967e-ac4400c8f226)|||
 |5-6/10        | Modeling and Querying Graph Data with Neo4J|[Slides](https://github.com/DataSystemsGroupUT/dataeng/blob/Homework4/Neo4j_lab_Slides.pptx.pdf)|[CypherManual](https://s3.amazonaws.com/artifacts.opencypher.org/openCypher9.pdf)|[Video](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=1c9e44d6-d3a0-44ed-a012-ac4b00bb831b)|||
-|| Data Ingestion with Apache Kafka||||||
+|| Data Ingestion with Apache Kafka|||[Video 1](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=eb980aea-b01b-4144-b4b0-ac5900b38aaa) [Video 2](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=fab6a6f0-9893-49d8-89ec-ac5a009998d4) [Video 3](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=b7073df1-19cf-4a24-a4d4-ac6100a85a1e) [Video 4](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=fce37959-4d0b-4330-90ec-ac6000dbb5f9)|||
 || Apache Airflow Data Pipelines||||||
 || Stream Processing with  Kafka Streams||||||
 || Stream Processing with  KSQL||||||
