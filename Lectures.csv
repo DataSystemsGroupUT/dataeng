@@ -1,0 +1,18 @@
+Date;Title;Material;Mandatory Reads;Extras
+01/09;Course Intro;Slides - pdf slide 45-109);;
+03/09;Data Modeling;Slides - pdf slide 1-44;Chp 4 p111-127, Chp 5 p151-156, Chp 6 p199-205 of [3];
+10/09;DM for Relational Databases;Slides - pdf slide 45-109;Chp 2, 6, and 7 (Normal Forms) of [1];Relational Model
+10/09;DM for Data Warehouse;Slides  - pdfslide 109-118;pdf video;Chp 2 of [2]
+17/09;DM for Big Data;Slides - pdf;Chp 2 of [3], video;paper
+17/09;Key Value Stores;Slides 1,Slides 2pdf;nosql;
+24/10;Column Oriented Databases;Slides 1 Slides 2 pdf;nosql;
+24/10;Document Databases;Slides 1 Slides 2 pdf;nosql;
+01/10;Graph Databases;Slides 1 Slides 2 pdf1 pdf2;Chp 3 and 5 of [5];book
+08/10;Data Ingestion;;;
+15/10;Part 1 Recap;Slides 1  pdf;;
+22/10;Midterm;;;
+29/10;Data Engineering Pipelines (Part1);;;
+05/11;Data Engineering Pipelines (Part1);;;
+12/11;Streaming Data;;;
+Keynote TBA;;;;
+Data Wrangling;;;;
