@@ -37,15 +37,15 @@ Streaming data gave rise to some interesting data pipeline implementations.
 
 [^1]: henceforth referred as data pipelines only
 
-### Basic Operation of Data Pipelines 
+### Basic Operations of Data Pipelines 
 
-- store schema and access information of different data sources
+- access information of different data sources
 - extract discrete data elements of the source data
 - copy extracted data from a data source to another
 - transform data 
-	-  correct errors in data elements extracted from source data
+	- correct errors in data elements extracted from source data
 	- standardize data in data elements based on field type
-- join or merge (in a rule driven way) with other data sources
+- join or merge (in a rule-driven way) with other data sources
  
 ## Big Data Pipeline - Batch
 

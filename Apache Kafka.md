@@ -116,7 +116,7 @@ Producers shard data over a set of Partitions
 
 ![right fit](./attachments/consumergroup.pdf)
 
-### Apache Kafka[^2]
+### Apache Kafka[^1]
 
 ![inline](./attachments/img0022.png) 
 
