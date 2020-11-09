@@ -1,0 +1,4 @@
+apache-airflow[crypto,celery,postgres,jdbc,ssh,slack]==1.10.12
+pandas==1.1.1
+faker==4.4.0
+cattrs==1.0.0
