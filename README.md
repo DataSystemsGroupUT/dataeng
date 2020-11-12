@@ -61,7 +61,7 @@ Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di M
 |28-29/09   |Modeling and Querying Document Data with MongoDB|[Slides](https://github.com/DataSystemsGroupUT/dataeng/blob/Homework3/slides/MongoDB.pdf)||[Video](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=9ffba354-a2a1-4131-967e-ac4400c8f226)|[Homework 3](https://github.com/DataSystemsGroupUT/dataeng/tree/Homework3)||
 |5-6/10        | Modeling and Querying Graph Data with Neo4J|[Slides](https://github.com/DataSystemsGroupUT/dataeng/blob/Homework4/Neo4j_lab_Slides.pptx.pdf)|[CypherManual](https://s3.amazonaws.com/artifacts.opencypher.org/openCypher9.pdf)|[Video](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=1c9e44d6-d3a0-44ed-a012-ac4b00bb831b)|[Homework 4](https://github.com/DataSystemsGroupUT/dataeng/tree/Homework4)||
 |19-20-26-27/10| Data Ingestion with Apache Kafka|[Slides](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Apache%20Kafka.pdf)||[Video 1](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=eb980aea-b01b-4144-b4b0-ac5900b38aaa) [Video 2](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=fab6a6f0-9893-49d8-89ec-ac5a009998d4) [Video 3](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=b7073df1-19cf-4a24-a4d4-ac6100a85a1e) [Video 4](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=fce37959-4d0b-4330-90ec-ac6000dbb5f9)|[Homework 5](https://github.com/DataSystemsGroupUT/dataeng/tree/Homework5)||
-|| Apache Airflow Data Pipelines||||||
+|| Apache Airflow Data Pipelines||[Homework 6](https://github.com/DataSystemsGroupUT/dataeng/tree/Homework6)||
 || Stream Processing with  Kafka Streams||||||
 || Stream Processing with  KSQL||||||
 ||Data Cleansing ||||||
