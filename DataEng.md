@@ -34,7 +34,7 @@
 
 ### Modern Data Pipelines with [[Apache Airflow]]
 
-### [[Data Velocity | Stream Processing]] with [[Kafka Streams]] and [[KSQL]]
+### [[Streaming Data Engineering | Stream Processing]] with [[Kafka Streams]] and [[KSQL]]
 
 ### [[Anti Patterns]] in Data Processing
 
