@@ -404,10 +404,17 @@ It's important to notice that you cannot use jinja templates inside the python c
 pg_connection_default:
 
 conn id: postgres_not_default
+
 conn type: Postgres
+
 host: postgres
+
+schema: postgres
+
 login: airflow
+
 password: airflow
+
 port: 5432
 
 crontab website:
