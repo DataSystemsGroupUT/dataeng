@@ -750,9 +750,6 @@ KTable<String, Long> wherenow =
  
 ```
 
-### Core Operations
-
-
 
 ## Programming with Streams: Dataflow
 
