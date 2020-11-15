@@ -46,11 +46,13 @@ Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di M
 |15/10| Part 1 Recap |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Part%201%20-%20Recap.md)  [pdf](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Part%201%20-%20Recap.pdf)|||
 |22/10| Midterm |||||
 |29/10| Data Engineering Pipelines (Part1) ||||
-|05/11| Data Engineering Pipelines (Part1) ||||
-|12/11| Streaming Data ||||
-|| Keynote TBA||||
-||  ||||
+|05/11| Data Engineering Pipelines (Part2) ||||
+|12/11| Streaming Data (Part 1) ||||
+|19/11| Keynote TBA||||
+|26/11| Streaming Data (Part 2) ||||
 || Data Wrangling ||||
+
+
 # Practices (Videos Will be Available after Group 2 issue)
 
 | Date     | Title              | Material | Reads | Videos | Assignment | Notes |
