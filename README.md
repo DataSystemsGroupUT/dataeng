@@ -47,7 +47,7 @@
 - Advanced
     - [Exercise 3: Producer ](src/main/java/kafka/advanced/exercise3/Readme.md)
     - [Exercise 4: Consumer](src/main/java/kafka/advanced/exercise4/Readme.md)
-    - [Exercise 5: P/C](src/main/java/kafka/advanced/exercise6/Readme.md)
+    - [Exercise 5: P/C](src/main/java/kstreams/exercise2/Readme.md)
         - Serialization
         - Deserialization
         - Partitioning
@@ -59,18 +59,18 @@
 
 ## Day 2 Kafka Stream: List of Exercises
 
- - [Exercise 10: Pipes](src/main/java/kstreams/exercise10/Readme.md)
+ - [Exercise 10: Pipes](src/main/java/kstreams/exercise1/Readme.md)
  - [Exercise 11: Word Count](src/main/java/kstreams/exercise11/Readme.md)
     - Processor
     - Kafka Stream
- - [Exercise 12: Rolling Average](src/main/java/kstreams/exercise12/Readme.md)
- - [Exercise 13: Time-Based Window](src/main/java/kstreams/exercise13/Readme.md)
+ - [Exercise 12: Rolling Average](src/main/java/kstreams/exercise3/Readme.md)
+ - [Exercise 13: Time-Based Window](src/main/java/kstreams/exercise4/Readme.md)
     - Processing Time
     - Event Time
- - [Exercise 14: Stream Enrichment](src/main/java/kstreams/exercise14/Readme.md)
+ - [Exercise 14: Stream Enrichment](src/main/java/kstreams/exercise5/Readme.md)
  - [Exercise 15: TBD](src/main/java/kstreams/exercise15/Readme.md)
- - [Exercise 16: Homework](src/main/java/kstreams/exercise16/Readme.md)
- - [Exercise 17: Pageviews](src/main/java/kstreams/exercise17/Readme.md)
+ - [Exercise 16: Homework](src/main/java/kstreams/exercise6/Readme.md)
+ - [Exercise 17: Pageviews](src/main/java/kstreams/exercise7/Readme.md)
 
 ## Day 3 KSQL: List of Exercises
 
