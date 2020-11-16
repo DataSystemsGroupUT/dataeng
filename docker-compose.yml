@@ -1,0 +1,144 @@
+version: '2.2'
+services:
+  zookeeper:
+    hostname: zookeeper
+    container_name: zookeeper
+    image: "${REPOSITORY}/cp-zookeeper:${CONFLUENT_DOCKER_TAG}"
+    restart: always
+    networks:
+      - kafka-net
+    restart: always
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+
+  kafka1:
+    image: "${REPOSITORY}/cp-enterprise-kafka:${CONFLUENT_DOCKER_TAG}"
+    restart: always
+    hostname: kafka
+    container_name: kafka1
+    ports:
+      - "9092:9092"
+    networks:
+      - kafka-net
+    restart: always
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka1:9092
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+      KAFKA_DELETE_TOPIC_ENABLE: "true"
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_METRIC_REPORTERS: "io.confluent.metrics.reporter.ConfluentMetricsReporter"
+      CONFLUENT_METRICS_REPORTER_BOOTSTRAP_SERVERS: "kafka1:9092"
+      CONFLUENT_METRICS_REPORTER_TOPIC_REPLICAS: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 100
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+  
+  kafka2:
+    image: "${REPOSITORY}/cp-enterprise-kafka:${CONFLUENT_DOCKER_TAG}"
+    restart: always
+    hostname: kafka
+    container_name: kafka2
+    ports:
+      - "9093:9093"
+    networks:
+      - kafka-net
+    restart: always
+    environment:
+      KAFKA_BROKER_ID: 2
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka2:9093
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+      KAFKA_DELETE_TOPIC_ENABLE: "true"
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_METRIC_REPORTERS: "io.confluent.metrics.reporter.ConfluentMetricsReporter"
+      CONFLUENT_METRICS_REPORTER_BOOTSTRAP_SERVERS: "kafka2:9093"
+      CONFLUENT_METRICS_REPORTER_TOPIC_REPLICAS: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 100
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+  schema-registry:
+    hostname: schema-registry
+    container_name: schema-registry
+    image: "${REPOSITORY}/cp-schema-registry:${CONFLUENT_DOCKER_TAG}"
+    restart: always
+    ports:
+      - 8081:8081
+    networks:
+      - kafka-net
+    restart: always
+    environment:
+      SCHEMA_REGISTRY_HOST_NAME: schema-registry
+      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: kafka1:9092
+      SCHEMA_REGISTRY_LISTENERS: http://schema-registry:8081
+  
+  tools:
+    image: cnfltraining/training-tools:6.0
+    restart: always
+    hostname: tools
+    container_name: tools
+    restart: always
+    networks:
+      - kafka-net
+    volumes:
+      - .:/root/confluent-streams/labs/using-ksql
+    working_dir: /root/confluent-streams/labs/using-ksql
+    command: /bin/bash
+    tty: true
+
+  notebook:
+    build: notebook/
+    networks:
+      - kafka-net
+    ports:
+      - 8888:8888
+    volumes:
+       - ./:/home/jovyan/work/data
+    environment:
+      - GRANT_SUDO=yesd
+
+  ksqldb-server:
+    container_name: ksqldb-server
+    image: ${REPOSITORY}/ksqldb-server
+    ports: 
+      - 8088:8088
+      - 8083:8083
+    depends_on:
+      - kafka1
+      - kafka2
+      - schema-registry
+    environment:
+      KSQL_BOOTSTRAP_SERVERS: kafka1:9092
+      KSQL_LISTENERS: http://0.0.0.0:8088
+      KSQL_KSQL_SCHEMA_REGISTRY_URL: http://schema-registry:8081
+      KSQL_AUTO_OFFSET_RESET: "earliest"
+      KSQL_COMMIT_INTERVAL_MS: 2000
+      KSQL_KSQL_HIDDEN_TOPICS: '^_.*'        
+    # If you want to use the Confluent Hub installer to d/l component, but make them available
+    # when running this offline, spin up the stack once and then run : 
+    #   docker cp ksqldb:/usr/share/confluent-hub-components ./data/connect-jars
+    volumes:
+      - $PWD/data:/data
+      - $PWD/scripts:/scripts
+    networks:
+      - kafka-net
+
+  ksqldb-cli:
+    container_name: ksqldb-cli
+    image: ${REPOSITORY}/cp-ksqldb-cli:${CONFLUENT_DOCKER_TAG}
+    depends_on:
+      - ksqldb-server
+    entrypoint: /bin/sh
+    tty: true
+    volumes:
+      - $PWD/scripts:/scripts
+    networks:
+      - kafka-net
+
+networks:
+  kafka-net:
