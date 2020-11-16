@@ -1,66 +1,24 @@
-# 3 Days Kafka Training Course
+# Kafka Streams/KSQL Practice and Homework
 
-![img](qrcode.png)
 ## Prerequisites
     
     - Knowledge of Java
+    - Knowledge of SQL
     - Knowledge of Bash
     - Download Confluent Plaform
 
-[Slide](./kafka.pdf)
-
-
 ### Topics
 
-    - Publish Subscribe
-    - Kafka Concepts
-        - Topics
-        - Producers
-        - Consumers
-    - Kafka System
-        - Brokers
-        - Partitioning
-        - Serialization
-    - Kafka Internals
-        - Commit Log
-        - Log Compaction
-        - Fault Tolerance
-            - Broker via Replication
-            - Producer via Transactionality
-            
-            
-### TODO
+- Kafka Recap
+- Serdes
+- Continuous Computations
+- Windowing
+- Streaming Aggregations
 
-[ ] Exercise 14 Join KGlobal Table
-[ ] Exercise X on Join Stream-Stream
-[ ] Exercise X on Session Windows
-[ ] KSQL in Java
-[ ] Exercise 17-18 Readme
+## List of Exercises
 
-
-## Day 1 Kafka Basics: List of Exercises
-
-- ABC
-    - [Exercise 1: Console 1](src/main/bash/exercise1/exercise1.md)
-    - [Exercise 2: Console 2](src/main/java/kafka/abasics/exercise1/exercise2.md)
-
-- Advanced
-    - [Exercise 3: Producer ](src/main/java/kafka/advanced/exercise3/Readme.md)
-    - [Exercise 4: Consumer](src/main/java/kafka/advanced/exercise4/Readme.md)
-    - [Exercise 5: P/C](src/main/java/kstreams/exercise2/Readme.md)
-        - Serialization
-        - Deserialization
-        - Partitioning
-
-- Expert
-    - [Exercise 6: Word Count P/C](src/main/java/kafka/expert/exercise6/Readme.md)
-    - [Exercise 7: Offset Management](src/main/java/kafka/experter/exercise9/Readme.md)
-    - [Exercise 8: Homework](src/main/java/kafka/expert/exercise7/Readme.md)
-
-## Day 2 Kafka Stream: List of Exercises
-
- - [Exercise 10: Pipes](src/main/java/kstreams/exercise1/Readme.md)
- - [Exercise 11: Word Count](src/main/java/kstreams/exercise11/Readme.md)
+ - [Exercise 1](src/main/java/kstreams/Readme.md)
+ - [Exercise 11: Word Count](src/main/java/kstreams/exercise1/Readme.md)
     - Processor
     - Kafka Stream
  - [Exercise 12: Rolling Average](src/main/java/kstreams/exercise3/Readme.md)
