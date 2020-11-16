@@ -27,6 +27,19 @@ bin/kafka-console-consumer --bootstrap-server localhost:9092 \
                                 
 ```
 
+## Learning Goals
+
+- break the ice with Kafka Streams
+- Configurations
+- Concept of topology
+
+### Notes
+
+- What is a Serde?
+- Why does the program do not terminate?
+- What about partitioning?
+
+
 Remember that Kafka Streaming uses an underlying dataflow API? 
 The following figure shows how the topology looks like
 

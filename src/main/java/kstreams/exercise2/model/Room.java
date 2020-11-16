@@ -19,10 +19,10 @@ public class Room {
         this.location = location;
     }
 
+
     @Override
     public String toString() {
-        return "TemperatureKey " +
-                "'location' " + location;
+        return location;
     }
 
     @Override

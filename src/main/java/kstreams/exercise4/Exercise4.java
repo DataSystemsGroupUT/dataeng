@@ -3,8 +3,8 @@ package kstreams.exercise4;
 import kstreams.exercise2.model.Temperature;
 import kstreams.exercise2.model.Room;
 import kstreams.exercise3.model.Tuple;
-import kstreams.exercise3.serdes.RoomSerde;
-import kstreams.exercise3.serdes.TemperatureSerde;
+import kstreams.exercise2.serde.RoomSerde;
+import kstreams.exercise2.serde.TemperatureSerde;
 import kstreams.exercise3.serdes.Tuple2Serde;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.streams.KafkaStreams;
@@ -38,7 +38,6 @@ public class Exercise4 {
 
                 .windowedBy(TimeWindows.of(Duration.ofSeconds(10)))
                         // SLIDING WINDOW .advanceBy(Duration.ofSeconds(5)))
-
                 .aggregate(
                         () -> new Tuple(0L, 0L),
                         (Room key, Tuple value, Tuple aggregate) -> {

@@ -2,8 +2,8 @@ package kstreams.exercise5;
 
 import kstreams.exercise2.model.Room;
 import kstreams.exercise2.model.Temperature;
-import kstreams.exercise3.serdes.RoomSerde;
-import kstreams.exercise3.serdes.TemperatureSerde;
+import kstreams.exercise2.serde.RoomSerde;
+import kstreams.exercise2.serde.TemperatureSerde;
 import kstreams.exercise5.model.ConfigSerde;
 import kstreams.exercise5.model.Configuration;
 import kstreams.exercise5.model.RichTemperature;
@@ -26,7 +26,7 @@ public class Exercise5 {
         StreamsBuilder builder = new StreamsBuilder();
 
         Properties props = new Properties();
-        props.put(StreamsConfig.APPLICATION_ID_CONFIG, "join-average-kafkastream");
+        props.put(StreamsConfig.APPLICATION_ID_CONFIG, "join-kafkastream");
         props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         props.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, TemperatureSerde.class);
         props.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, RoomSerde.class);

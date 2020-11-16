@@ -1,21 +1,40 @@
-# Exercise 13: Join KStream KTable
+# Exercise 5: Stream Enrichment
 
-## Before
 
-Run [Premise](../exercise2/Readme.md).
-Re-run [exercise 3](../exercise3/Readme.md).
+Stream enrichment is a common task in stream processing. It is useful when you have to attach some slowly-evolving metadata to 
+an incoming stream. Metadata usually represents contextual information that gives the streaming data some meaning.
 
-or
+During this exercise, we enrich the stream of temperature observation with some metadata about the rooms. We call this metadata
+```Configuration``` and it corresponds to the stream preferred temperature.
 
-- create a TemperatureKey and Temperature and Tuple classes
-- create relative serdes
-- create a temperature topic
-- create a configuration topic co-partitioned with temperature
+
+One we enriched the stream, we filter out all the anomalous rooms where the current temperature is not the requested one.
+
+Finally, we aggregate such cases by key to observe how many room are currently not in the required state.
+
+## Dependencies
+
+- [Exercise 2](../exercise2/Readme.md).
+- [exercise 3](../exercise3/Readme.md).
+
+```bash
+bin/kafka-topics --bootstrap-server kafka1:9092 --create \
+                      --partitions 2 \
+                      --replication-factor 1 \
+                      --topic temperature
+```
+
+## Learning Goals
+
+-  Recap on custom serializers and partitioning
+-  KTable
+-  KStream and KTable Join
+
 
 ```bash
 bin/kafka-topics --bootstrap-server localhost:9092 --create \
                       --partitions 2 \
-                      --replication-factor 2 \
+                      --replication-factor 1 \
                       --topic configuration
 ```
 

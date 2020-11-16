@@ -1,30 +1,43 @@
 # Working with temperature data
 
-## Part A
+## Kafka 101 (Recap)
 
-## Model
-
-The temperature observation records a prefVal and the timestamp.
+The temperature observation records is a pair value and the timestamp.
 Moreover, we want to carry on the information about the room where the sensor is deployed.
 
-## producer
-
-Write a Kafka producer that generates the observation every 5 seconds (system time)
+The producer generates the observation every 5 seconds (system time)
 and pushes them to a temperature topic.
 
-Before starting, recall to create the topic, with with two partitions
+The partitioning can be customized, for instance per room.
+
+Before starting, recall to create the topic with two partitions.
+
+Either via bash or using the AdminClient
+
 
 ```bash
 bin/kafka-topics --bootstrap-server localhost:9092 --create \
                       --partitions 2 \
-                      --replication-factor 2 \
+                      --replication-factor 1 \
                       --topic temperature
 ```
 
-## Part B
+## Learning Goals
 
-Write a Kafka consumer that reads the topic observations from the topic temperature
+- create custom value and key object
+- create a custom serializer/deserializer
+- create a custom partitioner
+- create a custom serde
 
-## Part C
+A Kafka consumer reads the topic observations from the topic temperature
 
-Modify the Kafka Producer so that it partition the observation per room.
+## Kafka Streams 
+
+Let's try to consumer in streaming now like we did with the first example.
+
+### Dependencies: None
+
+### Learning Goal
+
+- From Serializers to Deserializers to Serdes
+- Consuming a topic in streaming

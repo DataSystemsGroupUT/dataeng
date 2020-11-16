@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-/ksql-datagen quickstart=orders topic=orderst
+docker exec -it tools ksql-datagen quickstart=pageviews topic=pageviews  format=json bootstrap-server=kafka1:9092
 
-/bin/ksql-datagen quickstart=users
-
+docker exec -it tools ksql-datagen  topic=users  format=json iterations=100 format=json bootstrap-server=kafka1:9092

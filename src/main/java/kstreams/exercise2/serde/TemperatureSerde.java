@@ -1,4 +1,4 @@
-package kstreams.exercise3.serdes;
+package kstreams.exercise2.serde;
 
 
 import kstreams.exercise2.model.Temperature;

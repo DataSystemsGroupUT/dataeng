@@ -17,9 +17,8 @@ public class Exercise0 {
 
         //First we need to initialize Kafka properties
         Properties properties = new Properties();
-        properties.put("bootstrap.servers", "kafka1:9092;kafka2:9093");
+        properties.put("bootstrap.servers", "kafka1:9092,kafka2:9093");
         properties.put("client.id", "java-admin-client");
-
 
         AdminClient client = AdminClient.create(properties);
 

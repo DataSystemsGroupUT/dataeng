@@ -3,8 +3,8 @@ package kstreams.exercise3;
 import kstreams.exercise2.model.Room;
 import kstreams.exercise2.model.Temperature;
 import kstreams.exercise3.model.Tuple;
-import kstreams.exercise3.serdes.RoomSerde;
-import kstreams.exercise3.serdes.TemperatureSerde;
+import kstreams.exercise2.serde.RoomSerde;
+import kstreams.exercise2.serde.TemperatureSerde;
 import kstreams.exercise3.serdes.Tuple2Serde;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.streams.KafkaStreams;
@@ -26,7 +26,7 @@ public class Exercise3 {
 
         Properties props = new Properties();
         props.put(StreamsConfig.APPLICATION_ID_CONFIG, "rolling-average-kafkastream");
-        props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
+        props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "kafka1:9092");
         props.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, RoomSerde.class);
         props.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, TemperatureSerde.class);
         props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");

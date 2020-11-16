@@ -1,4 +1,4 @@
-package kstreams.exercise7.model;
+package kstreams.exercise6.model;
 
 import com.google.gson.Gson;
 import org.apache.kafka.common.serialization.Deserializer;

@@ -1,4 +1,4 @@
-package kstreams.exercise7.model;
+package kstreams.exercise6.model;
 
 public class PageView {
 

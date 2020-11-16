@@ -1,6 +1,6 @@
-package kstreams.exercise7;
+package kstreams.exercise6;
 
-import kstreams.exercise7.model.PageView;
+import kstreams.exercise6.model.PageView;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.streams.processor.TimestampExtractor;
 

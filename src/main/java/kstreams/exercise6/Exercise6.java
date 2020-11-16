@@ -1,13 +1,8 @@
 package kstreams.exercise6;
 
-import com.google.gson.Gson;
-import kstreams.exercise6.model.Order;
-import kstreams.exercise6.serdes.OrderSerde;
+import kstreams.exercise6.model.*;
 import org.apache.kafka.common.serialization.Serdes;
-import org.apache.kafka.streams.KafkaStreams;
-import org.apache.kafka.streams.StreamsBuilder;
-import org.apache.kafka.streams.StreamsConfig;
-import org.apache.kafka.streams.Topology;
+import org.apache.kafka.streams.*;
 import org.apache.kafka.streams.kstream.*;
 
 import java.time.Duration;
@@ -15,37 +10,38 @@ import java.util.Properties;
 
 public class Exercise6 {
 
-    static Gson gson = new Gson();
-
     public static void main(String[] args) {
         StreamsBuilder builder = new StreamsBuilder();
 
         Properties props = new Properties();
-        props.put(StreamsConfig.APPLICATION_ID_CONFIG, "window-tumbling");
+        props.put(StreamsConfig.APPLICATION_ID_CONFIG, "window-join");
         props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
         props.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass());
         props.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass());
-
-        KStream<String, String> orders = builder.stream("orderst", Consumed.with(Serdes.String(), Serdes.String()));
-
-        OrderSerde orderSerde = new OrderSerde();
-        orders.mapValues(value -> gson.fromJson(value, Order.class))
-                .to("json-orderst", Produced.with(Serdes.String(), orderSerde));
-
-        KStream<String, Order> ordersj = builder.stream("json-orderst", Consumed.with(Serdes.String(), orderSerde));
+        props.put(StreamsConfig.DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG, PageviewTimestampExtractor.class);
 
 
+        KStream<String, PageView> pageviews = builder.stream("pageviews", Consumed.with(Serdes.String(), new PageSerde()));
 
-        TimeWindowedKStream<String, Order> windowedKStream = ordersj
-                //group by state
-                .groupBy((key, value) -> value.getAddress().getState())
-                //tumbling window of 5 seconds
-                .windowedBy(TimeWindows.of(Duration.ofSeconds(5)));
-//                .windowedBy(TimeWindows.of(Duration.ofSeconds(10)).advanceBy(Duration.ofSeconds(5)));
-        KTable<Windowed<String>, Long> count = windowedKStream.count();
+        KStream<String, PageView> pageviewsbyuser = pageviews.selectKey((key, value) -> value.getUserid()).through("pageviewsbyuser");
 
-        count.toStream().print(Printed.toSysOut());
+        KTable<String, User> users = builder.table("users", Consumed.with(Serdes.String(), new UserSerde()));
 
+
+        KStream<String, RegionalView> joined = pageviewsbyuser
+                .leftJoin(users, (pageView, user) -> new RegionalView(user.getRegionid(), pageView));
+
+        KStream<String, RegionalView> pageviewsbyregion = joined.selectKey((key, value) -> value.getUser_region())
+                .through("pageviewsbyregion", Produced.with(Serdes.String(), new RegionalPageSerde()));
+        //joined.print(Printed.toSysOut());
+
+        KTable<Windowed<String>, Long> counttable = pageviewsbyregion
+                .groupByKey()
+                .windowedBy(TimeWindows.of(Duration.ofSeconds(30))
+                        .advanceBy(Duration.ofSeconds(10))).count();
+
+
+        counttable.toStream().print(Printed.toSysOut());
 
         Topology topology = builder.build();
 
@@ -54,6 +50,7 @@ public class Exercise6 {
         KafkaStreams ks = new KafkaStreams(topology, props);
         ks.start();
     }
+
 
 }
 

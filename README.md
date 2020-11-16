@@ -70,7 +70,7 @@
  - [Exercise 14: Stream Enrichment](src/main/java/kstreams/exercise5/Readme.md)
  - [Exercise 15: TBD](src/main/java/kstreams/exercise15/Readme.md)
  - [Exercise 16: Homework](src/main/java/kstreams/exercise6/Readme.md)
- - [Exercise 17: Pageviews](src/main/java/kstreams/exercise7/Readme.md)
+ - [Exercise 17: Pageviews](src/main/java/kstreams/exercise6/Readme.md)
 
 ## Day 3 KSQL: List of Exercises
 

@@ -1,52 +1,35 @@
-# Exercise 4: Temperature Average using Kafka Streams Window Operators.
+# Temperature Analysis: Windowing Average using Kafka Streams.
 
-## Before
+## Dependencies
 
-Re-run [Premise](../exercise2/Readme.md).
-Re-run [exercise 12](../exercise3/Readme.md).
-
-or
-
-- create a TemperatureKey and Temperature and Tuple classes
-- create relative serdes
-- create a temperature topic
+- [Exercise 2](../exercise2/Readme.md).
+- [exercise 3](../exercise3/Readme.md).
 
 ```bash
-bin/kafka-topics --bootstrap-server localhost:9092 --create \
+bin/kafka-topics --bootstrap-server kafka1:9092 --create \
                       --partitions 2 \
-                      --replication-factor 2 \
+                      --replication-factor 1 \
                       --topic temperature
 ```
 
-## A using processing time
+Compute the moving average of the last 15 seconds
+using processing time or event time.
 
-We simply add a window operation to execrise 12.
-This does not change the topology, i.e.,
 
-![topology](topology.png)
-```
-Topologies:
-   Sub-topology: 0
-    Source: KSTREAM-SOURCE-0000000000 (topics: [temperature])
-      --> KSTREAM-MAPVALUES-0000000001
-    Processor: KSTREAM-MAPVALUES-0000000001 (stores: [])
-      --> KSTREAM-AGGREGATE-0000000003
-      <-- KSTREAM-SOURCE-0000000000
-    Processor: KSTREAM-AGGREGATE-0000000003 (stores: [KSTREAM-AGGREGATE-STATE-STORE-0000000002])
-      --> KTABLE-MAPVALUES-0000000004
-      <-- KSTREAM-MAPVALUES-0000000001
-    Processor: KTABLE-MAPVALUES-0000000004 (stores: [])
-      --> KTABLE-TOSTREAM-0000000005
-      <-- KSTREAM-AGGREGATE-0000000003
-    Processor: KTABLE-TOSTREAM-0000000005 (stores: [])
-      --> KSTREAM-PRINTER-0000000006
-      <-- KTABLE-MAPVALUES-0000000004
-    Processor: KSTREAM-PRINTER-0000000006 (stores: [])
-      --> none
-      <-- KTABLE-TOSTREAM-0000000005
-```
+## Learning Goals
 
-## B using event-time
+- window-based continuous computation
+- reporting
+- KTABLE
+
+
+### Using Processing Time
+
+- What results are produced?
+- When are produced?
+- How are reported?
+
+### Using Event Time
 
 To use Event-Time we specify a timestamp extractor using 
 the appropriate interface
@@ -73,3 +56,29 @@ and we configure the application accordingly
 props.put(StreamsConfig.DEFAULT_TIMESTAMP_EXTRACTOR_CLASS_CONFIG, TemperatureTimestampExtractor.class);
 
 ```
+
+
+
+![topology](topology.png)
+```
+Topologies:
+   Sub-topology: 0
+    Source: KSTREAM-SOURCE-0000000000 (topics: [temperature])
+      --> KSTREAM-MAPVALUES-0000000001
+    Processor: KSTREAM-MAPVALUES-0000000001 (stores: [])
+      --> KSTREAM-AGGREGATE-0000000003
+      <-- KSTREAM-SOURCE-0000000000
+    Processor: KSTREAM-AGGREGATE-0000000003 (stores: [KSTREAM-AGGREGATE-STATE-STORE-0000000002])
+      --> KTABLE-MAPVALUES-0000000004
+      <-- KSTREAM-MAPVALUES-0000000001
+    Processor: KTABLE-MAPVALUES-0000000004 (stores: [])
+      --> KTABLE-TOSTREAM-0000000005
+      <-- KSTREAM-AGGREGATE-0000000003
+    Processor: KTABLE-TOSTREAM-0000000005 (stores: [])
+      --> KSTREAM-PRINTER-0000000006
+      <-- KTABLE-MAPVALUES-0000000004
+    Processor: KSTREAM-PRINTER-0000000006 (stores: [])
+      --> none
+      <-- KTABLE-TOSTREAM-0000000005
+```
+

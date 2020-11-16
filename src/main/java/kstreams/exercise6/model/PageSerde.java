@@ -1,4 +1,4 @@
-package kstreams.exercise7.model;
+package kstreams.exercise6.model;
 
 import com.google.gson.Gson;
 import org.apache.kafka.common.serialization.Deserializer;
@@ -7,17 +7,17 @@ import org.apache.kafka.common.serialization.Serializer;
 
 import java.nio.charset.Charset;
 
-public class UserSerde implements Serde<User> {
+public class PageSerde implements Serde<PageView> {
 
     Gson gson = new Gson();
 
     @Override
-    public Serializer<User> serializer() {
+    public Serializer<PageView> serializer() {
         return (topic, data) -> gson.toJson(data).getBytes(Charset.forName("UTF-8"));
     }
 
     @Override
-    public Deserializer<User> deserializer() {
-        return (topic, data) -> gson.fromJson(new String(data), User.class);
+    public Deserializer<PageView> deserializer() {
+        return (topic, data) -> gson.fromJson(new String(data), PageView.class);
     }
 }

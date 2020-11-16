@@ -1,49 +1,30 @@
-# Exercise 12: Temperature Average using Kafka Streams.
-
-## Before
-
-Run [Exercise3](../exercise2/Readme.md).
-
-or
-
-- create a TemperatureKey and Temperature classes
-- create a temperature topic
-
-```bash
-bin/kafka-topics --bootstrap-server localhost:9092 --create \
-                      --partitions 2 \
-                      --replication-factor 2 \
-                      --topic temperature
-```
-
-## TODOs
-
-- define a SerDe, i.e., Serializer and Deserializers
-
-A KafkaStream application typically does both the tasks, so you must implement them both
-of them and a wrapper class 
-
-```java
-public class TemperatureSerde implements Serde<Temperature>...
-```
-You can re-use you previously defined serializers and deserializers from exercise 5
-
+# Exercise 3: Rolling Temperature Average using Kafka Streams.
 
 Calculating the average temperature per room.
 
-
 ![formula](./formula.png)
 
-This suggests we need to keep a local 
-count and then a total sum
-finally divide it.
+This suggests we need to keep a local  count and then a total sum finally divide it.
+*Clearly a stateful computation* Can we do this in one-pass?
 
-*Clearly a stateful computation*
-
-Can we do this in one-pass?
-
-- Let's introduce an helper structure Tuple (Long,Long)
+- Let's introduce a helper structure Tuple (Long,Long)
 - We can group across the stream per key
+
+
+## Dependencies
+
+[Exercise 2](../exercise2/Readme.md).
+
+## Learning Goals
+
+- understand continuous computations
+
+```bash
+bin/kafka-topics --bootstrap-server kafka1:9092 --create \
+                      --partitions 2 \
+                      --replication-factor 1 \
+                      --topic temperature
+```
 
 ![topology](topology.png)
 ```
