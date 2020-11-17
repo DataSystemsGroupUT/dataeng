@@ -2,7 +2,7 @@ package kstreams.exercise5;
 
 import kstreams.exercise2.model.Room;
 import kstreams.exercise2.serialization.RoomSerializer;
-import kstreams.exercise5.model.ConfigSerializer;
+import kstreams.exercise5.serialization.ConfigSerializer;
 import kstreams.exercise5.model.Configuration;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;

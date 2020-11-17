@@ -1,5 +1,6 @@
-package kstreams.exercise5.model;
+package kstreams.exercise5.serialization;
 
+import kstreams.exercise5.model.RichTemperature;
 import org.apache.kafka.common.serialization.Deserializer;
 import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serializer;

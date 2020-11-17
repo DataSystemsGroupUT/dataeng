@@ -1,6 +1,7 @@
-package kstreams.exercise5.model;
+package kstreams.exercise5.serialization;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import kstreams.exercise5.model.RichTemperature;
 import org.apache.kafka.common.serialization.Serializer;
 
 import java.util.Map;
