@@ -1,9 +1,0 @@
-{"namespace": "kafka.expert.exercise8",
- "type": "record",
- "name": "Location",
- "fields": [
-     {"name": "building", "type": "string", "doc" : "The building address"},
-     {"name": "floor", "type": "int", "doc" : "The floor number"},
-     {"name": "number", "type": "int", "doc" : "The room number"}
- ]
-}

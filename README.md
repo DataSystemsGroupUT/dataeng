@@ -17,18 +17,18 @@
 
 ## List of Exercises
 
- - [Exercise 1](src/main/java/kstreams/Readme.md)
- - [Exercise 11: Word Count](src/main/java/kstreams/exercise1/Readme.md)
+ - [Exercise 1](ksql-udfs/src/main/java/ee/ut/kstreams/Readme.md)
+ - [Exercise 11: Word Count](ksql-udfs/src/main/java/ee/ut/kstreams/ee.ut.cs.dsg.ksql.exercise1/Readme.md)
     - Processor
     - Kafka Stream
- - [Exercise 12: Rolling Average](src/main/java/kstreams/exercise3/Readme.md)
- - [Exercise 13: Time-Based Window](src/main/java/kstreams/exercise4/Readme.md)
+ - [Exercise 12: Rolling Average](ksql-udfs/src/main/java/ee/ut/kstreams/exercise3/Readme.md)
+ - [Exercise 13: Time-Based Window](ksql-udfs/src/main/java/ee/ut/kstreams/exercise4/Readme.md)
     - Processing Time
     - Event Time
- - [Exercise 14: Stream Enrichment](src/main/java/kstreams/exercise5/Readme.md)
- - [Exercise 15: TBD](src/main/java/kstreams/exercise15/Readme.md)
- - [Exercise 16: Homework](src/main/java/kstreams/exercise6/Readme.md)
- - [Exercise 17: Pageviews](src/main/java/kstreams/exercise6/Readme.md)
+ - [Exercise 14: Stream Enrichment](ksql-udfs/src/main/java/ee/ut/kstreams/exercise5/Readme.md)
+ - [Exercise 15: TBD](ksql-udfs/src/main/java/ee/ut/kstreams/exercise15/Readme.md)
+ - [Exercise 16: Homework](ksql-udfs/src/main/java/ee/ut/kstreams/exercise6/Readme.md)
+ - [Exercise 17: Pageviews](ksql-udfs/src/main/java/ee/ut/kstreams/exercise6/Readme.md)
 
 ## Day 3 KSQL: List of Exercises
 

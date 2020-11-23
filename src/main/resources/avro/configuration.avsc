@@ -1,0 +1,10 @@
+{"namespace": "ee.ut.cs.dsg.exercise5",
+ "type": "record",
+ "name": "Configuration",
+ "fields": [
+     {"name": "prefVal", "type": "double", "doc" : "The preferred value from the measurement"},
+     {"name": "measurement", "type": "string", "doc" : "The measurement type, e.g., temperature"},
+     {"name": "timestamp", "type": "long", "doc" : "The measurement timestamp"},
+     {"name": "author", "type": "string", "doc" : "The author of the configuration"}
+ ]
+}

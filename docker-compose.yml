@@ -125,6 +125,7 @@ services:
     volumes:
       - $PWD/data:/data
       - $PWD/scripts:/scripts
+      - $PWD/extensions:/extensions
     networks:
       - kafka-net
 

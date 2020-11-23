@@ -1,4 +1,4 @@
-{"namespace": "kafka.expert.exercise8",
+{"namespace": "ee.ut.cs.dsg.exercise2",
  "type": "record",
  "name": "Observation",
  "fields": [
