@@ -16,7 +16,7 @@ public class MySplit {
         String s1 = s.toLowerCase()
                 .replace(",", " ")
                 .replace(";", " ")
-                .replace(".", " ")
+                .replace("/.", " ")
                 .replace("!", " ")
                 .replace("\"", " ")
                 .replace("?", " ");

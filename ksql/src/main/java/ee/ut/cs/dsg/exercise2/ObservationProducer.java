@@ -13,7 +13,7 @@ import java.util.Random;
 
 public class ObservationProducer {
 
-    public static String TOPIC = "temperature_avro";
+    public static String TOPIC = "temperature";
 
     public void createProducer() throws InterruptedException {
 

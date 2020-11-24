@@ -187,4 +187,5 @@ Topologies:
     Processor: PrependAliasRight (stores: [])
       --> none
       <-- KTABLE-TRANSFORMVALUES-0000000004
-```
+``
+

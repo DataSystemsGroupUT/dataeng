@@ -18,7 +18,7 @@ public class Exercise1Producer {
 
     Lorem lorem = LoremIpsum.getInstance();
     Random random = new Random();
-    public static String INPUT_TOPIC = "paragraphs3";
+    public static String INPUT_TOPIC = "paragraphs";
     Gson gson = new Gson();
 
     public void createProducer() throws InterruptedException {

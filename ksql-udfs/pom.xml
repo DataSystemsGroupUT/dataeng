@@ -2,14 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>kafka-training</artifactId>
-        <groupId>io.confluent.helloworld</groupId>
-        <version>1.0</version>
-    </parent>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>ksql-udfs</artifactId>
+    <groupId>ee.ut.cs.dsg.dataeng</groupId>
+    <version>1.0</version>
 
     <properties>
         <confluent.version>6.0.0</confluent.version>
@@ -19,8 +15,14 @@
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <exec.mainClass>ee.ut.cs.dsg.ksql.ThisIsIgnored</exec.mainClass>
-
     </properties>
+
+    <repositories>
+        <repository>
+            <id>confluent</id>
+            <url>http://packages.confluent.io/maven/</url>
+        </repository>
+    </repositories>
 
 
     <dependencies>
@@ -29,6 +31,7 @@
             <artifactId>ksqldb-udf</artifactId>
             <version>${confluent.version}</version>
         </dependency>
+
     </dependencies>
 
     <build>
@@ -57,6 +60,7 @@
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
+
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
@@ -77,5 +81,6 @@
         </plugins>
 
     </build>
+
 
 </project>
