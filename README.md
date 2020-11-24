@@ -56,9 +56,9 @@ Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di M
 
 # Practices (Videos Will be Available after Group 2 issue)
 
-| Date     | Title              | Material | Reads | Videos | Assignment | Notes |
+| Date     | Title              | Material | Reads | Videos | Branch | Notes |
 |----------|-------------|----------|-------|-------|-------|----|
-| 07-8/09  | Docker |  [Slides](./docker/README.md) - [Lab Branch](https://github.com/DataSystemsGroupUT/dataeng/tree/docker) | |[Video GP1](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=31e77abe-b51e-4a39-8c33-ac30009b7ba6) [Video GP2](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=31e77abe-b51e-4a39-8c33-ac30009b7ba6) ||  [QA GP2 only](https://docs.google.com/document/d/134YKfqp49-rtAXa0FJO30LJonHVO-PeYLqqeo8DQY9I/) 
+| 07-8/09  | Docker | [Slides](./docker/README.md) - | |[Video GP1](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=31e77abe-b51e-4a39-8c33-ac30009b7ba6) [Video GP2](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=31e77abe-b51e-4a39-8c33-ac30009b7ba6) |[Lab Branch](https://github.com/DataSystemsGroupUT/dataeng/tree/docker) |  [QA GP2 only](https://docs.google.com/document/d/134YKfqp49-rtAXa0FJO30LJonHVO-PeYLqqeo8DQY9I/) 
 | 14-15 /09  |Modeling and Querying Relational Data with Postgres|[Slides](https://github.com/DataSystemsGroupUT/dataeng/blob/Homework1/PostgreSQL.pdf)|[Chp 32 of [1]§](https://www.db-book.com/db7/online-chapters-dir/32.pdf) |[Video](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=b3221179-fd3a-4b4e-9a67-ac38008f7fbe)|[Homework 1](https://github.com/DataSystemsGroupUT/dataeng/tree/Homework1)||
 | 21-22 /09  |Modeling and Querying Key Value Data with Redis|[Slides](https://github.com/DataSystemsGroupUT/dataeng/blob/Homework2/REDIS.pdf)||[Video](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=0e659b03-7d3e-4b4c-a0f9-ac3d00f462a7)|[Homework 2](https://github.com/DataSystemsGroupUT/dataeng/tree/Homework2)||
 |28-29/09   |Modeling and Querying Document Data with MongoDB|[Slides](https://github.com/DataSystemsGroupUT/dataeng/blob/Homework3/slides/MongoDB.pdf)||[Video](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=9ffba354-a2a1-4131-967e-ac4400c8f226)|[Homework 3](https://github.com/DataSystemsGroupUT/dataeng/tree/Homework3)||
