@@ -119,6 +119,7 @@ services:
       - $PWD/data:/data
       - $PWD/scripts:/scripts
       - $PWD/extensions:/extensions
+      - $PWD/extensions:/usr/ext
     networks:
       - kafka-net
 
