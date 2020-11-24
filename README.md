@@ -46,8 +46,8 @@ Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di M
 |15/10| Part 1 Recap |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Part%201%20-%20Recap.md)  [pdf](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Part%201%20-%20Recap.pdf)|||
 |22/10| Midterm |||||
 |29/10| Data Engineering Pipelines (Part1) |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Data%20Pipeline%20(Intro).md) [slide 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Data%20Pipeline.md) [pdf](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/pipelines.pdf)|||
-|05/11| Data Engineering Pipelines (Part2) |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/MapReduce.md) [Slides 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/FlumeJava.md) [Slides 3](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Apache%20Airflow.md)|||
-|12/11| Streaming Data (Part 1) |[Slide 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Streaming%20Data%20Engineering.md) [Slide 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Streaming%20Pipelines.md)|||
+|05/11| Data Engineering Pipelines (Part2) |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/MapReduce.md) [Slides 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/FlumeJava.md) [Slides 3](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Apache%20Airflow.md)|Chp 10 of 3||
+|12/11| Streaming Data (Part 1) |[Slide 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Streaming%20Data%20Engineering.md) [Slide 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Streaming%20Pipelines.md)|Chp 11 of 3||
 |19/11| Data Journey|[Slides](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/DataJourney_UoT.pdf)|||
 |26/11| Streaming Data (Part 2) ||||
 |03/12| Data Wrangling (Part 1) ||||
