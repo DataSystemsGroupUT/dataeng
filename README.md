@@ -1,121 +1,40 @@
 # Kafka Streams/KSQL Practice and Homework
 
-## Prerequisites
-    
-    - Knowledge of Java
-    - Knowledge of SQL
-    - Knowledge of Bash
-    - Download Confluent Plaform
 
-### Topics
+## Setup
 
-- Kafka Recap
-- Serdes
-- Continuous Computations
-- Windowing
-- Streaming Aggregations
+Start the containers ```docker-compose up -d```
 
-## List of Exercises
+![Deployment](./docker-compose.png)
 
- - [Exercise 1](ksql-udfs/src/main/java/ee/ut/kstreams/Readme.md)
- - [Exercise 11: Word Count](ksql-udfs/src/main/java/ee/ut/kstreams/ee.ut.cs.dsg.ksql.exercise1/Readme.md)
-    - Processor
-    - Kafka Stream
- - [Exercise 12: Rolling Average](ksql-udfs/src/main/java/ee/ut/kstreams/exercise3/Readme.md)
- - [Exercise 13: Time-Based Window](ksql-udfs/src/main/java/ee/ut/kstreams/exercise4/Readme.md)
-    - Processing Time
-    - Event Time
- - [Exercise 14: Stream Enrichment](ksql-udfs/src/main/java/ee/ut/kstreams/exercise5/Readme.md)
- - [Exercise 15: TBD](ksql-udfs/src/main/java/ee/ut/kstreams/exercise15/Readme.md)
- - [Exercise 16: Homework](ksql-udfs/src/main/java/ee/ut/kstreams/exercise6/Readme.md)
- - [Exercise 17: Pageviews](ksql-udfs/src/main/java/ee/ut/kstreams/exercise6/Readme.md)
+## Tools
 
-## Day 3 KSQL: List of Exercises
+SSH to the Tools container
 
-TBD
+```docker exec -it tools /bin/bash```
 
-###  Running Kafka (Requires Linux)
+Run the following command to create the topic ```example_topic```.
 
-Download Confluent Platform [here](https://www.confluent.io/download/)
+```kafka-topics --bootstrap-server kafka1:9092 --partitions 2 --create --topic example_topic ```
 
-enter the bin folder and verify if all the scrits are executable
+## Cleanup
 
-```bash
-#grant permission
-chmod +x *.sh
-```
+Stop the containers ```docker-compose down```
 
-ssh to the virtual machine with port forwarding
+Delete all the volumes ```docker volume rm $(docker volume ls -q)```
 
-```bash
-ssh -p 3022 -L 9092:localhost:9092 -L 2081:localhost:2081 tartu@localhost
-```
+## Kafka Streams
 
+## KSQL
 
-Then start zookeeper. It's address is *localhost:2181*
-```bash
-bin/zookeeper-server-start etc/kafka/zookeeper.properties
-```
+### KSQL-CLI
 
+SSH to the KSQL-DB CLI container ```docker exec -it ksqldb-cli /bin/bash```
 
-Then we start a kafka broker
-
-```bash
-bin/kafka-server-start etc/kafka/server.properties
-
-```
-
-If you want to start a second broker you MUST change the ID in the configuration and the port
-as indicated below. Suggestion, also differentiate the log folder.
-```lombok.config
-
-
-etc/kafka//server-1.properties:
-    broker.id=1
-    listeners=PLAINTEXT://:9092
-    log.dirs=/tmp/kafka-logs-1
-    
-
-etc/kafka//server-2.properties:
-    broker.id=2
-    listeners=PLAINTEXT://:9093
-    log.dirs=/tmp/kafka-logs-2
-```
-
-## Utilities
-
-[Topology-Viz](https://zz85.github.io/kafka-streams-viz/)
+Connect to the KSQL-CLI server ```ksql http://ksqldb-server:8088```
 
 
 
-### CLI 
-
-#### Create topics from the CLI
-
-```bash
-bin/kafka-topics --create --zookeeper localhost:2181 --replication-factor X --partitions Y --topic <name>
-```
-
-#### List existing topics 
-bin/kafka-topics --list --zookeeper localhost:2181 
-
-#### Describe a certain topic
-
-```bash
-bin/kafka-topics --describe --zookeeper localhost:2181 test
-```
-Output 
-
-Topic: test	PartitionCount: 1	ReplicationFactor: 1	Configs:
-Topic: test	Partition: 0	Leader: 0	Replicas: 0	Isr: 0	Offline:
 
 
-## Other Utilities
 
-bin/kafka-console-producer --broker-list localhost:9092 --topic test
-
-bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic test --from-beginning
-
-bin/kafka-topics --list --zookeeper localhost:2181
-
-bin/schema-registry-start ./etc/schema-registry/schema-registry.properties

@@ -4,7 +4,6 @@ services:
     hostname: zookeeper
     container_name: zookeeper
     image: "${REPOSITORY}/cp-zookeeper:${CONFLUENT_DOCKER_TAG}"
-    restart: always
     networks:
       - kafka-net
     restart: always
@@ -21,7 +20,6 @@ services:
       - "9092:9092"
     networks:
       - kafka-net
-    restart: always
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
@@ -35,7 +33,6 @@ services:
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 100
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
   
   kafka2:
     image: "${REPOSITORY}/cp-enterprise-kafka:${CONFLUENT_DOCKER_TAG}"
@@ -46,7 +43,6 @@ services:
       - "9093:9093"
     networks:
       - kafka-net
-    restart: always
     environment:
       KAFKA_BROKER_ID: 2
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
@@ -60,7 +56,6 @@ services:
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 100
       KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
-      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 
   schema-registry:
     hostname: schema-registry
@@ -71,7 +66,6 @@ services:
       - 8081:8081
     networks:
       - kafka-net
-    restart: always
     environment:
       SCHEMA_REGISTRY_HOST_NAME: schema-registry
       SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: kafka1:9092
@@ -82,7 +76,6 @@ services:
     restart: always
     hostname: tools
     container_name: tools
-    restart: always
     networks:
       - kafka-net
     volumes:
