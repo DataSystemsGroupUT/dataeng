@@ -9,7 +9,7 @@ kafka-topics --bootstrap-server kafka1:9092 --partitions 2 --create --topic capa
 
 ```
 
-- Run [Person Producer](./src/main/java/ee/ut/cs/dsg/PersonProducer.java)
+- Run [People Producer](./src/main/java/ee/ut/cs/dsg/PeopleProducer.java)
 - Run [Capacity Producer](./src/main/java/ee/ut/cs/dsg/CapacityProducer.java)
 
 ## KSQL/STREAMS
