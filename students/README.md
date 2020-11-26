@@ -1,17 +1,5 @@
-# Working with temperature data: Stream Enrichment
+# KSQL/Kafka Streams Assignment
 
-
-We now extend the temperature example, assuming to keep a configuration for each room.
-The configuration contains the preferred temperature value in that room, and it is signed by it's author
-via authentication.
-
-Our goal is identifying those rooms whose current temperature is not the preferred one (Anomalies).
-
-### Learning Goals
-
-- Using AVRO and KSQL
-- KTable 
-- KTable-KStream JOINs
 
 ## Before
 
@@ -21,8 +9,8 @@ kafka-topics --bootstrap-server kafka1:9092 --partitions 2 --create --topic capa
 
 ```
 
-- Run [Observation Producer](./src/main/java/ee/ut/cs/dsg/exercise6/PersonProducer.java)
-- Run [Configuration Producer](../ksql/src/main/java/ee/ut/cs/dsg/exercise6/CapacityProducer.java)
+- Run [Observation Producer](./src/main/java/ee/ut/cs/dsg/PersonProducer.java)
+- Run [Configuration Producer](../ksql/src/main/java/ee/ut/cs/dsg/CapacityProducer.java)
 
 ## KSQL/STREAMS
 

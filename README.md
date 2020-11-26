@@ -1,6 +1,10 @@
 # Kafka Streams/KSQL Practice and Homework
 
 
+### ASSIGNMENT !!!!!
+
+- [README](./students/README.md)
+
 ## Setup
 
 ```mvn clean generate-sources```
