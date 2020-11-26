@@ -1,4 +1,4 @@
-package ee.ut.cs.dsg.exercise1;
+package ee.ut.cs.dsg.dsg.exercise1;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.Serdes;

@@ -1,9 +1,9 @@
-package ee.ut.cs.dsg.exercise5;
+package ee.ut.cs.dsg.dsg.exercise5;
 
-import ee.ut.cs.dsg.exercise2.model.Room;
-import ee.ut.cs.dsg.exercise2.serialization.RoomSerializer;
-import ee.ut.cs.dsg.exercise5.serialization.ConfigSerializer;
-import ee.ut.cs.dsg.exercise5.model.Configuration;
+import ee.ut.cs.dsg.dsg.exercise2.model.Room;
+import ee.ut.cs.dsg.dsg.exercise2.serialization.RoomSerializer;
+import ee.ut.cs.dsg.dsg.exercise5.serialization.ConfigSerializer;
+import ee.ut.cs.dsg.dsg.exercise5.model.Configuration;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;

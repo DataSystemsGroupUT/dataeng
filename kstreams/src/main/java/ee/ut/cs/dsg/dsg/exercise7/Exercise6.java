@@ -1,7 +1,6 @@
-package ee.ut.cs.dsg.exercise7;
+package ee.ut.cs.dsg.dsg.exercise7;
 
-import ee.ut.cs.dsg.exercise6.model.*;
-import ee.ut.cs.dsg.exercise7.model.*;
+import ee.ut.cs.dsg.dsg.exercise7.model.*;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.StreamsBuilder;

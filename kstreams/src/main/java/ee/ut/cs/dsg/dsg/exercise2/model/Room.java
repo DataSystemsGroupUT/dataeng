@@ -1,4 +1,4 @@
-package ee.ut.cs.dsg.exercise2.model;
+package ee.ut.cs.dsg.dsg.exercise2.model;
 
 public class Room {
 

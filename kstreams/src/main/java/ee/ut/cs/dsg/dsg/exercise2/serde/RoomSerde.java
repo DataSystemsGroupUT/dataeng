@@ -1,9 +1,9 @@
-package ee.ut.cs.dsg.exercise2.serde;
+package ee.ut.cs.dsg.dsg.exercise2.serde;
 
 
-import ee.ut.cs.dsg.exercise2.model.Room;
-import ee.ut.cs.dsg.exercise2.serialization.RoomSerializer;
-import ee.ut.cs.dsg.exercise2.serialization.RoomDeserializer;
+import ee.ut.cs.dsg.dsg.exercise2.model.Room;
+import ee.ut.cs.dsg.dsg.exercise2.serialization.RoomSerializer;
+import ee.ut.cs.dsg.dsg.exercise2.serialization.RoomDeserializer;
 import org.apache.kafka.common.serialization.Deserializer;
 import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serializer;

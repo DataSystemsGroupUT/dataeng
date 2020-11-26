@@ -2,7 +2,7 @@
 
 ## Dependencies
 
-- [Exercise 2](../ee.ut.cs.dsg.ksql.exercise2/Readme.md).
+- [Exercise 2](../ee.ut.cs.dsg.dsg.ksql.exercise2/Readme.md).
 - [exercise 3](../exercise3/Readme.md).
 
 ```bash

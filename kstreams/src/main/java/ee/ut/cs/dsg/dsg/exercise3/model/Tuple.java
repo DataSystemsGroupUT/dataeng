@@ -1,4 +1,4 @@
-package ee.ut.cs.dsg.exercise3.model;
+package ee.ut.cs.dsg.dsg.exercise3.model;
 
 public class Tuple {
     public Long t1;

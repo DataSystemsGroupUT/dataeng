@@ -1,9 +1,9 @@
-package ee.ut.cs.dsg.exercise2;
+package ee.ut.cs.dsg.dsg.exercise2;
 
-import ee.ut.cs.dsg.exercise2.model.Room;
-import ee.ut.cs.dsg.exercise2.model.Temperature;
-import ee.ut.cs.dsg.exercise2.serialization.RoomDeserializer;
-import ee.ut.cs.dsg.exercise2.serialization.TemperatureDeserializer;
+import ee.ut.cs.dsg.dsg.exercise2.model.Room;
+import ee.ut.cs.dsg.dsg.exercise2.model.Temperature;
+import ee.ut.cs.dsg.dsg.exercise2.serialization.RoomDeserializer;
+import ee.ut.cs.dsg.dsg.exercise2.serialization.TemperatureDeserializer;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecords;

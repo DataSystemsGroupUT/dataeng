@@ -1,9 +1,9 @@
-package ee.ut.cs.dsg.exercise2.serde;
+package ee.ut.cs.dsg.dsg.exercise2.serde;
 
 
-import ee.ut.cs.dsg.exercise2.model.Temperature;
-import ee.ut.cs.dsg.exercise2.serialization.TemperatureSerializer;
-import ee.ut.cs.dsg.exercise2.serialization.TemperatureDeserializer;
+import ee.ut.cs.dsg.dsg.exercise2.model.Temperature;
+import ee.ut.cs.dsg.dsg.exercise2.serialization.TemperatureSerializer;
+import ee.ut.cs.dsg.dsg.exercise2.serialization.TemperatureDeserializer;
 import org.apache.kafka.common.serialization.Deserializer;
 import org.apache.kafka.common.serialization.Serde;
 import org.apache.kafka.common.serialization.Serializer;

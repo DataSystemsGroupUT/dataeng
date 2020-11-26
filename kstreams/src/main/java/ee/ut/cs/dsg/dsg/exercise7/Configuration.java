@@ -3,9 +3,8 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package ee.ut.cs.dsg.dsg.exercise5;
+package ee.ut.cs.dsg.dsg.exercise7;
 
-import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
 import org.apache.avro.util.Utf8;
 import org.apache.avro.message.BinaryMessageEncoder;
@@ -14,8 +13,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Configuration extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 8375463535352658166L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Configuration\",\"namespace\":\"ee.ut.cs.dsg.dsg.exercise5\",\"fields\":[{\"name\":\"prefVal\",\"type\":\"double\",\"doc\":\"The preferred value from the measurement\"},{\"name\":\"measurement\",\"type\":\"string\",\"doc\":\"The measurement type, e.g., temperature\"},{\"name\":\"timestamp\",\"type\":\"long\",\"doc\":\"The measurement timestamp\"},{\"name\":\"author\",\"type\":\"string\",\"doc\":\"The author of the configuration\"}]}");
+  private static final long serialVersionUID = 2368080721594692327L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Configuration\",\"namespace\":\"ee.ut.cs.dsg.dsg.exercise6\",\"fields\":[{\"name\":\"count\",\"type\":\"int\",\"doc\":\"The preferred value from the count\"},{\"name\":\"room\",\"type\":\"int\",\"doc\":\"The room number\"},{\"name\":\"floor\",\"type\":\"int\",\"doc\":\"The floor number\"},{\"name\":\"building\",\"type\":\"int\",\"doc\":\"The building number\"},{\"name\":\"timestamp\",\"type\":\"long\",\"doc\":\"The measurement timestamp\"},{\"name\":\"author\",\"type\":\"string\",\"doc\":\"The author of the configuration\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -71,10 +70,14 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
     return DECODER.decode(b);
   }
 
-  /** The preferred value from the measurement */
-   private double prefVal;
-  /** The measurement type, e.g., temperature */
-   private java.lang.CharSequence measurement;
+  /** The preferred value from the count */
+   private int count;
+  /** The room number */
+   private int room;
+  /** The floor number */
+   private int floor;
+  /** The building number */
+   private int building;
   /** The measurement timestamp */
    private long timestamp;
   /** The author of the configuration */
@@ -89,14 +92,18 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
 
   /**
    * All-args constructor.
-   * @param prefVal The preferred value from the measurement
-   * @param measurement The measurement type, e.g., temperature
+   * @param count The preferred value from the count
+   * @param room The room number
+   * @param floor The floor number
+   * @param building The building number
    * @param timestamp The measurement timestamp
    * @param author The author of the configuration
    */
-  public Configuration(java.lang.Double prefVal, java.lang.CharSequence measurement, java.lang.Long timestamp, java.lang.CharSequence author) {
-    this.prefVal = prefVal;
-    this.measurement = measurement;
+  public Configuration(java.lang.Integer count, java.lang.Integer room, java.lang.Integer floor, java.lang.Integer building, java.lang.Long timestamp, java.lang.CharSequence author) {
+    this.count = count;
+    this.room = room;
+    this.floor = floor;
+    this.building = building;
     this.timestamp = timestamp;
     this.author = author;
   }
@@ -106,10 +113,12 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
   // Used by DatumWriter.  Applications should not call.
   public java.lang.Object get(int field$) {
     switch (field$) {
-    case 0: return prefVal;
-    case 1: return measurement;
-    case 2: return timestamp;
-    case 3: return author;
+    case 0: return count;
+    case 1: return room;
+    case 2: return floor;
+    case 3: return building;
+    case 4: return timestamp;
+    case 5: return author;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -118,48 +127,86 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: prefVal = (java.lang.Double)value$; break;
-    case 1: measurement = (java.lang.CharSequence)value$; break;
-    case 2: timestamp = (java.lang.Long)value$; break;
-    case 3: author = (java.lang.CharSequence)value$; break;
+    case 0: count = (java.lang.Integer)value$; break;
+    case 1: room = (java.lang.Integer)value$; break;
+    case 2: floor = (java.lang.Integer)value$; break;
+    case 3: building = (java.lang.Integer)value$; break;
+    case 4: timestamp = (java.lang.Long)value$; break;
+    case 5: author = (java.lang.CharSequence)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
   /**
-   * Gets the value of the 'prefVal' field.
-   * @return The preferred value from the measurement
+   * Gets the value of the 'count' field.
+   * @return The preferred value from the count
    */
-  public double getPrefVal() {
-    return prefVal;
+  public int getCount() {
+    return count;
   }
 
 
   /**
-   * Sets the value of the 'prefVal' field.
-   * The preferred value from the measurement
+   * Sets the value of the 'count' field.
+   * The preferred value from the count
    * @param value the value to set.
    */
-  public void setPrefVal(double value) {
-    this.prefVal = value;
+  public void setCount(int value) {
+    this.count = value;
   }
 
   /**
-   * Gets the value of the 'measurement' field.
-   * @return The measurement type, e.g., temperature
+   * Gets the value of the 'room' field.
+   * @return The room number
    */
-  public java.lang.CharSequence getMeasurement() {
-    return measurement;
+  public int getRoom() {
+    return room;
   }
 
 
   /**
-   * Sets the value of the 'measurement' field.
-   * The measurement type, e.g., temperature
+   * Sets the value of the 'room' field.
+   * The room number
    * @param value the value to set.
    */
-  public void setMeasurement(java.lang.CharSequence value) {
-    this.measurement = value;
+  public void setRoom(int value) {
+    this.room = value;
+  }
+
+  /**
+   * Gets the value of the 'floor' field.
+   * @return The floor number
+   */
+  public int getFloor() {
+    return floor;
+  }
+
+
+  /**
+   * Sets the value of the 'floor' field.
+   * The floor number
+   * @param value the value to set.
+   */
+  public void setFloor(int value) {
+    this.floor = value;
+  }
+
+  /**
+   * Gets the value of the 'building' field.
+   * @return The building number
+   */
+  public int getBuilding() {
+    return building;
+  }
+
+
+  /**
+   * Sets the value of the 'building' field.
+   * The building number
+   * @param value the value to set.
+   */
+  public void setBuilding(int value) {
+    this.building = value;
   }
 
   /**
@@ -202,8 +249,8 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
    * Creates a new Configuration RecordBuilder.
    * @return A new Configuration RecordBuilder
    */
-  public static ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder newBuilder() {
-    return new ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder();
+  public static Configuration.Builder newBuilder() {
+    return new Configuration.Builder();
   }
 
   /**
@@ -211,11 +258,11 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
    * @param other The existing builder to copy.
    * @return A new Configuration RecordBuilder
    */
-  public static ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder newBuilder(ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder other) {
+  public static Configuration.Builder newBuilder(Configuration.Builder other) {
     if (other == null) {
-      return new ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder();
+      return new Configuration.Builder();
     } else {
-      return new ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder(other);
+      return new Configuration.Builder(other);
     }
   }
 
@@ -224,11 +271,11 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
    * @param other The existing instance to copy.
    * @return A new Configuration RecordBuilder
    */
-  public static ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder newBuilder(ee.ut.cs.dsg.dsg.exercise5.Configuration other) {
+  public static Configuration.Builder newBuilder(Configuration other) {
     if (other == null) {
-      return new ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder();
+      return new Configuration.Builder();
     } else {
-      return new ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder(other);
+      return new Configuration.Builder(other);
     }
   }
 
@@ -239,10 +286,14 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Configuration>
     implements org.apache.avro.data.RecordBuilder<Configuration> {
 
-    /** The preferred value from the measurement */
-    private double prefVal;
-    /** The measurement type, e.g., temperature */
-    private java.lang.CharSequence measurement;
+    /** The preferred value from the count */
+    private int count;
+    /** The room number */
+    private int room;
+    /** The floor number */
+    private int floor;
+    /** The building number */
+    private int building;
     /** The measurement timestamp */
     private long timestamp;
     /** The author of the configuration */
@@ -257,23 +308,31 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder other) {
+    private Builder(Configuration.Builder other) {
       super(other);
-      if (isValidValue(fields()[0], other.prefVal)) {
-        this.prefVal = data().deepCopy(fields()[0].schema(), other.prefVal);
+      if (isValidValue(fields()[0], other.count)) {
+        this.count = data().deepCopy(fields()[0].schema(), other.count);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
       }
-      if (isValidValue(fields()[1], other.measurement)) {
-        this.measurement = data().deepCopy(fields()[1].schema(), other.measurement);
+      if (isValidValue(fields()[1], other.room)) {
+        this.room = data().deepCopy(fields()[1].schema(), other.room);
         fieldSetFlags()[1] = other.fieldSetFlags()[1];
       }
-      if (isValidValue(fields()[2], other.timestamp)) {
-        this.timestamp = data().deepCopy(fields()[2].schema(), other.timestamp);
+      if (isValidValue(fields()[2], other.floor)) {
+        this.floor = data().deepCopy(fields()[2].schema(), other.floor);
         fieldSetFlags()[2] = other.fieldSetFlags()[2];
       }
-      if (isValidValue(fields()[3], other.author)) {
-        this.author = data().deepCopy(fields()[3].schema(), other.author);
+      if (isValidValue(fields()[3], other.building)) {
+        this.building = data().deepCopy(fields()[3].schema(), other.building);
         fieldSetFlags()[3] = other.fieldSetFlags()[3];
+      }
+      if (isValidValue(fields()[4], other.timestamp)) {
+        this.timestamp = data().deepCopy(fields()[4].schema(), other.timestamp);
+        fieldSetFlags()[4] = other.fieldSetFlags()[4];
+      }
+      if (isValidValue(fields()[5], other.author)) {
+        this.author = data().deepCopy(fields()[5].schema(), other.author);
+        fieldSetFlags()[5] = other.fieldSetFlags()[5];
       }
     }
 
@@ -281,110 +340,203 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
      * Creates a Builder by copying an existing Configuration instance
      * @param other The existing instance to copy.
      */
-    private Builder(ee.ut.cs.dsg.dsg.exercise5.Configuration other) {
+    private Builder(Configuration other) {
       super(SCHEMA$);
-      if (isValidValue(fields()[0], other.prefVal)) {
-        this.prefVal = data().deepCopy(fields()[0].schema(), other.prefVal);
+      if (isValidValue(fields()[0], other.count)) {
+        this.count = data().deepCopy(fields()[0].schema(), other.count);
         fieldSetFlags()[0] = true;
       }
-      if (isValidValue(fields()[1], other.measurement)) {
-        this.measurement = data().deepCopy(fields()[1].schema(), other.measurement);
+      if (isValidValue(fields()[1], other.room)) {
+        this.room = data().deepCopy(fields()[1].schema(), other.room);
         fieldSetFlags()[1] = true;
       }
-      if (isValidValue(fields()[2], other.timestamp)) {
-        this.timestamp = data().deepCopy(fields()[2].schema(), other.timestamp);
+      if (isValidValue(fields()[2], other.floor)) {
+        this.floor = data().deepCopy(fields()[2].schema(), other.floor);
         fieldSetFlags()[2] = true;
       }
-      if (isValidValue(fields()[3], other.author)) {
-        this.author = data().deepCopy(fields()[3].schema(), other.author);
+      if (isValidValue(fields()[3], other.building)) {
+        this.building = data().deepCopy(fields()[3].schema(), other.building);
         fieldSetFlags()[3] = true;
+      }
+      if (isValidValue(fields()[4], other.timestamp)) {
+        this.timestamp = data().deepCopy(fields()[4].schema(), other.timestamp);
+        fieldSetFlags()[4] = true;
+      }
+      if (isValidValue(fields()[5], other.author)) {
+        this.author = data().deepCopy(fields()[5].schema(), other.author);
+        fieldSetFlags()[5] = true;
       }
     }
 
     /**
-      * Gets the value of the 'prefVal' field.
-      * The preferred value from the measurement
+      * Gets the value of the 'count' field.
+      * The preferred value from the count
       * @return The value.
       */
-    public double getPrefVal() {
-      return prefVal;
+    public int getCount() {
+      return count;
     }
 
 
     /**
-      * Sets the value of the 'prefVal' field.
-      * The preferred value from the measurement
-      * @param value The value of 'prefVal'.
+      * Sets the value of the 'count' field.
+      * The preferred value from the count
+      * @param value The value of 'count'.
       * @return This builder.
       */
-    public ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder setPrefVal(double value) {
+    public Configuration.Builder setCount(int value) {
       validate(fields()[0], value);
-      this.prefVal = value;
+      this.count = value;
       fieldSetFlags()[0] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'prefVal' field has been set.
-      * The preferred value from the measurement
-      * @return True if the 'prefVal' field has been set, false otherwise.
+      * Checks whether the 'count' field has been set.
+      * The preferred value from the count
+      * @return True if the 'count' field has been set, false otherwise.
       */
-    public boolean hasPrefVal() {
+    public boolean hasCount() {
       return fieldSetFlags()[0];
     }
 
 
     /**
-      * Clears the value of the 'prefVal' field.
-      * The preferred value from the measurement
+      * Clears the value of the 'count' field.
+      * The preferred value from the count
       * @return This builder.
       */
-    public ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder clearPrefVal() {
+    public Configuration.Builder clearCount() {
       fieldSetFlags()[0] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'measurement' field.
-      * The measurement type, e.g., temperature
+      * Gets the value of the 'room' field.
+      * The room number
       * @return The value.
       */
-    public java.lang.CharSequence getMeasurement() {
-      return measurement;
+    public int getRoom() {
+      return room;
     }
 
 
     /**
-      * Sets the value of the 'measurement' field.
-      * The measurement type, e.g., temperature
-      * @param value The value of 'measurement'.
+      * Sets the value of the 'room' field.
+      * The room number
+      * @param value The value of 'room'.
       * @return This builder.
       */
-    public ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder setMeasurement(java.lang.CharSequence value) {
+    public Configuration.Builder setRoom(int value) {
       validate(fields()[1], value);
-      this.measurement = value;
+      this.room = value;
       fieldSetFlags()[1] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'measurement' field has been set.
-      * The measurement type, e.g., temperature
-      * @return True if the 'measurement' field has been set, false otherwise.
+      * Checks whether the 'room' field has been set.
+      * The room number
+      * @return True if the 'room' field has been set, false otherwise.
       */
-    public boolean hasMeasurement() {
+    public boolean hasRoom() {
       return fieldSetFlags()[1];
     }
 
 
     /**
-      * Clears the value of the 'measurement' field.
-      * The measurement type, e.g., temperature
+      * Clears the value of the 'room' field.
+      * The room number
       * @return This builder.
       */
-    public ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder clearMeasurement() {
-      measurement = null;
+    public Configuration.Builder clearRoom() {
       fieldSetFlags()[1] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'floor' field.
+      * The floor number
+      * @return The value.
+      */
+    public int getFloor() {
+      return floor;
+    }
+
+
+    /**
+      * Sets the value of the 'floor' field.
+      * The floor number
+      * @param value The value of 'floor'.
+      * @return This builder.
+      */
+    public Configuration.Builder setFloor(int value) {
+      validate(fields()[2], value);
+      this.floor = value;
+      fieldSetFlags()[2] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'floor' field has been set.
+      * The floor number
+      * @return True if the 'floor' field has been set, false otherwise.
+      */
+    public boolean hasFloor() {
+      return fieldSetFlags()[2];
+    }
+
+
+    /**
+      * Clears the value of the 'floor' field.
+      * The floor number
+      * @return This builder.
+      */
+    public Configuration.Builder clearFloor() {
+      fieldSetFlags()[2] = false;
+      return this;
+    }
+
+    /**
+      * Gets the value of the 'building' field.
+      * The building number
+      * @return The value.
+      */
+    public int getBuilding() {
+      return building;
+    }
+
+
+    /**
+      * Sets the value of the 'building' field.
+      * The building number
+      * @param value The value of 'building'.
+      * @return This builder.
+      */
+    public Configuration.Builder setBuilding(int value) {
+      validate(fields()[3], value);
+      this.building = value;
+      fieldSetFlags()[3] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'building' field has been set.
+      * The building number
+      * @return True if the 'building' field has been set, false otherwise.
+      */
+    public boolean hasBuilding() {
+      return fieldSetFlags()[3];
+    }
+
+
+    /**
+      * Clears the value of the 'building' field.
+      * The building number
+      * @return This builder.
+      */
+    public Configuration.Builder clearBuilding() {
+      fieldSetFlags()[3] = false;
       return this;
     }
 
@@ -404,10 +556,10 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
       * @param value The value of 'timestamp'.
       * @return This builder.
       */
-    public ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder setTimestamp(long value) {
-      validate(fields()[2], value);
+    public Configuration.Builder setTimestamp(long value) {
+      validate(fields()[4], value);
       this.timestamp = value;
-      fieldSetFlags()[2] = true;
+      fieldSetFlags()[4] = true;
       return this;
     }
 
@@ -417,7 +569,7 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
       * @return True if the 'timestamp' field has been set, false otherwise.
       */
     public boolean hasTimestamp() {
-      return fieldSetFlags()[2];
+      return fieldSetFlags()[4];
     }
 
 
@@ -426,8 +578,8 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
       * The measurement timestamp
       * @return This builder.
       */
-    public ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder clearTimestamp() {
-      fieldSetFlags()[2] = false;
+    public Configuration.Builder clearTimestamp() {
+      fieldSetFlags()[4] = false;
       return this;
     }
 
@@ -447,10 +599,10 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
       * @param value The value of 'author'.
       * @return This builder.
       */
-    public ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder setAuthor(java.lang.CharSequence value) {
-      validate(fields()[3], value);
+    public Configuration.Builder setAuthor(java.lang.CharSequence value) {
+      validate(fields()[5], value);
       this.author = value;
-      fieldSetFlags()[3] = true;
+      fieldSetFlags()[5] = true;
       return this;
     }
 
@@ -460,7 +612,7 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
       * @return True if the 'author' field has been set, false otherwise.
       */
     public boolean hasAuthor() {
-      return fieldSetFlags()[3];
+      return fieldSetFlags()[5];
     }
 
 
@@ -469,9 +621,9 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
       * The author of the configuration
       * @return This builder.
       */
-    public ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder clearAuthor() {
+    public Configuration.Builder clearAuthor() {
       author = null;
-      fieldSetFlags()[3] = false;
+      fieldSetFlags()[5] = false;
       return this;
     }
 
@@ -480,10 +632,12 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
     public Configuration build() {
       try {
         Configuration record = new Configuration();
-        record.prefVal = fieldSetFlags()[0] ? this.prefVal : (java.lang.Double) defaultValue(fields()[0]);
-        record.measurement = fieldSetFlags()[1] ? this.measurement : (java.lang.CharSequence) defaultValue(fields()[1]);
-        record.timestamp = fieldSetFlags()[2] ? this.timestamp : (java.lang.Long) defaultValue(fields()[2]);
-        record.author = fieldSetFlags()[3] ? this.author : (java.lang.CharSequence) defaultValue(fields()[3]);
+        record.count = fieldSetFlags()[0] ? this.count : (java.lang.Integer) defaultValue(fields()[0]);
+        record.room = fieldSetFlags()[1] ? this.room : (java.lang.Integer) defaultValue(fields()[1]);
+        record.floor = fieldSetFlags()[2] ? this.floor : (java.lang.Integer) defaultValue(fields()[2]);
+        record.building = fieldSetFlags()[3] ? this.building : (java.lang.Integer) defaultValue(fields()[3]);
+        record.timestamp = fieldSetFlags()[4] ? this.timestamp : (java.lang.Long) defaultValue(fields()[4]);
+        record.author = fieldSetFlags()[5] ? this.author : (java.lang.CharSequence) defaultValue(fields()[5]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
@@ -516,9 +670,13 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
   @Override public void customEncode(org.apache.avro.io.Encoder out)
     throws java.io.IOException
   {
-    out.writeDouble(this.prefVal);
+    out.writeInt(this.count);
 
-    out.writeString(this.measurement);
+    out.writeInt(this.room);
+
+    out.writeInt(this.floor);
+
+    out.writeInt(this.building);
 
     out.writeLong(this.timestamp);
 
@@ -531,30 +689,42 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
   {
     org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
     if (fieldOrder == null) {
-      this.prefVal = in.readDouble();
+      this.count = in.readInt();
 
-      this.measurement = in.readString(this.measurement instanceof Utf8 ? (Utf8)this.measurement : null);
+      this.room = in.readInt();
+
+      this.floor = in.readInt();
+
+      this.building = in.readInt();
 
       this.timestamp = in.readLong();
 
       this.author = in.readString(this.author instanceof Utf8 ? (Utf8)this.author : null);
 
     } else {
-      for (int i = 0; i < 4; i++) {
+      for (int i = 0; i < 6; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
-          this.prefVal = in.readDouble();
+          this.count = in.readInt();
           break;
 
         case 1:
-          this.measurement = in.readString(this.measurement instanceof Utf8 ? (Utf8)this.measurement : null);
+          this.room = in.readInt();
           break;
 
         case 2:
-          this.timestamp = in.readLong();
+          this.floor = in.readInt();
           break;
 
         case 3:
+          this.building = in.readInt();
+          break;
+
+        case 4:
+          this.timestamp = in.readLong();
+          break;
+
+        case 5:
           this.author = in.readString(this.author instanceof Utf8 ? (Utf8)this.author : null);
           break;
 

@@ -1,7 +1,7 @@
-package ee.ut.cs.dsg.exercise3.serdes;
+package ee.ut.cs.dsg.dsg.exercise3.serdes;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import ee.ut.cs.dsg.exercise3.model.Tuple;
+import ee.ut.cs.dsg.dsg.exercise3.model.Tuple;
 import org.apache.kafka.common.serialization.Deserializer;
 
 import java.util.Map;

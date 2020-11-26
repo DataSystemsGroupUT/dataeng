@@ -1,7 +1,7 @@
-package ee.ut.cs.dsg.exercise2;
+package ee.ut.cs.dsg.dsg.exercise2;
 
-import ee.ut.cs.dsg.exercise2.serde.RoomSerde;
-import ee.ut.cs.dsg.exercise2.serde.TemperatureSerde;
+import ee.ut.cs.dsg.dsg.exercise2.serde.RoomSerde;
+import ee.ut.cs.dsg.dsg.exercise2.serde.TemperatureSerde;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.StreamsBuilder;

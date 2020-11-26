@@ -1,7 +1,7 @@
-package ee.ut.cs.dsg.exercise5.serialization;
+package ee.ut.cs.dsg.dsg.exercise5.serialization;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import ee.ut.cs.dsg.exercise5.model.Configuration;
+import ee.ut.cs.dsg.dsg.exercise5.model.Configuration;
 import org.apache.kafka.common.serialization.Deserializer;
 
 import java.util.Map;

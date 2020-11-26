@@ -1,12 +1,12 @@
-package ee.ut.cs.dsg.exercise5;
+package ee.ut.cs.dsg.dsg.exercise5;
 
-import ee.ut.cs.dsg.exercise2.model.Room;
-import ee.ut.cs.dsg.exercise2.model.Temperature;
-import ee.ut.cs.dsg.exercise2.serde.RoomSerde;
-import ee.ut.cs.dsg.exercise2.serde.TemperatureSerde;
-import ee.ut.cs.dsg.exercise5.model.Configuration;
-import ee.ut.cs.dsg.exercise5.model.RichTemperature;
-import ee.ut.cs.dsg.exercise5.serialization.ConfigSerde;
+import ee.ut.cs.dsg.dsg.exercise2.model.Room;
+import ee.ut.cs.dsg.dsg.exercise2.model.Temperature;
+import ee.ut.cs.dsg.dsg.exercise2.serde.RoomSerde;
+import ee.ut.cs.dsg.dsg.exercise2.serde.TemperatureSerde;
+import ee.ut.cs.dsg.dsg.exercise5.model.Configuration;
+import ee.ut.cs.dsg.dsg.exercise5.model.RichTemperature;
+import ee.ut.cs.dsg.dsg.exercise5.serialization.ConfigSerde;
 import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.StreamsConfig;

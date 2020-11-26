@@ -1,6 +1,6 @@
-package ee.ut.cs.dsg.exercise2.serialization;
+package ee.ut.cs.dsg.dsg.exercise2.serialization;
 
-import ee.ut.cs.dsg.exercise2.model.Room;
+import ee.ut.cs.dsg.dsg.exercise2.model.Room;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.kafka.common.serialization.Serializer;
 

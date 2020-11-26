@@ -1,4 +1,4 @@
-package ee.ut.cs.dsg.exercise5.model;
+package ee.ut.cs.dsg.dsg.exercise5.model;
 
 public class Configuration {
 

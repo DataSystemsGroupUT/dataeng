@@ -1,4 +1,4 @@
-package ee.ut.cs.dsg;
+package ee.ut.cs.dsg.dsg;
 
 import org.apache.kafka.clients.admin.*;
 import org.apache.kafka.common.config.ConfigResource;

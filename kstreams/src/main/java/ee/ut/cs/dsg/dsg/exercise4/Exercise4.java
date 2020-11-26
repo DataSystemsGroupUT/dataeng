@@ -1,11 +1,11 @@
-package ee.ut.cs.dsg.exercise4;
+package ee.ut.cs.dsg.dsg.exercise4;
 
-import ee.ut.cs.dsg.exercise2.model.Temperature;
-import ee.ut.cs.dsg.exercise2.model.Room;
-import ee.ut.cs.dsg.exercise3.model.Tuple;
-import ee.ut.cs.dsg.exercise2.serde.RoomSerde;
-import ee.ut.cs.dsg.exercise2.serde.TemperatureSerde;
-import ee.ut.cs.dsg.exercise3.serdes.Tuple2Serde;
+import ee.ut.cs.dsg.dsg.exercise2.model.Temperature;
+import ee.ut.cs.dsg.dsg.exercise2.model.Room;
+import ee.ut.cs.dsg.dsg.exercise3.model.Tuple;
+import ee.ut.cs.dsg.dsg.exercise2.serde.RoomSerde;
+import ee.ut.cs.dsg.dsg.exercise2.serde.TemperatureSerde;
+import ee.ut.cs.dsg.dsg.exercise3.serdes.Tuple2Serde;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.StreamsBuilder;

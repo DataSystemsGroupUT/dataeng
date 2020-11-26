@@ -1,4 +1,4 @@
-package ee.ut.cs.dsg.exercise0;
+package ee.ut.cs.dsg.dsg.exercise0;
 
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.KafkaStreams;
