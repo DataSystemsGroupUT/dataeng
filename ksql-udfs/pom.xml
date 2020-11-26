@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <artifactId>ksql-udfs</artifactId>
-    <groupId>ee.ut.cs.dsg.dataeng</groupId>
+    <groupId>ee.ut.cs.dsg.dsg.dataeng</groupId>
     <version>1.0</version>
 
     <properties>
@@ -14,7 +14,7 @@
         <maven.assembly.plugin.version>3.1.1</maven.assembly.plugin.version>
         <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <exec.mainClass>ee.ut.cs.dsg.ksql.ThisIsIgnored</exec.mainClass>
+        <exec.mainClass>ee.ut.cs.dsg.dsg.dsg.ksql.ThisIsIgnored</exec.mainClass>
     </properties>
 
     <repositories>

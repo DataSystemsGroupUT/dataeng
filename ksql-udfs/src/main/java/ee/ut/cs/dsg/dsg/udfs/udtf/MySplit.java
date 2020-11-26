@@ -1,4 +1,4 @@
-package ee.ut.cs.dsg.udfs.udtf;
+package ee.ut.cs.dsg.dsg.udfs.udtf;
 
 import io.confluent.ksql.function.udf.UdfParameter;
 import io.confluent.ksql.function.udtf.Udtf;
