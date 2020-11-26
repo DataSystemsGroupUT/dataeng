@@ -1,4 +1,4 @@
-package ee.ut.cs.dsg.exercise2;
+package ee.ut.cs.dsg.dsg.exercise2;
 
 import io.confluent.kafka.serializers.KafkaAvroDeserializerConfig;
 import io.confluent.kafka.serializers.KafkaAvroSerializer;

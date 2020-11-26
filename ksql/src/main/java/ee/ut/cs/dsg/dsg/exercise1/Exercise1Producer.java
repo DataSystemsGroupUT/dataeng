@@ -1,4 +1,4 @@
-package ee.ut.cs.dsg.exercise1;
+package ee.ut.cs.dsg.dsg.exercise1;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;

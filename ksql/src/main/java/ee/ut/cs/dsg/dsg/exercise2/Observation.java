@@ -3,9 +3,8 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package ee.ut.cs.dsg.exercise2;
+package ee.ut.cs.dsg.dsg.exercise2;
 
-import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
 import org.apache.avro.util.Utf8;
 import org.apache.avro.message.BinaryMessageEncoder;
@@ -15,7 +14,7 @@ import org.apache.avro.message.SchemaStore;
 @org.apache.avro.specific.AvroGenerated
 public class Observation extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
   private static final long serialVersionUID = -7056224261811287647L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Observation\",\"namespace\":\"ee.ut.cs.dsg.exercise2\",\"fields\":[{\"name\":\"id\",\"type\":\"long\",\"doc\":\"The observation id\"},{\"name\":\"prefVal\",\"type\":\"double\",\"doc\":\"The actual measurement from the sensor\"},{\"name\":\"measurement\",\"type\":\"string\",\"doc\":\"The measurement type, e.g., temperature\"},{\"name\":\"timestamp\",\"type\":\"long\",\"doc\":\"The measurement timestamp\"}]}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Observation\",\"namespace\":\"ee.ut.cs.dsg.dsg.exercise2\",\"fields\":[{\"name\":\"id\",\"type\":\"long\",\"doc\":\"The observation id\"},{\"name\":\"prefVal\",\"type\":\"double\",\"doc\":\"The actual measurement from the sensor\"},{\"name\":\"measurement\",\"type\":\"string\",\"doc\":\"The measurement type, e.g., temperature\"},{\"name\":\"timestamp\",\"type\":\"long\",\"doc\":\"The measurement timestamp\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -202,8 +201,8 @@ public class Observation extends org.apache.avro.specific.SpecificRecordBase imp
    * Creates a new Observation RecordBuilder.
    * @return A new Observation RecordBuilder
    */
-  public static ee.ut.cs.dsg.exercise2.Observation.Builder newBuilder() {
-    return new ee.ut.cs.dsg.exercise2.Observation.Builder();
+  public static ee.ut.cs.dsg.dsg.exercise2.Observation.Builder newBuilder() {
+    return new ee.ut.cs.dsg.dsg.exercise2.Observation.Builder();
   }
 
   /**
@@ -211,11 +210,11 @@ public class Observation extends org.apache.avro.specific.SpecificRecordBase imp
    * @param other The existing builder to copy.
    * @return A new Observation RecordBuilder
    */
-  public static ee.ut.cs.dsg.exercise2.Observation.Builder newBuilder(ee.ut.cs.dsg.exercise2.Observation.Builder other) {
+  public static ee.ut.cs.dsg.dsg.exercise2.Observation.Builder newBuilder(ee.ut.cs.dsg.dsg.exercise2.Observation.Builder other) {
     if (other == null) {
-      return new ee.ut.cs.dsg.exercise2.Observation.Builder();
+      return new ee.ut.cs.dsg.dsg.exercise2.Observation.Builder();
     } else {
-      return new ee.ut.cs.dsg.exercise2.Observation.Builder(other);
+      return new ee.ut.cs.dsg.dsg.exercise2.Observation.Builder(other);
     }
   }
 
@@ -224,11 +223,11 @@ public class Observation extends org.apache.avro.specific.SpecificRecordBase imp
    * @param other The existing instance to copy.
    * @return A new Observation RecordBuilder
    */
-  public static ee.ut.cs.dsg.exercise2.Observation.Builder newBuilder(ee.ut.cs.dsg.exercise2.Observation other) {
+  public static ee.ut.cs.dsg.dsg.exercise2.Observation.Builder newBuilder(ee.ut.cs.dsg.dsg.exercise2.Observation other) {
     if (other == null) {
-      return new ee.ut.cs.dsg.exercise2.Observation.Builder();
+      return new ee.ut.cs.dsg.dsg.exercise2.Observation.Builder();
     } else {
-      return new ee.ut.cs.dsg.exercise2.Observation.Builder(other);
+      return new ee.ut.cs.dsg.dsg.exercise2.Observation.Builder(other);
     }
   }
 
@@ -257,7 +256,7 @@ public class Observation extends org.apache.avro.specific.SpecificRecordBase imp
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(ee.ut.cs.dsg.exercise2.Observation.Builder other) {
+    private Builder(ee.ut.cs.dsg.dsg.exercise2.Observation.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -281,7 +280,7 @@ public class Observation extends org.apache.avro.specific.SpecificRecordBase imp
      * Creates a Builder by copying an existing Observation instance
      * @param other The existing instance to copy.
      */
-    private Builder(ee.ut.cs.dsg.exercise2.Observation other) {
+    private Builder(ee.ut.cs.dsg.dsg.exercise2.Observation other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.id)) {
         this.id = data().deepCopy(fields()[0].schema(), other.id);
@@ -317,7 +316,7 @@ public class Observation extends org.apache.avro.specific.SpecificRecordBase imp
       * @param value The value of 'id'.
       * @return This builder.
       */
-    public ee.ut.cs.dsg.exercise2.Observation.Builder setId(long value) {
+    public ee.ut.cs.dsg.dsg.exercise2.Observation.Builder setId(long value) {
       validate(fields()[0], value);
       this.id = value;
       fieldSetFlags()[0] = true;
@@ -339,7 +338,7 @@ public class Observation extends org.apache.avro.specific.SpecificRecordBase imp
       * The observation id
       * @return This builder.
       */
-    public ee.ut.cs.dsg.exercise2.Observation.Builder clearId() {
+    public ee.ut.cs.dsg.dsg.exercise2.Observation.Builder clearId() {
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -360,7 +359,7 @@ public class Observation extends org.apache.avro.specific.SpecificRecordBase imp
       * @param value The value of 'prefVal'.
       * @return This builder.
       */
-    public ee.ut.cs.dsg.exercise2.Observation.Builder setPrefVal(double value) {
+    public ee.ut.cs.dsg.dsg.exercise2.Observation.Builder setPrefVal(double value) {
       validate(fields()[1], value);
       this.prefVal = value;
       fieldSetFlags()[1] = true;
@@ -382,7 +381,7 @@ public class Observation extends org.apache.avro.specific.SpecificRecordBase imp
       * The actual measurement from the sensor
       * @return This builder.
       */
-    public ee.ut.cs.dsg.exercise2.Observation.Builder clearPrefVal() {
+    public ee.ut.cs.dsg.dsg.exercise2.Observation.Builder clearPrefVal() {
       fieldSetFlags()[1] = false;
       return this;
     }
@@ -403,7 +402,7 @@ public class Observation extends org.apache.avro.specific.SpecificRecordBase imp
       * @param value The value of 'measurement'.
       * @return This builder.
       */
-    public ee.ut.cs.dsg.exercise2.Observation.Builder setMeasurement(java.lang.CharSequence value) {
+    public ee.ut.cs.dsg.dsg.exercise2.Observation.Builder setMeasurement(java.lang.CharSequence value) {
       validate(fields()[2], value);
       this.measurement = value;
       fieldSetFlags()[2] = true;
@@ -425,7 +424,7 @@ public class Observation extends org.apache.avro.specific.SpecificRecordBase imp
       * The measurement type, e.g., temperature
       * @return This builder.
       */
-    public ee.ut.cs.dsg.exercise2.Observation.Builder clearMeasurement() {
+    public ee.ut.cs.dsg.dsg.exercise2.Observation.Builder clearMeasurement() {
       measurement = null;
       fieldSetFlags()[2] = false;
       return this;
@@ -447,7 +446,7 @@ public class Observation extends org.apache.avro.specific.SpecificRecordBase imp
       * @param value The value of 'timestamp'.
       * @return This builder.
       */
-    public ee.ut.cs.dsg.exercise2.Observation.Builder setTimestamp(long value) {
+    public ee.ut.cs.dsg.dsg.exercise2.Observation.Builder setTimestamp(long value) {
       validate(fields()[3], value);
       this.timestamp = value;
       fieldSetFlags()[3] = true;
@@ -469,7 +468,7 @@ public class Observation extends org.apache.avro.specific.SpecificRecordBase imp
       * The measurement timestamp
       * @return This builder.
       */
-    public ee.ut.cs.dsg.exercise2.Observation.Builder clearTimestamp() {
+    public ee.ut.cs.dsg.dsg.exercise2.Observation.Builder clearTimestamp() {
       fieldSetFlags()[3] = false;
       return this;
     }

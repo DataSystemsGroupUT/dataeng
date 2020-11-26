@@ -1,4 +1,4 @@
-package ee.ut.cs.dsg.exercise2;
+package ee.ut.cs.dsg.dsg.exercise2;
 
 import org.apache.kafka.clients.producer.Partitioner;
 import org.apache.kafka.common.Cluster;

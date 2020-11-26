@@ -1,6 +1,5 @@
-package ee.ut.cs.dsg.exercise5;
+package ee.ut.cs.dsg.dsg.exercise5;
 
-import ee.ut.cs.dsg.exercise2.CustomPartitioner;
 import io.confluent.kafka.serializers.KafkaAvroDeserializerConfig;
 import io.confluent.kafka.serializers.KafkaAvroSerializer;
 import org.apache.kafka.clients.producer.KafkaProducer;

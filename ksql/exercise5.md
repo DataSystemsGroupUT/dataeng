@@ -21,8 +21,8 @@ kafka-topics --bootstrap-server kafka1:9092 --partitions 2 --create --topic conf
 
 ```
 
-- Run [Observation Producer](./src/main/java/ee/ut/cs/dsg/exercise2/ObservationProducer.java)
-- Run [Configuration Producer](./src/main/java/ee/ut/cs/dsg/exercise5/ConfigurationProducer.java)
+- Run [Observation Producer](src/main/java/ee/ut/cs/dsg/dsg/exercise2/ObservationProducer.java)
+- Run [Configuration Producer](src/main/java/ee/ut/cs/dsg/dsg/exercise5/ConfigurationProducer.java)
 
 ## KSQL
 

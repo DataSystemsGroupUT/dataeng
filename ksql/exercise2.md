@@ -35,7 +35,7 @@ bin/kafka-topics --bootstrap-server localhost:9092 --create \
 
 
 ```json
-{"namespace": "ksql.ee.ut.cs.dsg.ksql.exercise2",
+{"namespace": "ksql.ee.ut.cs.dsg.dsg.ksql.exercise2",
  "type": "record",
  "name": "Observation",
  "fields": [

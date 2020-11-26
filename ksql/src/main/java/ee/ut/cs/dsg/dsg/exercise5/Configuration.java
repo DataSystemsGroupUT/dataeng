@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package ee.ut.cs.dsg.exercise5;
+package ee.ut.cs.dsg.dsg.exercise5;
 
 import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Configuration extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -7695236011538915248L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Configuration\",\"namespace\":\"ee.ut.cs.dsg.exercise5\",\"fields\":[{\"name\":\"prefVal\",\"type\":\"double\",\"doc\":\"The preferred value from the measurement\"},{\"name\":\"measurement\",\"type\":\"string\",\"doc\":\"The measurement type, e.g., temperature\"},{\"name\":\"timestamp\",\"type\":\"long\",\"doc\":\"The measurement timestamp\"},{\"name\":\"author\",\"type\":\"string\",\"doc\":\"The author of the configuration\"}]}");
+  private static final long serialVersionUID = 8375463535352658166L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Configuration\",\"namespace\":\"ee.ut.cs.dsg.dsg.exercise5\",\"fields\":[{\"name\":\"prefVal\",\"type\":\"double\",\"doc\":\"The preferred value from the measurement\"},{\"name\":\"measurement\",\"type\":\"string\",\"doc\":\"The measurement type, e.g., temperature\"},{\"name\":\"timestamp\",\"type\":\"long\",\"doc\":\"The measurement timestamp\"},{\"name\":\"author\",\"type\":\"string\",\"doc\":\"The author of the configuration\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -202,8 +202,8 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
    * Creates a new Configuration RecordBuilder.
    * @return A new Configuration RecordBuilder
    */
-  public static ee.ut.cs.dsg.exercise5.Configuration.Builder newBuilder() {
-    return new ee.ut.cs.dsg.exercise5.Configuration.Builder();
+  public static ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder newBuilder() {
+    return new ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder();
   }
 
   /**
@@ -211,11 +211,11 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
    * @param other The existing builder to copy.
    * @return A new Configuration RecordBuilder
    */
-  public static ee.ut.cs.dsg.exercise5.Configuration.Builder newBuilder(ee.ut.cs.dsg.exercise5.Configuration.Builder other) {
+  public static ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder newBuilder(ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder other) {
     if (other == null) {
-      return new ee.ut.cs.dsg.exercise5.Configuration.Builder();
+      return new ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder();
     } else {
-      return new ee.ut.cs.dsg.exercise5.Configuration.Builder(other);
+      return new ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder(other);
     }
   }
 
@@ -224,11 +224,11 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
    * @param other The existing instance to copy.
    * @return A new Configuration RecordBuilder
    */
-  public static ee.ut.cs.dsg.exercise5.Configuration.Builder newBuilder(ee.ut.cs.dsg.exercise5.Configuration other) {
+  public static ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder newBuilder(ee.ut.cs.dsg.dsg.exercise5.Configuration other) {
     if (other == null) {
-      return new ee.ut.cs.dsg.exercise5.Configuration.Builder();
+      return new ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder();
     } else {
-      return new ee.ut.cs.dsg.exercise5.Configuration.Builder(other);
+      return new ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder(other);
     }
   }
 
@@ -257,7 +257,7 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(ee.ut.cs.dsg.exercise5.Configuration.Builder other) {
+    private Builder(ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.prefVal)) {
         this.prefVal = data().deepCopy(fields()[0].schema(), other.prefVal);
@@ -281,7 +281,7 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
      * Creates a Builder by copying an existing Configuration instance
      * @param other The existing instance to copy.
      */
-    private Builder(ee.ut.cs.dsg.exercise5.Configuration other) {
+    private Builder(ee.ut.cs.dsg.dsg.exercise5.Configuration other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.prefVal)) {
         this.prefVal = data().deepCopy(fields()[0].schema(), other.prefVal);
@@ -317,7 +317,7 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
       * @param value The value of 'prefVal'.
       * @return This builder.
       */
-    public ee.ut.cs.dsg.exercise5.Configuration.Builder setPrefVal(double value) {
+    public ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder setPrefVal(double value) {
       validate(fields()[0], value);
       this.prefVal = value;
       fieldSetFlags()[0] = true;
@@ -339,7 +339,7 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
       * The preferred value from the measurement
       * @return This builder.
       */
-    public ee.ut.cs.dsg.exercise5.Configuration.Builder clearPrefVal() {
+    public ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder clearPrefVal() {
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -360,7 +360,7 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
       * @param value The value of 'measurement'.
       * @return This builder.
       */
-    public ee.ut.cs.dsg.exercise5.Configuration.Builder setMeasurement(java.lang.CharSequence value) {
+    public ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder setMeasurement(java.lang.CharSequence value) {
       validate(fields()[1], value);
       this.measurement = value;
       fieldSetFlags()[1] = true;
@@ -382,7 +382,7 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
       * The measurement type, e.g., temperature
       * @return This builder.
       */
-    public ee.ut.cs.dsg.exercise5.Configuration.Builder clearMeasurement() {
+    public ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder clearMeasurement() {
       measurement = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -404,7 +404,7 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
       * @param value The value of 'timestamp'.
       * @return This builder.
       */
-    public ee.ut.cs.dsg.exercise5.Configuration.Builder setTimestamp(long value) {
+    public ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder setTimestamp(long value) {
       validate(fields()[2], value);
       this.timestamp = value;
       fieldSetFlags()[2] = true;
@@ -426,7 +426,7 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
       * The measurement timestamp
       * @return This builder.
       */
-    public ee.ut.cs.dsg.exercise5.Configuration.Builder clearTimestamp() {
+    public ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder clearTimestamp() {
       fieldSetFlags()[2] = false;
       return this;
     }
@@ -447,7 +447,7 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
       * @param value The value of 'author'.
       * @return This builder.
       */
-    public ee.ut.cs.dsg.exercise5.Configuration.Builder setAuthor(java.lang.CharSequence value) {
+    public ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder setAuthor(java.lang.CharSequence value) {
       validate(fields()[3], value);
       this.author = value;
       fieldSetFlags()[3] = true;
@@ -469,7 +469,7 @@ public class Configuration extends org.apache.avro.specific.SpecificRecordBase i
       * The author of the configuration
       * @return This builder.
       */
-    public ee.ut.cs.dsg.exercise5.Configuration.Builder clearAuthor() {
+    public ee.ut.cs.dsg.dsg.exercise5.Configuration.Builder clearAuthor() {
       author = null;
       fieldSetFlags()[3] = false;
       return this;
