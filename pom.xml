@@ -10,6 +10,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
         <module>ksql-udfs</module>
         <module>ksql</module>
         <module>kstreams</module>
+        <module>students</module>
     </modules>
     <packaging>pom</packaging>
     <repositories>
@@ -29,7 +30,11 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
     </properties>
 
     <dependencies>
-
+        <dependency>
+            <groupId>com.opencsv</groupId>
+            <artifactId>opencsv</artifactId>
+            <version>4.1</version>
+        </dependency>
         <dependency>
             <groupId>com.thedeanda</groupId>
             <artifactId>lorem</artifactId>

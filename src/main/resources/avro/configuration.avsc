@@ -1,4 +1,4 @@
-{"namespace": "ee.ut.cs.dsg.exercise5",
+{"namespace": "ee.ut.cs.dsg.dsg.exercise5",
  "type": "record",
  "name": "Configuration",
  "fields": [
