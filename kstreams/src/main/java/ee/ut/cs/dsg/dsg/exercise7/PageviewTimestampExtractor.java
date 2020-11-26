@@ -1,6 +1,6 @@
-package ee.ut.cs.dsg.exercise6;
+package ee.ut.cs.dsg.exercise7;
 
-import ee.ut.cs.dsg.exercise6.model.PageView;
+import ee.ut.cs.dsg.exercise7.model.PageView;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.streams.processor.TimestampExtractor;
 

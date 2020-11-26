@@ -15,7 +15,7 @@ public class CustomPartitioner implements Partitioner {
         List<PartitionInfo> partitionInfos = cluster.partitionsForTopic(topic);
         Integer room = Integer.valueOf(tk.split("room")[1]);
 
-        return partitionInfos.get(room % partitionInfos.size()).partition();
+        return room % partitionInfos.size();
     }
 
     @Override

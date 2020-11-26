@@ -1,4 +1,4 @@
-package ee.ut.cs.dsg.exercise6.model;
+package ee.ut.cs.dsg.exercise7.model;
 
 public class User {
     private String userid;

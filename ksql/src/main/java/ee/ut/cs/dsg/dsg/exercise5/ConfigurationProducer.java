@@ -14,7 +14,7 @@ import java.util.Random;
 
 public class ConfigurationProducer {
 
-    public static String TOPIC = "configuration2_avro";
+    public static String TOPIC = "configuration_avro2";
 
     public void createProducer() throws InterruptedException {
 
@@ -24,7 +24,7 @@ public class ConfigurationProducer {
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "kafka1:9092");
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, KafkaAvroSerializer.class.getName());
-        props.put(ProducerConfig.PARTITIONER_CLASS_CONFIG, CustomPartitioner.class.getName());
+//        props.put(ProducerConfig.PARTITIONER_CLASS_CONFIG, CustomPartitioner.class.getName());
 //        props.put(KafkaAvroDeserializerConfig.SCHEMA_REGISTRY_URL_CONFIG, "mock://" + scope);
         props.put(KafkaAvroDeserializerConfig.SCHEMA_REGISTRY_URL_CONFIG, "http://schema-registry:8081/");
 

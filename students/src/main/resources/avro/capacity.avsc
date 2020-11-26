@@ -1,0 +1,12 @@
+{"namespace": "ee.ut.cs.dsg",
+ "type": "record",
+ "name": "Capacity",
+ "fields": [
+     {"name": "cap", "type": "int", "doc" : "The preferred value from the count"},
+     {"name": "room", "type": "string", "doc" : "The room number"},
+     {"name": "floor", "type": "string", "doc" : "The floor number"},
+     {"name": "building", "type": "string", "doc" : "The building number"},
+     {"name": "timestamp", "type": "long", "doc" : "The measurement timestamp"},
+     {"name": "author", "type": "string", "doc" : "The author of the configuration"}
+ ]
+}

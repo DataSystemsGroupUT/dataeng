@@ -1,0 +1,11 @@
+{"namespace": "ee.ut.cs.dsg",
+ "type": "record",
+ "name": "Person",
+ "fields": [
+     {"name": "id", "type": "long", "doc" : "The id of the observation"},
+     {"name": "name", "type": "string", "doc" : "The person's name"},
+     {"name": "email", "type": "string", "doc" : "The person's email"},
+     {"name": "city", "type": "string", "doc" : "The person's city"},
+     {"name": "timestamp", "type": "long", "doc" : "The observation timestamp"}
+ ]
+}

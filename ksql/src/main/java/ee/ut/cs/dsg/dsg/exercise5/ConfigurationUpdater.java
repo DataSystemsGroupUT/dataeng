@@ -14,7 +14,7 @@ import java.util.Random;
 
 public class ConfigurationUpdater {
 
-    public static String TOPIC = "configuration2_avro";
+    public static String TOPIC = "configuration_avro";
 
     public void createProducer() throws InterruptedException {
 
