@@ -82,7 +82,7 @@ your topology code here
 
 Identify the rooms that contains more people than the allowed ones (capacity)
 
-- Perform the calculation rolling count (no window)
+- Perform the calculation rolling manner (no window)
   + Create a stream/table called ```ANOMALIESROLL``` 
   + Provide the topology for the KSQL/KStreams program
 
