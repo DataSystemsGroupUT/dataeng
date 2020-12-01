@@ -3,6 +3,8 @@
 
 ## Before
 
+# LOOK AT THE WHOLE TASKS BEFORE STARTING!
+
 ```bash
 kafka-topics --bootstrap-server kafka1:9092 --partitions 2 --create --topic observations 
 kafka-topics --bootstrap-server kafka1:9092 --partitions 2 --create --topic capacities 
