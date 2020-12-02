@@ -9,8 +9,6 @@
 
 ```mvn clean generate-sources```
 
-```
-
 Start the containers ```docker-compose up -d```
 
 ![Deployment](./docker-compose.png)
