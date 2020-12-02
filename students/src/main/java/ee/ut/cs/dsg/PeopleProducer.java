@@ -33,8 +33,8 @@ public class PeopleProducer {
 
         KafkaProducer<String, Person> observer = new KafkaProducer<>(props);
         long ts = 0;
-
-        File file = new File(PeopleProducer.class.getClassLoader().getResource("people.csv").getPath());
+        
+        File file = new File(PeopleProducer.class.getClassLoader().getResource("people.csv").getPath().replace("%20", " "));
         FileReader f = new FileReader(file);
         CSVReader reader = new CSVReader(f);
 
