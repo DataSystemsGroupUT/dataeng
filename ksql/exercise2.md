@@ -27,7 +27,7 @@ Either via bash or using the AdminClient
 
 
 ```bash
-bin/kafka-topics --bootstrap-server localhost:9092 --create \
+kafka-topics --bootstrap-server kafka1:9092 --create \
                       --partitions 2 \
                       --replication-factor 1 \
                       --topic temperature
