@@ -1,1 +1,0 @@
-[source](https://www.oreilly.com/radar/questioning-the-lambda-architecture/)
