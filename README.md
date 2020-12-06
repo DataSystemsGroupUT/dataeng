@@ -15,7 +15,7 @@ This branch contains for notebooks:
 
 To run these notebooks, you can use docker, google colab, etc. The requirements are in environment.yml
 
-In the following I will show you how to use conda.
+In the following I will show you how to use conda. you can install miniconda from [this link](https://docs.conda.io/en/latest/miniconda.html), if you don't have miniconda nor anaconda installed on your system
 
 ### create a new conda environment and install the dependencies and packages from environment.yml
 
@@ -29,7 +29,8 @@ conda env create -f environment.yml
 conda activate wrangling
 ```
 
-To be able selecting a conda environment as the kernel in Jupyter
+### To be able to select a conda environment as the kernel in Jupyter
 
 ```
 python3 -m ipykernel install --user --name wrangling --display-name "Python3 (wrangling)"
+```
