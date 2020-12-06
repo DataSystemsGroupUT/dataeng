@@ -6,7 +6,7 @@
 <img src="https://upload.wikimedia.org/wikipedia/en/3/39/Tartu_%C3%9Clikool_logo.svg" width="250"><img src="./logo_dsg_vettoriale.png" width="250">
 
 
-This branch contains for notebooks:
+This branch contains four notebooks:
 1. Introduction to data wrangling using pandas.
 2. Introduction to data cleaning.
 3. Introduction to machine learning.
