@@ -3,7 +3,7 @@
 # Data Wrangling:
 ## Repository for the Data Engineering Course (LTAT.02.007)
 
-<img src="https://upload.wikimedia.org/wikipedia/en/3/39/Tartu_%C3%9Clikool_logo.svg" width="250"><img src="./attachments/logo_dsg_vettoriale.png" width="250">
+<img src="https://upload.wikimedia.org/wikipedia/en/3/39/Tartu_%C3%9Clikool_logo.svg" width="250"><img src="./logo_dsg_vettoriale.png" width="250">
 
 
 This branch contains for notebooks:
