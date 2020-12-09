@@ -1,9 +1,23 @@
 # KSQL/Kafka Streams Assignment
 
+This is the KSQL/KAFKA Stream assignment.
+In case you decide to use KSQL, use the README itself to submit your queries and topologies.
+In case you use KStream (JAVA), submit a zip file with the project.
+
+
+The goal of the homework is performing some analytics on two differen sources, i.e.,
+
+- observation: describes people entering a specific room on a floor in a building
+- capacity: describes the capacity of the specific room (How  many people can fit in)
+
+
+# LOOK AT ALL THE TASKS BEFORE STARTING!
+# LOOK AT ALL THE TASKS BEFORE STARTING!
+# LOOK AT ALL THE TASKS BEFORE STARTING!
 
 ## Before
 
-# LOOK AT ALL THE TASKS BEFORE STARTING!
+Create the topics from the CLI using the following commands, as did during classes.
 
 ```bash
 kafka-topics --bootstrap-server kafka1:9092 --partitions 2 --create --topic observations 
@@ -14,7 +28,7 @@ kafka-topics --bootstrap-server kafka1:9092 --partitions 2 --create --topic capa
 - Run [People Producer](./src/main/java/ee/ut/cs/dsg/PeopleProducer.java)
 - Run [Capacity Producer](./src/main/java/ee/ut/cs/dsg/CapacityProducer.java)
 
-## KSQL/STREAMS
+# TASKS
 
 ## Task 0
 
@@ -109,7 +123,6 @@ your KSQL statements here
 ```
 your topology code here
 ```
-
 
 ![Your topology image her](./todo.png)
 
