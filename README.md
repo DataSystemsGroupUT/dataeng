@@ -49,9 +49,9 @@ Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di M
 |05/11| Data Engineering Pipelines (Part2) |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/MapReduce.md) [Slides 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/FlumeJava.md) [Slides 3](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Apache%20Airflow.md)|Chp 10 of 3 [R. Chang Pt 2](https://medium.com/@rchang/a-beginners-guide-to-data-engineering-part-ii-47c4e7cbda71) [R. Chang Pt 3](https://medium.com/@rchang/a-beginners-guide-to-data-engineering-the-series-finale-2cc92ff14b0)||
 |12/11| Streaming Data (Part 1) |[Slide 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Streaming%20Data%20Engineering.md) [Slide 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Streaming%20Pipelines.md)|Chp 11 of 3 [Streaming 101](https://www.oreilly.com/radar/the-world-beyond-batch-streaming-101/) [Streaming 102](https://www.oreilly.com/radar/the-world-beyond-batch-streaming-102)||
 |19/11| Data Journey|[Slides](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/DataJourney_UoT.pdf)|||
-|26/11| Streaming Data (Part 2) ||||
-|03/12| Data Wrangling (Part 1) ||||
-|10/12| Data Wrangling (Part 2) ||||
+|26/11| Streaming Data (Part 2) |[Slide 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Streaming%20Data%20Engineering.md) [Slide 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Streaming%20Pipelines.md)|||   
+|03/12| Data Wrangling (Part 1) |[pdf](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Data%20Preprocessing.pdf)|||
+|10/12| Data Wrangling (Part 2) |[pdf](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Data%20Preprocessing%20Part2%20.pdf)|||
 
 
 # Practices (Videos Will be Available after Group 2 issue)
@@ -67,8 +67,8 @@ Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di M
 |10-11/11| Apache Airflow Data Pipelines|[Slides](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Apache%20Airflow.md)||[Video 1](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=0d863345-9ad5-4053-926f-ac6e0118015f) [Video 2](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=eb9bd9de-2e9b-4569-b3c3-ac7000834a8d)|[Homework 6](https://github.com/DataSystemsGroupUT/dataeng/tree/Homework6)||
 |16-17/11| Stream Processing with  Kafka Streams|[Slides](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Kafka%20Stream.md)||[Video 1](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=1ceb30eb-56a3-4c3c-ade0-ac75010f2ef0) [Video 2](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=ac3a65e4-3df3-4040-bb1a-ac7600e8946a)|[Homework 7](https://github.com/DataSystemsGroupUT/dataeng/tree/Homework7)||
 |23-24/11| Stream Processing with  KSQL|[Slides](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/KSQL.md)||[Video 1](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=1a396e84-84d2-4071-b3a4-ac7c00fe41ab) [Video 2](https://panopto.ut.ee/Panopto/Pages/Viewer.aspx?id=92631b24-c3f7-4e1b-9035-ac7d00ab6f0d)|[Homework 7](https://github.com/DataSystemsGroupUT/dataeng/tree/Homework7)||
-||Data Cleansing ||||||
-||Augmentation||||||
+|06/12|Data Cleansing ||||||
+|13/12|Data Augmentation||||||
 
 # Extras
 
