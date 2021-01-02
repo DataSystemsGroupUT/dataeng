@@ -25,7 +25,7 @@
 - No Schemas
 - No transactions
 - No joins
-- Max docuement size of 16MB[^92]
+- Max document size of 16MB[^92]
 
 
 [^91]: Larger documents handled with GridFS
@@ -41,7 +41,7 @@
 
 ## When to consider MongoDB 
 
-- When you  need high availability of data
+- When you don't need high availability of data
 - when you need fast and instant data recovery
 - when do not want to sustain schema migration costs
 
@@ -49,9 +49,9 @@
 ### Advantages
 - Full featured indexes
 - Sophisticated query language
-- Easy mapping to object oriented code
-- Native language drivers in all popular language
-- Simple to setup and manage
+- Easy mapping to object-oriented code
+- Native language drivers in all popular languages
+- Simple to set up and manage
 - Operates at in-memory speed wherever possible
 - Auto-sharding built in
 - Dynamically add / remove capacity with no downtime
@@ -193,7 +193,7 @@ Example:
 ```python
 db.parts.aggregate( 
     {$group : {_id: type, totalquantity : 
-    { $sum: quanity}
+    { $sum: quantity}
 }})
 ```
 
@@ -352,7 +352,7 @@ Consists of groups of MongoDB nodes that work together to provide automated fail
 ---
 #### Hash Sharding
 
-- MongoDB apples a MD5 hash on the key when a hash shard key is used:
+- MongoDB applies a MD5 hash on the key when a hash shard key is used:
   - Hash Shard Key(deviceId) = MD5(deviceId)
   - Ensures data is distributed randomly within the range of MD5 values
 
