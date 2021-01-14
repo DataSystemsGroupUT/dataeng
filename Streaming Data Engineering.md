@@ -215,7 +215,7 @@ $$(o1,1), (o2,2), (o3,3), (o4,4),(o5,5), (oi,i) .....$$
 ### How to Process Streams?
 
 Due to the *unbounded* nature of stream, traditional processing techniques are not adequate. 
-Moreover, stream analysis typically has strict time constrains.
+Moreover, stream analysis typically has strict time constraints.
 
 Thus, **Stream processing** requires a paradigm shift, i.e.,  from data at rest and post-hoc analyses, to process data **in-motion** and in-motion insights.
 
@@ -288,7 +288,7 @@ Five dimensions are important when considering stream processing engines for big
 ![inline](./attachments/Images/placeholdergraph.png)
 
 ## Different Notions of Time (1/2)
-In the SP literature, many notion of time have been proposed. For sake of simplicity, we use the nomenclature suggested by Tyler Akidau [^2].
+In the SP literature, many notions of time have been proposed. For sake of simplicity, we use the nomenclature suggested by Tyler Akidau [^2].
 -  **Ingestion time**: the time at which a stream element arrives in the system
 -  **Processing time**: the time at which an operator in the processing pipeline reads the stream element
 -  **Event time**: The original time at which the data was generated
@@ -474,7 +474,7 @@ There are different abstraction levels that a programmer can use to express stre
 
 ## SQL-like Languages
 
-Prominent batch-processing solutions provide SQL interfaces e.g., Hive,
+Prominent batch-processing solutions provide SQL interfaces, e.g., Hive,
 PIG, SparkSQL. The reasons include the access to a wider audience and
 all the benefits of declarative languages. Similarly, Stream Processing
 systems are migrating towards SQL-like languages. Can you guess what
@@ -657,7 +657,7 @@ Functional APIs are still declarative. However, they give more freedom to the de
 
 ![inline](https://www.michael-noll.com/assets/uploads/stream-vs-table-chess-analogy.png)
 
-###  Trasformations
+###  Transformations
 
 [.column]
 
@@ -786,7 +786,7 @@ The model provides a framework to answer four questions:
 -  **What** results are we computing?
 -  **Where** in event-time are they computed?
 -  **When** in processing time are they materialized?
--  **How** do results are reported ?
+-  **How** do results are reported?
 
 ### PCollection[^2]
 
@@ -969,7 +969,7 @@ Starting from the seminal work of Hewitt et al., actors were thought as a model 
 
 [.column]
 
--  Actors are lightweight objects that encapsulate a *state* and a *behavior*.
+-  Actors are lightweight objects that encapsulate a *state* and a *behaviour*.
 
 -  They share no mutable state among them, and in fact the only way to communicate is through asynchronous message passing.
 
@@ -998,7 +998,7 @@ parallel tasks of two connected logical operators.
 
 -  **Partitioning by key**: guarantees that records with the same key (e.g., declared by the user) are sent to the same parallel task of consuming operators
 
--  **User defined partitioning functions**:(e.g., geo-partitioning or machine learning model selection ).
+-  **User-defined partitioning functions**:(e.g., geo-partitioning or machine learning model selection ).
 
 ### Open-Source Systems Overview
 
