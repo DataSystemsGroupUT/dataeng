@@ -303,7 +303,7 @@ A fully **ACID** database is the perfect fit for use cases where data **reliabil
 
 ### MongoDB
 
-- An In-Memory [[Document Databases]]
+- A Document Store
 - Strong consistency (**C**)
 - *Tuneably* available (**~~A~~**)
 - Horizontal Scalable  (**P**)
