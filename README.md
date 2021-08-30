@@ -9,47 +9,44 @@
 
 ## Requirements
 
-* `sudo apt-get install python3-dev`
 * To have docker *and* docker-compose installed.
 * Install docker and docker-compose exactly as it is described in the website.
 * **do not do do apt install docker or docker-compose**
 
 ## How to spin the webserver up
 
-Run this, docker build, *once*
-```shell script
+### Prepping
 
-sudo docker build -t airflow-training:1.0 .
-
+First, get your **id**:
+```sh
+id -u
 ```
 
-### command dissection
+Now edit the **.env** file and swap out 501 for your own.
 
-* docker - err...the docker cli tool :D 
-* build - run the code written on the Dockerfile
-* -t tag the image with the following name:version naming convention
-
-```shell script
-
-sudo docker-compose -f docker-compose.yml up -d
-
+Run the following command to creat the volumes needed in order to send data to airflow:
+```sh
+mkdir -p ./dags ./logs ./plugins
 ```
 
-### command dissection
+And this **once**:
+```sh
+docker-compose up airflow-init
+```
+If the exit code is 0 then it's all good.
 
-* docker-compose - err... the docker-compose cli tool :D 
-* -f - run the compose file 
-* up - aggregates all logs to the same stdout
-* -d - runs in the background i.e doesn't take over your current bash session
+### Running
 
-shut down everything
-
-```shell script
-
-sudo docker-compose down
-
+```sh
+docker-compose up
 ```
 
-## Acknowledgements
+After it is up, add a new connection:
 
-The dockerfile and entrypoint are modified versions of those taken from: https://github.com/puckel/docker-airflow and https://github.com/happilyeverafter95/slack-airflow
+* Name - postgres_default
+* Conn type - postgres
+* Host - postgres
+* Port - 5432
+* Database - airflow
+* Username - airflow
+* Password - airflow

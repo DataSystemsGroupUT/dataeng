@@ -2,7 +2,7 @@ Hello there, brave one!
 
 In case you'd like to do this **without** docker, here's how, for any debian distro(if you're using arch or something else then I'm more-than-sure that you're savvy enough to figure all this by yourself)
 
-The course was is structured in a way such that in case you'd like to not use docker, it's not gonna take THAT much effort to get everything up and running.
+The course is structured in a way such that in case you'd like to not use docker, it's not gonna take THAT much effort to get everything up and running.
 
 # Airflow
 

@@ -1,6 +1,6 @@
 # Hey there.
 
-Ok, so, hypothetically speaking, let's say that you don't have any debian-based linux distribution.
+Let's say that you don't have any debian-based linux distribution.
 
 In that case, you can use google cloud in order to create a 24/7 debian virtual machine.
 
@@ -14,7 +14,7 @@ go to [google cloud](console.cloud.google.com) and register, put your credit car
 
 On console.cloud.google.com, with your newly created account, click on "Compute Engine" on the left side of the screen.
 
-![](compute_engine.png)
+![](./imgs/compute_engine.png)
 
 Now, create your virtual machine, with DEBIAN as the OS. Get one whose specs cost at max 30 bucks a month.
 
@@ -40,7 +40,7 @@ Now, select create firewall rule
 
 Make sure your firewall rule looks like this:
 
-![](firewall_rules.png)
+![](./imgs/firewall_rules.png)
 
 ### Step 4 -
 

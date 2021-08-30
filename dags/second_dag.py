@@ -20,7 +20,7 @@ second_dag = DAG(
     dag_id='second_dag',
     default_args=default_args_dict,
     catchup=False,
-    template_searchpath=['/usr/local/airflow/data/']
+    template_searchpath=['/opt/airflow/dags/']
 )
 
 
@@ -35,9 +35,9 @@ task_one = PythonOperator(
     dag=second_dag,
     python_callable=_get_spreadsheet,
     op_kwargs={
-        "output_folder": "/usr/local/airflow/data",
+        "output_folder": "/opt/airflow/dags",
         "epoch": "{{ execution_date.int_timestamp }}",
-        "url": "http://www.gerbode.net/spreadsheet.xlsx"
+        "url": "http://www.lutemusic.org/spreadsheet.xlsx"
     },
     trigger_rule='all_success',
     depends_on_past=False,
@@ -48,7 +48,7 @@ task_one = PythonOperator(
 task_two = BashOperator(
     task_id='transmute_to_csv',
     dag=second_dag,
-    bash_command="xlsx2csv /usr/local/airflow/data/{{ execution_date.int_timestamp }}.xlsx > /usr/local/airflow/data/{{ execution_date.int_timestamp }}_correct.csv",
+    bash_command="xlsx2csv /opt/airflow/dags/{{ execution_date.int_timestamp }}.xlsx > /opt/airflow/dags/{{ execution_date.int_timestamp }}_correct.csv",
     trigger_rule='all_success',
     depends_on_past=False,
 )
@@ -67,7 +67,7 @@ task_three = PythonOperator(
     dag=second_dag,
     python_callable=_time_filter,
     op_kwargs={
-        "output_folder": "/usr/local/airflow/data",
+        "output_folder": "/opt/airflow/dags",
         "epoch": "{{ execution_date.int_timestamp }}",
         "previous_epoch": "{{ prev_execution_date.int_timestamp }}",
         "next_epoch": "{{ next_execution_date.int_timestamp }}",
@@ -92,7 +92,7 @@ task_four = BranchPythonOperator(
     python_callable=_emptiness_check,
     op_kwargs={
         'previous_epoch': '{{ prev_execution_date.int_timestamp }}',
-        "output_folder": "/usr/local/airflow/data"
+        "output_folder": "/opt/airflow/dags"
     },
     trigger_rule='all_success',
 )
@@ -115,7 +115,7 @@ task_five = PythonOperator(
     dag=second_dag,
     python_callable=_split,
     op_kwargs={
-        'output_folder': '/usr/local/airflow/data',
+        'output_folder': '/opt/airflow/dags',
         'previous_epoch': '{{ prev_execution_date.int_timestamp }}',
     },
     trigger_rule='all_success',
@@ -124,7 +124,7 @@ task_five = PythonOperator(
 
 def _create_intavolature_query(previous_epoch: int, output_folder: str):
     df = pd.read_csv(f'{output_folder}/{str(previous_epoch)}_intavolature.csv')
-    with open("/usr/local/airflow/data/intavolature_inserts.sql", "w") as f:
+    with open("/opt/airflow/dags/intavolature_inserts.sql", "w") as f:
         df_iterable = df.iterrows()
         f.write(
             "CREATE TABLE IF NOT EXISTS intavolature (\n"
@@ -158,7 +158,7 @@ task_six_a = PythonOperator(
     python_callable=_create_intavolature_query,
     op_kwargs={
         'previous_epoch': '{{ prev_execution_date.int_timestamp }}',
-        'output_folder': '/usr/local/airflow/data',
+        'output_folder': '/opt/airflow/dags',
     },
     trigger_rule='all_success',
 )
@@ -166,7 +166,7 @@ task_six_a = PythonOperator(
 
 def _create_composer_query(previous_epoch: int, output_folder: str):
     df = pd.read_csv(f'{output_folder}/{str(previous_epoch)}_composer.csv')
-    with open("/usr/local/airflow/data/composer_inserts.sql", "w") as f:
+    with open("/opt/airflow/dags/composer_inserts.sql", "w") as f:
         df_iterable = df.iterrows()
         f.write(
             "CREATE TABLE IF NOT EXISTS composer (\n"
@@ -189,7 +189,7 @@ task_six_b = PythonOperator(
     python_callable=_create_composer_query,
     op_kwargs={
         'previous_epoch': '{{ prev_execution_date.int_timestamp }}',
-        'output_folder': '/usr/local/airflow/data',
+        'output_folder': '/opt/airflow/dags',
     },
     trigger_rule='all_success',
 )
@@ -197,7 +197,7 @@ task_six_b = PythonOperator(
 task_seven_a = PostgresOperator(
     task_id='insert_intavolature_query',
     dag=second_dag,
-    postgres_conn_id='postgres_not_default',
+    postgres_conn_id='postgres_default',
     sql='intavolature_inserts.sql',
     trigger_rule='all_success',
     autocommit=True
@@ -206,7 +206,7 @@ task_seven_a = PostgresOperator(
 task_seven_b = PostgresOperator(
     task_id='insert_composer_query',
     dag=second_dag,
-    postgres_conn_id='postgres_not_default',
+    postgres_conn_id='postgres_default',
     sql='composer_inserts.sql',
     trigger_rule='all_success',
     autocommit=True,

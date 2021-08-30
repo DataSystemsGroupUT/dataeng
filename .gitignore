@@ -1,15 +1,2 @@
-.obsidian
-.obsidian/*
-./todos
-
-out.md
-*.markdown
-
-*.slide.md
-SLIDES.md
-
-obsidian.css
-
-Questions.md
-
-.ipynb_checkpoints/
+*.log
+.idea
