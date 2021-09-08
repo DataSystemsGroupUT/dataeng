@@ -1,10 +1,20 @@
+footer:  [Riccardo Tommasini](http://rictomm.me) - riccardo.tommasini@ut.ee - @rictomm 
+slide-dividers: #, ##, ###
+slidenumbers: true
+autoscale: true
+build-lists: true
+theme: Plain Jane
+
+
 # History
 
-![right fit](./attachments/03-USDE-graph-db14.png)
+![right fit](./attachments/euler.png)
 
 Leonhard Euler's paper on "Seven Bridges of Königsberg", published in 1736.
 
-![inline](./attachments/03-USDE-graph-db13 1.png)![inline](./attachments/03-USDE-graph-db11 1.png)![inline](./attachments/03-USDE-graph-db12 1.png)
+![inline](./attachments/euler1.png)![inline](./attachments/euler2.png)![inline](./attachments/euler3.png)
+
+---
 
 ## Famous problems
 
@@ -70,7 +80,7 @@ Edges have directions, i.e.  an edge is an *ordered* pair of nodes
 
 ### Weighted graphs
 
-are graphs for which each edge has an associated *weight*, usually given by a _weight function 
+are graphs for which each edge has an associated *weight*, usually given by a weight function 
 
 $$f_w$$ : $$E \rightarrow R $$ .
 
@@ -83,9 +93,11 @@ $$f_w$$ : $$E \rightarrow R $$ .
 - A path is *simple* if each vertex is distinct.
 - If there is  path *p* from *u* to *v* then we say *v* is **reachable** from *u* via *p* .
 
-**Example**: Simple path from 1 to 5= [ 1, 2, 4, 5 ]
+**Example**: 
+  
+  Simple path from 1 to 5= [ 1, 2, 4, 5 ]
 
-![inline](./attachments/graph3.png)
+![right fit](./attachments/graph3.png)
 
 ### Cycle
 
@@ -128,12 +140,14 @@ Degree =indegree+outdegree
 
 ### Bipartite graph
 
+
+![right fit](./attachments/bipartitegraph.png)
+ 
+
  - *V* can be partitioned into 2 sets $$V_1$$ and $$V_2$$ such that $$(u,v) \in E$$ implies
   -  either $$u \in V_1$$ and $$ v \in V_2$$
-  -  or *$$v \in V_1$$ and $$ u \in V_2$$
+  -  or $$v \in V_1$$ and $$ u \in V_2$$
 
-![right 60%](./attachments/bipartitegraph.png)
- 
 
 ### Complete Graph
 
@@ -159,11 +173,12 @@ Degree =indegree+outdegree
 
 ### Tree
 
+![right fit](./attachments/graphtree.png)
+
 Connected Acyclic Graph
 
 Two nodes have *exactly* one path between them
 
-![right 60%](./attachments/graphtree.png)
 
 ## Hypergraph
 
@@ -213,12 +228,12 @@ Two nodes have *exactly* one path between them
 
 ### Representation (List)
 
- - Edge List
+<!--  - Edge List
   -  pairs (ordered if directed) of vertices
   -  Optionally weight and other data
  - Adjacency List
+ -->
 
----
 ![inline](./attachments/AdjacencyList.png)
 
 

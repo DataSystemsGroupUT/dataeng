@@ -29,29 +29,65 @@
 
 Special Thanks to Emanuele Della Valle and Marco Brambilla from Politecnico di Milano to letting me "steal" some of their great slides.
 
+
+### Overview
+
+- [Data Engineer](lectures/Data%20Engineer.md)
+- [[Data Lifecycle]]
+	- [Data Collection](Data%20Collection.md) (Taught not tested)
+	- [Data Processing](Data%20Processing.md)
+	- [[Data Analysis]] (Extra Points - Suggestion for Data Science Project in Spring)
+- Data Processing (from ETL to Data Pipelines, Introduce Big Data)
+	- [Data Ingestion](Data%20Ingestion.md) (Files, HDFS, MongoDB)
+	- [[Cleansing | Data Pre-Processing ]] (Python)
+	- [Data Transformation](Data%20Transformation.md) (Airflow)
+		- [[Data Modeling]]
+			- [Data Modeling for Databases](Data%20Modeling.md#Data%20Modeling%20for%20Databases)
+			- [Data Modeling for Data Warehouses](Data%20Modeling.md#Data%20Modeling%20for%20Data%20Warehouses)
+		- [[ systems/Apache Hadoop | Parallel Processing  ]]
+	- [[Data Serving]]
+		- [[Data Visualisation]]
+		- [[Querying]]
+- Steaming Data Pipelines
+	- [[Apache Kafka | Streaming Data Ingestion ]]
+	- [[Streaming Data Pre-Processing | Cleansing]] (Java)
+	- [Streaming Data Transformation](Data%20Transformation.md) (Java/SQL)
+	- [[Event Sourcing | Data Modelling for Data Streams]]
+	
+ #### Course Goals: Build a data pipeline about: Internet Memes
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
 # Lectures
 
 | Date  | Title              | Material | Mandatory Reads | Extras |
 |-------|--------------------|----------|-----------------|--------|
-| 01/09 | Course Intro       | [Slides](./Data%20Engineer.md) - [pdf](./pdfs/Data%20Engineer.pdf) slide 45-109) | ||
+| 01/09 | Course Intro       | [Slides](lectures/Data%20Engineer.md) - [pdf](./pdfs/Data%20Engineer.pdf) slide 45-109) | ||
 | 03/09 | Data Modeling      | [Slides](Data%20Modeling.md) - [pdf](./pdfs/Data%20Modeling.pdf) slide 1-44 | Chp 4 p111-127, Chp 5 p151-156, Chp 6 p199-205 of [3]
 | 10/09 |  DM for Relational Databases |   [Slides](Data%20Modeling.md) - [pdf](./pdfs/Data%20Modeling.pdf) slide 45-109 | Chp 2, 6, and 7 (Normal Forms) of [1] | [Relational Model](https://course.ccs.neu.edu/cs3200sp18s3/ssl/readings/codd.pdf) | 
-|10/09  |  DM for Data Warehouse         |  [Slides](Data%20Modeling.md)  - [pdf](./pdfs/Data%20Modeling.pdf)slide 109-118|  [pdf](http://www.kimballgroup.com/wp-content/uploads/2013/08/2013.09-Kimball-Dimensional-Modeling-Techniques11.pdf) [video](http://slideshot.epfl.ch/play/suri_stonebraker)|  Chp 2 of [2] | 
+| 10/09 |  DM for Data Warehouse         |  [Slides](Data%20Modeling.md)  - [pdf](./pdfs/Data%20Modeling.pdf)slide 109-118|  [pdf](http://www.kimballgroup.com/wp-content/uploads/2013/08/2013.09-Kimball-Dimensional-Modeling-Techniques11.pdf) [video](http://slideshot.epfl.ch/play/suri_stonebraker)|  Chp 2 of [2] | 
 | 17/09 |  DM for Big Data   | [Slides](Data%20Modeling%20for%20Big%20Data.md) - [pdf](./pdfs/Data%20Modeling%20Big%20Data.pdf)| Chp 2 of [3], [video](https://www.youtube.com/watch?v=LDW0QWie21s)|[paper](https://www.ics.uci.edu/~cs223/papers/cidr07p15.pdf)| 
 | 17/09 |  Key Value Stores |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Key-Value%20Store.md),[Slides 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Redis.md)[pdf](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Key-Value%20Stores%20-%20Redis.pdf)||[nosql](https://www.christof-strauch.de/nosqldbs.pdf)|
-|24/10| Column Oriented Databases |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Column%20Oriented%20Database.md) [Slides 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Cassandra.md) [pdf](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Column%20Stores%20-%20Cassandra.pdf)||[nosql](https://www.christof-strauch.de/nosqldbs.pdf)|
-|24/10| Document Databases  |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Document%20Databases.md) [Slides 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/MongoDB.md) [pdf](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Document%20Stores%20-%20MongoDB.pdf)||[nosql](https://www.christof-strauch.de/nosqldbs.pdf)|
-|01/10| Graph Databases |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Graph%20Theory.md) [Slides 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Graph%20Databases.md) [pdf1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Graph%20Theory.pdf) [pdf2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Graph%20Databases.pdf)|Chp 3 and 5 of [5]|[book](https://neo4j.com/graph-databases-book/)|
-|08/10| Data Ingestion |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Data%20Acquisition.md) [Slide 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/REST%20API.md) [Slide 3](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/HDFS.md) [Slide 4](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Apache%20Kafka.md)|||
-|15/10| Part 1 Recap |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Part%201%20-%20Recap.md)  [pdf](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Part%201%20-%20Recap.pdf)|||
-|22/10| Midterm |||||
-|29/10| Data Engineering Pipelines (Part1) |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Data%20Pipeline%20(Intro).md) [slide 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Data%20Pipeline.md) [pdf](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/pipelines.pdf)|||
-|05/11| Data Engineering Pipelines (Part2) |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/MapReduce.md) [Slides 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/FlumeJava.md) [Slides 3](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Apache%20Airflow.md)|Chp 10 of 3 [R. Chang Pt 2](https://medium.com/@rchang/a-beginners-guide-to-data-engineering-part-ii-47c4e7cbda71) [R. Chang Pt 3](https://medium.com/@rchang/a-beginners-guide-to-data-engineering-the-series-finale-2cc92ff14b0)||
-|12/11| Streaming Data (Part 1) |[Slide 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Streaming%20Data%20Engineering.md) [Slide 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Streaming%20Pipelines.md)|Chp 11 of 3 [Streaming 101](https://www.oreilly.com/radar/the-world-beyond-batch-streaming-101/) [Streaming 102](https://www.oreilly.com/radar/the-world-beyond-batch-streaming-102)||
-|19/11| Data Journey|[Slides](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/DataJourney_UoT.pdf)|||
-|26/11| Streaming Data (Part 2) |[Slide 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Streaming%20Data%20Engineering.md) [Slide 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Streaming%20Pipelines.md)|||   
-|03/12| Data Wrangling (Part 1) |[pdf](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Data%20Preprocessing.pdf)|||
-|10/12| Data Wrangling (Part 2) |[pdf](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Data%20Preprocessing%20Part2%20.pdf)|||
+| 24/10 | Column Oriented Databases |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Column%20Oriented%20Database.md) [Slides 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Cassandra.md) [pdf](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Column%20Stores%20-%20Cassandra.pdf)||[nosql](https://www.christof-strauch.de/nosqldbs.pdf)|
+| 24/10| Document Databases  |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Document%20Databases.md) [Slides 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/MongoDB.md) [pdf](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Document%20Stores%20-%20MongoDB.pdf)||[nosql](https://www.christof-strauch.de/nosqldbs.pdf)|
+| 01/10| Graph Databases |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Graph%20Theory.md) [Slides 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Graph%20Databases.md) [pdf1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Graph%20Theory.pdf) [pdf2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Graph%20Databases.pdf)|Chp 3 and 5 of [5]|[book](https://neo4j.com/graph-databases-book/)|
+| 08/10| Data Ingestion |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Data%20Acquisition.md) [Slide 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/REST%20API.md) [Slide 3](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/HDFS.md) [Slide 4](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Apache%20Kafka.md)|||
+| 15/10| Part 1 Recap |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Part%201%20-%20Recap.md)  [pdf](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Part%201%20-%20Recap.pdf)|||
+| 22/10| Midterm |||||
+| 29/10| Data Engineering Pipelines (Part1) |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Data%20Pipeline%20(Intro).md) [slide 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Data%20Pipeline.md) [pdf](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/pipelines.pdf)|||
+| 05/11| Data Engineering Pipelines (Part2) |[Slides 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/MapReduce.md) [Slides 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/FlumeJava.md) [Slides 3](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Apache%20Airflow.md)|Chp 10 of 3 [R. Chang Pt 2](https://medium.com/@rchang/a-beginners-guide-to-data-engineering-part-ii-47c4e7cbda71) [R. Chang Pt 3](https://medium.com/@rchang/a-beginners-guide-to-data-engineering-the-series-finale-2cc92ff14b0)||
+| 12/11| Streaming Data (Part 1) |[Slide 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Streaming%20Data%20Engineering.md) [Slide 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Streaming%20Pipelines.md)|Chp 11 of 3 [Streaming 101](https://www.oreilly.com/radar/the-world-beyond-batch-streaming-101/) [Streaming 102](https://www.oreilly.com/radar/the-world-beyond-batch-streaming-102)||
+| 19/11| Data Journey|[Slides](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/DataJourney_UoT.pdf)|||
+| 26/11| Streaming Data (Part 2) |[Slide 1](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Streaming%20Data%20Engineering.md) [Slide 2](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/Streaming%20Pipelines.md)|||   
+| 03/12| Data Wrangling (Part 1) |[pdf](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Data%20Preprocessing.pdf)|||
+| 10/12| Data Wrangling (Part 2) |[pdf](https://github.com/DataSystemsGroupUT/dataeng/blob/dataeng/pdfs/Data%20Preprocessing%20Part2%20.pdf)|||
 
 
 # Practices (Videos Will be Available after Group 2 issue)

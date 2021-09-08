@@ -1,4 +1,4 @@
-# Data Pipeline
+### Definition
 
 A pipeline is a set of data processing elements connected in series, where the output of one element is the input of the next one. 
 
@@ -65,13 +65,6 @@ Data pipelines open up the possibility of creating "workflows" which can help re
 
 ![right](https://live.staticflickr.com/3438/3936825397_4625288e73_b.jpg)
 
-### Apache Beam[^2]
-
-[^2]: [link](https://beam.apache.org/documentation/programming-guide/)
-
-### Kafka Streams
-
-### KSQL
 
 ## Data pipeline components
 
@@ -98,7 +91,7 @@ How to combine the components above?
 [[Kappa architecture]]
 
 
-## Data Virtualisation
 
-	
-## Anti Patterns
+
+
+

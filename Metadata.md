@@ -1,5 +1,9 @@
 ### Metadata
 
+![metadata](attachments/metadata.png)
+
+---
+
 ![inline](https://image.slidesharecdn.com/marquez-191112193750/95/data-lineage-with-apache-airflow-using-marquez-7-638.jpg?cb=1573587558)
 
 ### ABCs of Data Context[^2]

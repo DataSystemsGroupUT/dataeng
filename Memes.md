@@ -1,0 +1,1 @@
+![[attachments/https%3A%2F%2Fwww.mihaileric.com%2Fstatic%2Fpatrick-951fdc9920aa2a6cc7b75e0959379665-321c9.jpg]][Memes](Memes.md)

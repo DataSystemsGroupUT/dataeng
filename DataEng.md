@@ -20,9 +20,9 @@
 
 # [[Data Pipeline (Intro)]]
 
-## [[Data Acquisition]]
+## [[Data Collection]]
 
-### [[REST API]] and [[Real-Time API | Beyond]]
+### [[Web API]] and [[Real-Time API | Beyond]]
 
 ### [[HDFS]]
 
@@ -44,6 +44,6 @@
 
 ## [[Data Cleansing]]
 
-## [[Data Augumentation]]
+## [[Data Augmentation]]
 
 
