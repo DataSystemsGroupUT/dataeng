@@ -33,8 +33,6 @@ A distributed file system stores files across a large collection of machines whi
 
 A distributed message queue stores file in a log an allow sequential reads. 
 
-
-
 ### Data Systems
 
 [[DISTRIBUTED FILE SYSTEMS | HDFS]] or [[Object Storages | S3 ]]

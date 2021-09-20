@@ -10,6 +10,172 @@ We will see how to:
 
 ---
 
+## Using image and viewing history
+
+The `history` command lists all the layers composing an image.
+
+For each layer, it shows its creation time, size, and creation command.
+
+When an image was built with a Dockerfile, each layer corresponds to
+a line of the Dockerfile.
+
+```bash
+$ docker history figlet
+IMAGE         CREATED            CREATED BY                     SIZE
+f9e8f1642759  About an hour ago  /bin/sh -c apt-get install fi  1.627 MB
+7257c37726a1  About an hour ago  /bin/sh -c apt-get update      21.58 MB
+07c86167cdc4  4 days ago         /bin/sh -c #(nop) CMD ["/bin   0 B
+<missing>     4 days ago         /bin/sh -c sed -i 's/^#\s*\(   1.895 kB
+<missing>     4 days ago         /bin/sh -c echo '#!/bin/sh'    194.5 kB
+<missing>     4 days ago         /bin/sh -c #(nop) ADD file:b   187.8 MB
+```
+
+---
+
+
+
+## Why `sh -c`?
+
+* On UNIX, to start a new program, we need two system calls:
+
+  - `fork()`, to create a new child process;
+
+  - `execve()`, to replace the new child process with the program to run.
+
+* Conceptually, `execve()` works like this:
+
+  `execve(program, [list, of, arguments])`
+
+* When we run a command, e.g. `ls -l /tmp`, something needs to parse the command.
+
+  (i.e. split the program and its arguments into a list.)
+
+* The shell is usually doing that.
+
+  (It also takes care of expanding environment variables and special things like `~`.)
+
+---
+
+
+
+## Why `sh -c`?
+
+* When we do `RUN ls -l /tmp`, the Docker builder needs to parse the command.
+
+* Instead of implementing its own parser, it outsources the job to the shell.
+
+* That's why we see `sh -c ls -l /tmp` in that case.
+
+* But we can also do the parsing jobs ourselves.
+
+* This means passing `RUN` a list of arguments.
+
+* This is called the *exec syntax*.
+
+---
+
+## Shell syntax vs exec syntax
+
+Dockerfile commands that execute something can have two forms:
+
+* plain string, or *shell syntax*:
+  <br/>`RUN apt-get install figlet`
+
+* JSON list, or *exec syntax*:
+  <br/>`RUN ["apt-get", "install", "figlet"]`
+
+We are going to change our Dockerfile to see how it affects the resulting image.
+
+---
+
+## Using exec syntax in our Dockerfile
+
+Let's change our Dockerfile as follows!
+
+```dockerfile
+FROM ubuntu
+RUN apt-get update
+RUN ["apt-get", "install", "figlet"]
+```
+
+Then build the new Dockerfile.
+
+```bash
+$ docker build -t figlet .
+```
+
+---
+
+## History with exec syntax
+
+Compare the new history:
+
+```bash
+$ docker history figlet
+IMAGE         CREATED            CREATED BY                     SIZE
+27954bb5faaf  10 seconds ago     apt-get install figlet         1.627 MB
+7257c37726a1  About an hour ago  /bin/sh -c apt-get update      21.58 MB
+07c86167cdc4  4 days ago         /bin/sh -c #(nop) CMD ["/bin   0 B
+<missing>     4 days ago         /bin/sh -c sed -i 's/^#\s*\(   1.895 kB
+<missing>     4 days ago         /bin/sh -c echo '#!/bin/sh'    194.5 kB
+<missing>     4 days ago         /bin/sh -c #(nop) ADD file:b   187.8 MB
+```
+
+* Exec syntax specifies an *exact* command to execute.
+
+* Shell syntax specifies a command to be wrapped within `/bin/sh -c "..."`.
+
+---
+
+## When to use exec syntax and shell syntax
+
+* shell syntax:
+
+  * is easier to write
+  * interpolates environment variables and other shell expressions
+  * creates an extra process (`/bin/sh -c ...`) to parse the string
+  * requires `/bin/sh` to exist in the container
+
+* exec syntax:
+
+  * is harder to write (and read!)
+  * passes all arguments without extra processing
+  * doesn't create an extra process
+  * doesn't require `/bin/sh` to exist in the container
+
+---
+
+## Pro-tip: the `exec` shell built-in
+
+POSIX shells have a built-in command named `exec`.
+
+`exec` should be followed by a program and its arguments.
+
+From a user perspective:
+
+- it looks like the shell exits right away after the command execution,
+
+- in fact, the shell exits just *before* command execution;
+
+- or rather, the shell gets *replaced* by the command.
+
+---
+
+## Example using `exec`
+
+```dockerfile
+CMD exec figlet -f script hello
+```
+
+In this example, `sh -c` will still be used, but
+`figlet` will be PID 1 in the container.
+
+The shell gets replaced by `figlet` when `figlet` starts execution.
+
+This allows to run processes as PID 1 without using JSON.
+
+---
+
 ## Reducing the number of layers
 
 * Each line in a `Dockerfile` creates a new layer.
