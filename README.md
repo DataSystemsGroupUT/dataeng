@@ -45,7 +45,7 @@ After it is up, add a new connection:
 
 * Name - postgres_default
 * Conn type - postgres
-* Host - postgres
+* Host - localhost
 * Port - 5432
 * Database - airflow
 * Username - airflow
